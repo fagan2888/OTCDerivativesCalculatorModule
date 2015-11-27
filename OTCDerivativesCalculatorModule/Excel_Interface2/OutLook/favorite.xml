@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<favoritePosition>
+  <positionFolderName>FirstTestBook</positionFolderName>
+  <positionFolderCode>AhnBook0001</positionFolderCode>
+  <unclassifiedFavorite>
+    <favoriteInfo>
+      <favoriteName>unclassifiedFavorite</favoriteName>
+      <favoriteCode>unclassifiedFavoriteCode</favoriteCode>
+    </favoriteInfo>
+    <instrumentList>
+      <instrument>itemCode_111_140529103307</instrument>
+      <instrument>itemCode_111_140529143209</instrument>
+      <instrument>itemCode_111_140530144879</instrument>
+      <instrument>itemCode_111_140530145005</instrument>
+      <instrument>itemCode_000_140602092560</instrument>
+    </instrumentList>
+  </unclassifiedFavorite>
+  <favorite>
+    <favoriteInfo>
+      <favoriteName>BondTrading_Team</favoriteName>
+      <favoriteCode>BondTradingTeamBook0001</favoriteCode>
+    </favoriteInfo>
+    <instrumentList>
+    </instrumentList>
+  </favorite>
+</favoritePosition>

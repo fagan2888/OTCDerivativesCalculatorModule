@@ -1,0 +1,73 @@
+﻿<UserControl x:Class="Excel_Interface.Excel_marketDataSymbolView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Vertical">
+                <Label Content="- symbol List" />
+                <ListView Name="symbolDataListView_" 
+                          SelectionChanged="symbolDataListView__SelectionChanged"
+                          HorizontalAlignment="Stretch"
+                          VerticalAlignment="Stretch">
+                    <ListView.ItemTemplate >
+                        <DataTemplate >
+                            <StackPanel Orientation="Vertical">
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding SYMBOL_}" Margin="0,0,10,0" />
+                                    <TextBlock Text="{Binding NAME_ENG_}" Margin="0,0,10,0" />
+                                    <TextBlock Text="{Binding NAME_KOR_}" Margin="0,0,10,0" />
+                                    <TextBlock Text="{Binding SYMBOL_TYPE_}" Margin="0,0,10,0" />
+                                    <TextBlock Text="{Binding PROVIDER_}" Margin="0,0,10,0" />
+                                    <TextBlock Text="{Binding DESCRIPTION_}" Margin="0,0,10,0" />
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                    <ListView.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="Trade">
+                                <MenuItem Header="test"/>
+                            </MenuItem>
+                        </ContextMenu>
+                    </ListView.ContextMenu>
+                </ListView>
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="- Add Symbol" />
+                    <Button Content="Add" Click="AddSymbolButton_Click" />
+                    <Button Content="delete" Click="deleteSymbolButton_Click" />
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Symbol : " />
+                    <TextBox Name="symbolTb_" Width="100" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Name_eng : " />
+                    <TextBox Name="name_engTb_" Width="100" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Name_kor : " />
+                    <TextBox Name="name_korTb_" Width="100" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Symbol_type : " />
+                    <TextBox Name="symbol_typeTb_" Width="100" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Provider : " />
+                    <TextBox Name="providerTb_" Width="100" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Description : " />
+                    <TextBox Name="descriptionTb_" Width="100" />
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+        
+    </Grid>
+</UserControl>

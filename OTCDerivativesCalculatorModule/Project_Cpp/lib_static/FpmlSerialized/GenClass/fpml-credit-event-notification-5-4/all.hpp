@@ -1,0 +1,11 @@
+#include <GenClass\fpml-credit-event-notification-5-4\AffectedTransactions.hpp>
+#include <GenClass\fpml-credit-event-notification-5-4\BankruptcyEvent.hpp>
+#include <GenClass\fpml-credit-event-notification-5-4\CreditEvent.hpp>
+#include <GenClass\fpml-credit-event-notification-5-4\CreditEventNoticeDocument.hpp>
+#include <GenClass\fpml-credit-event-notification-5-4\CreditEventNotification.hpp>
+#include <GenClass\fpml-credit-event-notification-5-4\CreditEventNotificationRetracted.hpp>
+#include <GenClass\fpml-credit-event-notification-5-4\FailureToPayEvent.hpp>
+#include <GenClass\fpml-credit-event-notification-5-4\ObligationAccelerationEvent.hpp>
+#include <GenClass\fpml-credit-event-notification-5-4\ObligationDefaultEvent.hpp>
+#include <GenClass\fpml-credit-event-notification-5-4\RepudiationMoratoriumEvent.hpp>
+#include <GenClass\fpml-credit-event-notification-5-4\RestructuringEvent.hpp>

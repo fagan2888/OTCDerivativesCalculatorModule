@@ -1,0 +1,37 @@
+﻿<UserControl x:Class="Excel_Interface.Excel_greekResultView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Converter="clr-namespace:Converter"
+             mc:Ignorable="d" >
+    <Control.Resources>
+        <Converter:IndexConverter x:Key="IndexConverter" />
+    </Control.Resources>
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Risk Factor Information" />
+                <CheckBox Content="Amount" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </StackPanel>
+            
+            <ListView Name="greekListView_" >
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Width="20" Header="n"
+                                        DisplayMemberBinding="{Binding RelativeSource=
+                                             {RelativeSource FindAncestor, AncestorType={x:Type ListViewItem}}, 
+                                              Converter={StaticResource IndexConverter}}" />
+
+                        <GridViewColumn Header="Name" Width="80" DisplayMemberBinding="{Binding Name_}" />
+                        <GridViewColumn Header="Delta" Width="60" DisplayMemberBinding="{Binding Delta_}" />
+                        <GridViewColumn Header="Gamma" Width="60" DisplayMemberBinding="{Binding Delta_}" />
+                        <GridViewColumn Header="Vega" Width="60" DisplayMemberBinding="{Binding Delta_}" />
+                        
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            
+        </StackPanel>
+    </Grid>
+</UserControl>

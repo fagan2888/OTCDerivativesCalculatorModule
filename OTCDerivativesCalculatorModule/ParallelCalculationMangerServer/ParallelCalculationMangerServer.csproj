@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C99EB325-F72C-4F2E-AB93-43F982476C82}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ParallelCalculationMangerServer</RootNamespace>
+    <AssemblyName>ParallelCalculationMangerServer</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Excel_Interface2">
+      <HintPath>..\Excel_Interface2\bin\Debug\Excel_Interface2.dll</HintPath>
+    </Reference>
+    <Reference Include="RiskMonitor">
+      <HintPath>..\Project_CSharp\RiskMonitor\bin\Debug\RiskMonitor.exe</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AsynchronousClient.cs" />
+    <Compile Include="AsynchronousSocketListener.cs" />
+    <Compile Include="CalculationServerMonitor\CalculationServerMonitorManager.cs" />
+    <Compile Include="DAO\CALCULATION_QUEUE_INFO_Table_DAO.cs" />
+    <Compile Include="DAO\CALCULATION_QUEUE_INFO_Table_DAOManager.cs" />
+    <Compile Include="DAO\CALCULATION_SERVER_STATUS_Table_DAO.cs" />
+    <Compile Include="DAO\CALCULATION_SERVER_STATUS_Table_DAOManager.cs" />
+    <Compile Include="DAO\DataBaseConnectManager.cs" />
+    <Compile Include="Data\CalculationManager.cs" />
+    <Compile Include="Data\CalculationServerInfo.cs" />
+    <Compile Include="Data\InstrumentData.cs" />
+    <Compile Include="Data\Job\CalculationServerInfoJob.cs" />
+    <Compile Include="Data\Job\CalculationStartJob.cs" />
+    <Compile Include="Data\MessageParser.cs" />
+    <Compile Include="Data\Job\InstrumentDataEnQueueJob.cs" />
+    <Compile Include="Data\Job\JobAction.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ServerInfo.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

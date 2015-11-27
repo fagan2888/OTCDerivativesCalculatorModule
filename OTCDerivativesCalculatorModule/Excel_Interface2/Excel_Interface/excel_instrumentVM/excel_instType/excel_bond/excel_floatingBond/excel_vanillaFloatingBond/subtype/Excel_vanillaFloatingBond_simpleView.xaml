@@ -1,0 +1,55 @@
+﻿<UserControl x:Class="Excel_Interface.Excel_vanillaFloatingBond_simpleView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Product String :" />
+                <TextBox Width="150" Text="{Binding Path=ProductString_}" />
+                <TextBox Width="40" Text="Valid" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"  />
+                <Button Width="30" Content="set" Click="productStringSetButton_Click" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Gearing :" />
+                        <TextBox Width="60" Text="{Binding Path=Gearing_}" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Spread :" />
+                        <TextBox Width="60" Text="{Binding Path=Spread_}" />
+                        <Label Content="bp" />
+                    </StackPanel>
+                    <Grid Name="scheduleGenGrid_" />
+                </StackPanel>
+                <DataGrid Name="subScheduleDataGrid_"
+                        AutoGenerateColumns="False"
+                        ScrollViewer.CanContentScroll="True" 
+                        IsReadOnly="True"
+                        ScrollViewer.VerticalScrollBarVisibility="Auto"
+                        ScrollViewer.HorizontalScrollBarVisibility="Auto"                         >
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Date" Binding="{Binding Path=EventDate_, StringFormat=yyyy-MM-dd}"/>
+                        <DataGridTextColumn Header="FixingDate" Binding="{Binding Path=FixingDate_, StringFormat=yyyy-MM-dd}"/>
+                        <DataGridTextColumn Header="CalStart" Binding="{Binding Path=CalculationStartDate_, StringFormat=yyyy-MM-dd}"/>
+                        <DataGridTextColumn Header="CalEnd" Binding="{Binding Path=CalculationEndDate_, StringFormat=yyyy-MM-dd}"/>
+                        <DataGridTemplateColumn Header="PaymentDate">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <DatePicker Name="PaymentDate" SelectedDate="{Binding Path=PaymentDate_, Mode=TwoWay}" />
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTextColumn Header="Gearing" Binding="{Binding Path=Gearing_}"/>
+                        <DataGridTextColumn Header="Spread" Binding="{Binding Path=Spread_}"/>
+                    </DataGrid.Columns>
+
+                </DataGrid>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

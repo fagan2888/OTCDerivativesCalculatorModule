@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{49274CC4-6B5E-4D64-821E-6B6BBBDC507E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FpmlSerializedCSharp</RootNamespace>
+    <AssemblyName>FpmlSerializedCSharp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeAnyURI.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeBase64Binary.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeBoolean.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeByte.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeDate.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeDateTime.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeDecimal.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeDouble.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeDuration.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeENTITIES.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeENTITY.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeFloat.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeGDay.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeGMonth.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeGMonthDay.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeGYear.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeGYearMonth.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeHexBinary.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeID.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeIDREF.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeIDREFS.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeInt.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeInteger.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeLanguage.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeLong.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeName.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeNCName.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeNegativeInteger.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeNMTOKEN.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeNMTOKENS.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeNonNegativeInteger.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeNonPositiveInteger.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeNormalizedString.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeNOTATION.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypePositiveInteger.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeQName.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeShort.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeString.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeTime.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeToken.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeUnsignedByte.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeUnsignedInt.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeUnsignedLong.cs" />
+    <Compile Include="GeneratedCode\built_in_type\XsdTypeUnsignedShort.cs" />
+    <Compile Include="GeneratedCode\IDManager.cs" />
+    <Compile Include="GeneratedCode\ISerialized.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\Bond.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\CalculationAgent.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\CalculationAmount.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\CalculationPeriodFrequency.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\Cashflow.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\CDSSpreadTermstructure.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\CreditDefaultSwap.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\CreditDefaultSwapInstrument.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\CreditDefaultSwapPricing.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\CreditEvents.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\Curve.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\CurveList.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\DiscountCurve.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\EvaluationCurves.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\FixedRate.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\Header.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\Instrument.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\InterestRateSwap.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\IRCalculation.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\IssueInformation.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\JointProbabilityTrait.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\NoteInfo.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\NthDefault.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\Obligations.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\Pricing.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\PricingParameter.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\PricingResult.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\ProtectionTerms.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\RateCalculation.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\RateData.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\ReferenceEntity.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\ReferenceEntityCurves.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\ReferenceEntityInfo.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\ReferenceInformation.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\ReferenceInformationList.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\ReferenceObligation.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\SchduleGen.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\SecuritiesInfo.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\SwapInfo.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\SwapPayoff.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\SwapStream.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\SwapStreamPara.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\TermstructureBase.cs" />
+    <Compile Include="GeneratedCode\RiskMonitor-0-1\YieldTermStructure.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

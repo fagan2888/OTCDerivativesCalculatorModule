@@ -1,0 +1,12 @@
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\CardStock\CardStock\bin\Debug\CardStock.exe.config
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\CardStock\CardStock\bin\Debug\CardStock.exe
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\CardStock\CardStock\bin\Debug\CardStock.pdb
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\CardStock\CardStock\obj\x86\Debug\Views\CardDeckView.baml
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\CardStock\CardStock\obj\x86\Debug\Views\CardDeckView.g.cs
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\CardStock\CardStock\obj\x86\Debug\App.g.cs
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\CardStock\CardStock\obj\x86\Debug\CardStock_MarkupCompile.cache
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\CardStock\CardStock\obj\x86\Debug\CardStock.g.resources
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\CardStock\CardStock\obj\x86\Debug\Jarloo.CardStock.Properties.Resources.resources
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\CardStock\CardStock\obj\x86\Debug\CardStock.csproj.GenerateResource.Cache
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\CardStock\CardStock\obj\x86\Debug\CardStock.exe
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\CardStock\CardStock\obj\x86\Debug\CardStock.pdb

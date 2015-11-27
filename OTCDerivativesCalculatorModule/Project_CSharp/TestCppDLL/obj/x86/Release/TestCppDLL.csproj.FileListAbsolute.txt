@@ -1,0 +1,4 @@
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\TestCppDLL\bin\Release\TestCppDLL.exe
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\TestCppDLL\bin\Release\TestCppDLL.pdb
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\TestCppDLL\obj\x86\Release\TestCppDLL.exe
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\TestCppDLL\obj\x86\Release\TestCppDLL.pdb

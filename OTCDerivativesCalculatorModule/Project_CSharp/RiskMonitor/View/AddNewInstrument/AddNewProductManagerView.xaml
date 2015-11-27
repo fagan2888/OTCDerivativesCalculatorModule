@@ -1,0 +1,52 @@
+﻿<Window x:Class="RiskMonitor.AddNewProductManagerView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AddNewProductManager" Height="700" Width="800">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Vertical">
+                    <Label Content="Local Template" />
+                    <TreeView Name="LocalTemplateListView_" Width="200" Height="300" SelectedItemChanged="LocalTemplateListView_SelectedItemChanged">
+                        <TreeView.ItemTemplate>
+                            <HierarchicalDataTemplate ItemsSource="{Binding Path=TemplateHirachyList_}" >
+                                <TextBlock Text="{Binding Path=Name_}" Margin="2" />
+                            </HierarchicalDataTemplate>
+                        </TreeView.ItemTemplate>
+                    </TreeView>
+                    <Label Content="Online Template" />
+                    <TreeView Width="150" Height="150">
+
+                    </TreeView>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Find :" />
+                        <TextBox Width="100"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel Orientation="Vertical">
+                            <Label Content="- Content List" />
+                            <ListView x:Name="ContentListView_" ItemsSource="{Binding ElementName=LocalTemplateListView_, Path=SelectedItem.InstList}" Width="200" Height="200" 
+                                      MouseDoubleClick="ContentListView_MouseDoubleClick" SelectionChanged="ContentListView_SelectionChanged" />
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical">
+                            <Label Content="- Detail" />
+                            <ListView Width="200" Height="200"/>
+                        </StackPanel>
+                    </StackPanel>
+
+                </StackPanel>
+                
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Name :" />
+                <TextBox Name="FileNameTb_" Width="200" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Add" Click="AddBtn_Click" />
+                <Button Content="Cancel" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

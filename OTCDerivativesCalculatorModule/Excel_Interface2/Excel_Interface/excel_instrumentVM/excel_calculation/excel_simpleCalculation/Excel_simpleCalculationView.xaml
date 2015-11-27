@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="Excel_Interface.Excel_simpleCalculationView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="EventDate :" />
+                    <DatePicker Name="eventDatePicker_" SelectedDate="{Binding Path=EventDate_, Mode=TwoWay}" />
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Grid Name="eventCalGrid_" />
+                <Grid Name="returnCalGrid_" />
+                <Grid Name="compReturnCalGrid_" />
+                <Grid Name="eventCalCallGrid_" />
+                <Grid Name="returnCalCallGrid_" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

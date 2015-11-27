@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<instrument Type="Bond">
+  <header>
+    <productName>산은캐피탈496-1</productName>
+    <productType>bond</productType>
+    <krCode>KR6008272397</krCode>
+  </header>
+
+  <instrumentInfo>
+    <type>fixedBondInstrument</type>
+    <fixedBondInstrument>
+      
+      <bondInformation>
+        <irFrequency>3M</irFrequency>
+        <notional></notional>
+        <issueDate></issueDate>
+        <maturityDate></maturityDate>
+        <dayCounter></dayCounter>
+        <businessDayConvention></businessDayConvention>
+        <calendar></calendar>
+      </bondInformation>
+
+      <bondCouponInfo>
+        <type>fixedRateType</type>
+        <fixedRateType>
+          <fixedRate>0.04</fixedRate>
+        </fixedRateType>
+      </bondCouponInfo>
+      
+      <scheduleInfo>
+        <initialDate>2013-08-06</initialDate>
+        <endDate>2018-08-06</endDate>
+        <paymentDays>3</paymentDays>
+        <calendar>KOR</calendar>
+        <businessDayConvention>Following</businessDayConvention>
+        <dateGeneration>Backward</dateGeneration>
+        <!-- Backward , Forward ,TwentiethIMM , 21 , 17-->
+        <periodFrequency>3M</periodFrequency>
+      </scheduleInfo>
+      
+      <payoffInfoAnalytic>
+        
+        <standardPayoff_A>
+          <eventTriggerList_A>
+        
+            <eventTrigger_A>
+              <type>fixedRatePayoff_A</type>
+              <fixedRatePayoff_A>
+                <dayCounter></dayCounter>
+                <calculationStartDate></calculationStartDate>
+                <calculationEndDate></calculationEndDate>
+                <fixedRate></fixedRate>
+                <payoffDate></payoffDate>
+              </fixedRatePayoff_A>
+            </eventTrigger_A>
+        
+            <eventTrigger_A>
+              <type>fixedRatePayoff_A</type>
+              <fixedRatePayoff_A>
+                <dayCounter></dayCounter>
+                <calculationStartDate></calculationStartDate>
+                <calculationEndDate></calculationEndDate>
+                <fixedRate></fixedRate>
+                <payoffDate></payoffDate>
+              </fixedRatePayoff_A>
+            </eventTrigger_A>
+        
+            <eventTrigger_A>
+              <type>fixedRatePayoff_A</type>
+              <fixedRatePayoff_A>
+                <dayCounter></dayCounter>
+                <calculationStartDate></calculationStartDate>
+                <calculationEndDate></calculationEndDate>
+                <fixedRate></fixedRate>
+                <payoffDate></payoffDate>
+              </fixedRatePayoff_A>
+            </eventTrigger_A>
+                
+          </eventTriggerList_A>
+        </standardPayoff_A>
+        
+      </payoffInfoAnalytic>
+      
+    </fixedBondInstrument>
+    
+  </instrumentInfo>
+
+  <dataInterface>
+    <insterfaceList>
+      
+      <interface>
+        <type>KRX</type>
+        <bondKRXIssueInformation>
+          <krCode></krCode>
+          <shortCode></shortCode>
+          <korName></korName>
+          <engName></engName>
+          <issueInstitude></issueInstitude>
+          <listed></listed>
+          <bondType></bondType>
+          <couponType></couponType>
+          <issueType></issueType>
+          <seniority></seniority>
+          <listedDate></listedDate>
+        </bondKRXIssueInformation>
+      </interface>
+      
+      <interface>
+        <type>MRO</type>
+        <bondIssueInformation>
+          <instrumentId instrumentIdScheme="CUSIP">ExampleCUSIP1</instrumentId>
+          <currency>JPY</currency>
+          <clearanceSystem>Clearstream</clearanceSystem>
+          <couponRate>0.014</couponRate>
+          <maturity>2011-03-20</maturity>
+          <parValue>10000000000</parValue>
+          <faceAmount>10000000000</faceAmount>
+        </bondIssueInformation>
+      </interface>
+      
+      <interface>
+        <type>fpml</type>
+        <bondIssueInformation>
+          <instrumentId instrumentIdScheme="CUSIP">ExampleCUSIP1</instrumentId>
+          <currency>JPY</currency>
+          <clearanceSystem>Clearstream</clearanceSystem>
+          <couponRate>0.014</couponRate>
+          <maturity>2011-03-20</maturity>
+          <parValue>10000000000</parValue>
+          <faceAmount>10000000000</faceAmount>
+        </bondIssueInformation>
+      </interface>
+    </insterfaceList>
+    
+  </dataInterface>
+
+  <payoffInfoAnalytic>
+    <type>fixedRateBond</type>
+    <fixedRateBond>
+
+      <couponPart>
+        <payRecieve>Recieve</payRecieve>
+        <swapStream>
+          <type>standardStream</type>
+          <standardStream>
+
+
+
+            <calculationStartDate>2013-08-06</calculationStartDate>
+            <calculationEndDate>2018-08-06</calculationEndDate>
+            <paymentDate>2018-08-06</paymentDate>
+
+            <irCouponCalculation>
+              <type>fixedRateCalculation</type>
+              <fixedRateCalculation>
+                <rate>0.05</rate>
+              </fixedRateCalculation>
+            </irCouponCalculation>
+
+            <inArrear>false</inArrear>
+
+            <irCalculation>
+              <calculationAmount>
+                <currency>KRW</currency>
+                <amount>10000000</amount>
+              </calculationAmount>
+
+              <calculationStartDate>2013-08-06</calculationStartDate>
+              <calculationEndDate>2018-08-06</calculationEndDate>
+              <paymentDate>2018-08-06</paymentDate>
+
+              <irCouponCalculation>
+                <type>fixedRateCalculation</type>
+                <fixedRateCalculation>
+                  <rate>0.05</rate>
+                </fixedRateCalculation>
+              </irCouponCalculation>
+
+              <inArrear>false</inArrear>
+
+            </irCalculation>
+            <irCalculation>
+              <calculationAmount>
+                <currency>KRW</currency>
+                <amount>10000000</amount>
+              </calculationAmount>
+
+              <calculationStartDate>2013-08-06</calculationStartDate>
+              <calculationEndDate>2018-08-06</calculationEndDate>
+              <paymentDate>2018-08-06</paymentDate>
+
+              <irCouponCalculation>
+                <type>fixedRateCalculation</type>
+                <fixedRateCalculation>
+                  <rate>0.05</rate>
+                </fixedRateCalculation>
+              </irCouponCalculation>
+
+              <inArrear>false</inArrear>
+            </irCalculation>
+
+          </standardStream>
+
+        </swapStream>
+
+      </couponPart>
+    </fixedRateBond>
+  </payoffInfoAnalytic>
+  
+</instrument>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pricingParametor>
+  <evaluationDate>2013-06-05</evaluationDate>
+
+  <underlying>
+    <krcode>KR000001</krcode>
+    <underName>KoreaElec</underName>
+    <currentValue>267500</currentValue>
+    <drift>0.0276</drift>
+    <dividend>0.0067</dividend>
+    <volatility>0.2987</volatility>
+  </underlying>
+
+  <underlying>
+    <krcode>KR000001</krcode>
+    <underName>SkInovation</underName>
+    <currentValue>160000</currentValue>
+    <drift>0.0276</drift>
+    <dividend>0.006</dividend>
+    <volatility>0.3375</volatility>
+  </underlying>
+  
+  <method>monte</method>
+  <corr>0.329003</corr>
+  <simulationNum>30000</simulationNum>
+  <dicountFlatTS>0.0276</dicountFlatTS>
+  
+</pricingParametor>
+

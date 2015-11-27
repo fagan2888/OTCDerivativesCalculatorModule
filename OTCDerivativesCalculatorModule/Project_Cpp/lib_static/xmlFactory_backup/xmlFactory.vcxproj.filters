@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="xml\testProduct.xml">
+      <Filter>xml</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Factory">
+      <UniqueIdentifier>{a7c9e755-3042-4c3b-8af7-68d5b416b340}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xml">
+      <UniqueIdentifier>{31cf826c-8323-4440-b6f9-6822769440c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="util">
+      <UniqueIdentifier>{b3b44a85-c272-432c-b370-575051843e1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factory\ELS">
+      <UniqueIdentifier>{3a61133f-ea14-4f73-9f09-184f5695fd16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factory\Instrument">
+      <UniqueIdentifier>{e516df99-4c2c-4a0b-8857-d12010e5121b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factory\Instrument\Swap">
+      <UniqueIdentifier>{05d9f42e-1985-42e5-a358-f28c94afb5d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factory\Instrument\Swap\CurrencyRateSwap">
+      <UniqueIdentifier>{c7627b24-48a3-40ad-bc82-243a253161a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factory\Instrument\Swap\CurrencyRateSwap\PaymentCalculationPeriodFactory">
+      <UniqueIdentifier>{a2f8902b-f047-4fd6-98ed-e336a7b9a44e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factory\Etc">
+      <UniqueIdentifier>{e81a7fad-14b0-4ad5-8cc6-b1c82ff2c9bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FpmlSerialized">
+      <UniqueIdentifier>{e26daa59-d132-48d2-bf5f-82f27ccbd7fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factory\Instrument\StructuredProduct">
+      <UniqueIdentifier>{6297dcb8-104c-43fc-b7b2-061bdae2fb3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factory\Instrument\StructuredProduct\Component">
+      <UniqueIdentifier>{20c40ec7-217e-4e65-bcec-7e2897d1b150}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factory\Index">
+      <UniqueIdentifier>{1a626c3d-267b-4f47-bb6a-0cec47458137}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factory\Instrument\StructuredProduct\Component\PayoffFactorys">
+      <UniqueIdentifier>{0a832d9a-658a-436e-b623-10c6306e1dec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factory\Fdm">
+      <UniqueIdentifier>{74a5e869-7f0a-450f-b6cd-e3fecb720b3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factory\ELS\StepDown">
+      <UniqueIdentifier>{6f4a0e61-50e1-44a2-9471-c5f4f695cc8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tinyXml">
+      <UniqueIdentifier>{af1bd0e6-f61c-46e2-acc4-ecfd48b4d35f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factory\Curve">
+      <UniqueIdentifier>{a2162964-e98d-4829-bf97-e46b9fc8594d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="util\xmlUtilHeader.hpp">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\convertFunction.hpp">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\all.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Instrument\StructuredProduct\qlStructuredProductFactory.hpp">
+      <Filter>Factory\Instrument\StructuredProduct</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Instrument\StructuredProduct\qlStructuredProductPayoffFactory.hpp">
+      <Filter>Factory\Instrument\StructuredProduct</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Instrument\StructuredProduct\component\qlEventIndexTransformationFactory.hpp">
+      <Filter>Factory\Instrument\StructuredProduct\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Instrument\StructuredProduct\component\qlFunctionEventsFactory.hpp">
+      <Filter>Factory\Instrument\StructuredProduct\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Instrument\StructuredProduct\component\qlJointEventFactory.hpp">
+      <Filter>Factory\Instrument\StructuredProduct\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Instrument\StructuredProduct\component\qlPayoffMFactory.hpp">
+      <Filter>Factory\Instrument\StructuredProduct\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Instrument\StructuredProduct\component\qlEventCheckFactory.hpp">
+      <Filter>Factory\Instrument\StructuredProduct\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlDayCounterFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlFixingDateFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlTimeUnitFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlCalendarFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlCurrencyFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlBusinessDayConvention.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Instrument\StructuredProduct\component\PayoffFactorys\qlNullPayoffFactory.hpp">
+      <Filter>Factory\Instrument\StructuredProduct\Component\PayoffFactorys</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Instrument\StructuredProduct\component\PayoffFactorys\qlExprPayoffFactory.hpp">
+      <Filter>Factory\Instrument\StructuredProduct\Component\PayoffFactorys</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Instrument\StructuredProduct\component\PayoffFactorys\qlPreFixPayoffFactory.hpp">
+      <Filter>Factory\Instrument\StructuredProduct\Component\PayoffFactorys</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Instrument\StructuredProduct\component\PayoffFactorys\qlAverPayoffFactory.hpp">
+      <Filter>Factory\Instrument\StructuredProduct\Component\PayoffFactorys</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Instrument\StructuredProduct\component\PayoffFactorys\qlConstPayoffFactory.hpp">
+      <Filter>Factory\Instrument\StructuredProduct\Component\PayoffFactorys</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Instrument\StructuredProduct\component\PayoffFactorys\all.hpp">
+      <Filter>Factory\Instrument\StructuredProduct\Component\PayoffFactorys</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Instrument\StructuredProduct\component\qlDateIntervalMakerFactory.hpp">
+      <Filter>Factory\Instrument\StructuredProduct\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Index\qlUnderlyingFactory.hpp">
+      <Filter>Factory\Index</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Instrument\StructuredProduct\component\qlVariableValueFactory.hpp">
+      <Filter>Factory\Instrument\StructuredProduct\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlYieldTermStructureFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="tinyXml\tinyxml.h">
+      <Filter>tinyXml</Filter>
+    </ClInclude>
+    <ClInclude Include="tinyXml\tinystr.h">
+      <Filter>tinyXml</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\ELS\StepDown\qlStepDownELSFactory.hpp">
+      <Filter>Factory\ELS\StepDown</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlTermstructureFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="util\convertFunction.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Instrument\StructuredProduct\qlStructuredProductFactory.cpp">
+      <Filter>Factory\Instrument\StructuredProduct</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Instrument\StructuredProduct\qlStructuredProductPayoffFactory.cpp">
+      <Filter>Factory\Instrument\StructuredProduct</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Instrument\StructuredProduct\component\qlEventIndexTransformationFactory.cpp">
+      <Filter>Factory\Instrument\StructuredProduct\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Instrument\StructuredProduct\component\qlFunctionEventsFactory.cpp">
+      <Filter>Factory\Instrument\StructuredProduct\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Instrument\StructuredProduct\component\qlJointEventFactory.cpp">
+      <Filter>Factory\Instrument\StructuredProduct\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Instrument\StructuredProduct\component\qlPayoffMFactory.cpp">
+      <Filter>Factory\Instrument\StructuredProduct\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Instrument\StructuredProduct\component\qlEventCheckFactory.cpp">
+      <Filter>Factory\Instrument\StructuredProduct\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Instrument\StructuredProduct\component\PayoffFactorys\qlConstPayoffFactory.cpp">
+      <Filter>Factory\Instrument\StructuredProduct\Component\PayoffFactorys</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Instrument\StructuredProduct\component\PayoffFactorys\qlExprPayoffFactory.cpp">
+      <Filter>Factory\Instrument\StructuredProduct\Component\PayoffFactorys</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Instrument\StructuredProduct\component\PayoffFactorys\qlNullPayoffFactory.cpp">
+      <Filter>Factory\Instrument\StructuredProduct\Component\PayoffFactorys</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Instrument\StructuredProduct\component\PayoffFactorys\qlPreFixPayoffFactory.cpp">
+      <Filter>Factory\Instrument\StructuredProduct\Component\PayoffFactorys</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Instrument\StructuredProduct\component\PayoffFactorys\qlAverPayoffFactory.cpp">
+      <Filter>Factory\Instrument\StructuredProduct\Component\PayoffFactorys</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Instrument\StructuredProduct\component\qlDateIntervalMakerFactory.cpp">
+      <Filter>Factory\Instrument\StructuredProduct\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Index\qlUnderlyingFactory.cpp">
+      <Filter>Factory\Index</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Instrument\StructuredProduct\component\qlVariableValueFactory.cpp">
+      <Filter>Factory\Instrument\StructuredProduct\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\ELS\StepDown\qlStepDownELSFactory.cpp">
+      <Filter>Factory\ELS\StepDown</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Etc\qlYieldTermStructureFactory.cpp">
+      <Filter>Factory\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyXml\tinyxml.cpp">
+      <Filter>tinyXml</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyXml\tinyxmlerror.cpp">
+      <Filter>tinyXml</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyXml\tinyxmlparser.cpp">
+      <Filter>tinyXml</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyXml\tinystr.cpp">
+      <Filter>tinyXml</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

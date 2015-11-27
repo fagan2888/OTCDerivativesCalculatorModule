@@ -1,0 +1,805 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<instrument Type="StepDown">
+  <instPositionInfo>
+    <krCode>50505A3C33S0</krCode>
+    <instName>IBK 제1032회 사모ELS</instName>
+    <instCode>50505A3C33S0</instCode>
+    <instType>stepUp</instType>
+    <notional>976660000</notional>
+  </instPositionInfo>
+  <header>
+    <productName>IBK 제1032회 사모ELS</productName>
+    <krCode>50505A3C33S0</krCode>
+  </header>
+  <instrumentInfo>
+    <type>standardInstrument</type>
+    <standardInstrument>
+      <issueInformation>
+        <type>noteInfo</type>
+        <noteInfo>
+          <tradeDate>2013-12-15</tradeDate>
+          <effectiveDate>2013-12-16</effectiveDate>
+          <maturityDate>2015-06-10</maturityDate>
+          <notional>976660000</notional>
+          <premium>0</premium>
+        </noteInfo>
+      </issueInformation>
+      
+      <underlyingInformation>
+        <type>indexUnderInfo</type>
+        <indexUnderInfo>
+          <index>
+            <type>stockIndex</type>
+            <krCode>KOSPI200</krCode>
+            <name>KOSPI200</name>
+            <basePrice>258.04</basePrice>
+            <stockIndex>
+            </stockIndex>
+          </index>
+          <index>
+            <type>stockIndex</type>
+            <krCode>HSCEI</krCode>
+            <name>HSCEI</name>
+            <basePrice>11025.82</basePrice>
+            <stockIndex>
+            </stockIndex>
+          </index>
+        </indexUnderInfo>
+      </underlyingInformation>
+      
+      <payoffInfo>
+        <type>autoCallablePayoff</type>
+        <preDefinedVariableList>
+          <preDefinedVariableInfo>
+            <refInstanceName>A1</refInstanceName>
+            <initialValue>0.0</initialValue>
+          </preDefinedVariableInfo>
+        </preDefinedVariableList>
+        
+        <autoCallablePayoff>
+
+          <eventTriggerList>
+
+            <eventTrigger>
+              <type>simpleEventCouponTrigger</type>
+              <eventDate>2014-03-13</eventDate>
+              <simpleEventCouponTrigger>
+                
+                <eventCalculation>
+                  
+                  <type>simpleRangeEventCal</type>
+                  <simpleRangeEventCal>
+
+                    <range1D>
+                      <lowerBound>0.0</lowerBound>
+                      <lowerBoundEquality>true</lowerBoundEquality>
+                      <upperBound>1.0</upperBound>
+                      <upperBoundEquality>true</upperBoundEquality>
+                    </range1D>
+                    
+                    <referenceCalculation>
+                      <type>maximumReferenceCal</type>
+                      <maximumReferenceCal>
+                        <fixingDateInfo>
+                          <type>fixedFixingDateInfo</type>
+                          <fixedFixingDateInfo>
+                            <date>2014-03-13</date>
+                            <autoCallFlag>false</autoCallFlag>
+                          </fixedFixingDateInfo>
+                        </fixingDateInfo>
+                      </maximumReferenceCal>
+                    </referenceCalculation>
+                    
+                  </simpleRangeEventCal>
+
+                  <refVariable_eventOcc>
+                    <variableEventInfo>
+                      <type>overWriteVariableEventInfo</type>
+                      <overWriteVariableEventInfo>
+                        <usingRefVarName>eventOcc</usingRefVarName>
+                        <refInstanceName>e1</refInstanceName>
+                        <initialTF>false</initialTF>
+                      </overWriteVariableEventInfo>
+                    </variableEventInfo>
+                  </refVariable_eventOcc>
+                  
+                </eventCalculation>
+
+                <returnCalculation>
+                  <type>constReturnCal</type>
+                  <constReturnCal>
+                    <constReturn>0.02</constReturn>
+                  </constReturnCal>
+
+                </returnCalculation>
+
+                <complementReturnCalculation>
+                  <returnCalculation>
+                    <type>zeroReturnCal</type>
+                    <zeroReturnCal/>
+                  </returnCalculation>
+                </complementReturnCalculation>
+                
+                <payoffDateInfo>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2014-03-13</date>
+                      <autoCallFlag>false</autoCallFlag>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </payoffDateInfo>
+
+                <isExpired>false</isExpired>
+              </simpleEventCouponTrigger>
+
+              <autoTerminationTrigger>
+                <eventCalculation>
+                  <type>referenceEventCal</type>
+                  <referenceEventCal>
+                    <refName>e1</refName>
+                  </referenceEventCal>
+                </eventCalculation>
+                <returnCalculation>
+                  <type>constReturnCal</type>
+                  <constReturnCal>
+                    <constReturn>1.0</constReturn>
+                  </constReturnCal>
+                </returnCalculation>
+
+                <payoffDateInfo>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2014-03-13</date>
+                      <autoCallFlag>false</autoCallFlag>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </payoffDateInfo>
+                
+              </autoTerminationTrigger>
+
+            </eventTrigger>
+
+            <eventTrigger>
+              <type>simpleEventCouponTrigger</type>
+              <eventDate>2014-06-10</eventDate>
+              <simpleEventCouponTrigger>
+
+                <eventCalculation>
+                  <name>e2</name>
+                  <type>simpleRangeEventCal</type>
+                  <simpleRangeEventCal>
+
+                    <range1D>
+                      <lowerBound>0.0</lowerBound>
+                      <lowerBoundEquality>true</lowerBoundEquality>
+                      <upperBound>1.0</upperBound>
+                      <upperBoundEquality>true</upperBoundEquality>
+                    </range1D>
+
+                    <referenceCalculation>
+                      <type>maximumReferenceCal</type>
+                      <maximumReferenceCal>
+                        <fixingDateInfo>
+                          <type>fixedFixingDateInfo</type>
+                          <fixedFixingDateInfo>
+                            <date>2014-06-10</date>
+                            <autoCallFlag>false</autoCallFlag>
+                          </fixedFixingDateInfo>
+                        </fixingDateInfo>
+                      </maximumReferenceCal>
+                    </referenceCalculation>
+
+                  </simpleRangeEventCal>
+
+                  <refVariable_eventOcc>
+                    <variableEventInfo>
+                      <type>overWriteVariableEventInfo</type>
+                      <overWriteVariableEventInfo>
+                        <usingRefVarName>eventOcc</usingRefVarName>
+                        <refInstanceName>e2</refInstanceName>
+                        <initialTF>false</initialTF>
+                      </overWriteVariableEventInfo>
+                    </variableEventInfo>
+                  </refVariable_eventOcc>
+                  
+                </eventCalculation>
+
+                <returnCalculation>
+                  <type>constReturnCal</type>
+                  <constReturnCal>
+                    <constReturn>0.04</constReturn>
+                  </constReturnCal>
+
+                </returnCalculation>
+
+                <complementReturnCalculation>
+                  <returnCalculation>
+                    <type>zeroReturnCal</type>
+                    <zeroReturnCal/>
+                  </returnCalculation>
+                </complementReturnCalculation>
+                
+                <payoffDateInfo>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2014-06-10</date>
+                      <autoCallFlag>false</autoCallFlag>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </payoffDateInfo>
+
+                <isExpired>false</isExpired>
+              </simpleEventCouponTrigger>
+
+              <autoTerminationTrigger>
+                <eventCalculation>
+                  <type>referenceEventCal</type>
+                  <referenceEventCal>
+                    <refName>e2</refName>
+                  </referenceEventCal>
+                </eventCalculation>
+                <returnCalculation>
+                  <type>constReturnCal</type>
+                  <constReturnCal>
+                    <constReturn>1.0</constReturn>
+                  </constReturnCal>
+                </returnCalculation>
+
+                <payoffDateInfo>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2014-06-10</date>
+                      <autoCallFlag>false</autoCallFlag>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </payoffDateInfo>
+
+              </autoTerminationTrigger>
+
+
+            </eventTrigger>
+
+            <eventTrigger>
+              <type>simpleEventCouponTrigger</type>
+              <eventDate>2014-09-05</eventDate>
+              <simpleEventCouponTrigger>
+
+                <eventCalculation>
+                  <name>e3</name>
+                  <type>simpleRangeEventCal</type>
+                  <simpleRangeEventCal>
+
+                    <range1D>
+                      <lowerBound>0.0</lowerBound>
+                      <lowerBoundEquality>true</lowerBoundEquality>
+                      <upperBound>1.05</upperBound>
+                      <upperBoundEquality>true</upperBoundEquality>
+                    </range1D>
+
+                    <referenceCalculation>
+                      <type>maximumReferenceCal</type>
+                      <maximumReferenceCal>
+                        <fixingDateInfo>
+                          <type>fixedFixingDateInfo</type>
+                          <fixedFixingDateInfo>
+                            <date>2014-09-05</date>
+                            <autoCallFlag>false</autoCallFlag>
+                          </fixedFixingDateInfo>
+                        </fixingDateInfo>
+                      </maximumReferenceCal>
+                    </referenceCalculation>
+
+                  </simpleRangeEventCal>
+
+                  <refVariable_eventOcc>
+                    <variableEventInfo>
+                      <type>overWriteVariableEventInfo</type>
+                      <overWriteVariableEventInfo>
+                        <usingRefVarName>eventOcc</usingRefVarName>
+                        <refInstanceName>e3</refInstanceName>
+                        <initialTF>false</initialTF>
+                      </overWriteVariableEventInfo>
+                    </variableEventInfo>
+                  </refVariable_eventOcc>
+                  
+                </eventCalculation>
+
+                <returnCalculation>
+                  <type>constReturnCal</type>
+                  <constReturnCal>
+                    <constReturn>0.06</constReturn>
+                  </constReturnCal>
+
+                </returnCalculation>
+
+                <complementReturnCalculation>
+                  <returnCalculation>
+                    <type>zeroReturnCal</type>
+                    <zeroReturnCal/>
+                  </returnCalculation>
+                </complementReturnCalculation>
+                
+                <payoffDateInfo>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2014-09-05</date>
+                      <autoCallFlag>false</autoCallFlag>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </payoffDateInfo>
+
+                <isExpired>false</isExpired>
+              </simpleEventCouponTrigger>
+
+              <autoTerminationTrigger>
+                <eventCalculation>
+                  <type>referenceEventCal</type>
+                  <referenceEventCal>
+                    <refName>e3</refName>
+                  </referenceEventCal>
+                </eventCalculation>
+                <returnCalculation>
+                  <type>constReturnCal</type>
+                  <constReturnCal>
+                    <constReturn>1.0</constReturn>
+                  </constReturnCal>
+                </returnCalculation>
+
+                <payoffDateInfo>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2014-09-05</date>
+                      <autoCallFlag>false</autoCallFlag>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </payoffDateInfo>
+
+              </autoTerminationTrigger>
+
+
+            </eventTrigger>
+
+            <eventTrigger>
+              <type>simpleEventCouponTrigger</type>
+              <eventDate>2014-12-10</eventDate>
+              <simpleEventCouponTrigger>
+
+                <eventCalculation>
+                  <name>e4</name>
+                  <type>simpleRangeEventCal</type>
+                  <simpleRangeEventCal>
+
+                    <range1D>
+                      <lowerBound>0.0</lowerBound>
+                      <lowerBoundEquality>true</lowerBoundEquality>
+                      <upperBound>1.05</upperBound>
+                      <upperBoundEquality>true</upperBoundEquality>
+                    </range1D>
+
+                    <referenceCalculation>
+                      <type>maximumReferenceCal</type>
+                      <maximumReferenceCal>
+                        <fixingDateInfo>
+                          <type>fixedFixingDateInfo</type>
+                          <fixedFixingDateInfo>
+                            <date>2014-12-10</date>
+                            <autoCallFlag>false</autoCallFlag>
+                          </fixedFixingDateInfo>
+                        </fixingDateInfo>
+                      </maximumReferenceCal>
+                    </referenceCalculation>
+
+                  </simpleRangeEventCal>
+
+                  <refVariable_eventOcc>
+                    <variableEventInfo>
+                      <type>overWriteVariableEventInfo</type>
+                      <overWriteVariableEventInfo>
+                        <usingRefVarName>eventOcc</usingRefVarName>
+                        <refInstanceName>e4</refInstanceName>
+                        <initialTF>false</initialTF>
+                      </overWriteVariableEventInfo>
+                    </variableEventInfo>
+                  </refVariable_eventOcc>
+                  
+                </eventCalculation>
+
+                <returnCalculation>
+                  <type>constReturnCal</type>
+                  <constReturnCal>
+                    <constReturn>0.08</constReturn>
+                  </constReturnCal>
+
+                </returnCalculation>
+
+                <complementReturnCalculation>
+                  <returnCalculation>
+                    <type>zeroReturnCal</type>
+                    <zeroReturnCal/>
+                  </returnCalculation>
+                </complementReturnCalculation>
+                
+                <payoffDateInfo>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2014-12-10</date>
+                      <autoCallFlag>false</autoCallFlag>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </payoffDateInfo>
+
+                <isExpired>false</isExpired>
+              </simpleEventCouponTrigger>
+
+              <autoTerminationTrigger>
+                <eventCalculation>
+                  <type>referenceEventCal</type>
+                  <referenceEventCal>
+                    <refName>e4</refName>
+                  </referenceEventCal>
+                </eventCalculation>
+                <returnCalculation>
+                  <type>constReturnCal</type>
+                  <constReturnCal>
+                    <constReturn>1.0</constReturn>
+                  </constReturnCal>
+                </returnCalculation>
+
+                <payoffDateInfo>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2014-12-10</date>
+                      <autoCallFlag>false</autoCallFlag>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </payoffDateInfo>
+
+              </autoTerminationTrigger>
+
+
+            </eventTrigger>
+
+            <eventTrigger>
+              <type>simpleEventCouponTrigger</type>
+              
+              <eventDate>2015-03-10</eventDate>
+              
+              <simpleEventCouponTrigger>
+
+                <eventCalculation>
+                  <name>e5</name>
+                  <type>simpleRangeEventCal</type>
+                  <simpleRangeEventCal>
+
+                    <range1D>
+                      <lowerBound>0.0</lowerBound>
+                      <lowerBoundEquality>true</lowerBoundEquality>
+                      <upperBound>1.10</upperBound>
+                      <upperBoundEquality>true</upperBoundEquality>
+                    </range1D>
+
+                    <referenceCalculation>
+                      <type>maximumReferenceCal</type>
+                      <maximumReferenceCal>
+                        <fixingDateInfo>
+                          <type>fixedFixingDateInfo</type>
+                          <fixedFixingDateInfo>
+                            <date>2015-03-10</date>
+                            <autoCallFlag>false</autoCallFlag>
+                          </fixedFixingDateInfo>
+                        </fixingDateInfo>
+                      </maximumReferenceCal>
+
+                      
+                    </referenceCalculation>
+
+                  </simpleRangeEventCal>
+
+                  <refVariable_eventOcc>
+                    <variableEventInfo>
+                      <type>overWriteVariableEventInfo</type>
+                      <overWriteVariableEventInfo>
+                        <usingRefVarName>eventOcc</usingRefVarName>
+                        <refInstanceName>e5</refInstanceName>
+                        <initialTF>false</initialTF>
+                      </overWriteVariableEventInfo>
+                    </variableEventInfo>
+                  </refVariable_eventOcc>
+                  
+                </eventCalculation>
+
+                <returnCalculation>
+                  <type>constReturnCal</type>
+                  <constReturnCal>
+                    <constReturn>0.10</constReturn>
+                  </constReturnCal>
+
+                  <refVariable_returnValue>
+                    <variableInfo>
+                      <type>additionVariableInfo</type>
+                      <additionVariableInfo>
+                        <usingRefVarName>constValue</usingRefVarName>
+                        <refInstanceName>A1</refInstanceName>
+                        <initialValue>0.0</initialValue>
+                        <save>true</save>
+                      </additionVariableInfo>
+                    </variableInfo>
+                  </refVariable_returnValue>
+
+                  <resetVariableInfo>
+                    <refInstanceName>A1</refInstanceName>
+                    <resetValue>0.0</resetValue>                        
+                  </resetVariableInfo>
+                  
+                </returnCalculation>
+
+                <complementReturnCalculation>
+                  <returnCalculation>
+                    <type>zeroReturnCal</type>
+                    <zeroReturnCal/>
+                  </returnCalculation>
+                </complementReturnCalculation>
+                
+                <payoffDateInfo>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2015-03-10</date>
+                      <autoCallFlag>false</autoCallFlag>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </payoffDateInfo>
+
+                <isExpired>false</isExpired>
+              </simpleEventCouponTrigger>
+
+              <autoTerminationTrigger>
+                <eventCalculation>
+                  <type>referenceEventCal</type>
+                  <referenceEventCal>
+                    <refName>e5</refName>
+                  </referenceEventCal>
+                </eventCalculation>
+                <returnCalculation>
+                  <type>constReturnCal</type>
+                  <constReturnCal>
+                    <constReturn>1.0</constReturn>
+                  </constReturnCal>
+                </returnCalculation>
+
+                <payoffDateInfo>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2015-03-10</date>
+                      <autoCallFlag>false</autoCallFlag>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </payoffDateInfo>
+
+              </autoTerminationTrigger>
+
+            </eventTrigger>
+
+            <eventTrigger>
+              <type>simpleEventCouponTrigger</type>
+              <eventDate>2015-06-10</eventDate>
+              <simpleEventCouponTrigger>
+
+                <eventCalculation>
+                  <name>e6</name>
+                  <type>simpleRangeEventCal</type>
+                  <simpleRangeEventCal>
+
+                    <range1D>
+                      <lowerBound>0.0</lowerBound>
+                      <lowerBoundEquality>true</lowerBoundEquality>
+                      <upperBound>1.15</upperBound>
+                      <upperBoundEquality>true</upperBoundEquality>
+                    </range1D>
+
+                    <referenceCalculation>
+                      <type>maximumReferenceCal</type>
+                      <maximumReferenceCal>
+                        <fixingDateInfo>
+                          <type>fixedFixingDateInfo</type>
+                          <fixedFixingDateInfo>
+                            <date>2015-06-10</date>
+                            <autoCallFlag>false</autoCallFlag>
+                          </fixedFixingDateInfo>
+                        </fixingDateInfo>
+                      </maximumReferenceCal>
+                    </referenceCalculation>
+
+                  </simpleRangeEventCal>
+
+                  <refVariable_eventOcc>
+                    <variableEventInfo>
+                      <type>overWriteVariableEventInfo</type>
+                      <overWriteVariableEventInfo>
+                        <usingRefVarName>eventOcc</usingRefVarName>
+                        <refInstanceName>e6</refInstanceName>
+                        <initialTF>false</initialTF>
+                      </overWriteVariableEventInfo>
+                    </variableEventInfo>
+                  </refVariable_eventOcc>
+                  
+                </eventCalculation>
+
+                <returnCalculation>
+                  <type>constReturnCal</type>
+                  <constReturnCal>
+                    <constReturn>0.12</constReturn>
+                  </constReturnCal>
+
+                </returnCalculation>
+                
+                <complementReturnCalculation>
+                  <returnCalculation>
+                    <type>zeroReturnCal</type>
+                    <zeroReturnCal/>
+                  </returnCalculation>
+                </complementReturnCalculation>
+                
+                <payoffDateInfo>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2015-06-10</date>
+                      <autoCallFlag>false</autoCallFlag>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </payoffDateInfo>
+
+                <isExpired>false</isExpired>
+              </simpleEventCouponTrigger>
+
+              <autoTerminationTrigger>
+                <eventCalculation>
+                  <type>referenceEventCal</type>
+                  <referenceEventCal>
+                    <refName>e6</refName>
+                  </referenceEventCal>
+                </eventCalculation>
+                <returnCalculation>
+                  <type>constReturnCal</type>
+                  <constReturnCal>
+                    <constReturn>1.0</constReturn>
+                  </constReturnCal>
+                </returnCalculation>
+
+                <payoffDateInfo>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2015-06-10</date>
+                      <autoCallFlag>false</autoCallFlag>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </payoffDateInfo>
+
+              </autoTerminationTrigger>
+
+            </eventTrigger>
+
+            <eventTrigger>
+              <type>simpleEventCouponTrigger</type>
+              <eventDate>2015-06-10</eventDate>
+              <simpleEventCouponTrigger>
+
+                <eventCalculation>
+                  <type>simpleBarrierEventCal</type>
+                  <simpleBarrierEventCal>
+                    <barrierInfo>
+                      <type>constUpperBarrierInfo</type>
+                      <constUpperBarrierInfo>
+
+                        <referenceCalculation>
+                          <type>maximumReferenceCal</type>
+                          <maximumReferenceCal>
+                            <fixingDateInfo>
+                              <type>nullFixingDateInfo</type>
+                              <nullFixingDateInfo></nullFixingDateInfo>
+                            </fixingDateInfo>
+                          </maximumReferenceCal>
+                        </referenceCalculation>
+
+                        <barrierDateInfo>
+                          <dateInformation>
+                            <type>dailyInterval</type>
+                            <dailyInterval>
+                              <observationStartDate>2013-12-16</observationStartDate>
+                              <observationEndDate>2015-06-10</observationEndDate>
+                            </dailyInterval>
+                          </dateInformation>
+                        </barrierDateInfo>
+
+                        <trigger>1.4</trigger>
+                        <!-- -->
+                        <pastEventOccDate>2013-11-23</pastEventOccDate>
+                        <pastEventOccValue>0.856</pastEventOccValue>
+
+                        <refVariableFlag_eventOccDate>kiEvent_eventOccDate</refVariableFlag_eventOccDate>
+                        <refVariableFlag_eventOccValue>kiEvent_eventOccValue</refVariableFlag_eventOccValue>
+                        <!-- -->
+
+                      </constUpperBarrierInfo>
+                    </barrierInfo>
+                  </simpleBarrierEventCal>
+
+                </eventCalculation>
+
+                <returnCalculation>
+                  <type>vanillaReturnCal</type>
+                  <vanillaReturnCal>
+                    <gearing>-1.0</gearing>
+                    <spread>2.0</spread>
+                    <referenceCalculation>
+                      <type>maximumReferenceCal</type>
+                      <maximumReferenceCal>
+                        <fixingDateInfo>
+                          <type>fixedFixingDateInfo</type>
+                          <fixedFixingDateInfo>
+                            <date>2015-06-10</date>
+                            <autoCallFlag>false</autoCallFlag>      
+                          </fixedFixingDateInfo>
+                        </fixingDateInfo>
+                      </maximumReferenceCal>
+                    </referenceCalculation>
+                  </vanillaReturnCal>
+
+                  <postCalculation>
+                    <operator1DList>
+                      <operator1D>
+                        <type>maximumOper1D</type>
+                        <maximumOper1D>
+                          <constValue>0.0</constValue>
+                        </maximumOper1D>
+                      </operator1D>
+                    </operator1DList>
+                  </postCalculation>
+                  
+                </returnCalculation>
+                
+                <complementReturnCalculation>
+
+                  <returnCalculation>
+                    <type>constReturnCal</type>
+                    <constReturnCal>
+                      <constReturn>1.12</constReturn>
+                    </constReturnCal>
+                  </returnCalculation>
+
+                </complementReturnCalculation>
+
+                <payoffDateInfo>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2015-06-10</date>
+                      <autoCallFlag>false</autoCallFlag>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </payoffDateInfo>
+
+                <isExpired>false</isExpired>
+
+              </simpleEventCouponTrigger>
+              
+            </eventTrigger>
+
+          </eventTriggerList>
+          
+        </autoCallablePayoff>
+      </payoffInfo>
+    </standardInstrument>
+  </instrumentInfo>
+</instrument>

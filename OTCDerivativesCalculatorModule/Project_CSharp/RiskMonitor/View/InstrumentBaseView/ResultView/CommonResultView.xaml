@@ -1,0 +1,17 @@
+﻿<UserControl x:Class="RiskMonitor.CommonResultView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Name="mainPanel_" Orientation="Horizontal">
+                <Label Content="Price : "/>
+                <TextBox Text="{Binding Path=Price_}" Width="100" />
+                <Label Content="UnitPrice : "/>
+                <TextBox Text="{Binding Path=UnitPrice_}" Width="100" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

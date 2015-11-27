@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pricing>
+  <evaluationTime>0001-01-01</evaluationTime>
+  <pricingParametor>
+    <method>monte</method>
+    <simulationNum>100000</simulationNum>
+    <dicountFlatTS>0.0276</dicountFlatTS>
+    <pricingParametor>
+      <kiEvent>true</kiEvent>
+    </pricingParametor>
+  </pricingParametor>
+</pricing>

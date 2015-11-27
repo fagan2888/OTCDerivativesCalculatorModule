@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ProductTest">
+      <UniqueIdentifier>{6142b57c-68dd-4e2e-ada9-7aebfc29f6b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TestXmlFile">
+      <UniqueIdentifier>{8a896783-15f2-46f4-bed8-fe251247851e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TestXmlFile\NotUse">
+      <UniqueIdentifier>{24fc741a-9004-4cfd-be44-bf1ad9b12e02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ProductTest\backup">
+      <UniqueIdentifier>{dcd1646a-df22-4509-8940-260ead278761}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ProductTest\credit">
+      <UniqueIdentifier>{63f9c700-16a7-46fa-98f4-b0acf22e6ada}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ProductTest\credit\creditDefaultSwap">
+      <UniqueIdentifier>{6c2cd570-d5ba-417a-b86c-17df043ad434}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ProductTest\equity">
+      <UniqueIdentifier>{0c5ea6c1-06cc-4414-b125-8f956d1de465}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ProductTest\equity\stepDownKI">
+      <UniqueIdentifier>{3575a7e6-d528-4fb3-8200-4bd501507570}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="Debug\ELS701_InstInformation.xml">
+      <Filter>TestXmlFile</Filter>
+    </None>
+    <None Include="Debug\ELS701_Underlying.xml">
+      <Filter>TestXmlFile</Filter>
+    </None>
+    <None Include="Debug\ELS701_Result.xml">
+      <Filter>TestXmlFile</Filter>
+    </None>
+    <None Include="testStructruedProductNode.xml">
+      <Filter>TestXmlFile\NotUse</Filter>
+    </None>
+    <None Include="testStructruedProductNodeExceptTime.xml">
+      <Filter>TestXmlFile\NotUse</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CodeBackup.cpp">
+      <Filter>ProductTest\backup</Filter>
+    </ClCompile>
+    <ClCompile Include="src\testMain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\ProductTest\credit\creditDefaultSwap\creditDefaultSwapTest.hpp">
+      <Filter>ProductTest\credit\creditDefaultSwap</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ProductTest\equity\stepDownKI\stepDownKI_Test.hpp">
+      <Filter>ProductTest\equity\stepDownKI</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="RiskMonitor.ReferenceInformationListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <Grid>
+        <DataGrid Name="referenceInfoListDataGrid_"
+                      LoadingRow="referenceInfoListDataGrid_LoadingRow"
+                      AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="EntityName" Binding="{Binding Path=ReferenceEntityViewModel_.EntityName_}"/>
+                <DataGridTextColumn Header="EntityID" Binding="{Binding Path=ReferenceEntityViewModel_.EntityID_}"/>
+
+                <DataGridTextColumn Header="InstrumentId" Binding="{Binding Path=ReferenceObligationViewModel_.BondViewModel_.InstrumentId_}"/>
+                <DataGridTextColumn Header="CouponRate" Binding="{Binding Path=ReferenceObligationViewModel_.BondViewModel_.CouponRate_}"/>
+                <DataGridTextColumn Header="Maturity" Binding="{Binding Path=ReferenceObligationViewModel_.BondViewModel_.Maturity_}"/>
+
+                <DataGridTextColumn Header="ReferencePrice" Binding="{Binding Path=ReferencePrice}"/>
+                
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

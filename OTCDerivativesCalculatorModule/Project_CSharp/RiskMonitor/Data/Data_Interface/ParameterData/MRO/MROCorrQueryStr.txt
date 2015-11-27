@@ -1,0 +1,5 @@
+﻿select STD_DATE,STOCK_ID,OTHER_ID,CORR 
+from OTC_TD_MRELSSTOCKCORR 
+WHERE std_date='@STD_DATE@' and 
+	  STOCK_ID in (@UNDER_LIST@) and 
+	  OTHER_ID in (@UNDER_LIST@)

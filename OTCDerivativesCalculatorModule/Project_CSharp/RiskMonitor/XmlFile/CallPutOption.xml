@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<instrument Type="CPOption">
+  <header>
+    <productName>IBK 제831회 사모ELS</productName>
+    <productType>CPOption</productType>
+    <krCode>50507A3603S0</krCode>
+  </header>
+  
+  <issueInformation>
+    <securities>
+      <tradeDate>2013-06-10</tradeDate>
+      <effectiveDate>2013-06-10</effectiveDate>
+      <maturityDate>2016-06-07</maturityDate>
+      <notional>210600000</notional>
+      <premium>0</premium>
+    </securities>
+  </issueInformation>
+  
+  <underlyingInformation>
+    <underlying>
+      <krCode>KR7012330007</krCode>
+      <name>KR7012330007</name>
+      <basePrice>272000</basePrice>
+    </underlying>
+  </underlyingInformation>
+  
+  <optionInformation>
+    
+    <composite>
+
+      <option>
+        <optionType>barrier</optionType>
+        <expiryDate>2014-09-29</expiryDate>
+        <deliveryDate>2014-09-30</deliveryDate>
+        <cpType>call</cpType>
+        <initialPrice>100</initialPrice>
+        <barrier>120</barrier>
+        <strike>105</strike>
+        <hitRebate unit="percent">3</hitRebate>
+      </option>
+      
+      <option>
+        <type>put</type>
+        <strike>245</strike>
+      </option>
+      
+    </composite>
+    
+  </optionInformation>
+  
+</instrument>

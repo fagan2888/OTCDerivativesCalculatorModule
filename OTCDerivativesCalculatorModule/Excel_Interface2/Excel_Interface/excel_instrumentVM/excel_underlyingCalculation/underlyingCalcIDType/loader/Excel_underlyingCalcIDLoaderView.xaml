@@ -1,0 +1,24 @@
+﻿<UserControl x:Class="Excel_Interface.Excel_underlyingCalcIDLoaderView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Underlying Calc Type :" />
+                <ComboBox Width="60" Name="underCalcIDTypeCombBox_" />
+            </StackPanel>
+            <Grid Name="selectedUnderCalcIDGrid_" />
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Surmit" Click="SurmitButton_Click" />
+                <Button Content="Cancel" Click="CancelButton_Click" />
+            </StackPanel>
+
+
+
+        </StackPanel>
+
+    </Grid>
+</UserControl>

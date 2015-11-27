@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="Excel_Interface.IndexTickerInfoEditorView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <Grid>
+        <StackPanel Name="bindingPanel_" Orientation="Vertical">
+            <StackPanel  Orientation="Horizontal">
+                <Label Content="Index Data Info" />
+            </StackPanel>
+            <StackPanel  Orientation="Horizontal">
+                <Label Content="Name :" />
+                <TextBox Name="nameTB_" Text="{Binding Path=Name_}" Width="80" />
+                <Label Content="Index__type :" />
+                <ComboBox Name="indexTypeCB_" Text="{Binding Path=Index_type_}" Width="80" SelectionChanged="ComboBox_SelectionChanged" Initialized="ComboBox_Initialized"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="KrCode :" />
+                <TextBox Name="krcodeTB_" Text="{Binding Path=KrCode_}" Width="80" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Yahoo__ticker :" />
+                <TextBox Width="80" Text="{Binding Path=Yahoo_ticker_}" Name="yahoo_tickerTB_" />
+                <Button Content="test" Width="50" Click="TestButton_Click" />
+                <TextBox Width="30" Name="yahoo_tickerTestTB_" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Content="surmit" Click="surmitButton_Click" />
+                <Button Content="cancel" Click="cancelButton_Click" />
+            </StackPanel>
+
+
+        </StackPanel>
+    </Grid>
+</UserControl>

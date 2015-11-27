@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<instrument Type="DigitalRange">
+
+  <header>
+    <productName>IBK 제0001회 공모DLB</productName>
+    <productType>DigitalRange</productType>
+    <krCode>50613F3A01D0</krCode>
+  </header>
+
+  <instrumentInfo>
+    <type>standardInstrument</type>
+    <standardInstrument>
+
+      <issueInformation>
+        <type>noteInfo</type>
+        <noteInfo>
+          <tradeDate>2013-10-06</tradeDate>
+          <effectiveDate>2013-10-07</effectiveDate>
+          <maturityDate>2014-04-04</maturityDate>
+          <notional>1000000</notional>
+          <currency>KRW</currency>
+          <premium>0</premium>
+        </noteInfo>
+      </issueInformation>
+
+      <underlyingInformation>
+        <type>index</type>
+        <indexUnderInfo>
+          <index>
+            <type>interestRate</type>
+            <interestRateIndex>
+              <krCode>KBPCDAAA</krCode>
+              <name>CDAAA3M</name>
+              <basePrice>2.9</basePrice>
+              <tenor>3M</tenor>
+            </interestRateIndex>
+          </index>
+        </indexUnderInfo>
+      </underlyingInformation>
+
+      <payoffInfo>
+        <type>vanillaPayoff</type>
+        <vanillaPayoff>
+          <type>multipleChoiceRange</type>
+          <multipleChoiceRange>
+            
+            <RangeInfo>
+              <referenceCalculation>
+                <type>maximum</type>
+                <referenceList>
+                  <reference>
+                    <krCode>KBPCDAAA</krCode>
+                  </reference>
+                  <reference>
+                    <krCode>KBPCDAAA</krCode>
+                  </reference>
+                </referenceList>
+                <maximum>
+                  <upperBound>0</upperBound>
+                  <lowerBound>3</lowerBound>
+                </maximum>
+              </referenceCalculation>
+              <returnCalculation>
+                <type>constantReturn</type>
+                <constantReturn>
+                  <value>0.5</value>
+                </constantReturn>
+              </returnCalculation>
+              <rangeSet>
+                <type>standardRange</type>
+                <standardRange>
+                  <upperBound>0</upperBound>
+                  <lowerBound>0.05</lowerBound>
+                </standardRange>
+              </rangeSet>
+            </RangeInfo>
+
+            <RangeInfo>
+              <referenceCalculation>
+                <type>maximum</type>
+                  
+                <referenceList>
+                  <reference>
+                    <krCode>KBPCDAAA</krCode>
+                  </reference>
+                  <reference>
+                    <krCode>KBPCDAAA</krCode>
+                  </reference>
+                </referenceList>
+                <maximum>
+                  <upperBound>0</upperBound>
+                  <lowerBound>3</lowerBound>
+                </maximum>
+              </referenceCalculation>
+              <returnCalculation>
+                <type>constantReturn</type>
+                <constantReturn>
+                  <value>0.5</value>
+                </constantReturn>
+              </returnCalculation>
+              <rangeSet>
+                <type>standardRange</type>
+                <standardRange>
+                  <upperBound>0</upperBound>
+                  <lowerBound>0.05</lowerBound>
+                </standardRange>
+              </rangeSet>
+            </RangeInfo>
+
+          </multipleChoiceRange>
+        </vanillaPayoff>
+      
+      </payoffInfo>
+      
+    </standardInstrument>
+  </instrumentInfo>
+
+</instrument>

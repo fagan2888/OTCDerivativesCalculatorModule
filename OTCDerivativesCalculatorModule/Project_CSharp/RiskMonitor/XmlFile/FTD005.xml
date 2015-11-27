@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<instrument>
+  <issueInformation>
+    <productName>IBKELS_840</productName>
+    <productType>structuredSwap</productType>
+    <instrumentID>50505A2A14S0</instrumentID>
+    <krCode>KR000002</krCode>
+    <tradeDate>2013-05-29</tradeDate>
+    <effectiveDate>2013-05-30</effectiveDate>
+    <maturityDate>2016-05-27</maturityDate>
+    <notional>10000</notional>
+    <premium>50</premium>
+  </issueInformation>
+
+  <nthDefaultSwap>
+
+    <basketReferenceInformation>
+      
+      <referenceEntity>
+        <name></name>
+      </referenceEntity>
+      <referenceEntity>
+        <name></name>
+      </referenceEntity>
+      <nthToDefault>1</nthToDefault>
+      
+    </basketReferenceInformation>
+
+    <fixedRate>0.006</fixedRate>
+
+    <protextionTerms>
+      
+    </protextionTerms>
+    
+  </nthDefaultSwap>
+  
+  
+</instrument>

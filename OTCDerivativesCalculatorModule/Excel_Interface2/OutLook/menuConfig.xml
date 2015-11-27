@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<menuList>
+
+  <Menu>
+    <MenuItem Header="_Booking">
+      <MenuItem Header="_General" Click="makeInstButton_Click" />
+      <MenuItem Header="_ELS">
+        <MenuItem Header="_StepDown" />
+      </MenuItem>
+      <Separator />
+      <MenuItem Header="_Type Setting" Click="typeSettingButton_Click" />
+    </MenuItem>
+  </Menu>
+  
+</menuList>

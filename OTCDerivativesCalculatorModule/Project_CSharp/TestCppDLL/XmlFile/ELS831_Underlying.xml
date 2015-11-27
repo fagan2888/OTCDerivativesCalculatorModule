@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<pricingParametor>
+  <evaluationDate>2013-06-12</evaluationDate>
+  <underlying>
+    <krcode>KR000001</krcode>
+    <underName>HyeonDaeMobis</underName>
+    <currentValue>260500</currentValue>
+    <drift>0.0285</drift>
+    <dividend>0.0067</dividend>
+    <volatility>0.2987</volatility>
+  </underlying>
+  <underlying>
+    <krcode>KR000001</krcode>
+    <underName>LotteChemical</underName>
+    <currentValue>154000</currentValue>
+    <drift>0.0285</drift>
+    <dividend>0.006</dividend>
+    <volatility>0.3375</volatility>
+  </underlying>
+  <method>monte</method>
+  <corr>0.339108</corr>
+  <simulationNum>100000</simulationNum>
+  <dicountFlatTS>0.0285</dicountFlatTS>
+</pricingParametor>

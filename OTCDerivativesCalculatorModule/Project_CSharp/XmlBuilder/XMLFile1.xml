@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<elsStepDown>
+  
+  <issueInformation>
+    <productType>structuredSwap</productType>
+    <instrumentID>50505A2A14S0</instrumentID>
+
+    <issueDate id="IssueDate">
+      <dateSingle>2011-08-05</dateSingle>
+    </issueDate>
+    <maturityDate id="MaturityDate">
+      <dateSingle>2013-08-05</dateSingle>
+    </maturityDate>
+
+    <calculationAgent></calculationAgent>
+
+    <notional id="equityNotionalAmount">
+      <notionalAmount>
+        <currency>KRW</currency>
+        <amount>1000000</amount>
+      </notionalAmount>
+    </notional>
+
+    <premium>
+      <payerPartyReference href="party2"/>
+      <receiverPartyReference href="party1"/>
+      <paymentAmount>
+        <currency>EUR</currency>
+        <amount>405000</amount>
+      </paymentAmount>
+      <paymentDate>
+        <unadjustedDate>2002-07-17</unadjustedDate>
+        <dateAdjustments>
+          <businessDayConvention>NONE</businessDayConvention>
+        </dateAdjustments>
+      </paymentDate>
+    </premium>
+  </issueInformation>
+
+  <elsStepDownPayoff>
+    <baseInformation>
+        
+    </baseInformation>
+    <elsStepDownRedemSchedule>
+
+      <elsStepDownRedemEventCheck>
+        <checkValueCalculation>
+          <upEvent>
+            <joint>AND</joint>
+            <checkValue>
+              <value>90</value>
+            </checkValue>
+            <checkValue>
+              <value>90</value>
+            </checkValue>
+          </upEvent>
+        </checkValueCalculation>
+        <returnValueCalculation>
+          <elsConstReturn>
+            <value>1.2</value>
+          </elsConstReturn>
+        </returnValueCalculation>
+        <autoCallable>true</autoCallable>
+        <expired>false</expired>
+        <description>autoCallEvent</description>
+      </elsStepDownRedemEventCheck>
+        
+    </elsStepDownRedemSchedule>
+
+    <elsStepDownComplementEventCheck>
+      <returnValueCalculation>
+        <elsConstReturn>
+          <value>1.8</value>
+        </elsConstReturn>
+        <description>MaturityEvent</description>
+      </returnValueCalculation>
+    </elsStepDownComplementEventCheck>
+
+    <elsStepDownKIEventCheck>
+      <historyFlag>false</historyFlag>
+      <checkValueCalculation>
+        <downEvent>
+          <joint>OR</joint>
+          <checkValue>
+            <value>50</value>
+          </checkValue>
+          <checkValue>
+            <value>50</value>
+          </checkValue>
+        </downEvent>
+      </checkValueCalculation>
+
+      <checkType>LowPrice</checkType>
+      <returnValueCalculation>
+        <elsSlopeReturn>
+          <value>Minimum</value>
+        </elsSlopeReturn>
+      </returnValueCalculation>
+    </elsStepDownKIEventCheck>
+      
+  
+</elsStepDownPayoff>
+    
+</elsStepDown>
+  
+
+

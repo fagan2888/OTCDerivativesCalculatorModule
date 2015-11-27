@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{BC7E8D87-50F8-457D-9113-2C51323384E7}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>xmlFactory</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>D:\Program Files (x86)\boost\boost_1_47;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;..\</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LibraryPath>D:\Program Files (x86)\boost\boost_1_47\lib;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>D:\Program Files (x86)\boost\boost_1_47;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;..\</IncludePath>
+    <LibraryPath>D:\Program Files (x86)\boost\boost_1_47\lib;$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\;$(SolutionDir);$(SolutionDir)Project_Cpp\lib_static\FpmlSerialized\GenClass;$(SolutionDir)Project_Cpp\lib_static\QuantLib;$(SolutionDir)Project_Cpp\lib_static\xmlFactory;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996;4819</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>QuantLib-vc100-mt-gd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)Debug;$(SolutionDir)Project_Cpp\lib_static\QuantLib\bin;D:\Project File\OTCDerivativesCalculatorModule\Project_Cpp\lib_static\XmlUtil\tinyxml\DebugtinyxmlSTL;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>/NODEFAULTLIB:libc.lib /NODEFAULTLIB:libcmt.lib /NODEFAULTLIB:msvcrt.lib /NODEFAULTLIB:libcd.lib /NODEFAULTLIB:msvcrtd.lib /D "TIXML_USE_STL" %(AdditionalOptions)</AdditionalOptions>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\;$(SolutionDir)Project_Cpp\lib_static\QuantLib;$(SolutionDir)Project_Cpp\lib_static\xmlFactory;$(SolutionDir)Project_Cpp\lib_static\FpmlSerialized\GenClass;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/D "TIXML_USE_STL" %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4996;4819</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>calculationModule.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\Release;$(SolutionDir)Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="xml\testProduct.xml">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Factory\ELS\StepDown\qlStepDownELSFactory.hpp" />
+    <ClInclude Include="Factory\Etc\all.hpp" />
+    <ClInclude Include="Factory\Etc\qlBusinessDayConvention.hpp" />
+    <ClInclude Include="Factory\Etc\qlCalendarFactory.hpp" />
+    <ClInclude Include="Factory\Etc\qlCurrencyFactory.hpp" />
+    <ClInclude Include="Factory\Etc\qlDayCounterFactory.hpp" />
+    <ClInclude Include="Factory\Etc\qlFixingDateFactory.hpp" />
+    <ClInclude Include="Factory\Etc\qlTermstructureFactory.hpp" />
+    <ClInclude Include="Factory\Etc\qlTimeUnitFactory.hpp" />
+    <ClInclude Include="Factory\Etc\qlYieldTermStructureFactory.hpp" />
+    <ClInclude Include="Factory\Index\qlUnderlyingFactory.hpp" />
+    <ClInclude Include="Factory\Instrument\StructuredProduct\component\PayoffFactorys\all.hpp" />
+    <ClInclude Include="Factory\Instrument\StructuredProduct\component\PayoffFactorys\qlAverPayoffFactory.hpp" />
+    <ClInclude Include="Factory\Instrument\StructuredProduct\component\PayoffFactorys\qlConstPayoffFactory.hpp" />
+    <ClInclude Include="Factory\Instrument\StructuredProduct\component\PayoffFactorys\qlExprPayoffFactory.hpp" />
+    <ClInclude Include="Factory\Instrument\StructuredProduct\component\PayoffFactorys\qlNullPayoffFactory.hpp" />
+    <ClInclude Include="Factory\Instrument\StructuredProduct\component\PayoffFactorys\qlPreFixPayoffFactory.hpp" />
+    <ClInclude Include="Factory\Instrument\StructuredProduct\component\qlDateIntervalMakerFactory.hpp" />
+    <ClInclude Include="Factory\Instrument\StructuredProduct\component\qlEventCheckFactory.hpp" />
+    <ClInclude Include="Factory\Instrument\StructuredProduct\component\qlEventIndexTransformationFactory.hpp" />
+    <ClInclude Include="Factory\Instrument\StructuredProduct\component\qlFunctionEventsFactory.hpp" />
+    <ClInclude Include="Factory\Instrument\StructuredProduct\component\qlJointEventFactory.hpp" />
+    <ClInclude Include="Factory\Instrument\StructuredProduct\component\qlPayoffMFactory.hpp" />
+    <ClInclude Include="Factory\Instrument\StructuredProduct\component\qlVariableValueFactory.hpp" />
+    <ClInclude Include="Factory\Instrument\StructuredProduct\qlStructuredProductFactory.hpp" />
+    <ClInclude Include="Factory\Instrument\StructuredProduct\qlStructuredProductPayoffFactory.hpp" />
+    <ClInclude Include="tinyXml\tinystr.h" />
+    <ClInclude Include="tinyXml\tinyxml.h" />
+    <ClInclude Include="util\convertFunction.hpp" />
+    <ClInclude Include="util\xmlUtilHeader.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Factory\ELS\StepDown\qlStepDownELSFactory.cpp" />
+    <ClCompile Include="Factory\Etc\qlYieldTermStructureFactory.cpp" />
+    <ClCompile Include="Factory\Index\qlUnderlyingFactory.cpp" />
+    <ClCompile Include="Factory\Instrument\StructuredProduct\component\PayoffFactorys\qlAverPayoffFactory.cpp" />
+    <ClCompile Include="Factory\Instrument\StructuredProduct\component\PayoffFactorys\qlConstPayoffFactory.cpp" />
+    <ClCompile Include="Factory\Instrument\StructuredProduct\component\PayoffFactorys\qlExprPayoffFactory.cpp" />
+    <ClCompile Include="Factory\Instrument\StructuredProduct\component\PayoffFactorys\qlNullPayoffFactory.cpp" />
+    <ClCompile Include="Factory\Instrument\StructuredProduct\component\PayoffFactorys\qlPreFixPayoffFactory.cpp" />
+    <ClCompile Include="Factory\Instrument\StructuredProduct\component\qlDateIntervalMakerFactory.cpp" />
+    <ClCompile Include="Factory\Instrument\StructuredProduct\component\qlEventCheckFactory.cpp" />
+    <ClCompile Include="Factory\Instrument\StructuredProduct\component\qlEventIndexTransformationFactory.cpp" />
+    <ClCompile Include="Factory\Instrument\StructuredProduct\component\qlFunctionEventsFactory.cpp" />
+    <ClCompile Include="Factory\Instrument\StructuredProduct\component\qlJointEventFactory.cpp" />
+    <ClCompile Include="Factory\Instrument\StructuredProduct\component\qlPayoffMFactory.cpp" />
+    <ClCompile Include="Factory\Instrument\StructuredProduct\component\qlVariableValueFactory.cpp" />
+    <ClCompile Include="Factory\Instrument\StructuredProduct\qlStructuredProductFactory.cpp" />
+    <ClCompile Include="Factory\Instrument\StructuredProduct\qlStructuredProductPayoffFactory.cpp" />
+    <ClCompile Include="tinyXml\tinystr.cpp" />
+    <ClCompile Include="tinyXml\tinyxml.cpp" />
+    <ClCompile Include="tinyXml\tinyxmlerror.cpp" />
+    <ClCompile Include="tinyXml\tinyxmlparser.cpp" />
+    <ClCompile Include="util\convertFunction.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

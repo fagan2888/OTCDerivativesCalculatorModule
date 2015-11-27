@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="Excel_Interface.Excel_vanillaFloatingCouponScheduleListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="schedule" />
+                <Button Content="Edit" />
+            </StackPanel>
+
+            <DataGrid Name="vanillaFloatingScheduleDataGrid_"
+                        AutoGenerateColumns="False"
+                        ScrollViewer.CanContentScroll="True" 
+                        IsReadOnly="True"
+                        ScrollViewer.VerticalScrollBarVisibility="Auto"
+                        ScrollViewer.HorizontalScrollBarVisibility="Auto"                         >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Date" Binding="{Binding Path=EventDate_, StringFormat=yyyy-MM-dd}"/>
+                    <DataGridTextColumn Header="Type" Binding="{Binding Path=DetailScheduleType_}"/>
+
+                    <DataGridTemplateColumn Header="PaymentDate">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <DatePicker Name="PaymentDate" SelectedDate="{Binding Path=PaymentDate_, Mode=TwoWay}" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Header="FloatingCoupon" Binding="{Binding Path=Description_}"/>
+                    <DataGridTextColumn Header="Description" Binding="{Binding Path=Description_}"/>
+                </DataGrid.Columns>
+
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</UserControl>

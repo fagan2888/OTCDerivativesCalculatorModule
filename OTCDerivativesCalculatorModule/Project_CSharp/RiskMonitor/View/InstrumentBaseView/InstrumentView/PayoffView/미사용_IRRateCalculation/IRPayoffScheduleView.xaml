@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="RiskMonitor.IRPayoffScheduleView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="400">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="- InterestRate Calculation Schedule" />
+                <Button Content="Edit" Click="IRCalculationBtn_Click" />
+            </StackPanel>
+            
+            <DataGrid>
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="No" />
+                    <DataGridTextColumn Header="Type" />
+                    <DataGridTextColumn Header="StartDate" />
+                    <DataGridTextColumn Header="EndDate" />
+                    <DataGridTextColumn Header="Fixed" />
+                    <DataGridTextColumn Header="Expired" />
+                    <DataGridTextColumn Header="Description" />
+                    
+                </DataGrid.Columns>
+            </DataGrid>
+
+        </StackPanel>
+    </Grid>
+</UserControl>

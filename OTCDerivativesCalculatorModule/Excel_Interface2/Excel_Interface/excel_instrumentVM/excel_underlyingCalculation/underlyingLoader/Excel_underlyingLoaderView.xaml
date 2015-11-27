@@ -1,0 +1,67 @@
+﻿<UserControl x:Class="Excel_Interface.Excel_underlyingLoaderView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="- Underlying" />
+                <Button Content="symbol" Click="symbolButton_Click" />
+            </StackPanel>
+            
+            <TabControl MouseDoubleClick="tabControl_MouseDoubleClick" >
+                
+                <TabItem Header="Equity">
+                    <Grid Name="equityTabGrid_"/>
+                </TabItem>
+                <TabItem Header="EquityPre" >
+                    <DataGrid Name="UnderlyingDataGrid_" LoadingRow="DataGrid_LoadingRow_" 
+                      AutoGenerateColumns="False"
+                      ScrollViewer.CanContentScroll="True" 
+                      ScrollViewer.VerticalScrollBarVisibility="Auto"
+                      IsReadOnly="True" 
+                      ScrollViewer.HorizontalScrollBarVisibility="Auto">
+
+                        <DataGrid.RowStyle>
+                            <Style TargetType="{x:Type DataGridRow}">
+                                <EventSetter Event="MouseDoubleClick" Handler="resultDataGrid_MouseDoubleClick"/>
+                            </Style>
+                        </DataGrid.RowStyle>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="KrCode" Binding="{Binding Path=KrCode_}"/>
+                            <DataGridTextColumn Header="Name" Binding="{Binding Path=Name_}"/>
+                            <DataGridTextColumn Header="Type" Binding="{Binding Path=Index_type_}"/>
+                        </DataGrid.Columns>
+
+                    </DataGrid>
+                </TabItem>
+                <TabItem Header="Index">
+                    <Grid Name="indexTabGrid_" />
+                </TabItem>
+                <TabItem Header="IR">
+                    <Grid Name="irTabGrid_"/>
+                </TabItem>
+                <TabItem Header="IR Curve">
+                    <Grid Name="irCurveTabGrid_"/>
+                </TabItem>
+                <TabItem Header="Fx">
+                    <Grid Name="fxCurveTabGrid_"/>
+                </TabItem>
+                <TabItem Header="CreditCurve">
+                    <Grid Name="creditCurveTabGrid_"/>
+                </TabItem>
+                <TabItem Header="Comm">
+                    <Grid Name="commTabGrid_"/>
+                </TabItem>
+                
+            </TabControl>
+            
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Surmit" Click="SurmitButton_Click" />
+                <Button Content="Cancel" Click="CancelButton_Click" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

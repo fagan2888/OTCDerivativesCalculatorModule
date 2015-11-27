@@ -1,0 +1,188 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<instrument Type="StopLoss">
+  
+  <header>
+    <productName>IBK 제954회 공모ELS</productName>
+    <productType>StopLoss</productType>
+    <krCode>50505A3A13S0</krCode>
+    <itemCode>50505A3A13S0</itemCode>
+    <counterParty>HanaBank</counterParty>
+  </header>
+  
+  <instrumentInfo>
+    <type>standardInstrument</type>
+    <standardInstrument>
+      
+      <issueInformation>
+        <type>noteInfo</type>
+        <noteInfo>
+          <tradeDate>2013-10-17</tradeDate>
+          <effectiveDate>2013-10-18</effectiveDate>
+          <maturityDate>2014-04-17</maturityDate>
+          <notional>2284900000</notional>
+          <premium>0</premium>
+        </noteInfo>
+      </issueInformation>
+      
+      <underlyingInformation>
+        <type>index</type>
+        <indexUnderInfo>
+          <index>
+            <type>stockIndex</type>
+            <krCode>KOSPI200</krCode>
+            <name>KOSPI200Name</name>
+            <basePrice>271.24</basePrice>
+            <stockIndex>
+              
+            </stockIndex>
+          </index>
+        </indexUnderInfo>
+      </underlyingInformation>
+
+      <payoffInfo>
+        <type>stopLossPayoff</type>
+        <stopLossPayoff>
+
+          <barrierInfo>
+            <name>stopLossEvent</name>
+            <type>constLowerBarrierInfo</type>
+            <constLowerBarrierInfo>
+              
+              <referenceCalculation>
+                
+                <type>dailyReturnReferenceCal</type>
+                <dailyReturnReferenceCal>
+                  <krCode>KOSPI200</krCode>
+                  <fixingDateInfo>
+                    <type>nullFixingDateInfo</type>
+                    <nullFixingDateInfo></nullFixingDateInfo>
+                  </fixingDateInfo>
+                </dailyReturnReferenceCal>
+                <!--
+                <type>identityReferenceCal</type>
+                <identityReferenceCal>
+                  <krCode>KOSPI200</krCode>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2013-11-18</date>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </identityReferenceCal>
+                -->
+              </referenceCalculation>
+
+              <barrierDateInfo>
+                <dateInformation>
+                  <type>dailyInterval</type>
+                  <dailyInterval>
+                    <observationStartDate>2013-10-18</observationStartDate>
+                    <observationEndDate>2014-04-17</observationEndDate>
+                  </dailyInterval>
+                </dateInformation>
+              </barrierDateInfo>
+              
+              <trigger>0.88</trigger>
+              <pastEventOccDate>2013-11-23</pastEventOccDate>
+              <pastEventOccValue>0.856</pastEventOccValue>
+              
+              <refVariableFlag_eventOccDate>stopLossEvent_eventOccDate</refVariableFlag_eventOccDate>
+              <refVariableFlag_eventOccValue>stopLossEvent_eventOccValue</refVariableFlag_eventOccValue>
+              <!-- -->
+              
+            </constLowerBarrierInfo>
+          </barrierInfo>
+
+          <eventTriggerList>
+            <eventTrigger>
+              <type>fixedRateTrigger</type>
+              <fixedRateTrigger>
+                <calculationStartDate>2013-10-18</calculationStartDate>
+                <calculationEndDate>2014-01-17</calculationEndDate>
+                <fixedRate>0.0105</fixedRate>
+                <payoffDateInfo>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2014-01-20</date>
+                      <autoCallFlag>true</autoCallFlag>
+                      <autoCallFixingDate>2014-04-18</autoCallFixingDate>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </payoffDateInfo>
+                <isExpired>false</isExpired>
+              </fixedRateTrigger>
+            </eventTrigger>
+
+            <eventTrigger>
+              <type>fixedRateTrigger</type>
+              <fixedRateTrigger>
+                <calculationStartDate>2014-01-18</calculationStartDate>
+                <calculationEndDate>2014-04-17</calculationEndDate>
+                <fixedRate>0.0105</fixedRate>
+                <payoffDateInfo>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2014-04-18</date>
+                      <autoCallFlag>true</autoCallFlag>
+                      <autoCallFixingDate>2014-04-18</autoCallFixingDate>
+                     </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </payoffDateInfo>
+                <isExpired>false</isExpired>
+              </fixedRateTrigger>
+            </eventTrigger>
+
+          </eventTriggerList>
+
+          <returnCalculation>
+            <type>stopLossReturnCal</type>
+            <stopLossReturnCal>
+              <power>10.0</power>
+              <lossTrigger>0.88</lossTrigger>
+              <maximumLoss>0.1</maximumLoss>
+
+              <referenceCalculation>
+
+                <type>refVariableReferenceCal</type>
+                <refVariableReferenceCal>
+                  <refName>stopLossEvent_eventOccValue</refName>
+                </refVariableReferenceCal>
+                <!--
+                <type>identityReferenceCal</type>
+                <identityReferenceCal>
+                  <krCode>KOSPI200</krCode>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2013-11-18</date>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </identityReferenceCal>
+                -->
+              </referenceCalculation>
+
+              <!--<withNotional>1.0</withNotional>-->
+
+            </stopLossReturnCal>
+          </returnCalculation>
+
+          <payoffDateInfo>
+            <fixingDateInfo>
+              <type>fixedFixingDateInfo</type>
+              <fixedFixingDateInfo>
+                <date>2014-04-18</date>
+                <autoCallFlag>false</autoCallFlag>
+              </fixedFixingDateInfo>
+            </fixingDateInfo>
+            
+          </payoffDateInfo>
+          
+        </stopLossPayoff>
+      </payoffInfo>
+      
+    </standardInstrument>
+  </instrumentInfo>
+  
+</instrument>

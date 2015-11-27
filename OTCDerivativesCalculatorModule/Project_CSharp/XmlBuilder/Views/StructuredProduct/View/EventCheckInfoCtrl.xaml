@@ -1,0 +1,115 @@
+﻿<UserControl x:Class="XmlBuilder.Views.StructuredProduct.View.EventCheckInfoCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:my="clr-namespace:XmlBuilder.Views.StructuredProduct.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="700">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal" >
+                <Grid x:Name="EventCheck_Grid">
+                    <StackPanel Orientation="Vertical">
+                        <Label Content="- EventCheck List"/>
+                        <DataGrid x:Name="EventCheck_DataGrid" AutoGenerateColumns="False" ItemsSource="{Binding Path=EventCheckViewModel_}" SelectionChanged="EventCheck_DataGrid_SelectionChanged" >
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Binding="{Binding Path=Num_}" Header="Sym" />
+                                <DataGridTextColumn Binding="{Binding Path=Symbol_}" Header="Sym" />
+                                <DataGridTextColumn Binding="{Binding Path=Name_}" Header="Name" />
+                                <DataGridTextColumn Binding="{Binding Path=Type_}" Header="Type" />
+                                <DataGridTextColumn Binding="{Binding Path=Date_}" Header="Date" />
+                                <DataGridTextColumn Binding="{Binding Path=Expired_}" Header="Expired" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                        <Button/>
+                    </StackPanel>
+                </Grid>
+                <Grid x:Name="EventCheck_DetailGrid">
+                    <StackPanel Orientation="Vertical">
+                        <Grid x:Name="EventIndexTransformation_Grid" DataContext="{Binding Path=EITFVM_}">
+                            <StackPanel Orientation="Vertical">
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="- EventIndexTransformation" />
+                                    <Button Content="Edit" Click="Button_Click" />
+                                </StackPanel>
+                                <DataGrid x:Name="IndexTrans_DataGrid" ItemsSource="{Binding Path=IndexTransVMList_}" AutoGenerateColumns="False" SelectionChanged="DataGrid_SelectionChanged">
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Binding="{Binding Path=Symbol_}" Header="Sym" />
+                                        <DataGridTextColumn Binding="{Binding Path=Type_}" Header="Type" />
+                                        <DataGridTextColumn Binding="{Binding Path=Description_}" Header="Description" />
+                                    </DataGrid.Columns>
+
+                                </DataGrid>
+                            </StackPanel>
+                        </Grid>
+                        <Grid x:Name="FunctionEventGrid" DataContext="{Binding Path=FunctionEventVM_}">
+                            <StackPanel Orientation="Vertical">
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="- FunctionEvent" />
+                                    <Label Content="- JointType : " />
+                                    <TextBox Text="{Binding Path=JointType_}" />
+                                </StackPanel>
+
+                                <DataGrid ItemsSource="{Binding Path=EventFunctionMList_}" AutoGenerateColumns="False" >
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Binding="{Binding Path=EventName_}" Header="EventName" />
+                                        <DataGridTextColumn Binding="{Binding Path=EventType_}" Header="EventType" />
+                                        <DataGridTextColumn Binding="{Binding Path=Low_}" Header="Low" />
+                                        <DataGridTextColumn Binding="{Binding Path=IndexSymbol_}" Header="IndexSymbol" />
+                                        <DataGridTextColumn Binding="{Binding Path=High_}" Header="High" />
+                                        <DataGridTextColumn Binding="{Binding Path=TF_}" Header="TF" />
+
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                            </StackPanel>
+                        </Grid>
+                        <Grid x:Name="EventDateGrid" DataContext="{Binding Path=EventDateVM_}">
+                            <StackPanel Orientation="Vertical">
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="- EventDate" />
+                                    <Label Content="- Type : " />
+                                    <ComboBox Text="qwqd" />
+                                </StackPanel>
+                                <DataGrid ItemsSource="{Binding Path=EventDates_}" AutoGenerateColumns="False">
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Binding="{Binding Path=Date}" Header="Date" />
+
+                                        <DataGridTextColumn Binding="{Binding Path=DayOfWeek}" Header="DayOfWeek" />
+                                        <DataGridTextColumn Binding="{Binding Path=DayOfYear}" Header="Remain" />
+
+                                    </DataGrid.Columns>
+
+                                </DataGrid>
+                            </StackPanel>
+                        </Grid>
+                        <Grid x:Name="PayoffGrid" DataContext="{Binding Path=PayoffListVM_}">
+                            <StackPanel Orientation="Vertical">
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="- Payoff" />
+                                    <Button Content="Edit" Click="Button_Click_1" />
+                                </StackPanel>
+                                <DataGrid ItemsSource="{Binding Path=PayoffVMList_}" AutoGenerateColumns="False">
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Binding="{Binding Path=Type_}" Header="Type" />
+                                        <DataGridTextColumn Binding="{Binding Path=Date_}" Header="Date" />
+                                        <DataGridTextColumn Binding="{Binding Path=Value_}" Header="Value" />
+                                        <DataGridTextColumn Binding="{Binding Path=Description_}" Header="Description" />
+
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+                <Grid x:Name="DetailInfomation_Grid">
+                    <StackPanel Orientation="Vertical">
+                        <Label Content="-Details" />
+                        <TextBox x:Name="txtBox_" Text="Detail txtBox"/>
+                        <Grid x:Name="detailCtrl_"/>
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,149 @@
+﻿<Window x:Class="CDSCalculatorTest.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+        <TabControl>
+            <TabItem Header="Instrument">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="ProductName : " />
+                        <TextBox Width="100" />
+                        <Label Content="Notional : " />
+                        <TextBox Width="100" />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="EffectiveDate : " />
+                        <DatePicker />
+                        <Label Content="MaturityDate : " />
+                        <DatePicker />
+                    </StackPanel>
+                        <DataGrid ItemsSource="{Binding Path=ReferenceInfoList_}">
+
+                    </DataGrid>
+                    <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="CalculationAmount : " />
+                            <TextBox Width="100" />
+                            <Label Content="Currency: " />
+                            <TextBox Width="100" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="EffectiveDate :" />
+                            <DatePicker />
+                            <Label Content="TerminationDate :" />
+                            <DatePicker />
+                            
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="Calendar :" />
+                            <TextBox Width="100" />
+                            <Label Content="CalculationPeriod :" />
+                            <TextBox Width="100" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="DayCounter :" />
+                            <TextBox Width="100" />
+                            <Label Content="InArrear :" />
+                            <TextBox Width="100" />
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Label Content="FixedRate :" />
+                            <TextBox Width="100" />                
+                        </StackPanel>
+
+                        </StackPanel>
+                </StackPanel>
+            </TabItem>
+            
+            <TabItem Header="Parameter">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="PricingType : "/>
+                        <TextBox Width="100" />
+                        <Label Content="EvaluationTime : "/>
+                        <DatePicker />
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="CalculationAmount : " />
+                        <TextBox Width="100" />
+                        <Label Content="Currency: " />
+                        <TextBox Width="100" />
+                    </StackPanel>
+                    <Label Content="- Entity Curve Information" />
+                    <DataGrid>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Name" />
+                            <DataGridTextColumn Header="Recovery" />
+                            <DataGridTextColumn Header="1D" />
+                            <DataGridTextColumn Header="6M" />
+                            <DataGridTextColumn Header="1Y" />
+                            <DataGridTextColumn Header="2Y" />
+                            <DataGridTextColumn Header="3Y" />
+                            <DataGridTextColumn Header="4Y" />
+                            <DataGridTextColumn Header="5Y" />
+                            <DataGridTextColumn Header="7Y" />
+                            <DataGridTextColumn Header="10Y" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <StackPanel Orientation="Horizontal" >
+                        <Label Content="Correlation : " />
+                        <TextBox Width="60" />
+                        <Label Content="nth__Default : " />
+                        <TextBox Width="60" />
+                    </StackPanel>
+                    <Label Content="- Dicount Curve Information" />
+                    <DataGrid>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Name" />
+                            <DataGridTextColumn Header="1D" />
+                            <DataGridTextColumn Header="1M" />
+                            <DataGridTextColumn Header="3M" />
+                            <DataGridTextColumn Header="6M" />
+                            <DataGridTextColumn Header="9M" />
+                            <DataGridTextColumn Header="12M" />
+                            <DataGridTextColumn Header="2Y" />
+                            <DataGridTextColumn Header="3Y" />
+                            <DataGridTextColumn Header="4Y" />
+                            <DataGridTextColumn Header="5Y" />
+                            <DataGridTextColumn Header="6Y" />
+                            <DataGridTextColumn Header="7Y" />
+                            <DataGridTextColumn Header="8Y" />
+                            <DataGridTextColumn Header="9Y" />
+                            <DataGridTextColumn Header="10Y" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Recovery__Rate : " />
+                        <TextBox Width="60" />
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical">
+                        
+                    </StackPanel>
+                </StackPanel>
+            </TabItem>
+            
+            <TabItem Header="Restult">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Price : " />
+                        <TextBox Width="60" />
+                    </StackPanel>
+                    <DataGrid>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="PaymentDate"/>
+                            <DataGridTextColumn Header="SurvialProb"/>
+                            <DataGridTextColumn Header="DefaultProb"/>
+                            <DataGridTextColumn Header="CouponLeg"/>
+                            <DataGridTextColumn Header="ProtectLeg"/>
+                            <DataGridTextColumn Header="DicountFactor"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+            <Button Content="Load" Width="100" Click="Button_Click" />
+        </StackPanel>
+    </Grid>
+</Window>

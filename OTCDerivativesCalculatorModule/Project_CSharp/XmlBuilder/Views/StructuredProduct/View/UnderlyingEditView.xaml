@@ -1,0 +1,81 @@
+﻿<Window x:Class="XmlBuilder.Views.StructuredProduct.View.UnderlyingEditView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="UnderlyingEditView" Height="500" Width="500">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <Label Content="- Underlying List" />
+            <DataGrid x:Name="Underlying_DataGrid_" ItemsSource="{Binding Path=BaseIndexList_}" AutoGenerateColumns="False" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Path=Sym_}" Header="Sym" />
+                    <DataGridTextColumn Binding="{Binding Path=Code_}" Header="Code" />
+                    <DataGridTextColumn Binding="{Binding Path=Name_}" Header="Name" />
+                    <DataGridTextColumn Binding="{Binding Path=Type_}" Header="Type" />
+                    <DataGridTextColumn Binding="{Binding Path=Description_}" Header="Description" />
+                </DataGrid.Columns>
+            </DataGrid>
+            <Label Content="- Data Information" />
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Vertical">
+                    
+                    <TabControl Height="100" Name="DataTabControl_" Width="200">
+                        <TabItem Header="Stock" Name="Stock_TabItem">
+                            <Grid>
+                                <ListView x:Name="stockListView_" ItemsSource="{Binding Path=StockDataList_}">
+                                    <ListView.View>
+                                        <GridView>
+                                            <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Path=Name_}"  />
+                                        </GridView>
+                                    </ListView.View>
+                                </ListView>
+                            </Grid>
+                        </TabItem>
+                        <TabItem Header="Index" Name="Index_TabItem">
+                            <Grid>
+                                <TreeView>
+
+                                </TreeView>
+                            </Grid>
+                        </TabItem>
+                        <TabItem Header="IR" Name="IR_TabItem">
+                            <Grid>
+                                <TreeView>
+
+                                </TreeView>
+                            </Grid>
+                        </TabItem>
+                    </TabControl>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="Add" Click="Button_Click" />
+                        <Button Content="History" Click="Button_Click" />
+                    </StackPanel>
+                    <TreeView>
+
+                    </TreeView>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content=" - Data" />
+                        <CheckBox x:Name="IsDataLoadCheckBox_" Content="IsDataLoad" />
+                    </StackPanel>
+                    <DataGrid>
+                    </DataGrid>
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Status : " />
+                        <TextBox />
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Confirm"/>
+                <Button Content="Cancel"/>
+            </StackPanel>
+            
+        </StackPanel>
+        
+        
+    </Grid>
+</Window>

@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="Excel_Interface.MasterInfo_TableManagerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <Grid>
+        <DataGrid Name="MATSER_INFODataGrid_" LoadingRow="DataGrid_LoadingRow_" 
+          AutoGenerateColumns="False"
+          ScrollViewer.CanContentScroll="True" 
+          ScrollViewer.VerticalScrollBarVisibility="Auto"
+          ScrollViewer.HorizontalScrollBarVisibility="Auto">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Item_code" Binding="{Binding Path=Item_code_}"/>
+                <DataGridTextColumn Header="Item_name" Binding="{Binding Path=Item_name_}"/>
+                <DataGridTextColumn Header="Notional" Binding="{Binding Path=Notional_}"/>
+                <DataGridTextColumn Header="Remain_notional" Binding="{Binding Path=Remain_notional_}"/>
+                <DataGridTextColumn Header="Currency" Binding="{Binding Path=Currency_}"/>
+                <DataGridTextColumn Header="Trade_date" Binding="{Binding Path=Trade_date_,StringFormat=yyyy-MM-dd}"/>
+                <DataGridTextColumn Header="Maturity_date" Binding="{Binding Path=Maturity_date_,StringFormat=yyyy-MM-dd}"/>
+                <DataGridTextColumn Header="Counterparty" Binding="{Binding Path=Counterparty_}"/>
+                <DataGridTextColumn Header="Export_itemcode" Binding="{Binding Path=Export_itemcode_}"/>
+                <DataGridTextColumn Header="Trade_id" Binding="{Binding Path=Trade_id_}"/>
+                <DataGridTextColumn Header="Trade_status" Binding="{Binding Path=Trade_status_}"/>
+                <DataGridTextColumn Header="Instrument_type" Binding="{Binding Path=Instrument_type_}"/>
+                <DataGridTextColumn Header="Underlying_type" Binding="{Binding Path=Underlying_type_}"/>
+                <DataGridTextColumn Header="Underlying_detail_type" Binding="{Binding Path=Underlying_detail_type_}"/>
+                <DataGridTextColumn Header="Contract_type" Binding="{Binding Path=Contract_type_}"/>
+                <DataGridTextColumn Header="Contract_subtype" Binding="{Binding Path=Contract_subtype_}"/>
+                <DataGridTextColumn Header="Contract_detail_type" Binding="{Binding Path=Contract_detail_type_}"/>
+                <DataGridTextColumn Header="Booking_type" Binding="{Binding Path=Booking_type_}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

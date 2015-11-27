@@ -1,0 +1,93 @@
+﻿<UserControl x:Class="Excel_Interface.EventView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <Grid>
+        <StackPanel  Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Event_code : " />
+                <TextBox Text="{Binding Path=Event_code_}" Width="100" />
+            </StackPanel>
+            <StackPanel Name="bindingPanel_" Orientation="Horizontal">
+                <Label Content="Event_date : " />
+                <DatePicker Name="event_datePicker_" SelectedDate="{Binding Path=Event_date_, Mode=TwoWay}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Event_type : " />
+                <TextBox Text="{Binding Path=Event_type_}" Width="100" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Event_subtype : " />
+                <TextBox Text="{Binding Path=Event_subtype_}" Width="100" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Event_name : " />
+                <TextBox Text="{Binding Path=Event_name_}" Width="100" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Event_description : " />
+                <TextBox Text="{Binding Path=Event_description_}" Width="100" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Currency : " />
+                <TextBox Text="{Binding Path=Currency_}" Width="100" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Notional : " />
+                <TextBox Text="{Binding Path=Notional_}" Width="100" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Remain_notional : " />
+                <TextBox Text="{Binding Path=Remain_notional_}" Width="100" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Event_amount : " />
+                <TextBox Text="{Binding Path=Event_amount_}" Width="100" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Counterparty : " />
+                <TextBox Text="{Binding Path=Counterparty_}" Width="100" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Floating_flag : " />
+                <TextBox Text="{Binding Path=Floating_flag_}" Width="100" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Calculation_type : " />
+                <TextBox Text="{Binding Path=Calculation_type_}" Width="100" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Fixing_underlyings : " />
+                <TextBox Text="{Binding Path=Fixing_underlyings_}" Width="100" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Fixing_observation : " />
+                <TextBox Text="{Binding Path=Fixing_observation_}" Width="100" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Fixing_flag : " />
+                <TextBox Text="{Binding Path=Fixing_flag_}" Width="100" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Expired_flag : " />
+                <TextBox Text="{Binding Path=Expired_flag_}" Width="100" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Item_code : " />
+                <TextBox Text="{Binding Path=Item_code_}" Width="100" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Item_type : " />
+                <TextBox Text="{Binding Path=Item_type_}" Width="100" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Item_name : " />
+                <TextBox Text="{Binding Path=Item_name_}" Width="100" />
+            </StackPanel>
+        </StackPanel>
+
+
+    </Grid>
+</UserControl>

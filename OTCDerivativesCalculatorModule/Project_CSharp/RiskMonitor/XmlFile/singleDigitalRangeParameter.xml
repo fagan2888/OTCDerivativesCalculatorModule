@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pricing>
+  <evaluationTime>2013-08-29</evaluationTime>
+  <itemCode>TestKR000001</itemCode>
+  <pricingParameter>
+    <notional>180000000</notional>
+    <underlyingInfo>
+      <underlying>
+        <krCode>KR7012330007</krCode>
+        <underName>KR7012330007</underName>
+        <currentValue>277000</currentValue>
+        <drift>0.029</drift>
+        <dividend>0.0069</dividend>
+        <volatility>0.2947</volatility>
+      </underlying>
+    </underlyingInfo>
+    
+    <simulationNum>100000</simulationNum>
+    <dicountFlatTS>0.029</dicountFlatTS>
+    <instrumentInfo>
+      <kiEvent>false</kiEvent>
+    </instrumentInfo>
+    
+  </pricingParameter>
+  <pricingResult>
+    <price>177227037</price>
+    <unitPrice unit="10000">9845.95</unitPrice>
+    
+  </pricingResult>
+</pricing>

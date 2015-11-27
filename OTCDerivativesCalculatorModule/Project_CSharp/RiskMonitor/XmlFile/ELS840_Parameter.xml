@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<pricing>
+  <evaluationTime>2013-06-11</evaluationTime>
+  
+  <pricingParametor>
+    <notional>100000</notional>
+    
+    <underlyingInfo>
+      
+      <underlying>
+        <krcode>KR000001</krcode>
+        <underName>SkInovation</underName>
+        <currentValue>142000</currentValue>
+        <drift>0.0276</drift>
+        <dividend>0.0214</dividend>
+        <volatility>0.2780</volatility>
+      </underlying>
+      
+      <underlying>
+        <krcode>KR000001</krcode>
+        <underName>KoreaElec</underName>
+        <currentValue>26350</currentValue>
+        <drift>0.0276</drift>
+        <dividend>0.0</dividend>
+        <volatility>0.2466</volatility>
+      </underlying>
+
+      <correlation>
+        
+      </correlation>
+      
+      <correlation>
+        <matrix dim="2">
+          <data diag="">1</data>
+          <data row="1" column="2">0.4</data>
+          <data row="2" column="1">0.4</data>
+        </matrix>
+      </correlation>
+      
+    </underlyingInfo>
+    
+    <method>monte</method>
+    <simulationNum>100000</simulationNum>
+    <dicountFlatTS>0.0276</dicountFlatTS>
+
+    <instrumentEvent>
+      <kiEvent>true</kiEvent>
+    </instrumentEvent>
+  </pricingParametor>
+  
+  <pricingResult>
+    <price></price>
+    <unitPrice unit="100">e</unitPrice>
+    <greek>
+      <underlying>
+        <delta>
+          <value></value>
+        </delta>
+        <gamma>
+          <value></value>
+        </gamma>
+        <vega>
+          <value></value>
+        </vega>
+        <theta>
+          <value></value>
+        </theta>
+        <rho></rho>
+      </underlying>
+      <underlying>
+        <delta>
+          <value></value>
+        </delta>
+        <gamma>
+          <value></value>
+        </gamma>
+        <vega></vega>
+        <theta></theta>
+        <rho></rho>
+      </underlying>      
+    </greek>
+  </pricingResult>
+  
+</pricing>

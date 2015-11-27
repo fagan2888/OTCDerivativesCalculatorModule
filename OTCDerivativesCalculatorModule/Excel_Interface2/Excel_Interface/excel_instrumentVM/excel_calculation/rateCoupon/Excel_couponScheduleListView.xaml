@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="Excel_Interface.Excel_couponScheduleListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="- Schedule" />
+                <ComboBox Width="80" Name="frequencyComboBox_" />
+                <Button Content="Add" />
+                <Button Content="edit" />
+            </StackPanel>
+            <DataGrid Name="CouponScheduleDataGrid_" LoadingRow="DataGrid_LoadingRow_" 
+                    AutoGenerateColumns="False"
+                    ScrollViewer.CanContentScroll="True" 
+                    ScrollViewer.VerticalScrollBarVisibility="Auto"
+                    ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                    IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="EventDate" Binding="{Binding Path=EventDate_,StringFormat=yyyy-MM-dd}"/>
+                    
+                    <DataGridTemplateColumn Header="CalStartDate">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <DatePicker Name="CalStartDate" SelectedDate="{Binding Path=CalculationStartDate_, Mode=TwoWay}" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                    <DataGridTemplateColumn Header="CalEndDate">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <DatePicker Name="CalEndDate" SelectedDate="{Binding Path=CalculationEndDate_, Mode=TwoWay}" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                    <DataGridTextColumn Header="PayoffDate" Binding="{Binding Path=PayoffDate_,StringFormat=yyyy-MM-dd}"/>
+                    
+                    <DataGridTemplateColumn Header="Type">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="{Binding Path=Type_}" Click="typeEditBtn_Click"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Header="Description" Binding="{Binding Path=Description_}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</UserControl>

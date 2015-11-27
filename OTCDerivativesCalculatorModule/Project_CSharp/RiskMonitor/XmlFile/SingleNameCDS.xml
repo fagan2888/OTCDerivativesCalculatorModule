@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<instrument Type="SingleNameCDS">
+  
+  <header>
+    <productName>F_SingleNameCDS</productName>
+    <productType>SingleNameCDS</productType>
+    <krCode>F000TestProduct</krCode>
+  </header>
+  
+  <issueInformation>
+    <swap>
+      <tradeDate>2013-08-06</tradeDate>
+      <effectiveDate>2013-08-06</effectiveDate>
+      <maturityDate>2018-08-06</maturityDate>
+      <notional>10000000</notional>
+      <currency>USD</currency>
+      <premium>0</premium>
+    </swap>
+  </issueInformation>
+
+  <creditDefaultSwap>
+    
+    <referenceInformationList>
+      
+      <referenceInformation>
+        <referenceEntity>
+          <entityName>Hana Bank</entityName>
+          <entityId>00286</entityId>
+        </referenceEntity>
+        <referenceObligation>
+          <bond>
+            <instrumentId>US40963MAB81</instrumentId>
+            <couponRate>0.1111</couponRate>
+            <maturity>2030-03-06</maturity>
+          </bond>
+        </referenceObligation>
+        <referencePrice>1.0</referencePrice>
+      </referenceInformation>
+      
+      <referenceInformation>
+        <referenceEntity>
+          <entityName>Hyeondae Auto</entityName>
+          <entityId>00538</entityId>
+        </referenceEntity>
+        <referenceObligation>
+          <bond>
+            <instrumentId>US44890AAA60</instrumentId>
+            <couponRate>0.1222</couponRate>
+            <maturity>2030-03-06</maturity>
+          </bond>
+        </referenceObligation>
+        <referencePrice>1.0</referencePrice>
+      </referenceInformation>
+      
+      <referenceInformation>
+        <referenceEntity>
+          <entityName>GS Caltecs</entityName>
+          <entityId>00508</entityId>
+        </referenceEntity>
+        <referenceObligation>
+          <bond>
+            <instrumentId>USY5275KAP04</instrumentId>
+            <couponRate>0.1333</couponRate>
+            <maturity>2030-03-06</maturity>
+          </bond>
+        </referenceObligation>
+        <referencePrice>1.0</referencePrice>
+      </referenceInformation>
+      
+    </referenceInformationList>
+
+    <creditEvent>
+      <nthtodefault>1</nthtodefault>
+    </creditEvent>
+    
+    <protectionTerms>
+      
+      <calculationAmount>
+        <currency>USD</currency>
+        <amount>10000000</amount>
+      </calculationAmount>
+      
+      <creditEvents>
+        <failureToPay>true</failureToPay>
+        <obligationAcceleration>true</obligationAcceleration>
+        <repudiationMoratorium>true</repudiationMoratorium>
+        <restructuring>true</restructuring>
+        <defaultRequirement>true</defaultRequirement>
+      </creditEvents>
+      
+      <obligations>
+        <category>Bond</category>
+        <notSubordinated>true</notSubordinated>
+        <notDomesticCurrency>true</notDomesticCurrency>
+        <notDomesticLaw>true</notDomesticLaw>
+        <notDomesticIssuance>true</notDomesticIssuance>
+      </obligations>
+
+      <accrualCoupon>true</accrualCoupon>
+      
+    </protectionTerms>
+
+    <swapStream>
+      
+      <businessDayConvention>MODFOLLOWING</businessDayConvention>
+      
+      <calculationAmount>
+        <currency>USD</currency>
+        <amount>10000000</amount>
+      </calculationAmount>
+      
+      <irCalculation>
+        <paymentDates id="floatingCalcPeriodDates">
+          <effectiveDate>2013-08-06</effectiveDate>
+          <terminationDate>2018-08-06</terminationDate>
+          <calendar>KOR</calendar>
+          <calculationPeriodFrequency>
+            <periodMultiplier>3</periodMultiplier>
+            <period>M</period>
+            <rollConvention>6</rollConvention>
+          </calculationPeriodFrequency>
+        </paymentDates>
+        
+        <fixedRate>
+          <rate>0.05</rate>
+        </fixedRate>
+        <dayCountFraction>ACT/365Fix</dayCountFraction>
+        <inArrear>false</inArrear>
+        
+      </irCalculation>
+      
+    </swapStream>
+    
+  </creditDefaultSwap>
+
+  <calculationAgent>
+    <calculationAgentPartyReference href="party1" />
+  </calculationAgent>
+
+</instrument>

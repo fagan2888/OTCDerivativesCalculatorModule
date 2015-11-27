@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="Excel_Interface.Excel_vanillaCallPutView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <Label Content="vanilla Call / Put Option" />
+            <StackPanel Name="bindPanel_" Orientation="Horizontal">
+                <Label  Content="Call / Put : " />
+                <ComboBox Name="callPutComboBox_" SelectedItem="{Binding Path=CallPut_}" Width="80" />
+            </StackPanel>
+            <!--<StackPanel Orientation="Horizontal">
+                <Label Content="Name : " />
+                <TextBox Width="150" Text="{Binding Path=Name_}" />
+            </StackPanel>-->
+            <StackPanel Orientation="Horizontal">
+                <Label Content="PartiRate : " />
+                <TextBox Width="60" Text="{Binding Path=PartiRate_}" />
+                <Label Content="%" />
+                <Label Content="BaseCoupon : " />
+                <TextBox Width="60" Text="{Binding Path=BaseCoupon_}" />
+                <Label Content="%" />
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Strike : " />
+                <TextBox Name="StrikeTB_" Width="60" Text="{Binding Path=Strike_}" TextChanged="StrikeTextBox_TextChanged" />
+                <Label Content="%" />
+                <CheckBox VerticalAlignment="Center" />
+                
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="기준가 : " />
+                <TextBox Width="100" Text="{Binding Path=BaseUnderlyingValue_}" />
+                <Label Content="StrikeValue : " />
+                <TextBox Name="StrikeValueTB_" Width="100" Text="{Binding Path=StrikeValue_}" TextChanged="StrikeTextBox_TextChanged" />
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</UserControl>

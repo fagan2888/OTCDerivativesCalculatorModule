@@ -1,0 +1,84 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<instrument Type="CompositeOption">
+
+  <header>
+    <productName>IBK 제947회 사모ELS</productName>
+    <productType>CompositeOption</productType>
+    <krCode>KR67233183A2</krCode>
+    <itemCode>50505A3A13S0</itemCode>
+    <counterParty>HyeonDae</counterParty>
+  </header>
+
+  <instrumentInfo>
+    <type>standardInstrument</type>
+    <standardInstrument>
+
+      <issueInformation>
+        <type>noteInfo</type>
+        <noteInfo>
+          <tradeDate>2013-10-23</tradeDate>
+          <effectiveDate>2013-10-24</effectiveDate>
+          <maturityDate>2015-04-24</maturityDate>
+          <notional>100000000</notional>
+          <premium>0</premium>
+        </noteInfo>
+      </issueInformation>
+
+      <underlyingInformation>
+        <type>index</type>
+        <indexUnderInfo>
+          <index>
+            <type>stock</type>
+            <stockIndex>
+              <krCode>KR7005930003</krCode>
+              <name>TBTUSEQUIT</name>
+              <basePrice>72.07</basePrice>
+            </stockIndex>
+          </index>
+        </indexUnderInfo>
+      </underlyingInformation>
+
+      <payoffInfo>
+        <type>vanillaPayoff</type>
+        <vanillaPayoff>
+          <type>compositeSumOption</type>
+          <compositeSumOption>
+            <excerciseInfo>
+              <type>europeanExercise</type>
+              <europeanExercise>
+                <exerciseDate></exerciseDate>
+                <paymentDays>3D</paymentDays>>
+              </europeanExercise>
+            </excerciseInfo>
+            
+            <option>
+              <type>singleBarrier</type>
+              <singleBarrier>
+                <barrier>
+                  <type>dateInterval</type>
+                  <dateInterval>
+                    <startDate>2013-10-22</startDate>
+                    <endDate>2015-04-16</endDate>
+                    <frequency>Daily</frequency>
+                  </dateInterval>
+                  <triggerLevel>325.464</triggerLevel>
+                </barrier>
+              </singleBarrier>
+              
+            </option>
+            
+            <option>
+
+            </option>
+            
+            <option>
+
+            </option>
+          </compositeSumOption>
+        </vanillaPayoff>
+      </payoffInfo>
+      
+    </standardInstrument>
+  </instrumentInfo>
+
+</instrument>

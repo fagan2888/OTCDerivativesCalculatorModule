@@ -1,0 +1,46 @@
+﻿<Window x:Class="XmlBuilder.Views.StructuredProduct.View.PayoffCtrl.PayoffEditView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="PayoffEditView" Height="600" Width="600">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="- PayoffList" />
+
+            </StackPanel>
+            <DataGrid x:Name="Payoff_DataGrid_" ItemsSource="{Binding Path=PayoffVMList_}" AutoGenerateColumns="False" SelectionChanged="Payoff_DataGrid__SelectionChanged">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Path=Type_}" Header="Type" />
+                    <DataGridTextColumn Binding="{Binding Path=Date_}" Header="Date" />
+                    <DataGridTextColumn Binding="{Binding Path=Value_}" Header="Value" />
+                    <DataGridTextColumn Binding="{Binding Path=Description_}" Header="Description" />
+                </DataGrid.Columns>
+            </DataGrid>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Vertical">
+                    <Label Content="- Payoff List" />
+                    <TreeView x:Name="Payoff_TreeView_"  Width="139" >
+                    </TreeView>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <Label Content="- Detail Informaion" />
+                    <Grid x:Name="detailCtrl_" ></Grid>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <Label Content="- Index List" />
+                    <ListBox />
+                    <Label Content="- Symbol List" />
+                    <ListBox />
+                </StackPanel>
+
+                <Grid>
+                </Grid>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Confirm" />
+                <Button Content="Cancel " />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

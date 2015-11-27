@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="Excel_Interface.Excel_hullWhiteOneFactorView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <Label Content="hullwhite" />
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Alpha :" />
+                <TextBox Width="80" />
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Volatility :" />
+                <TextBox Width="80" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Tenor :" />
+                <TextBox Width="80" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="FittingCurveName:" />
+                <TextBox Width="80" />
+                <Button Content="Edit"/>
+            </StackPanel>            
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,491 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{48CDEB64-D1D7-4BDA-90E8-AE879AF8B0C5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XmlBuilder</RootNamespace>
+    <AssemblyName>XmlBuilder</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Ctrl\CheckFunctionCtrl.xaml.cs">
+      <DependentUpon>CheckFunctionCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ctrl\CheckFunctionModel.cs" />
+    <Compile Include="Ctrl\EventFunctionMCtrl.xaml.cs">
+      <DependentUpon>EventFunctionMCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ctrl\EventFunctionMModel.cs" />
+    <Compile Include="Ctrl\JointFunctionEventModel.cs" />
+    <Compile Include="Ctrl\VariableCtrl.xaml.cs">
+      <DependentUpon>VariableCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DataLoader\CommodityDataLoader.cs" />
+    <Compile Include="DataLoader\IndexDataLoader.cs" />
+    <Compile Include="DataLoader\InstrumentDataLoader.cs" />
+    <Compile Include="DataLoader\InterestRateDataLoader.cs" />
+    <Compile Include="DataLoader\StockDataLoader.cs" />
+    <Compile Include="DataLoader\XmlDataLoader.cs" />
+    <Compile Include="DataModel\CommodityData.cs" />
+    <Compile Include="DataModel\IData.cs" />
+    <Compile Include="DataModel\IndexData.cs" />
+    <Compile Include="DataModel\InterestRateData.cs" />
+    <Compile Include="DataModel\StockData.cs" />
+    <Compile Include="InstrumentModel\Instrument.cs" />
+    <Compile Include="StructuredProductXmlBuilder.cs" />
+    <Compile Include="Ctrl\VariableModel.cs" />
+    <Compile Include="Ctrl\VariableGridCtrl.xaml.cs">
+      <DependentUpon>VariableGridCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InstrumentViews\ELSStepDown\Ctrl\EventCalculation\EventEditCtrl.xaml.cs">
+      <DependentUpon>EventEditCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InstrumentViews\ELSStepDown\Ctrl\EventCalculation\StepDownEarlyRedemEventCtrl.xaml.cs">
+      <DependentUpon>StepDownEarlyRedemEventCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InstrumentViews\ELSStepDown\Ctrl\EventCalculation\StepDownEarlyRedemEventCtrlViewModel.cs" />
+    <Compile Include="Views\InstrumentViews\ELSStepDown\Ctrl\KICheckTypeDataGrid\IKICheckType.cs" />
+    <Compile Include="Views\InstrumentViews\ELSStepDown\Ctrl\KICheckTypeDataGrid\MinimumKICheckGrid.xaml.cs">
+      <DependentUpon>MinimumKICheckGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InstrumentViews\ELSStepDown\Ctrl\KICheckTypeDataGrid\MinimumKICheckGridVM.cs" />
+    <Compile Include="Views\InstrumentViews\ELSStepDown\Ctrl\KIPayoffEditView.xaml.cs">
+      <DependentUpon>KIPayoffEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InstrumentViews\ELSStepDown\Ctrl\KIPayoffEditViewModel.cs" />
+    <Compile Include="Views\InstrumentViews\ELSStepDown\Ctrl\MaturityPayoffEditView.xaml.cs">
+      <DependentUpon>MaturityPayoffEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InstrumentViews\ELSStepDown\Ctrl\MaturityPayoffEditViewModel.cs" />
+    <Compile Include="Views\InstrumentViews\ELSStepDown\Ctrl\PayoffCalculation\ConstantPayoffCtrl.xaml.cs">
+      <DependentUpon>ConstantPayoffCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InstrumentViews\ELSStepDown\Ctrl\PayoffCalculation\ConstantPayoffCtrlViewModel.cs" />
+    <Compile Include="Views\InstrumentViews\ELSStepDown\Ctrl\PayoffCalculation\ELSSlopePayoffCtrl.xaml.cs">
+      <DependentUpon>ELSSlopePayoffCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InstrumentViews\ELSStepDown\Ctrl\PayoffCalculation\ELSSlopePayoffCtrlViewModel.cs" />
+    <Compile Include="Views\InstrumentViews\ELSStepDown\Ctrl\PayoffCalculation\PayoffEditCtrl.xaml.cs">
+      <DependentUpon>PayoffEditCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InstrumentViews\ELSStepDown\Ctrl\RedemInfo\RedemEditView.xaml.cs">
+      <DependentUpon>RedemEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InstrumentViews\ELSStepDown\Ctrl\RedemInfo\RedemEditViewModel.cs" />
+    <Compile Include="Views\InstrumentViews\ELSStepDown\ELSKICheckInfoViewModel.cs" />
+    <Compile Include="Views\InstrumentViews\ELSStepDown\ELSMaturityInfoViewModel.cs" />
+    <Compile Include="Views\InstrumentViews\ELSStepDown\ELSRedemInfoViewModel.cs" />
+    <Compile Include="Views\InstrumentViews\ELSStepDown\ELSStepDownViewModel.cs" />
+    <Compile Include="Views\StructuredProduct\ViewModel\BaseIndexViewModel.cs" />
+    <Compile Include="Views\StructuredProduct\ViewModel\BaseInformationViewModel.cs" />
+    <Compile Include="Views\StructuredProduct\ViewModel\CommodityIndexViewModel.cs" />
+    <Compile Include="Views\StructuredProduct\ViewModel\EventCheckInfoCtrlViewModel.cs" />
+    <Compile Include="Views\StructuredProduct\ViewModel\EventCheckViewModel.cs" />
+    <Compile Include="Views\StructuredProduct\ViewModel\EventDateViewModel.cs" />
+    <Compile Include="Views\StructuredProduct\ViewModel\EventIndexTransformationViewModel.cs" />
+    <Compile Include="Views\StructuredProduct\ViewModel\FunctionEventViewModel.cs" />
+    <Compile Include="Views\StructuredProduct\ViewModel\IndexTransViewModel.cs" />
+    <Compile Include="Views\StructuredProduct\ViewModel\IRIndexViewModel.cs" />
+    <Compile Include="Views\StructuredProduct\ViewModel\IXmlBuild.cs" />
+    <Compile Include="Views\StructuredProduct\ViewModel\MinimumViewModel.cs" />
+    <Compile Include="Views\StructuredProduct\ViewModel\PayoffListViewModel.cs" />
+    <Compile Include="Views\StructuredProduct\ViewModel\PayoffViewModel.cs" />
+    <Compile Include="Views\StructuredProduct\ViewModel\ReturnCtrlViewModel.cs" />
+    <Compile Include="Views\StructuredProduct\ViewModel\StockIndexViewModel.cs" />
+    <Compile Include="Views\StructuredProduct\ViewModel\UnderlyingEditViewModel.cs" />
+    <Compile Include="Views\StructuredProduct\ViewModel\XmlBuilderViewModel.cs" />
+    <Compile Include="Views\StructuredProduct\View\AddNewProduct\AddNewProductManagerView.xaml.cs">
+      <DependentUpon>AddNewProductManagerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StructuredProduct\View\AddNewProduct\ViewModel\DetailViewModel.cs" />
+    <Compile Include="Views\StructuredProduct\View\AddNewProduct\ViewModel\LocalTemplateViewModel.cs" />
+    <Compile Include="Views\StructuredProduct\View\AddNewProduct\ViewModel\OnlineTemplateViewModel.cs" />
+    <Compile Include="Views\StructuredProduct\View\AddNewProduct\ViewModel\ProductTemplateContentsViewModel.cs" />
+    <Compile Include="Views\StructuredProduct\View\CheckFunctionCtrl\DownEventCheckCtrlModel.cs" />
+    <Compile Include="Views\StructuredProduct\View\CheckFunctionCtrl\RangeEventCheckCtrlModel.cs" />
+    <Compile Include="Views\StructuredProduct\View\CheckFunctionCtrl\UpDownEventCheckCtrlModel.cs" />
+    <Compile Include="Views\StructuredProduct\View\CheckFunctionCtrl\UpEventCheckCtrlModel.cs" />
+    <Compile Include="Views\InstrumentViews\ELSStepDown\ELSStepDownCtrl.xaml.cs">
+      <DependentUpon>ELSStepDownCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StructuredProduct\View\EventCheckInfoCtrl.xaml.cs">
+      <DependentUpon>EventCheckInfoCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StructuredProduct\View\BaseInformationCtrl.xaml.cs">
+      <DependentUpon>BaseInformationCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StructuredProduct\View\Explorer\CustomViewCtrl\ProductFundListExplorerCtrl.xaml.cs">
+      <DependentUpon>ProductFundListExplorerCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StructuredProduct\View\Explorer\ProductListExplorerView.xaml.cs">
+      <DependentUpon>ProductListExplorerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StructuredProduct\View\Explorer\CustomViewCtrl\ProductTypeListExplorerCtrl.xaml.cs">
+      <DependentUpon>ProductTypeListExplorerCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StructuredProduct\View\IndexTransCtrl\IndexTransEditView.xaml.cs">
+      <DependentUpon>IndexTransEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StructuredProduct\View\IndexTransCtrl\MinimumCtrlView.xaml.cs">
+      <DependentUpon>MinimumCtrlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StructuredProduct\View\IndexTransCtrl\ReturnCtrlView.xaml.cs">
+      <DependentUpon>ReturnCtrlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StructuredProduct\View\IndexTransCtrl\Setting\IndexListSetting.cs" />
+    <Compile Include="Views\StructuredProduct\View\AddNewProduct\ViewModel\ProductTemplate.cs" />
+    <Compile Include="Views\StructuredProduct\View\IssueInformationCtrl.xaml.cs">
+      <DependentUpon>IssueInformationCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StructuredProduct\View\ParametorCtrl.xaml.cs">
+      <DependentUpon>ParametorCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StructuredProduct\View\PayoffCtrl\AverCtrlModel.cs" />
+    <Compile Include="Views\StructuredProduct\View\PayoffCtrl\AverPayoffCtrl.xaml.cs">
+      <DependentUpon>AverPayoffCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StructuredProduct\View\PayoffCtrl\ConstPayoffCtrlModel.cs" />
+    <Compile Include="Views\StructuredProduct\View\PayoffCtrl\ConstPayoffCtrl.xaml.cs">
+      <DependentUpon>ConstPayoffCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StructuredProduct\View\PayoffCtrl\PayoffEditView.xaml.cs">
+      <DependentUpon>PayoffEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StructuredProduct\View\UnderlyingEditView.xaml.cs">
+      <DependentUpon>UnderlyingEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StructuredProduct\View\XmlBuilderCtrl.xaml.cs">
+      <DependentUpon>XmlBuilderCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\AverPayoff.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\BaseIndexes.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\BaseInformation.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\BasketAver.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\BusinessDayConventionEnum.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\CommodityIndex.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\CommonInformation.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\ConstPayoff.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\ConventionSet.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\DateInterval.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\DatesList.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\DownEventCheck.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\EventCheck.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\EventCheckBase.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\EventCheckNormal.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\EventCheckTime.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\EventDate.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\EventDates.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\EventFunctionM.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\EventIndexTransformation.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\EventSchedule.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\ExprPayoff.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\FixingDays.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\Function.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\FunctionEvents.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\Functions.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\FunctionTypeEnum.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\IEventCheck.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\IndexCalculation.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\IndexRef.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\IndexTimeRef.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\InstrumentType.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\InterestrateIndex.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\IssueInformation.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\JointFSubEvent.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\JointFunctionEvent.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\JointSubEvent.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\JointTimeEvent.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\JointTimeTypeEnum.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\JointTypeEnum.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\MinimumTran.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\NotionalValue.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\NullPayoff.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\PayoffBase.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\PreFixPayoff.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\RangeEventCheck.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\ReturnTran.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\StockIndex.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\StructuredProduct.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\StructuredProductPayoff.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\StructuredSwap.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\SubEvent.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\TriggerAtleast.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\UnderlyingIndex.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\UpDownEventCheck.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\UpEventCheck.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\Variable.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\VariableValue.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeAnyURI.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeBase64Binary.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeBoolean.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeByte.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeDate.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeDateTime.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeDecimal.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeDouble.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeDuration.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeENTITIES.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeENTITY.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeFloat.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeGDay.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeGMonth.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeGMonthDay.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeGYear.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeGYearMonth.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeHexBinary.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeID.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeIDREF.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeIDREFS.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeInt.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeInteger.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeLanguage.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeLong.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeName.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeNCName.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeNegativeInteger.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeNMTOKEN.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeNMTOKENS.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeNonNegativeInteger.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeNonPositiveInteger.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeNormalizedString.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeNOTATION.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypePositiveInteger.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeQName.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeShort.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeString.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeTime.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeToken.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeUnsignedByte.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeUnsignedInt.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeUnsignedLong.cs" />
+    <Compile Include="XmlSerializedClass\built_in_type\XsdTypeUnsignedShort.cs" />
+    <Compile Include="XmlSerializedClass\IDManager.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\InitialFixedValue.cs" />
+    <Compile Include="XmlSerializedClass\ISerialized.cs" />
+    <Compile Include="XmlSerializedClass\ahn-product-1-0\PayoffCalculation.cs" />
+    <Page Include="Ctrl\CheckFunctionCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ctrl\EventFunctionMCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Ctrl\VariableCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Ctrl\VariableGridCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\InstrumentViews\ELSStepDown\Ctrl\EventCalculation\EventEditCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\InstrumentViews\ELSStepDown\Ctrl\EventCalculation\StepDownEarlyRedemEventCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\InstrumentViews\ELSStepDown\Ctrl\KICheckTypeDataGrid\MinimumKICheckGrid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\InstrumentViews\ELSStepDown\Ctrl\KIPayoffEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\InstrumentViews\ELSStepDown\Ctrl\MaturityPayoffEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\InstrumentViews\ELSStepDown\Ctrl\PayoffCalculation\ConstantPayoffCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\InstrumentViews\ELSStepDown\Ctrl\PayoffCalculation\ELSSlopePayoffCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\InstrumentViews\ELSStepDown\Ctrl\PayoffCalculation\PayoffEditCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\InstrumentViews\ELSStepDown\Ctrl\RedemInfo\RedemEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StructuredProduct\View\AddNewProduct\AddNewProductManagerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\InstrumentViews\ELSStepDown\ELSStepDownCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StructuredProduct\View\EventCheckInfoCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StructuredProduct\View\BaseInformationCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StructuredProduct\View\Explorer\CustomViewCtrl\ProductFundListExplorerCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StructuredProduct\View\Explorer\ProductListExplorerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StructuredProduct\View\Explorer\CustomViewCtrl\ProductTypeListExplorerCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StructuredProduct\View\IndexTransCtrl\IndexTransEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StructuredProduct\View\IndexTransCtrl\MinimumCtrlView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StructuredProduct\View\IndexTransCtrl\ReturnCtrlView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StructuredProduct\View\IssueInformationCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StructuredProduct\View\ParametorCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StructuredProduct\View\PayoffCtrl\AverPayoffCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StructuredProduct\View\PayoffCtrl\ConstPayoffCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StructuredProduct\View\PayoffCtrl\PayoffEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StructuredProduct\View\UnderlyingEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\StructuredProduct\View\XmlBuilderCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="testStructruedProductNodeExceptTime.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XMLFile1.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Main\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

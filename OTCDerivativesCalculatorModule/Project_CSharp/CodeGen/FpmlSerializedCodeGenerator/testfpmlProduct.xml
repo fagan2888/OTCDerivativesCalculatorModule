@@ -1,0 +1,1003 @@
+<?xml version="1.0" encoding="utf-8"?>
+<requestContract>
+  <header>
+    <party id="partyA">
+      <partyId>IBKS_RISK</partyId>
+      <partyName>IBK Securities</partyName>
+    </party>
+    <party id="partyB">
+      <partyId>IBKS_OTC</partyId>
+      <partyName>IBK Securities</partyName>
+    </party>
+    <sentBy>PARTYABIC1</sentBy>
+    <sendTo>PARTYBBIC2</sendTo>
+    <creationTimestamp>2009-09-01T16:38:00Z</creationTimestamp>
+  </header>
+
+  <trade>
+    <tradeHeader>
+      <partyTradeIdentifier>
+        <partyReference href="partyA"/>
+        <tradeId tradeIdScheme="http://www.partyA.com/trade-id-1-0">1558488</tradeId>
+      </partyTradeIdentifier>
+      <partyTradeIdentifier>
+        <partyReference href="partyB"/>
+        <tradeId tradeIdScheme="http://www.partyA.com/trade-id-1-0">1558488</tradeId>
+      </partyTradeIdentifier>
+      <tradeDate>2013-01-02</tradeDate>
+    </tradeHeader>
+
+    <structuredProduct>
+    
+      <issueInformation>
+        <productType>
+          <classification scheme="my">structuredSwap</classification>
+        </productType>
+        <instrumentID>50505A2A14S0</instrumentID>
+        
+        <issueDate id="issueDate">
+          <unadjustedDate>2002-07-17</unadjustedDate>
+          <dateAdjustments>
+            <businessDayConvention>NONE</businessDayConvention>
+          </dateAdjustments>
+        </issueDate>
+        <maturityDate id="maturityDate">
+          <unadjustedDate>2002-07-17</unadjustedDate>
+          <dateAdjustments>
+            <businessDayConvention>NONE</businessDayConvention>
+          </dateAdjustments>
+        </maturityDate>
+        
+        <calculationAgent></calculationAgent>
+
+        <notional id="equityNotionalAmount">
+          <notionalAmount>
+            <currency>KRW</currency>
+            <amount>1000000</amount>
+          </notionalAmount>
+        </notional>
+        
+        <premium>
+          <payerPartyReference href="party2"/>
+          <receiverPartyReference href="party1"/>
+          <paymentAmount>
+            <currency>EUR</currency>
+            <amount>405000</amount>
+          </paymentAmount>
+          <paymentDate>
+            <unadjustedDate>2002-07-17</unadjustedDate>
+            <dateAdjustments>
+              <businessDayConvention>NONE</businessDayConvention>
+            </dateAdjustments>
+          </paymentDate>
+        </premium>
+      
+    </issueInformation>
+
+      <structuredProductPayoff>
+        <baseInformation>
+          
+          <optionalEarlyTerminaion>
+            <terminationDates>
+              <adjustableDate>
+                <unadjustedDate>2009-12-11</unadjustedDate>
+                <dateAdjustments>
+                  <businessDayConvention>FOLLOWING</businessDayConvention>
+                  <businessCenters>
+                    <businessCenter>EUTA</businessCenter>
+                  </businessCenters>
+                </dateAdjustments>
+              </adjustableDate>
+              <adjustableDate>
+                <unadjustedDate>2009-12-11</unadjustedDate>
+                <dateAdjustments>
+                  <businessDayConvention>FOLLOWING</businessDayConvention>
+                  <businessCenters>
+                    <businessCenter>EUTA</businessCenter>
+                  </businessCenters>
+                </dateAdjustments>
+              </adjustableDate>
+            </terminationDates>
+          </optionalEarlyTerminaion>
+          
+          <baseIndexes>
+            <baseIndex>
+              <stockIndex id="Stock1">
+                <code codeScheme="http://~"></code>
+                <name>KOSPI200</name>
+                <fixingInfomation fixingScheme="http://~">
+                </fixingInfomation>
+                <indexType></indexType>
+              </stockIndex>
+            </baseIndex>
+            <baseIndex>
+              <stockIndex id="Stock2">
+                <code codeScheme="http://~"></code>
+                <name>S_P500</name>
+                <fixingInfomation></fixingInfomation>
+                <indexType> </indexType>
+              </stockIndex>
+            </baseIndex>
+          </baseIndexes>
+
+          <commonInformation preSet ="custom">
+            <businessDay>bu</businessDay>
+            <businessDayConvenction>kkbu </businessDayConvenction>
+            <daycounter>365ACT</daycounter>
+            <currency>KRW</currency>
+            <imbededOption>NONE</imbededOption>
+            <calendar>KOR</calendar>
+          </commonInformation>
+      
+        </baseInformation>
+        <payoffSchedule>
+          
+          <eventCheck id="E1">
+            <eventCheckNormal>
+              <eventIndexTransformation id="E1_Return">
+                <indexCalculation>
+                  <return id="E1_Stock1_R">
+                    <baseRef>Stock1</baseRef>
+                    <numerDate>2011-08-02</numerDate>
+                    <denumerDate>2011-08-01</denumerDate>
+                  </return>
+                </indexCalculation>
+                <indexCalculation>
+                  <return id="E1_Stock1_R">
+                    <baseRef>Stock1</baseRef>
+                    <numerDate>2011-08-02</numerDate>
+                    <denumerDate>2011-08-01</denumerDate>
+                  </return>
+                </indexCalculation>
+                <!--<trans type="Return" baseRef="all" symID="Tran1" />-->
+              </eventIndexTransformation>
+        
+              <functionEvents>
+          
+                <eventFunction>
+                  <name>E1_Stock1_Check</name>
+                  <indexSymbol>E1_Stock1_R</indexSymbol>
+                  <upEventCheck>
+                    <checkValue>241.5</checkValue>
+                    <equality>false</equality>
+                  </upEventCheck>
+                </eventFunction>
+          
+                <eventFunction>
+                  <name>E1_Stock2_Check</name>
+                  <indexSymbol>E1_Stock2_R</indexSymbol>
+                  <functionType>UpEventCheck</functionType>
+                  <checkValue>1345.4</checkValue>
+                  <equality>false</equality>
+                </eventFunction>
+
+                <jointFunctionEvent>
+                  <jointType>And</jointType>
+                  <functions>
+                    <function>
+                      <refName>E1_Stock1_Check</refName>
+                      <truefalse>True</truefalse>
+                    </function>
+                    <function>
+                      <refName>E1_Stock2_Check</refName>
+                      <truefalse>True</truefalse>
+                    </function>
+                  </functions>
+                </jointFunctionEvent>
+          
+              </functionEvents>
+
+              <eventDate>
+              
+                <type>day</type>
+              
+                <!--day , daily 까지만 하고 나중에 module안에서 daily 검사할때는 처음하고 끝만 받아서 검사 ㄱㄱ, weekly , monthly-->
+                <adjustableDate>
+                  <unadjustedDate>2009-12-11</unadjustedDate>
+                  <dateAdjustments>
+                    <businessDayConvention>FOLLOWING</businessDayConvention>
+                    <businessCenters>
+                      <businessCenter>EUTA</businessCenter>
+                    </businessCenters>
+                  </dateAdjustments>
+                </adjustableDate>
+              
+              </eventDate>
+            
+              <payoffBase>
+                
+                <payoffDate>
+                  <adjustableDate>
+                    <unadjustedDate>2009-12-11</unadjustedDate>
+                    <dateAdjustments>
+                      <businessDayConvention>FOLLOWING</businessDayConvention>
+                      <businessCenters>
+                        <businessCenter>EUTA</businessCenter>
+                      </businessCenters>
+                    </dateAdjustments>
+                  </adjustableDate>
+                </payoffDate>
+                
+                <constPayoff>
+                  <constant>Notional * 1.033 </constant> 
+                </constPayoff>
+              
+              </payoffBase>
+            </eventCheckNormal>
+          </eventCheck>
+
+          <eventCheck id="E2">
+            <eventCheckNormal>
+              <eventIndexTransformation id="E2_Return">
+                <indexCalculation>
+                  <return id="E2_Stock1_R">
+                    <baseRef>Stock1</baseRef>
+                    <numerDate>2011-08-02</numerDate>
+                    <denumerDate>2011-08-01</denumerDate>
+                  </return>
+                </indexCalculation>
+                <indexCalculation>
+                  <return id="E2_Stock1_R">
+                    <baseRef>Stock2</baseRef>
+                    <numerDate>2011-08-02</numerDate>
+                    <denumerDate>2011-08-01</denumerDate>
+                  </return>
+                </indexCalculation>
+                <!--<trans type="Return" baseRef="all" symID="Tran1" />-->
+              </eventIndexTransformation>
+
+              <functionEvents>
+
+                <eventFunction>
+                  <name>E2_Stock1_Check</name>
+                  <indexSymbol>E2_Stock1_R</indexSymbol>
+                  <upEventCheck>
+                    <checkValue>241.5</checkValue>
+                    <equality>false</equality>
+                  </upEventCheck>
+                </eventFunction>
+
+                <eventFunction>
+                  <name>E2_Stock2_Check</name>
+                  <indexSymbol>E2_Stock2_R</indexSymbol>
+                  <functionType>UpEventCheck</functionType>
+                  <checkValue>1345.4</checkValue>
+                  <equality>false</equality>
+                </eventFunction>
+
+                <jointFunctionEvent>
+                  <jointType>And</jointType>
+                  <functions>
+                    <function>
+                      <refName>E2_Stock1_Check</refName>
+                      <truefalse>True</truefalse>
+                    </function>
+                    <function>
+                      <refName>E2_Stock2_Check</refName>
+                      <truefalse>True</truefalse>
+                    </function>
+                  </functions>
+                </jointFunctionEvent>
+
+              </functionEvents>
+
+              <eventDate>
+
+                <type>day</type>
+
+                <!--day , daily 까지만 하고 나중에 module안에서 daily 검사할때는 처음하고 끝만 받아서 검사 ㄱㄱ, weekly , monthly-->
+                <adjustableDate>
+                  <unadjustedDate>2009-12-11</unadjustedDate>
+                  <dateAdjustments>
+                    <businessDayConvention>FOLLOWING</businessDayConvention>
+                    <businessCenters>
+                      <businessCenter>EUTA</businessCenter>
+                    </businessCenters>
+                  </dateAdjustments>
+                </adjustableDate>
+
+              </eventDate>
+
+              <payoffBase>
+
+                <payoffDate>
+                  <adjustableDate>
+                    <unadjustedDate>2009-12-11</unadjustedDate>
+                    <dateAdjustments>
+                      <businessDayConvention>FOLLOWING</businessDayConvention>
+                      <businessCenters>
+                        <businessCenter>EUTA</businessCenter>
+                      </businessCenters>
+                    </dateAdjustments>
+                  </adjustableDate>
+                </payoffDate>
+
+                <constPayoff>
+                  <constant>Notional * 1.066 </constant>
+                </constPayoff>
+
+              </payoffBase>
+            </eventCheckNormal>
+          </eventCheck>
+
+          <eventCheck id="E3">
+            <eventCheckNormal>
+            <eventIndexTransformation id="E3_Return">
+              <indexCalculation>
+                <return id="E3_Stock1_R">
+                  <baseRef>Stock1</baseRef>
+                  <numerDate>2011-08-02</numerDate>
+                  <denumerDate>2011-08-01</denumerDate>
+                </return>
+              </indexCalculation>
+              <indexCalculation>
+                <return id="E3_Stock1_R">
+                  <baseRef>Stock2</baseRef>
+                  <numerDate>2011-08-02</numerDate>
+                  <denumerDate>2011-08-01</denumerDate>
+                </return>
+              </indexCalculation>
+              <!--<trans type="Return" baseRef="all" symID="Tran1" />-->
+            </eventIndexTransformation>
+
+              <functionEvents>
+
+                <eventFunction>
+                  <name>E3_Stock1_Check</name>
+                  <indexSymbol>E3_Stock1_R</indexSymbol>
+                  <upEventCheck>
+                    <checkValue>241.5</checkValue>
+                    <equality>false</equality>
+                  </upEventCheck>
+                </eventFunction>
+
+                <eventFunction>
+                  <name>E3_Stock2_Check</name>
+                  <indexSymbol>E3_Stock2_R</indexSymbol>
+                  <functionType>UpEventCheck</functionType>
+                  <checkValue>1345.4</checkValue>
+                  <equality>false</equality>
+                </eventFunction>
+
+                <jointFunctionEvent>
+                  <jointType>And</jointType>
+                  <functions>
+                    <function>
+                      <refName>E3_Stock1_Check</refName>
+                      <truefalse>True</truefalse>
+                    </function>
+                    <function>
+                      <refName>E3_Stock2_Check</refName>
+                      <truefalse>True</truefalse>
+                    </function>
+                  </functions>
+                </jointFunctionEvent>
+
+              </functionEvents>
+
+              <eventDate>
+
+                <type>day</type>
+
+                <!--day , daily 까지만 하고 나중에 module안에서 daily 검사할때는 처음하고 끝만 받아서 검사 ㄱㄱ, weekly , monthly-->
+                <adjustableDate>
+                  <unadjustedDate>2009-12-11</unadjustedDate>
+                  <dateAdjustments>
+                    <businessDayConvention>FOLLOWING</businessDayConvention>
+                    <businessCenters>
+                      <businessCenter>EUTA</businessCenter>
+                    </businessCenters>
+                  </dateAdjustments>
+                </adjustableDate>
+
+              </eventDate>
+
+              <payoffBase>
+
+                <payoffDate>
+                  <adjustableDate>
+                    <unadjustedDate>2009-12-11</unadjustedDate>
+                    <dateAdjustments>
+                      <businessDayConvention>FOLLOWING</businessDayConvention>
+                      <businessCenters>
+                        <businessCenter>EUTA</businessCenter>
+                      </businessCenters>
+                    </dateAdjustments>
+                  </adjustableDate>
+                </payoffDate>
+
+                <constPayoff>
+                  <constant>Notional * 1.066 </constant>
+                </constPayoff>
+
+              </payoffBase>
+            </eventCheckNormal>
+          </eventCheck>
+
+          <eventCheck id="E4">
+            <eventCheckNormal>
+              <eventIndexTransformation id="E4_Return">
+                <indexCalculation>
+                  <return id="E4_Stock1_R">
+                    <baseRef>Stock1</baseRef>
+                    <numerDate>2011-08-02</numerDate>
+                    <denumerDate>2011-08-01</denumerDate>
+                  </return>
+                </indexCalculation>
+                <indexCalculation>
+                  <return id="E4_Stock1_R">
+                    <baseRef>Stock2</baseRef>
+                    <numerDate>2011-08-02</numerDate>
+                    <denumerDate>2011-08-01</denumerDate>
+                  </return>
+                </indexCalculation>
+                <!--<trans type="Return" baseRef="all" symID="Tran1" />-->
+              </eventIndexTransformation>
+
+              <functionEvents>
+
+                <eventFunction>
+                  <name>E4_Stock1_Check</name>
+                  <indexSymbol>E4_Stock1_R</indexSymbol>
+                  <upEventCheck>
+                    <checkValue>241.5</checkValue>
+                    <equality>false</equality>
+                  </upEventCheck>
+                </eventFunction>
+
+                <eventFunction>
+                  <name>E4_Stock2_Check</name>
+                  <indexSymbol>E4_Stock2_R</indexSymbol>
+                  <functionType>UpEventCheck</functionType>
+                  <checkValue>1345.4</checkValue>
+                  <equality>false</equality>
+                </eventFunction>
+
+                <jointFunctionEvent>
+                  <jointType>And</jointType>
+                  <functions>
+                    <function>
+                      <refName>E4_Stock1_Check</refName>
+                      <truefalse>True</truefalse>
+                    </function>
+                    <function>
+                      <refName>E4_Stock2_Check</refName>
+                      <truefalse>True</truefalse>
+                    </function>
+                  </functions>
+                </jointFunctionEvent>
+
+              </functionEvents>
+
+              <eventDate>
+
+                <type>day</type>
+
+                <!--day , daily 까지만 하고 나중에 module안에서 daily 검사할때는 처음하고 끝만 받아서 검사 ㄱㄱ, weekly , monthly-->
+                <adjustableDate>
+                  <unadjustedDate>2009-12-11</unadjustedDate>
+                  <dateAdjustments>
+                    <businessDayConvention>FOLLOWING</businessDayConvention>
+                    <businessCenters>
+                      <businessCenter>EUTA</businessCenter>
+                    </businessCenters>
+                  </dateAdjustments>
+                </adjustableDate>
+
+              </eventDate>
+
+              <payoffBase>
+
+                <payoffDate>
+                  <adjustableDate>
+                    <unadjustedDate>2009-12-11</unadjustedDate>
+                    <dateAdjustments>
+                      <businessDayConvention>FOLLOWING</businessDayConvention>
+                      <businessCenters>
+                        <businessCenter>EUTA</businessCenter>
+                      </businessCenters>
+                    </dateAdjustments>
+                  </adjustableDate>
+                </payoffDate>
+
+                <constPayoff>
+                  <constant>Notional * 1.066 </constant>
+                </constPayoff>
+
+              </payoffBase>
+            </eventCheckNormal>
+          </eventCheck>
+
+          <eventCheck id="E5">
+            <eventCheckNormal>
+              <eventIndexTransformation id="E5_Return">
+                <indexCalculation>
+                  <return id="E5_Stock1_R">
+                    <baseRef>Stock1</baseRef>
+                    <numerDate>2011-08-02</numerDate>
+                    <denumerDate>2011-08-01</denumerDate>
+                  </return>
+                </indexCalculation>
+                <indexCalculation>
+                  <return id="E5_Stock1_R">
+                    <baseRef>Stock2</baseRef>
+                    <numerDate>2011-08-02</numerDate>
+                    <denumerDate>2011-08-01</denumerDate>
+                  </return>
+                </indexCalculation>
+                <!--<trans type="Return" baseRef="all" symID="Tran1" />-->
+              </eventIndexTransformation>
+
+              <functionEvents>
+
+                <eventFunction>
+                  <name>E5_Stock1_Check</name>
+                  <indexSymbol>E5_Stock1_R</indexSymbol>
+                  <upEventCheck>
+                    <checkValue>241.5</checkValue>
+                    <equality>false</equality>
+                  </upEventCheck>
+                </eventFunction>
+
+                <eventFunction>
+                  <name>E5_Stock2_Check</name>
+                  <indexSymbol>E5_Stock2_R</indexSymbol>
+                  <functionType>UpEventCheck</functionType>
+                  <checkValue>1345.4</checkValue>
+                  <equality>false</equality>
+                </eventFunction>
+
+                <jointFunctionEvent>
+                  <jointType>And</jointType>
+                  <functions>
+                    <function>
+                      <refName>E5_Stock1_Check</refName>
+                      <truefalse>True</truefalse>
+                    </function>
+                    <function>
+                      <refName>E5_Stock2_Check</refName>
+                      <truefalse>True</truefalse>
+                    </function>
+                  </functions>
+                </jointFunctionEvent>
+
+              </functionEvents>
+
+              <eventDate>
+
+                <type>day</type>
+
+                <!--day , daily 까지만 하고 나중에 module안에서 daily 검사할때는 처음하고 끝만 받아서 검사 ㄱㄱ, weekly , monthly-->
+                <adjustableDate>
+                  <unadjustedDate>2009-12-11</unadjustedDate>
+                  <dateAdjustments>
+                    <businessDayConvention>FOLLOWING</businessDayConvention>
+                    <businessCenters>
+                      <businessCenter>EUTA</businessCenter>
+                    </businessCenters>
+                  </dateAdjustments>
+                </adjustableDate>
+
+              </eventDate>
+
+              <payoffBase>
+
+                <payoffDate>
+                  <adjustableDate>
+                    <unadjustedDate>2009-12-11</unadjustedDate>
+                    <dateAdjustments>
+                      <businessDayConvention>FOLLOWING</businessDayConvention>
+                      <businessCenters>
+                        <businessCenter>EUTA</businessCenter>
+                      </businessCenters>
+                    </dateAdjustments>
+                  </adjustableDate>
+                </payoffDate>
+
+                <constPayoff>
+                  <constant>Notional * 1.066 </constant>
+                </constPayoff>
+
+              </payoffBase>
+            </eventCheckNormal>
+          </eventCheck>
+
+          <eventCheck id="E6">
+            <eventCheckNormal>
+              <eventIndexTransformation id="E6_Return">
+                <indexCalculation>
+                  <return id="E6_Stock1_R">
+                    <baseRef>Stock1</baseRef>
+                    <numerDate>2011-08-02</numerDate>
+                    <denumerDate>2011-08-01</denumerDate>
+                  </return>
+                </indexCalculation>
+                <indexCalculation>
+                  <return id="E6_Stock1_R">
+                    <baseRef>Stock2</baseRef>
+                    <numerDate>2011-08-02</numerDate>
+                    <denumerDate>2011-08-01</denumerDate>
+                  </return>
+                </indexCalculation>
+                <!--<trans type="Return" baseRef="all" symID="Tran1" />-->
+              </eventIndexTransformation>
+
+              <functionEvents>
+
+                <eventFunction>
+                  <name>E6_Stock1_Check</name>
+                  <indexSymbol>E6_Stock1_R</indexSymbol>
+                  <upEventCheck>
+                    <checkValue>241.5</checkValue>
+                    <equality>false</equality>
+                  </upEventCheck>
+                </eventFunction>
+
+                <eventFunction>
+                  <name>E6_Stock2_Check</name>
+                  <indexSymbol>E6_Stock2_R</indexSymbol>
+                  <functionType>UpEventCheck</functionType>
+                  <checkValue>1345.4</checkValue>
+                  <equality>false</equality>
+                </eventFunction>
+
+                <jointFunctionEvent>
+                  <jointType>And</jointType>
+                  <functions>
+                    <function>
+                      <refName>E6_Stock1_Check</refName>
+                      <truefalse>True</truefalse>
+                    </function>
+                    <function>
+                      <refName>E6_Stock2_Check</refName>
+                      <truefalse>True</truefalse>
+                    </function>
+                  </functions>
+                </jointFunctionEvent>
+
+              </functionEvents>
+
+              <eventDate>
+
+                <type>day</type>
+
+                <!--day , daily 까지만 하고 나중에 module안에서 daily 검사할때는 처음하고 끝만 받아서 검사 ㄱㄱ, weekly , monthly-->
+                <adjustableDate>
+                  <unadjustedDate>2009-12-11</unadjustedDate>
+                  <dateAdjustments>
+                    <businessDayConvention>FOLLOWING</businessDayConvention>
+                    <businessCenters>
+                      <businessCenter>EUTA</businessCenter>
+                    </businessCenters>
+                  </dateAdjustments>
+                </adjustableDate>
+
+              </eventDate>
+
+              <payoffBase>
+
+                <payoffDate>
+                  <adjustableDate>
+                    <unadjustedDate>2009-12-11</unadjustedDate>
+                    <dateAdjustments>
+                      <businessDayConvention>FOLLOWING</businessDayConvention>
+                      <businessCenters>
+                        <businessCenter>EUTA</businessCenter>
+                      </businessCenters>
+                    </dateAdjustments>
+                  </adjustableDate>
+                </payoffDate>
+
+                <constPayoff>
+                  <constant>Notional * 1.066 </constant>
+                </constPayoff>
+
+              </payoffBase>
+            </eventCheckNormal>
+          </eventCheck>
+          
+          <eventCheck id="KI">
+            <eventCheckTime>
+              <eventIndexTransformation id="E6_Return">
+                <indexCalculation>
+                  <return id="E6_Stock1_R">
+                    <baseRef>Stock1</baseRef>
+                    <numerDate>2011-08-02</numerDate>
+                    <denumerDate>2011-08-01</denumerDate>
+                  </return>
+                </indexCalculation>
+                <indexCalculation>
+                  <return id="E6_Stock1_R">
+                    <baseRef>Stock2</baseRef>
+                    <numerDate>2011-08-02</numerDate>
+                    <denumerDate>2011-08-01</denumerDate>
+                  </return>
+                </indexCalculation>
+                <!--<trans type="Return" baseRef="all" symID="Tran1" />-->
+              </eventIndexTransformation>
+
+              <functionEvents id="KI_Event">
+
+                <eventFunction>
+                  <name>KI_Stock1_Check</name>
+                  <indexSymbol>E6_Stock1_R</indexSymbol>
+                  <downEventCheck>
+                    <checkValue>150.5</checkValue>
+                    <equality>false</equality>
+                  </downEventCheck>
+                </eventFunction>
+
+                <eventFunction>
+                  <name>KI_Stock2_Check</name>
+                  <indexSymbol>E6_Stock2_R</indexSymbol>
+                  <downEventCheck>
+                    <checkValue>175.5</checkValue>
+                    <equality>false</equality>
+                  </downEventCheck>
+                </eventFunction>
+
+                <jointFunctionEvent>
+                  <jointType>OR</jointType>
+                  <functions>
+                    <function>
+                      <refName>KI_Stock1_Check</refName>
+                      <truefalse>True</truefalse>
+                    </function>
+                    <function>
+                      <refName>KI_Stock2_Check</refName>
+                      <truefalse>True</truefalse>
+                    </function>
+                  </functions>
+                </jointFunctionEvent>
+
+              </functionEvents>
+
+            <!--
+            <amotize>
+              <expr>2*Amor</expr>
+            </amotize>
+            -->
+
+              <eventDate type="daily"> <!--define weekly, every monday, ... ,friday-->
+                <!--day , daily 까지만 하고 나중에 module안에서 daily 검사할때는 처음하고 끝만 받아서 검사 ㄱㄱ, weekly , monthly-->
+                <adjustableDate>
+                  <unadjustedDate href="issueDate" />
+                  <dateAdjustments>
+                    <businessDayConvention>FOLLOWING</businessDayConvention>
+                    <businessCenters>
+                      <businessCenter>EUTA</businessCenter>
+                    </businessCenters>
+                  </dateAdjustments>
+                </adjustableDate>
+                <adjustableDate>
+                  <unadjustedDate href="maturityDate" />
+                  <dateAdjustments>
+                    <businessDayConvention>FOLLOWING</businessDayConvention>
+                    <businessCenters>
+                      <businessCenter>EUTA</businessCenter>
+                    </businessCenters>
+                  </dateAdjustments>
+                </adjustableDate>
+
+              </eventDate>
+
+              <timeAggregateTF probType="atleast">1</timeAggregateTF>
+            </eventCheckTime>
+          </eventCheck>
+
+          <eventCheck id="Maturity">
+            <eventCheckNormal>
+              <eventIndexTransformation id="Maturity_Return">
+                <indexCalculation>
+                  <return id="Maturity_Stock1_R">
+                    <baseRef>Stock1</baseRef>
+                    <numerDate>2011-08-02</numerDate>
+                    <denumerDate>2011-08-01</denumerDate>
+                  </return>
+                </indexCalculation>
+                <indexCalculation>
+                  <return id="Maturity_Stock1_R">
+                    <baseRef>Stock2</baseRef>
+                    <numerDate>2011-08-02</numerDate>
+                    <denumerDate>2011-08-01</denumerDate>
+                  </return>
+                </indexCalculation>
+                <!--<trans type="Return" baseRef="all" symID="Tran1" />-->
+              </eventIndexTransformation>
+
+              <functionEvents id="Maturity_Event">
+
+                <eventFunction>
+                  <name>Maturity_Stock1_Check</name>
+                  <indexSymbol>Maturity_Stock1_R</indexSymbol>
+                  <downEventCheck>
+                    <checkValue>150.5</checkValue>
+                    <equality>false</equality>
+                  </downEventCheck>
+                </eventFunction>
+
+                <eventFunction>
+                  <name>Maturity_Stock2_Check</name>
+                  <indexSymbol>Maturity_Stock2_R</indexSymbol>
+                  <downEventCheck>
+                    <checkValue>175.5</checkValue>
+                    <equality>false</equality>
+                  </downEventCheck>
+                </eventFunction>
+
+                <jointFunctionEvent>
+                  <jointType>OR</jointType>
+                  <functions>
+                    <function>
+                      <refName>Maturity_Stock1_Check</refName>
+                      <truefalse>True</truefalse>
+                    </function>
+                    <function>
+                      <refName>Maturity_Stock2_Check</refName>
+                      <truefalse>True</truefalse>
+                    </function>
+                  </functions>
+                </jointFunctionEvent>
+
+              </functionEvents>
+
+              <eventDate type="day">
+                <!--define weekly, every monday, ... ,friday-->
+                <!--day , daily 까지만 하고 나중에 module안에서 daily 검사할때는 처음하고 끝만 받아서 검사 ㄱㄱ, weekly , monthly-->
+                <adjustableDate>
+                  <unadjustedDate href="maturityDate" />
+                  <dateAdjustments>
+                    <businessDayConvention>FOLLOWING</businessDayConvention>
+                    <businessCenters>
+                      <businessCenter>EUTA</businessCenter>
+                    </businessCenters>
+                  </dateAdjustments>
+                </adjustableDate>
+
+              </eventDate>
+
+              <subEventCheck>
+                <eventCheck href="KI" />
+              </subEventCheck>
+
+              <payoff id="Maturity_Payoff">
+                <payoffDate>
+                  <adjustableDate>
+                    <unadjustedDate>2009-12-11</unadjustedDate>
+                    <dateAdjustments>
+                      <businessDayConvention>FOLLOWING</businessDayConvention>
+                      <businessCenters>
+                        <businessCenter>EUTA</businessCenter>
+                      </businessCenters>
+                    </dateAdjustments>
+                  </adjustableDate>
+
+                </payoffDate>
+                
+                <constPayoff>
+                  <constant>Notional * 1.066 </constant>
+                </constPayoff>
+                
+              </payoff>
+              
+              <jointFunctionEvent>
+                <jointType>And</jointType>
+                <functions>
+                  <function>
+                    <refName>Maturity_Event</refName>
+                    <truefalse>True</truefalse>
+                  </function>
+                  <function>
+                    <refName>KI</refName>
+                    <truefalse>False</truefalse>
+                  </function>
+                </functions>
+              </jointFunctionEvent>
+              
+            </eventCheckNormal>
+          </eventCheck>
+
+          <eventCheck symID="E_Maturity_Slope">
+            <eventCheckNormal>
+              <eventIndexTransformation id="Maturity_Return">
+                <indexCalculation>
+                  <return id="Maturity_Stock1_R">
+                    <baseRef>Stock1</baseRef>
+                    <numerDate>2011-08-02</numerDate>
+                    <denumerDate>2011-08-01</denumerDate>
+                  </return>
+                </indexCalculation>
+                <indexCalculation>
+                  <return id="Maturity_Stock2_R">
+                    <baseRef>Stock2</baseRef>
+                    <numerDate>2011-08-02</numerDate>
+                    <denumerDate>2011-08-01</denumerDate>
+                  </return>
+                </indexCalculation>
+                <indexCalculation>
+                  <minimum id="Maturity_Stock_Min">
+                    <variable>
+                      <symbol>Maturity_Stock1_R</symbol>  
+                    </variable>
+                    <variable>
+                      <symbol>Maturity_Stock2_R</symbol>  
+                    </variable>
+                  </minimum>
+                </indexCalculation>
+                <!--<trans type="Return" baseRef="all" symID="Tran1" />-->
+              </eventIndexTransformation>
+
+              <functionEvents id="Slope_Event">
+
+                <eventFunction>
+                  <name>Slope_Event_Check</name>
+                  <indexSymbol>Maturity_Stock_Min</indexSymbol>
+                  <downEventCheck>
+                    <checkValue>175.5</checkValue>
+                    <equality>false</equality>
+                  </downEventCheck>
+                </eventFunction>
+
+              </functionEvents>
+        
+              <subEventCheck>
+                <eventCheck href="KI" />
+              </subEventCheck>
+
+              <payoff id="Maturity_Payoff">
+                <payoffDate>
+                  <adjustableDate>
+                    <unadjustedDate>2009-12-11</unadjustedDate>
+                    <dateAdjustments>
+                      <businessDayConvention>FOLLOWING</businessDayConvention>
+                      <businessCenters>
+                        <businessCenter>EUTA</businessCenter>
+                      </businessCenters>
+                    </dateAdjustments>
+                  </adjustableDate>
+
+                </payoffDate>
+
+                <constPayoff>
+                  <constant>Notional * Maturity_Stock_Min </constant>
+                </constPayoff>
+
+              </payoff>
+
+              <jointFSubEvent>
+                <jointType>And</jointType>
+                <functions>
+                  <function>
+                    <refName>Maturity_Event</refName>
+                    <truefalse>True</truefalse>
+                  </function>
+                  <function>
+                    <refName>KI</refName>
+                    <truefalse>False</truefalse>
+                  </function>
+                </functions>
+              </jointFSubEvent>
+            </eventCheckNormal>
+          </eventCheck>
+          
+        </payoffSchedule>
+      </structuredProductPayoff>
+        
+  </structuredProduct>
+  </trade>
+
+</requestContract>
+
+<!--<transType>   </transType>
+        <count></count>
+        <mathFucntion functionType ="max">
+          <parametor>S1</parametor>
+          <parametor>0</parametor>
+        </mathFucntion>
+        <payoff>
+        <payoffDate>2012-10-05</payoffDate>
+        <expr>max(S1,S2)</expr>
+        
+        
+      </payoff>-->
+<!--두가지 경우가 가능 한걸로..어떻게 조함할지는 머..-->

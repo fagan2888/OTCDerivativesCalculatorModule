@@ -1,0 +1,13 @@
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\ExcelInterface\bin\Release\ExcelInterface.dll
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\ExcelInterface\bin\Release\ExcelInterface.pdb
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\ExcelInterface\obj\Release\ExcelInterface.dll
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\ExcelInterface\obj\Release\ExcelInterface.pdb
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\ExcelInterface\obj\Release\ExcelInterface.csprojResolveAssemblyReference.cache
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\ExcelInterface\bin\Release\Data\Data_Interface\MarketDataBase.sdf
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\ExcelInterface\bin\Release\RiskMonitor.exe
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\ExcelInterface\bin\Release\Fluent.dll
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\ExcelInterface\bin\Release\QLNet.dll
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\ExcelInterface\bin\Release\AvalonDock.dll
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\ExcelInterface\bin\Release\RiskMonitor.pdb
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\ExcelInterface\bin\Release\QLNet.pdb
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\ExcelInterface\bin\Release\ExcelInterface.tlb

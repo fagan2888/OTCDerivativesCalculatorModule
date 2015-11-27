@@ -1,0 +1,20 @@
+﻿ExcelOTCManagerAddIn
+
+
+library
+C#
+.cs
+D:\Project File\OTCDerivativesCalculatorModule\ExcelOTCManagerAddIn\obj\Debug\
+ExcelOTCManagerAddIn
+none
+false
+VSTO40;DEBUG;TRACE
+
+4136912058
+1649016384
+44197551932
+27-888337395
+excel_instrumentVM\hifive\Excel_underlyingInfoListView.xaml;PositionMaster\BookingPositionView.xaml;PositionMaster\NewProductView.xaml;PositionMaster\PositionMasterView.xaml;
+
+False
+

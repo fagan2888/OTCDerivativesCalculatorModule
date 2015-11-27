@@ -1,0 +1,52 @@
+﻿<UserControl x:Class="Excel_Interface.Excel_multiAsset_vanillaCallPutView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <Label Content="multi Asset vanilla Call / Put Option" />
+            <StackPanel Name="bindPanel_" Orientation="Horizontal">
+                <Label  Content="Call / Put : " />
+                <ComboBox  Name="callPutComboBox_" SelectedItem="{Binding Path=CallPut_}" Width="80" />
+            </StackPanel>
+            <!--<StackPanel Orientation="Horizontal">
+                <Label Content="Name : " />
+                <TextBox Width="150" Text="{Binding Path=Name_}" />
+            </StackPanel>-->
+            <StackPanel Orientation="Horizontal">
+                <Label Content="PartiRate : " />
+                <TextBox Width="60" Text="{Binding Path=PartiRate_}" />
+                <Label Content="%" />
+                <Label Content="BaseCoupon : " />
+                <TextBox Width="60" Text="{Binding Path=BaseCoupon_}" />
+                <Label Content="%" />
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Return Check Calculation" />
+                    <Button Width="30" Content="Set" Click="returnUnderlyingCalcSetBtn_Click" />
+                </StackPanel>
+                <TextBox Text="{Binding Path=Excel_underlyingCalcIDViewModel_.Description_}" Name="returnUnderCalcDescriptionTxb_" Width="200" HorizontalAlignment="Left"  />
+
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Strike : " />
+                <TextBox Width="60" Text="{Binding Path=Strike_}" />
+                <Label Content="%" />
+                <Label Content="Atm " />
+                <CheckBox VerticalAlignment="Center" />
+
+            </StackPanel>
+            <!--<StackPanel Orientation="Horizontal">
+                <Label Content="기준가 : " />
+                <TextBox Width="100" Text="{Binding Path=BaseUnderlyingValue_}" />
+                <Label Content="StrikeValue : " />
+                <TextBox Width="100" Text="{Binding Path=StrikeValue_}" />
+            </StackPanel>-->
+
+        </StackPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,48 @@
+﻿<Window x:Class="XmlBuilder.Views.StructuredProduct.View.IndexTransCtrl.IndexTransEditView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="IndexTransEditView" Height="600" Width="600">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            
+            <StackPanel Orientation="Horizontal">
+                <Label Content="- IndexTransList" />
+                
+            </StackPanel>
+            <DataGrid x:Name="IndexTrans_DataGrid_" ItemsSource="{Binding Path=IndexTransVMList_}" AutoGenerateColumns="False" SelectionChanged="IndexTrans_DataGrid__SelectionChanged">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Path=Symbol_}" Header="Sym" />
+                    <DataGridTextColumn Binding="{Binding Path=Type_}" Header="Type" />
+                    <DataGridTextColumn Binding="{Binding Path=Description_}" Header="Description" />
+                    
+                </DataGrid.Columns>
+            </DataGrid>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Vertical">
+                    <Label Content="- Trans List" />
+                    <TreeView x:Name="trans_TreeView_"  Width="139" >
+                    </TreeView>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <Label Content="- Detail Informaion" />
+                    <Grid x:Name="detailCtrl_" ></Grid>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <Label Content="- Index List" />
+                    <ListBox />
+                    <Label Content="- Symbol List" />
+                    <ListBox />
+                </StackPanel>
+                
+            
+                <Grid>
+                
+                </Grid>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Confirm" />
+                <Button Content="Cancel " />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

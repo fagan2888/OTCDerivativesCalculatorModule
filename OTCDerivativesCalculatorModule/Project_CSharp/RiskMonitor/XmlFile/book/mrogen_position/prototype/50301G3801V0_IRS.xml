@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<instrument Type="IRS">
+  
+  <header>
+    <productName>F_대우증권 IRS 20130821</productName>
+    <productType>IRS</productType>
+    <krCode>50301G3801V0</krCode>
+  </header>
+  
+  <instrumentInfo>
+    <type>standardInstrument</type>
+    <standardInstrument>
+    
+      <issueInformation>
+        <type>swapInfo</type>
+        <swapInfo>
+          <tradeDate>2013-08-06</tradeDate>
+          <effectiveDate>2013-08-06</effectiveDate>
+          <maturityDate>2018-08-06</maturityDate>
+          <notional>100000000</notional>
+          <currency>USD</currency>
+          <premium>0</premium>
+        </swapInfo>
+      </issueInformation>
+
+      <underlyingInformation>
+        <type>index</type>
+        <indexUnderInfo>
+          <index>
+            <type>stock</type>
+            <stockIndex>
+              <krCode>KR7005930003</krCode>
+              <name>KR7005930003</name>
+              <basePrice>1313000</basePrice>
+            </stockIndex>
+          </index>
+          <index>
+            <type>stock</type>
+            <stockIndex>
+              <krCode>KR7005930003</krCode>
+              <name>KR7005930003</name>
+              <basePrice>1313000</basePrice>
+            </stockIndex>
+          </index>
+        </indexUnderInfo>
+      </underlyingInformation>
+
+      <payoffInfo>
+        <type>interestRateSwap</type>
+
+        <interestRateSwap>
+
+          <couponPart>
+            <payRecieve>Recieve</payRecieve>
+            <swapStream>
+              <type>standardStream</type>
+              <standardStream>
+
+                <scheduleInfo>
+                  <effectiveDate>2013-08-06</effectiveDate>
+                  <terminationDate>2018-08-06</terminationDate>
+                  <paymentDays>3</paymentDays>
+                  <calendar>KOR</calendar>
+                  <businessDayConvention>Following</businessDayConvention>
+                  <dateGeneration>Backward</dateGeneration>
+                  <!-- Backward , Forward ,TwentiethIMM , 21 , 17-->
+                  <periodFrequency>3M</periodFrequency>
+                </scheduleInfo>
+
+                <irCalculation>
+                  <calculationAmount>
+                    <currency>USD</currency>
+                    <amount>10000000</amount>
+                  </calculationAmount>
+
+                  <calculationStartDate>2013-08-06</calculationStartDate>
+                  <calculationEndDate>2018-08-06</calculationEndDate>
+                  <paymentDate>2018-08-06</paymentDate>
+
+                  <irCouponCalculation>
+                    <type>fixedRateCalculation</type>
+                    <fixedRateCalculation>
+                      <rate>0.05</rate>
+                    </fixedRateCalculation>
+                  </irCouponCalculation>
+
+                  <inArrear>false</inArrear>
+
+                </irCalculation>
+                <irCalculation>
+                  <calculationAmount>
+                    <currency>USD</currency>
+                    <amount>10000000</amount>
+                  </calculationAmount>
+
+                  <calculationStartDate>2013-08-06</calculationStartDate>
+                  <calculationEndDate>2018-08-06</calculationEndDate>
+                  <paymentDate>2018-08-06</paymentDate>
+
+                  <irCouponCalculation>
+                    <type>fixedRateCalculation</type>
+                    <fixedRateCalculation>
+                      <rate>0.05</rate>
+                    </fixedRateCalculation>
+                  </irCouponCalculation>
+
+                  <inArrear>false</inArrear>
+
+                </irCalculation>
+                <irCalculation>
+                  <calculationAmount>
+                    <currency>USD</currency>
+                    <amount>10000000</amount>
+                  </calculationAmount>
+
+                  <calculationStartDate>2013-08-06</calculationStartDate>
+                  <calculationEndDate>2018-08-06</calculationEndDate>
+                  <paymentDate>2018-08-06</paymentDate>
+
+                  <irCouponCalculation>
+                    <type>fixedRateCalculation</type>
+                    <fixedRateCalculation>
+                      <rate>0.05</rate>
+                    </fixedRateCalculation>
+                  </irCouponCalculation>
+
+                  <inArrear>false</inArrear>
+
+                </irCalculation>
+                <irCalculation>
+                  <calculationAmount>
+                    <currency>USD</currency>
+                    <amount>10000000</amount>
+                  </calculationAmount>
+
+                  <calculationStartDate>2013-08-06</calculationStartDate>
+                  <calculationEndDate>2018-08-06</calculationEndDate>
+                  <paymentDate>2018-08-06</paymentDate>
+
+                  <irCouponCalculation>
+                    <type>fixedRateCalculation</type>
+                    <fixedRateCalculation>
+                      <rate>0.05</rate>
+                    </fixedRateCalculation>
+                  </irCouponCalculation>
+
+                  <inArrear>false</inArrear>
+
+                </irCalculation>
+
+              </standardStream>
+
+            </swapStream>
+
+          </couponPart>
+          
+          <couponPart>
+            <payRecieve>Pay</payRecieve>
+            <swapStream>
+              <type>standardStream</type>
+              <standardStream>
+
+                <scheduleInfo>
+                  <effectiveDate>2013-08-06</effectiveDate>
+                  <terminationDate>2018-08-06</terminationDate>
+                  <paymentDays>3</paymentDays>
+                  <calendar>KOR</calendar>
+                  <businessDayConvention>Following</businessDayConvention>
+                  <dateGeneration>Backward</dateGeneration>
+                  <!-- Backward , Forward ,TwentiethIMM , 21 , 17-->
+                  <periodFrequency>3M</periodFrequency>
+                </scheduleInfo>
+
+                <couponInfo>
+                  
+                </couponInfo>
+
+                <irCalculation>
+                  <calculationAmount>
+                    <currency>USD</currency>
+                    <amount>10000000</amount>
+                  </calculationAmount>
+
+                  <calculationStartDate>2013-08-06</calculationStartDate>
+                  <calculationEndDate>2018-08-06</calculationEndDate>
+                  <paymentDate>2018-08-06</paymentDate>
+
+                  <irCouponCalculation>
+                    <type>fixedRateCalculation</type>
+                    <fixedRateCalculation>
+                      <rate>0.05</rate>
+                    </fixedRateCalculation>
+                  </irCouponCalculation>
+
+                  <inArrear>false</inArrear>
+
+                </irCalculation>
+                <irCalculation>
+                  <calculationAmount>
+                    <currency>USD</currency>
+                    <amount>10000000</amount>
+                  </calculationAmount>
+
+                  <calculationStartDate>2013-08-06</calculationStartDate>
+                  <calculationEndDate>2018-08-06</calculationEndDate>
+                  <paymentDate>2018-08-06</paymentDate>
+
+                  <irCouponCalculation>
+                    <type>fixedRateCalculation</type>
+                    <fixedRateCalculation>
+                      <rate>0.05</rate>
+                    </fixedRateCalculation>
+                  </irCouponCalculation>
+
+                  <inArrear>false</inArrear>
+
+                </irCalculation>
+                <irCalculation>
+                  <calculationAmount>
+                    <currency>USD</currency>
+                    <amount>10000000</amount>
+                  </calculationAmount>
+
+                  <calculationStartDate>2013-08-06</calculationStartDate>
+                  <calculationEndDate>2018-08-06</calculationEndDate>
+                  <paymentDate>2018-08-06</paymentDate>
+
+                  <irCouponCalculation>
+                    <type>fixedRateCalculation</type>
+                    <fixedRateCalculation>
+                      <rate>0.05</rate>
+                    </fixedRateCalculation>
+                  </irCouponCalculation>
+
+                  <inArrear>false</inArrear>
+
+                </irCalculation>
+                <irCalculation>
+                  <calculationAmount>
+                    <currency>USD</currency>
+                    <amount>10000000</amount>
+                  </calculationAmount>
+
+                  <calculationStartDate>2013-08-06</calculationStartDate>
+                  <calculationEndDate>2018-08-06</calculationEndDate>
+                  <paymentDate>2018-08-06</paymentDate>
+
+                  <irCouponCalculation>
+                    <type>fixedRateCalculation</type>
+                    <fixedRateCalculation>
+                      <rate>0.05</rate>
+                    </fixedRateCalculation>
+                  </irCouponCalculation>
+
+                  <inArrear>false</inArrear>
+
+                </irCalculation>
+                  
+                
+                
+              </standardStream>
+              
+            </swapStream>
+          
+          </couponPart>
+        
+        </interestRateSwap>
+        
+      </payoffInfo>
+      
+    </standardInstrument>
+  </instrumentInfo>
+  
+  <calculationAgent>
+    <calculationAgentPartyReference href="party1" />
+  </calculationAgent>
+
+</instrument>

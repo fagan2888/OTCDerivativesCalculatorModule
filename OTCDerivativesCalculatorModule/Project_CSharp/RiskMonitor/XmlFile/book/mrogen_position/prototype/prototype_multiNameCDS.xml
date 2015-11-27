@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<instrument Type="SingleNameCDS">
+  
+  <header>
+    <productName>F_SingleNameCDS</productName>
+    <productType>SingleNameCDS</productType>
+    <krCode>F000TestProduct</krCode>
+  </header>
+  
+  <instPositionInfo>
+    <krCode>40507A3517S0</krCode>
+    <instName>MultiNamedCDS_Test</instName>
+    <instCode>50507A3517S0</instCode>
+    <bookedDate>2013-05-30</bookedDate>
+    <unBookedDate>2013-05-21</unBookedDate>
+    <maturityDate>2016-05-25</maturityDate>
+    <instType>creditDefaultSwap</instType>
+    <fileName>prototype_multiNameCDS.xml</fileName>
+    <positionName>OTCDerivatives00</positionName>
+    <counterParty>samsung</counterParty>
+    <notional>100000000</notional>
+    <currency>KRW</currency>
+    <fundCode>null</fundCode>
+    <fundName>null</fundName>
+  </instPositionInfo>
+  
+  <instrumentInfo>
+    <type>creditInstrument</type>
+    <creditInstrument>
+    
+      <issueInformation>
+        <type>swapInfo</type>
+        <swapInfo>
+          <tradeDate>2013-08-06</tradeDate>
+          <effectiveDate>2013-08-06</effectiveDate>
+          <maturityDate>2018-08-06</maturityDate>
+          <notional>100000000</notional>
+          <currency>USD</currency>
+          <premium>0</premium>
+        </swapInfo>
+      </issueInformation>
+
+      <underlyingInformation>
+        <type>indexUnderInfo</type>
+        <indexUnderInfo>
+          <index>
+            <type>stockIndex</type>
+            <stockIndex>
+              <krCode>KR7005930003</krCode>
+              <name>KR7005930003</name>
+              <basePrice>1313000</basePrice>
+            </stockIndex>
+          </index>
+          <index>
+            <type>stockIndex</type>
+            <stockIndex>
+              <krCode>KR7005930003</krCode>
+              <name>KR7005930003</name>
+              <basePrice>1313000</basePrice>
+            </stockIndex>
+          </index>
+        </indexUnderInfo>
+      </underlyingInformation>
+
+      <creditPayoffInfo>
+        <type>creditDefaultSwap</type>
+        
+        <creditDefaultSwap>
+
+          <protectionPart>
+            <payRecieve>Pay</payRecieve>
+            
+            <referenceInformationList>
+      
+              <referenceInformation>
+                <referenceEntity>
+                  <entityName>Hana Bank</entityName>
+                  <entityId>00286</entityId>
+                </referenceEntity>
+                <referenceObligation>
+                  <bond>
+                    <instrumentId>US40963MAB81</instrumentId>
+                    <couponRate>0.1111</couponRate>
+                    <maturity>2030-03-06</maturity>
+                  </bond>
+                </referenceObligation>
+                <referencePrice>1.0</referencePrice>
+              </referenceInformation>
+      
+              <referenceInformation>
+                <referenceEntity>
+                  <entityName>Hyeondae Auto</entityName>
+                  <entityId>00538</entityId>
+                </referenceEntity>
+                <referenceObligation>
+                  <bond>
+                    <instrumentId>US44890AAA60</instrumentId>
+                    <couponRate>0.1222</couponRate>
+                    <maturity>2030-03-06</maturity>
+                  </bond>
+                </referenceObligation>
+                <referencePrice>1.0</referencePrice>
+              </referenceInformation>
+      
+              <referenceInformation>
+                <referenceEntity>
+                  <entityName>GS Caltecs</entityName>
+                  <entityId>00508</entityId>
+                </referenceEntity>
+                <referenceObligation>
+                  <bond>
+                    <instrumentId>USY5275KAP04</instrumentId>
+                    <couponRate>0.1333</couponRate>
+                    <maturity>2030-03-06</maturity>
+                  </bond>
+                </referenceObligation>
+                <referencePrice>1.0</referencePrice>
+              </referenceInformation>
+      
+            </referenceInformationList>
+    
+            <protectionTerms>
+          
+              <calculationAmount>
+                <currency>USD</currency>
+                <amount>10000000</amount>
+              </calculationAmount>
+      
+              <creditEvents>
+                <failureToPay>true</failureToPay>
+                <obligationAcceleration>true</obligationAcceleration>
+                <repudiationMoratorium>true</repudiationMoratorium>
+                <restructuring>true</restructuring>
+                <defaultRequirement>true</defaultRequirement>
+              </creditEvents>
+      
+              <obligations>
+                <category>Bond</category>
+                <notSubordinated>true</notSubordinated>
+                <notDomesticCurrency>true</notDomesticCurrency>
+                <notDomesticLaw>true</notDomesticLaw>
+                <notDomesticIssuance>true</notDomesticIssuance>
+              </obligations>
+
+              <accrualCoupon>true</accrualCoupon>
+            </protectionTerms>
+          
+          </protectionPart>
+
+          <couponPart>
+            <payoffInfo>
+              <type>vanillaStandardStreamPayoff</type>
+              <vanillaStandardStreamPayoff>
+
+                <scheduleInfo>
+                  <effectiveDate>2013-08-06</effectiveDate>
+                  <terminationDate>2018-08-06</terminationDate>
+                  <paymentDays>3</paymentDays>
+                  <calendar>KOR</calendar>
+                  <businessDayConvention>Following</businessDayConvention>
+                  <dateGeneration>Backward</dateGeneration>
+                  <!-- Backward , Forward ,TwentiethIMM , 21 , 17-->
+                  <periodFrequency>3M</periodFrequency>
+                </scheduleInfo>
+                
+                <rateCalculation>
+                  <type>vanillaRateCalculation</type>
+
+                  <calculationAmount>
+                    <currency>USD</currency>
+                    <amount>10000000</amount>
+                  </calculationAmount>
+
+                  <calculationStartDate>2013-08-06</calculationStartDate>
+                  <calculationEndDate>2018-08-06</calculationEndDate>
+                  <paymentDate>2018-08-06</paymentDate>
+                  
+                  <vanillaRateCalculation>
+                    
+                    <rateCouponCalculation>
+                      <type>fixedRateCouponCalculation</type>
+
+                      <fixedRateCouponCalculation>
+                        <rate>0.05</rate>
+                      </fixedRateCouponCalculation>
+
+                    </rateCouponCalculation>
+                    
+                  </vanillaRateCalculation>
+
+                </rateCalculation>
+                
+                <rateCalculation>
+                  <type>rangeRateCalculation</type>
+                  
+                  <calculationAmount>
+                    <currency>USD</currency>
+                    <amount>10000000</amount>
+                  </calculationAmount>
+
+                  <calculationStartDate>2013-08-06</calculationStartDate>
+                  <calculationEndDate>2018-08-06</calculationEndDate>
+                  <paymentDate>2018-08-06</paymentDate>
+                  
+                  <rangeRateCalculation>
+                    
+                    <rangeEventInfoList>
+
+                      <rangeEventInfo>
+                        
+                        <type>simpleRangeEvent</type>
+                        <simpleRangeEvent>
+                          <referenceCalculation>
+                            <type></type>
+                          </referenceCalculation>
+                          <range1D>
+                            <lowerBound>0.0</lowerBound>
+                            <upperBound>0.9</upperBound>
+                          </range1D>
+                        </simpleRangeEvent>
+
+                        <rateCouponCalculation>
+                          <type>fixedRateCouponCalculation</type>
+
+                          <calculationStartDate>2013-08-06</calculationStartDate>
+                          <calculationEndDate>2018-08-06</calculationEndDate>
+                          <paymentDate>2018-08-06</paymentDate>
+
+                          <fixedRateCouponCalculation>
+                            <rate>0.05</rate>
+                          </fixedRateCouponCalculation>
+
+                        </rateCouponCalculation>
+                        
+                      </rangeEventInfo>
+                      
+                      <rangeEventInfo>
+                        
+                        <rangeEvent>
+                          <type>simpleRangeEvent</type>
+                          <simpleRangeEvent>
+                            <referenceCalculation>
+                              <type></type>
+                            </referenceCalculation>
+                            <range>
+                              <lowerBound>0.0</lowerBound>
+                              <upperBound>0.9</upperBound>
+                            </range>
+                          </simpleRangeEvent>
+                        </rangeEvent>
+                        
+                        <rateCouponCalculation>
+                          <type>floatingRateCouponCalculation</type>
+
+                          <calculationStartDate>2013-08-06</calculationStartDate>
+                          <calculationEndDate>2018-08-06</calculationEndDate>
+                          <paymentDate>2018-08-06</paymentDate>
+
+                          <floatingRateCouponCalculation>
+                            <referenceCalculation>
+                              <type>choiceReference</type>
+                              <choiceReference>
+
+                              </choiceReference>
+                            </referenceCalculation>
+                            <rate>0.05</rate>
+                          </floatingRateCouponCalculation>
+
+                        </rateCouponCalculation>  
+                        
+                      </rangeEventInfo>
+
+                    </rangeEventInfoList>
+                    
+                  </rangeRateCalculation>
+                  
+                </rateCalculation>
+
+                <rateCalculation>
+                  <type>simpleRangeConstantRateCalculation</type>
+                  <simpleRangeConstantRateCalculation>
+                    <referenceCalculation>
+                      
+                    </referenceCalculation>
+                    
+                    <simpleRangeList>
+                      <range1D>
+                        <lowerBound>0.0</lowerBound>
+                        <upperBound>0.9</upperBound>
+                      </range1D>
+                      <range1D>
+                        <lowerBound>0.0</lowerBound>
+                        <upperBound>0.9</upperBound>
+                      </range1D>
+                      <range1D>
+                        <lowerBound>0.0</lowerBound>
+                        <upperBound>0.9</upperBound>
+                      </range1D>
+                    </simpleRangeList>
+
+                    <constCouponList>
+                      <value></value>
+                      <value></value>
+                      <value></value>
+                    </constCouponList>
+                    
+                  </simpleRangeConstantRateCalculation>
+                </rateCalculation>
+                
+                <rateCalculation>
+                  <type>rangeAccrualRateCalculation</type>
+                  <rangeAccrualRateCalculation>
+
+                    <calculationAmount>
+                      <currency>USD</currency>
+                      <amount>10000000</amount>
+                    </calculationAmount>
+                    
+                    <rangeEvent>
+                      <referenceCalculation>
+                        <type></type>
+                      </referenceCalculation>
+                      <range>
+                        <lowerBound>0.0</lowerBound>
+                        <upperBound>0.9</upperBound>
+                      </range>
+
+                    </rangeEvent>
+                    
+                    <calculationStartDate>2013-08-06</calculationStartDate>
+                    <calculationEndDate>2018-08-06</calculationEndDate>
+                    <paymentDate>2018-08-06</paymentDate>
+                    
+                    <rateCouponCalculation>
+                      <type>fixedRateCalculation</type>
+                      <fixedRateCalculation>
+                        <rate>0.05</rate>
+                      </fixedRateCalculation>
+                    </rateCouponCalculation>
+                    
+                  </rangeAccrualRateCalculation>
+
+                </rateCalculation>
+
+                <rateCalculation>
+                  <type>vanillaRateCalculation</type>
+                  <vanillaRateCalculation>
+                    
+                    <calculationAmount>
+                      <currency>USD</currency>
+                      <amount>10000000</amount>
+                    </calculationAmount>
+                    
+                    <calculationStartDate>2013-08-06</calculationStartDate>
+                    <calculationEndDate>2018-08-06</calculationEndDate>
+                    <paymentDate>2018-08-06</paymentDate>
+
+                    <rateCouponCalculation>
+                      <type>constantRangeCouponCalculation</type>
+                      <constantRangeCouponCalculation>
+                        <referenceCalculation>
+                          
+                        </referenceCalculation>
+                        
+                        
+                      </constantRangeCouponCalculation>
+                    </rateCouponCalculation>
+                    
+                  </vanillaRateCalculation>
+                </rateCalculation>
+                   
+              </vanillaStandardStreamPayoff>
+              
+            </payoffInfo>
+          </couponPart>
+        
+        </creditDefaultSwap>
+        
+      </creditPayoffInfo>
+      
+    </creditInstrument>
+  </instrumentInfo>
+  
+  <calculationAgent>
+    <calculationAgentPartyReference href="party1" />
+  </calculationAgent>
+
+</instrument>

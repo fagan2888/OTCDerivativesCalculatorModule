@@ -1,0 +1,15 @@
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\ExcelInterface\bin\Debug\Data\Data_Interface\MarketDataBase.sdf
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\ExcelInterface\bin\Debug\RiskMonitor.exe
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\ExcelInterface\bin\Debug\Fluent.dll
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\ExcelInterface\bin\Debug\QLNet.dll
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\ExcelInterface\bin\Debug\AvalonDock.dll
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\ExcelInterface\bin\Debug\RiskMonitor.pdb
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\ExcelInterface\bin\Debug\QLNet.pdb
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\ExcelInterface\obj\Debug\ExcelInterface.csprojResolveAssemblyReference.cache
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\ExcelInterface\bin\Debug\ExcelInterface_debug.dll
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\ExcelInterface\bin\Debug\ExcelInterface_debug.pdb
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\ExcelInterface\bin\Debug\ExcelInterface_debug.tlb
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\ExcelInterface\obj\Debug\ExcelInterface_debug.dll
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\ExcelInterface\obj\Debug\ExcelInterface_debug.pdb
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\ExcelInterface\bin\Debug\masterInformation.sdf
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\ExcelInterface\bin\Debug\ExcelInterface_debug.dll.config

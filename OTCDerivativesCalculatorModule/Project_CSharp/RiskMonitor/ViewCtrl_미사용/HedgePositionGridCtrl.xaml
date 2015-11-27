@@ -1,0 +1,44 @@
+﻿<UserControl x:Class="RiskMonitor.HedgePositionGridCtrl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <ScrollViewer VerticalScrollBarVisibility="Auto" BorderThickness="0" Padding="0">
+        <StackPanel x:Name="LayoutRoot" Background="White" Margin="5">
+            <Button Height="50" Click="Button_Click" />
+            <TextBox x:Name="CountTxb" />
+
+            <DataGrid x:Name="dataGrid1" Height="400" IsReadOnly="True" >
+                <DataGrid.RowDetailsTemplate>
+                    <!-- Begin row details section. -->
+                    <DataTemplate>
+                        <Border BorderBrush="Green" BorderThickness="5" Background="Tan">
+                            <StackPanel Orientation="Horizontal">
+                                <StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <!-- Controls are bound to Task properties. -->
+                                        <TextBlock FontSize="16" Foreground="MidnightBlue" Text="{Binding Name}" 
+                                           Margin="0,0,10,0" VerticalAlignment="Bottom" />
+                                        <TextBlock FontSize="12" Text="Due Date: " VerticalAlignment="Bottom"/>
+                                        <DatePicker SelectedDate="{Binding DueDate, Mode=TwoWay}" VerticalAlignment="Bottom" />
+                                        <TextBlock FontSize="12" Text="    Complete:" VerticalAlignment="Bottom" />
+                                        <CheckBox IsChecked="{Binding Complete, Mode=TwoWay}" 
+                                              VerticalAlignment="Center" />
+                                    </StackPanel>
+                                    <TextBlock FontSize="12" Text="Notes: " />
+                                    <TextBox FontSize="12" Text="{Binding Notes, Mode=TwoWay}" Width="420" TextWrapping="Wrap"/>
+                                    <DataGrid Height="100" ItemsSource="{Binding Source=LinkedInstruments_}" AutoGenerateColumns="False">
+                                    </DataGrid> 
+
+                                </StackPanel>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                    <!-- End row details section. -->
+                </DataGrid.RowDetailsTemplate>
+            </DataGrid>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

@@ -1,0 +1,1590 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EB3AB6F7-7658-470C-BDD3-BFE52398787A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RiskMonitor</RootNamespace>
+    <AssemblyName>RiskMonitor</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AvalonDock">
+      <HintPath>..\Common Lib\AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="DataGridFilterLibrary">
+      <HintPath>..\Common Lib\DataGridFilterLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="Fluent">
+      <HintPath>..\Common Lib\Fluent.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=4.112.3.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\oracle\instantclient_11_2\odp.net\bin\4\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Interactivity">
+      <HintPath>..\..\packages\MahApps.Metro.0.13.1.0\lib\net40\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="BookInfoViewModel.cs" />
+    <Compile Include="CalculationModule\CppDLLManager\StepDownCppDLL.cs" />
+    <Compile Include="CommonViewModel\CalculationAmountViewModel.cs" />
+    <Compile Include="Data\DataCalculationManager.cs" />
+    <Compile Include="Data\DataInterfaceManager.cs" />
+    <Compile Include="Data\Data_Interface\DataUtil\DBAdaptor\BloombergAdaptor.cs" />
+    <Compile Include="Data\Data_Interface\DataUtil\DBAdaptor\DataAdaptor.cs" />
+    <Compile Include="Data\Data_Interface\DataUtil\DBAdaptor\MROAdaptor.cs" />
+    <Compile Include="Data\Data_Interface\DataUtil\DBAdaptor\YahooFinanceAdaptor.cs" />
+    <Compile Include="Data\Data_Interface\DataUtil\DBConnector\OracleDataBaseConnect.cs" />
+    <Compile Include="Data\Data_Interface\DataUtil\DBConnector\DataBaseConnect.cs" />
+    <Compile Include="Data\Data_Interface\DataUtil\DBInfoManger.cs" />
+    <Compile Include="Data\Data_Interface\DataUtil\DBSetting.cs" />
+    <Compile Include="Data\Data_Calculation\VolCalculation\HistoryVolCalculator.cs" />
+    <Compile Include="Data\Data_Interface\MarketData\MRO\OptionPositionDataLoader.cs" />
+    <Compile Include="Data\Data_Interface\DataUtil\QueryStr.cs" />
+    <Compile Include="Data\Data_Interface\MarketData\MRO\StockDataLoader.cs" />
+    <Compile Include="Data\Data_Interface\DataUtil\VolatilityManager.cs" />
+    <Compile Include="Data\Data_Interface\DataUtil\VolatiltityManager.cs" />
+    <Compile Include="Data\Data_Calculation\VolCalculation\VolCalculator.cs" />
+    <Compile Include="Data\Data_Interface\DBConnectionSetting.cs" />
+    <Compile Include="Data\Data_Interface\ParameterData\Excel\GeometricBMPara_Excel.cs" />
+    <Compile Include="Data\Data_Interface\ParameterData\MRO\MROParameterDataLoader.cs" />
+    <Compile Include="Model\CalculationAmout.cs" />
+    <Compile Include="Model\CorrelationSetting.cs" />
+    <Compile Include="Model\CurveSetting.cs" />
+    <Compile Include="Model\DataManager.cs" />
+    <Compile Include="Model\Delta.cs" />
+    <Compile Include="Model\ELSUnderlyingStock.cs" />
+    <Compile Include="Model\Error.cs" />
+    <Compile Include="Model\ErrorManager.cs" />
+    <Compile Include="Model\EventDomain.cs" />
+    <Compile Include="Model\Futures.cs" />
+    <Compile Include="Model\FxUnderlying.cs" />
+    <Compile Include="Model\Gamma.cs" />
+    <Compile Include="Model\GeneratedClass\IDManager.cs" />
+    <Compile Include="Model\GeneratedClass\ISerialized.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\AdditionOper1D.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\AdditionOperND.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\AdditionVariableInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\AndEventCal.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\AndSimpleCal.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\AtLeastEventCal.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\AtMostEventCal.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\AutoCallablePayoff.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\AutoCallableSwapPayoff.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\AutoCallConstReturnTrigger.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\AutoCallRangeReturnTrigger.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\AutoCallRedem.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\AutoTerminationTrigger.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\BarrierDateInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\BarrierInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\BarrierWithConstRebateCallOption.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\BarrierWithConstRebatePutOption.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Bond.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\BondCouponInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\BondInformation.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\BookInformation.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\CalculationAgent.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\CalculationAmount.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\CalculationPeriodFrequency.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\CalculationServerInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\CallPutCompositeReturnCal.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\CapFloorOption.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\CapOption.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\CashFlowInfoResult.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\CdsSpreadTermstructure.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\ChoiceReferenceCal.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\ClearQueue.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\CommonResult.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\ComplementReturnCalculation.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Complex1DReturnCal.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\ComplexNDReturnCal.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\CompositeSumOptionPayoff.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\ConditionOperator.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\ConstDualBarrierInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\ConstLowerBarrierInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\ConstReturnCal.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\ConstUpperBarrierInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\CorrelationInfo_para.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Correlation_para.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\CountEventCal.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\CouponPart.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\CreditDefaultSwap.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\CreditDefaultSwapInstrument.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\CreditEvents.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\CreditInstrument.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\CreditPayoffInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\DailyInterval.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\DailyReturnReferenceCal.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\DataValue.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\DataValueInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\DateInformation.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\DateList.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\DefinedVariableInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\DiscountCurve_para.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\DiscountCurve_paraSetting.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\DivisionOperND.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\DualBarrierEventCal.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\EvaluationCurves.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\EventCalculation.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\EventCalculationInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\EventCalculationList.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\EventTrigger.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\EventTriggerList.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\EventTriggerList_A.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\EventTrigger_A.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_averageUnderlyingCalcID.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_cds.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_choiceReturnCalculation.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_choiceUnderlyingCalcID.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_complementReturnCalc.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_complementReturnCalc_Call.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_compositeOption.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_compositeOption_subtype.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_constReturnCal.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_correlationInfo_para.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_correlation_para.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_counterUnderlyingCalcInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_couponSchedule.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_couponScheduleList.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_creditEventInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_creditEvents.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_creditEventSwapLeg.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_crs.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_defaultCurve.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_defaultCurve_para.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_digitalCallPut.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_discountCurve_para.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_downInOutPut.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_dualBarrierEventCal.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_dualKiEventCalc.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_dualRangeEventCal.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_emptyInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_eventCalcInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_eventCalcInfo_Call.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_fixedBond.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_fixedBond_constantRate.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_fixedBond_subSchedule.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_fixedBond_subtype.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_fixedCouponSchedule.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_fixedCouponScheduleList.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_fixedRateSwapLeg.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_floatingCouponSchedule.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_forwardModel.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_fxForward.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_fxSwap.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_general.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_geometricBM.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_hifive.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_hifiveSwapLeg.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_hifive_stepDown_ki.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_hifive_subtype.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_hullWhiteOneFactor.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_identityEventCal.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_interestRate.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_interface.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_interpolation.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_irs.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_issueInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_jointProbabilityTrait.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_kiEventCalculation.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_kiScheduleList.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_maximumUnderlyingCalcID.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_minimumUnderlyingCalcID.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_multiAssetCompositeOption.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_multiAsset_compositeOption_subtype.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_multiAsset_digitalCallPut.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_multiAsset_downInOutPut.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_multiAsset_upInOutCall.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_multiAsset_vanillaCallPut.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_noOccReturnCalcInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_noteInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_obligations.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_occReturnCalcInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_orderUnderlyingCalcID.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_parameter.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_protectionTerms.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_rateData.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_referenceCalcInfo_para.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_referenceCal_ID.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_referenceCal_IDList.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_referenceInformation.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_referenceInformationList.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_referenceInfo_para.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_referenceObligation.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_referenceSet.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_referenceSetList.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_referSimpleCalculation.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_result.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_returnCalcInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_returnCalcInfo_Call.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_schedule.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_ScheduleGenerator.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_scheduleList.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_selectedUnderlying.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_simpleCalculation.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_simpleKiEventCalc.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_singleBarrierEventCal.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_singleRangeEventCal.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_standardCreditPara.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_standardHifivePara.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_standardPara.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_standardSwapPara.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_stepDownKICustom.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_stepDownKI_subSchedule.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_stockIndex.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_structuredBond.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_structuredBond_fixedAccrual.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_structuredBond_floatingAccrual.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_structuredBond_subtype.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_structuredRateSwapLeg.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_swapInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_swapInterface.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_swapLeg.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_swapLegInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_targetKiEventCalc.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_underlyingCalcID.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_underlyingCalcInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_underlyingCalcInfo_para.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_underlyingInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_underlyingInfo_para.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_underlyingModel_para.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_upInOutCall.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_vanillaCallPut.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_vanillaFloatingBond.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_vanillaFloatingBond_simple.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_vanillaFloatingBond_subSchedule.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_vanillaFloatingBond_subtype.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_vanillaFloatingCouponSchedule.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_vanillaFloatingCouponScheduleList.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_vanillaFloatingRateSwapLeg.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_vanillaReturnCal.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Excel_yieldCurve.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\FittingYieldCurve.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\FixedBondInstrument.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\FixedFixingDateInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\FixedRateCouponCalculation.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\FixedRatePayoff_A.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\FixedRateTrigger.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\FixedRateType.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Fixing.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\FixingDateInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\FixingInformation.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\FloorOption.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\ForwardContractInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\ForwardModel.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Fx_exchangeLeg.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\GbmGreekInfoResult.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\GbmGreekResult.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\GeneralSchedule.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\GeneralScheduleDeatil.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\GeneralScheduleInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\GeneralTerminationEvent.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\GeneralTerminationEventDetail.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\General_scheduleDetail_fixedAmount.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\General_scheduleDetail_fixedCoupon.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\General_TerminationEventDetail_credit.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\General_TerminationEventDetail_target.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\GeometricBM.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\GeometricBM_paraSetting.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\GridCalculation.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\GridCalculationStart.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Group.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Header.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\HisoryData.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\History.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\HullWhiteGreekInfoResult.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\HullWhiteGreekResult.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\HullWhiteOneFactor.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\HullWhite_paraSetting.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\IdentityReferenceCal.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Index.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\IndexUnderInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\InstHirachyInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\InstPositionInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Instrument.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\InstrumentInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\InstrumentList.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\InterestRateIndex.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\InterestRateSwapPayoff.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\InterestRateSwapPayoff_A.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\IssueInformation.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\JointEventCalculation.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\JointProbabilityTrait.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\JointSimpleCalculation.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\KiEventInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\LowerBarrierEventCal.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\MarketData.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\MaturityNotification.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\MaximumOper1D.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\MaximumOperND.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\MaximumReferenceCal.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Message.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\MessageBody.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\MessageHeader.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Method.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\MinimumReferenceCal.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Monte.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\MonthlyAutoCallRedem.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\MultipleOper1D.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\MultipleOperND.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\NoAutoCallReturnTrigger.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\NonKiEventInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\NoteInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\NthDefaultTrait.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\NullFixingDateInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\NullResult.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\NullVariableEventInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\NullVariableInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Obligations.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Operator1D.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Operator1DList.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\OperatorND.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\OptionInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\OptionPayoffFunction.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\OrEventCal.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\OverWriteVariableEventInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\OverWriteVariableInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\ParaRoot.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\PathInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\PayoffDateInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\PayoffInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\PayoffInfoAnalytic.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\PaySwapPart.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\PaySwapPart_A.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\PostCalculation.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\PreCalculation.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\PreConditionEvent.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\PreDefinedVariableInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\PreDefinedVariableList.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\PreEventCalculation.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Pricing.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\PricingParameter.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\PricingResult.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\ProtectionPart.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\ProtectionTerms.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Range1D.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\RangeCondition1D.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\RateCalculation.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\RateCouponCalculation.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\RateData.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\RecieveSwapPart.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\RecieveSwapPart_A.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\RedemptionInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\RedemptionNotionalTrigger.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\ReferenceCalculation.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\ReferenceCalculationInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\ReferenceCurve.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\ReferenceCurveList.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\ReferenceEntity.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\ReferenceEntityInfo_para.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\ReferenceEventCal.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\ReferenceInformation.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\ReferenceInformationList.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\ReferenceObligation.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\RefVariableFixingDateInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\RefVariableReferenceCal.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\RefVariable_eventOcc.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\RefVariable_referenceValue.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\RefVariable_returnValue.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\ResetVariableInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\ReturnCalculation.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\ReturnCalculationInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Root.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\SecuritiesInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\SimpleCashFlowResult.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\SimpleEventCouponTrigger.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\SimpleRangeAccrualRateTrigger.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\SimpleRangeConstReturnTrigger.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\SimpleRangeEventCal.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\SimpleRangeEventList.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\SimpleRangeRateTrigger.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\SimpleRangeReturn.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\SimpleRangeReturnList.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\SimpleRangeReturnTrigger.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\SingeSimpleCal.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\SingleBarrier.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\StandardInstrument.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\StandardOption.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\StandardPayoff_A.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\StandardSwapInstrument.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\StepDownKIPayoff.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\StepDownKIResult.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\StepDownKI_paraSetting.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\StepDownNoKIPayoff.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\StockIndex.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\StopLossPayoff.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\StopLossReturnCal.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\SwapInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\SwapPayoffInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\SwapPayoffInfoAnalytic.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\SwapStreamPara.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Tenor.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\UnderlyingInformation.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\UnderlyingInfo_para.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\Underlying_para.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\UnderylingInfoResult.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\UnderylingResult.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\UpperBarrierEventCal.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\VanillaCallFunction.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\VanillaCallOption.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\VanillaCouponTrigger.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\VanillaFloatingRatePayoff_A.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\VanillaPayoff.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\VanillaPutFunction.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\VanillaPutOption.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\VanillaRateCalculation.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\VanillaRateTrigger.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\VanillaReturnCal.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\VanillaSwapPayoff.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\VariableCalculation.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\VariableCalList.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\VariableEventInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\VariableInfo.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\YieldTermstructure.cs" />
+    <Compile Include="Model\GeneratedClass\RiskMonitor-0-1\ZeroReturnCal.cs" />
+    <Compile Include="Model\Greek.cs" />
+    <Compile Include="Model\IBuildData.cs" />
+    <Compile Include="Model\InstrumentPortfolio.cs" />
+    <Compile Include="Model\InstUriInfo.cs" />
+    <Compile Include="Model\IXmlData.cs" />
+    <Compile Include="Model\PerturbationSetting.cs" />
+    <Compile Include="Model\ProcessFactory.cs" />
+    <Compile Include="Model\ProcessSetting.cs" />
+    <Compile Include="Model\ResultUriInfo.cs" />
+    <Compile Include="Model\UnderlyingPortfolio.cs" />
+    <Compile Include="Model\Vega.cs" />
+    <Compile Include="View\CustumView\_0_MainView\_0000_PositionMasterView\PositionBookingInfoVM.cs" />
+    <Compile Include="View\CustumView\_0_MainView\_0001_ResultMasterView\InstResultMasterWrapperVM.cs" />
+    <Compile Include="View\CustumView\_0_MainView\_0001_ResultMasterView\ResultMasterInfo.cs" />
+    <Compile Include="Data\Data_Interface\ResultData\ResultMasterLoader.cs" />
+    <Compile Include="View\CustumView\_2222_HedgeMonitorView\View\ELSGreekPositionView\UnderlyingPickerVM.cs" />
+    <Compile Include="View\Explorer\IUnderlyingInst.cs" />
+    <Compile Include="View\InstrumentBaseView\InstPositionView\InstPositionInfo.cs" />
+    <Compile Include="View\InstrumentBaseView\InstPositionView\InstPositionInfoView.xaml.cs">
+      <DependentUpon>InstPositionInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InstrumentBaseView\InstPositionView\InstPositionInfoViewModel.cs" />
+    <Compile Include="Data\Data_Interface\PositionData\MRO\Factory\StepDownELS\DataLoader_ELSUnderlyingStock.cs" />
+    <Compile Include="Data\Data_Interface\PositionData\MRO\Factory\StepDownELS\InstrumentMakerTool.cs" />
+    <Compile Include="Data\Data_Interface\PositionData\PositionHostInfo.cs" />
+    <Compile Include="Data\Data_Interface\PositionData\PositionMasterLoader.cs" />
+    <Compile Include="Data\FileDataLoader.cs" />
+    <Compile Include="Data\Data_Interface\MarketData\MRO\MROStockDataLoader.cs" />
+    <Compile Include="MainWindowViewModel.cs" />
+    <Compile Include="Model\Currency\KRWCurrency.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeAnyURI.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeBase64Binary.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeBoolean.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeByte.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeDate.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeDateTime.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeDecimal.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeDouble.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeDuration.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeENTITIES.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeENTITY.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeFloat.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeGDay.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeGMonth.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeGMonthDay.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeGYear.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeGYearMonth.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeHexBinary.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeID.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeIDREF.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeIDREFS.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeInt.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeInteger.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeLanguage.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeLong.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeName.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeNCName.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeNegativeInteger.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeNMTOKEN.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeNMTOKENS.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeNonNegativeInteger.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeNonPositiveInteger.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeNormalizedString.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeNOTATION.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypePositiveInteger.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeQName.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeShort.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeString.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeTime.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeToken.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeUnsignedByte.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeUnsignedInt.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeUnsignedLong.cs" />
+    <Compile Include="Model\GeneratedClass\BuiltInType\XsdTypeUnsignedShort.cs" />
+    <Compile Include="View\CustumView\_0_MainView\_0000_PositionMasterView\InstrumentPositionWrapper.cs" />
+    <Compile Include="View\CustumView\_0_MainView\_0000_PositionMasterView\PositionMasterView.xaml.cs">
+      <DependentUpon>PositionMasterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CustumView\_0_MainView\_0000_PositionMasterView\PositionMasterViewModel.cs" />
+    <Compile Include="View\CustumView\_0_MainView\_0000_PositionMasterView\PositionSigletonManger.cs" />
+    <Compile Include="View\CustumView\_0_MainView\_0001_ResultMasterView\ResultMasterView.xaml.cs">
+      <DependentUpon>ResultMasterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CustumView\_0_MainView\_0001_ResultMasterView\ResultMasterViewModel.cs" />
+    <Compile Include="View\CustumView\_0_MainView\_0001_ResultMasterView\ResultSingletonMaster.cs" />
+    <Compile Include="View\CustumView\_0_MainView\_0002_ParameterMasterView\ParameterMasterView.xaml.cs">
+      <DependentUpon>ParameterMasterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CustumView\_0_MainView\_0002_ParameterMasterView\ParameterMasterViewModel.cs" />
+    <Compile Include="View\CustumView\_0_MainView\_0002_ParameterMasterView\ParameterSingletonMaster.cs" />
+    <Compile Include="View\CustumView\_5555_InstrumentSelectorView\InstrumentSelectorViewModel.cs" />
+    <Compile Include="View\CustumView\_6_UtilView\_6004_SchedulerView\CalculationDllWrapper.cs" />
+    <Compile Include="View\CustumView\_6_UtilView\_6004_SchedulerView\IJob.cs" />
+    <Compile Include="View\CustumView\_6_UtilView\_6004_SchedulerView\SchedulerView.xaml.cs">
+      <DependentUpon>SchedulerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CustumView\_6_UtilView\_6004_SchedulerView\SchedulerViewModel.cs" />
+    <Compile Include="View\CustumView\_8001_BatchManagerView\BatchManagerView.xaml.cs">
+      <DependentUpon>BatchManagerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CustumView\_8001_BatchManagerView\BatchManagerViewModel.cs" />
+    <Compile Include="View\CustumView\_9999_BookManagerView\BookManagerView.xaml.cs">
+      <DependentUpon>BookManagerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CustumView\_9999_BookManagerView\BookManagerViewModel.cs" />
+    <Compile Include="View\Explorer\ExploreHirachyGroupVMWrapper.cs" />
+    <Compile Include="View\Explorer\HirachyInstrumentVM.cs" />
+    <Compile Include="View\Explorer\ExploreHirachyVMWrapper.cs" />
+    <Compile Include="View\Explorer\ExplorerBookInstView.xaml.cs">
+      <DependentUpon>ExplorerBookInstView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Explorer\ExplorerBookInstViewModel.cs" />
+    <Compile Include="View\Explorer\InstrumentWrapperVM.cs" />
+    <Compile Include="View\InstrumentBaseView\GroupBaseView.xaml.cs">
+      <DependentUpon>GroupBaseView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InstrumentBaseView\GroupBaseViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\IssueInfoView\IssueInformationViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\IssueInfoView\NoteInfoView.xaml.cs">
+      <DependentUpon>NoteInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InstrumentBaseView\InstrumentView\IssueInfoView\NoteInfoViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\IssueInfoView\SecuritiesInfoView.xaml.cs">
+      <DependentUpon>SecuritiesInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InstrumentBaseView\InstrumentView\IssueInfoView\SecuritiesInfoViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\IssueInfoView\SwapInfoView.xaml.cs">
+      <DependentUpon>SwapInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InstrumentBaseView\InstrumentView\IssueInfoView\SwapInfoViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\PayoffView\PayoffInfoViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\AutoCallablePayoffViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\AutoTerminationTriggerViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\ComplementReturnCalculationViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\dateInformation\DailyIntervalViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\dateInformation\DateInformationViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\dateInformation\DateListViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\EventCalculationInfoViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\EventCalculationListViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\EventCalculationViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\eventCalculation\DualBarrierEventCalViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\eventCalculation\LowerBarrierEventCalViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\eventCalculation\NullVariableEventInfoViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\eventCalculation\OverWriteVariableEventInfoViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\eventCalculation\Range1DViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\eventCalculation\ReferenceEventCalViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\eventCalculation\SimpleRangeEventCalViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\eventCalculation\UpperBarrierEventCalViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\eventCalculation\VariableEventInfoViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\EventTriggerListViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\EventTriggerViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\fixingDateInfo\FixedFixingDateInfoViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\fixingDateInfo\FixingDateInfoViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\fixingDateInfo\NullFixingDateInfoViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\fixingDateInfo\RefVariableFixingDateInfoViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\FixingInformationViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\FixingViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\jointCalculation\AndSimpleCalViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\jointCalculation\SingeSimpleCalViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\JointSimpleCalculationViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\operator\AdditionOper1DViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\operator\AdditionOperNDViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\operator\ConditionOperatorViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\operator\DivisionOperNDViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\operator\MaximumOper1DViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\operator\MaximumOperNDViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\operator\MultipleOper1DViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\operator\MultipleOperNDViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\operator\Operator1DListViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\operator\Operator1DViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\operator\OperatorNDViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\operator\RangeCondition1DViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\PayoffDateInfoViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\PostCalculationViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\PreConditionEventViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\PreEventCalculationViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\ReferenceCalculationInfoViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\referenceCalculation\ChoiceReferenceCalViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\referenceCalculation\DailyReturnReferenceCalViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\referenceCalculation\IdentityReferenceCalViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\referenceCalculation\MaximumReferenceCalViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\referenceCalculation\MinimumReferenceCalViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\referenceCalculation\ReferenceCalculationViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\referenceCalculation\RefVariableReferenceCalViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\eventCalculation\RefVariable_eventOccViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\referenceCalculation\VariableInfoViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\RefVariable_referenceValueViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\ReturnCalculationInfoViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\returnCalculation\AdditionVariableInfoViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\returnCalculation\CallPutCompositeReturnCalViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\returnCalculation\Complex1DReturnCalViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\returnCalculation\ComplexNDReturnCalViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\returnCalculation\ConstReturnCalViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\returnCalculation\DefinedVariableInfoViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\returnCalculation\NullVariableInfoViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\returnCalculation\OptionPayoffFunctionViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\returnCalculation\OverWriteVariableInfoViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\returnCalculation\PreDefinedVariableInfoViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\returnCalculation\RefVariable_returnValueViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\returnCalculation\ResetVariableInfoViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\returnCalculation\ReturnCalculationViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\returnCalculation\PreCalculationViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\returnCalculation\StopLossReturnCalViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\returnCalculation\VanillaCallFunctionViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\returnCalculation\VanillaPutFunctionViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\returnCalculation\VanillaReturnCalViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\returnCalculation\VariableCalculationViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\returnCalculation\VariableCalListViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\returnCalculation\ZeroReturnCalViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\SimpleEventCouponTriggerViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\payoffInfo\eventTrigger\VanillaRateTriggerViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\UnderlyingView\IndexUnderInfoView.xaml.cs">
+      <DependentUpon>IndexUnderInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InstrumentBaseView\InstrumentView\UnderlyingView\IndexUnderInfoViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\UnderlyingView\IndexUnderViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\UnderlyingView\IRIndexUnderViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\UnderlyingView\StockIndexUnderViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\UnderlyingView\UnderlyingViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\NoExistInstrumentBaseViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ParameterView\CorrelationInfo_paraView.xaml.cs">
+      <DependentUpon>CorrelationInfo_paraView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InstrumentBaseView\ParameterView\CorrelationInfo_paraViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ParameterView\Correlation_paraViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ParameterView\Curve\DiscountCurve_paraView.xaml.cs">
+      <DependentUpon>DiscountCurve_paraView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InstrumentBaseView\ParameterView\Curve\DiscountCurve_paraViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ParameterView\Curve\RateData\RateDataViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ParameterView\Curve\YieldTermstructureView.xaml.cs">
+      <DependentUpon>YieldTermstructureView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InstrumentBaseView\ParameterView\Curve\YieldTermstructureViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ParameterView\Instrument\standardCredit_para\CdsSpreadTermstructureView.xaml.cs">
+      <DependentUpon>CdsSpreadTermstructureView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InstrumentBaseView\ParameterView\Instrument\standardCredit_para\CdsSpreadTermstructureViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ParameterView\Instrument\standardCredit_para\EvaluationCurvesViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ParameterView\Instrument\standardCredit_para\JointProbabilityTraitViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ParameterView\Instrument\standardCredit_para\NthDefaultTraitView.xaml.cs">
+      <DependentUpon>NthDefaultTraitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InstrumentBaseView\ParameterView\Instrument\standardCredit_para\NthDefaultTraitViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ParameterView\Instrument\standardCredit_para\ReferenceCurveListViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ParameterView\Instrument\standardCredit_para\ReferenceCurveViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ParameterView\Instrument\standardCredit_para\ReferenceEntityInfo_paraView.xaml.cs">
+      <DependentUpon>ReferenceEntityInfo_paraView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InstrumentBaseView\ParameterView\Instrument\standardCredit_para\ReferenceEntityInfo_paraViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ParameterView\Instrument\standardCredit_para\StandardCredit_paraView.xaml.cs">
+      <DependentUpon>StandardCredit_paraView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InstrumentBaseView\ParameterView\Instrument\standardCredit_para\StandardCredit_paraViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ParameterView\Instrument\stepDownKI_para\StepDownKI_paraView.xaml.cs">
+      <DependentUpon>StepDownKI_paraView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InstrumentBaseView\ParameterView\Instrument\standard_para\Standard_paraView.xaml.cs">
+      <DependentUpon>Standard_paraView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InstrumentBaseView\ParameterView\Instrument\stepDownKI_para\StepDownKI_paraViewModel2.cs" />
+    <Compile Include="View\InstrumentBaseView\ParameterView\IUnderlyingPara.cs" />
+    <Compile Include="View\InstrumentBaseView\ParameterView\Method\MethodViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ParameterView\Method\MonteView.xaml.cs">
+      <DependentUpon>MonteView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InstrumentBaseView\ParameterView\Method\MonteViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ParameterView\PricingParameterViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ParameterView\Process\GeometricBMView.xaml.cs">
+      <DependentUpon>GeometricBMView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InstrumentBaseView\ParameterView\Process\GeometricBMViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ParameterView\Process\HullWhiteView.xaml.cs">
+      <DependentUpon>HullWhiteView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InstrumentBaseView\ParameterView\Process\HullWhiteViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ParameterView\Instrument\standard_para\Standard_paraViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ParameterView\UnderlyingInfo_paraView.xaml.cs">
+      <DependentUpon>UnderlyingInfo_paraView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InstrumentBaseView\ParameterView\UnderlyingInfo_paraViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ParameterView\Underlying_paraViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ResultView\cashflow\CashFlowInfoResultViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ResultView\cashflow\SimpleCashFlowResultViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ResultView\CommonResultView.xaml.cs">
+      <DependentUpon>CommonResultView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InstrumentBaseView\ResultView\CommonResultViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ResultView\IUnderlyingResult.cs" />
+    <Compile Include="View\InstrumentBaseView\ResultView\NullResultView.xaml.cs">
+      <DependentUpon>NullResultView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InstrumentBaseView\ResultView\NullResultViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ResultView\PricingResultViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ResultView\stepdownki\StepDownKIResultView.xaml.cs">
+      <DependentUpon>StepDownKIResultView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InstrumentBaseView\ResultView\stepdownki\StepDownKIResultViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ResultView\underlying\GbmGreekInfoResultView.xaml.cs">
+      <DependentUpon>GbmGreekInfoResultView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InstrumentBaseView\ResultView\underlying\GbmGreekInfoResultViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ResultView\underlying\GbmGreekResultViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ResultView\underlying\HullWhiteGreekInfoResultView.xaml.cs">
+      <DependentUpon>HullWhiteGreekInfoResultView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InstrumentBaseView\ResultView\underlying\HullWhiteGreekInfoResultViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ResultView\underlying\HullWhiteGreekResultViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ResultView\underlying\UnderylingInfoResultView.xaml.cs">
+      <DependentUpon>UnderylingInfoResultView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InstrumentBaseView\ResultView\underlying\UnderylingInfoResultViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ResultView\underlying\UnderylingResultViewModel.cs" />
+    <Compile Include="_미사용\StepDownInstBase.cs" />
+    <Compile Include="View\CommonViewCtrl\CalculationAmountView.xaml.cs">
+      <DependentUpon>CalculationAmountView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CustumView\_1111_DeltaHedgeMonitorView\DeltaHedgeMonitorView.xaml.cs">
+      <DependentUpon>DeltaHedgeMonitorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CustumView\_1111_DeltaHedgeMonitorView\DeltaHedgeMonitorViewModel.cs" />
+    <Compile Include="View\CustumView\_5555_InstrumentSelectorView\InstrumentSelectorView.xaml.cs">
+      <DependentUpon>InstrumentSelectorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CustumView\_1111_DeltaHedgeMonitorView\GreekPositionViewModel.cs" />
+    <Compile Include="View\CustumView\_8888_OptionView\OptionView\Option.cs" />
+    <Compile Include="View\CustumView\_8888_OptionView\OptionView\OptionViewModel.cs" />
+    <Compile Include="View\CustumView\_8888_OptionView\OptionView\StandardOption\CallPutOption.cs" />
+    <Compile Include="View\CustumView\_8888_OptionView\OptionView\StandardOption\CallPutOptionViewModel.cs" />
+    <Compile Include="View\CustumView\_6_UtilView\_6002_BatchControlView\BatchInstrumentVMWrapper.cs" />
+    <Compile Include="View\Explorer\ExploreHirachyInstrumentVMWrapper.cs" />
+    <Compile Include="View\Explorer\HirachyInstrumentBaseVM.cs" />
+    <Compile Include="View\Explorer\IHirachy.cs" />
+    <Compile Include="_미사용\InstrumentVMWrapper.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\NullPayoffViewModel.cs" />
+    <Compile Include="_미사용\CreditDefaultSwapPayoff.cs" />
+    <Compile Include="_미사용\RangeCoupon.cs" />
+    <Compile Include="_미사용\RangeInfo.cs" />
+    <Compile Include="_미사용\SwapInformation.cs" />
+    <Compile Include="_미사용\InstrumentBase.cs" />
+    <Compile Include="_미사용\StepDownKIBaseViewModel.cs" />
+    <Compile Include="_미사용\SwapPayoff.cs" />
+    <Compile Include="_미사용\SwapStream.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\StandardInstView.xaml.cs">
+      <DependentUpon>StandardInstView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InstrumentBaseView\ParameterView\Curve\CurveParameter.cs" />
+    <Compile Include="View\InstrumentBaseView\ParameterView\Curve\CurveParameterViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ParameterView\IMarketDataLoad.cs" />
+    <Compile Include="View\InstrumentBaseView\ParameterView\ParameterSettingView.xaml.cs">
+      <DependentUpon>ParameterSettingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="_미사용\SwapParameter.cs" />
+    <Compile Include="_미사용\SwapStreamParameter.cs" />
+    <Compile Include="View\InstrumentBaseView\ParameterView\UnderlyingParameter.cs" />
+    <Compile Include="View\InstrumentBaseView\ParameterView\UnderlyingParameterInfo.cs" />
+    <Compile Include="View\InstrumentBaseView\ParameterView\UnderlyingParameterInfoViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ResultView\GreekResult.cs" />
+    <Compile Include="View\InstrumentBaseView\ResultView\GreekResultInfo.cs" />
+    <Compile Include="View\InstrumentBaseView\ResultView\GreekView.xaml.cs">
+      <DependentUpon>GreekView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InstrumentBaseView\ResultView\GreekViewModel.cs" />
+    <Compile Include="_미사용\NoteInformation.cs" />
+    <Compile Include="_미사용\NullInformation.cs" />
+    <Compile Include="View\Explorer\NullInstrumentViewModel.cs" />
+    <Compile Include="Data\Data_Interface\MarketData\CorrelationLoader.cs" />
+    <Compile Include="Data\Data_Interface\MarketData\IndexQuoteLoader.cs" />
+    <Compile Include="Data\Data_Interface\MarketData\InterestRateCurveLoader.cs" />
+    <Compile Include="Data\Data_Interface\MarketData\VolatilityLoader.cs" />
+    <Compile Include="Data\Data_Interface\ResultData\MRO\MROResultDataLoader.cs" />
+    <Compile Include="Data\UnderlyingLoader.cs" />
+    <Compile Include="Model\CodeManager\CodeBuildManager.cs" />
+    <Compile Include="Model\Engine\CppLibStepDownKITypeMCEngine.cs" />
+    <Compile Include="Model\Engine\ICppLibEngine.cs" />
+    <Compile Include="Model\Engine\CppLibMCEngine.cs" />
+    <Compile Include="Model\Engine\Engine.cs" />
+    <Compile Include="_미사용\NonKIEventInfo.cs" />
+    <Compile Include="_미사용\StepDownKIPayoff.cs" />
+    <Compile Include="_미사용\StandardInstrument.cs" />
+    <Compile Include="View\InstrumentBaseView\StandardInstBaseView.xaml.cs">
+      <DependentUpon>StandardInstBaseView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InstrumentBaseView\StandardInstBaseViewModel.cs" />
+    <Compile Include="_미사용\MROUnderlyingLoader.cs" />
+    <Compile Include="Setting\DataLoadType.cs" />
+    <Compile Include="Setting\EnumClass.cs" />
+    <Compile Include="Setting\ParameterSetting.cs" />
+    <Compile Include="Util\CustomFunction.cs" />
+    <Compile Include="_미사용\InstrumentInformation.cs" />
+    <Compile Include="Model\Engine\MCEngine.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\UnderlyingView\Underlying.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\UnderlyingView\UnderlyingInfo.cs" />
+    <Compile Include="Setting\SQLSetting.cs" />
+    <Compile Include="ViewCtrl_미사용\HedgePositionGridCtrl.xaml.cs">
+      <DependentUpon>HedgePositionGridCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewCtrl_미사용\Task.cs" />
+    <Compile Include="Data\ELSStepDownLoader.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentBaseView.xaml.cs">
+      <DependentUpon>InstrumentBaseView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InstrumentBaseView\InstrumentView\InstrumentComposite\Credit\NthDefaultCDSViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\InstrumentComposite\Credit\NthDefaultCLNView.xaml.cs">
+      <DependentUpon>NthDefaultCLNView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InstrumentBaseView\InstrumentView\InstrumentComposite\Credit\NthDefaultCLNViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ParameterView\DicountFactorView.xaml.cs">
+      <DependentUpon>DicountFactorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InstrumentBaseView\ParameterView\DiscountFactor.cs" />
+    <Compile Include="View\InstrumentBaseView\ParameterView\DiscountFactorViewModel.cs" />
+    <Compile Include="_미사용\Parameter.cs" />
+    <Compile Include="_미사용\StepDownKIParameter.cs" />
+    <Compile Include="View\InstrumentBaseView\ResultView\HistoryResultViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentBaseViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ResultView\ReferenceDateResultViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ResultView\ResultModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ResultView\ResultViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\StandardInstViewModel.cs" />
+    <Compile Include="View\CustumView\_2222_HedgeMonitorView\View\ELSGreekPositionView\ELSGreekPositionView.xaml.cs">
+      <DependentUpon>ELSGreekPositionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CustumView\_2222_HedgeMonitorView\View\ELSGreekPositionView\GreekPositionAnalyzerViewModel.cs" />
+    <Compile Include="View\CustumView\_2222_HedgeMonitorView\View\ELSGreekPositionView\ELSStepDownGreekPositionViewModel.cs" />
+    <Compile Include="View\CustumView\_2222_HedgeMonitorView\View\ELSGreekPositionView\Factory_ELSGreekPosition.cs" />
+    <Compile Include="View\CustumView\_2222_HedgeMonitorView\View\ELSHedgeMonitorView\ELSHedgeMonitorView.xaml.cs">
+      <DependentUpon>ELSHedgeMonitorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CustumView\_2222_HedgeMonitorView\View\ELSHedgeMonitorView\ELSHedgeMonitorViewModel.cs" />
+    <Compile Include="View\CustumView\_2222_HedgeMonitorView\View\ELSHedgeMonitorView\ELSStepDownDeltaHedgeViewModel.cs" />
+    <Compile Include="View\CustumView\_2222_HedgeMonitorView\View\ELSHedgeMonitorView\UnderlyingHedgedViewModel.cs" />
+    <Compile Include="View\Explorer\InstrumentPropertyViewCtrl.xaml.cs">
+      <DependentUpon>InstrumentPropertyViewCtrl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StandardOptionViewBuilder.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\InstrumentComposite\Credit\NthDefaultCDSView.xaml.cs">
+      <DependentUpon>NthDefaultCDSView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="_미사용\IRCalculationPayoff.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\UnderlyingView\UnderlyingInfoViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\UnderlyingView\CodeManager.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\UnderlyingView\MatrixView.xaml.cs">
+      <DependentUpon>MatrixView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InstrumentBaseView\InstrumentView\UnderlyingView\MatrixViewMode.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\UnderlyingView\Quote.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\UnderlyingView\UnderlyingInfoParameterViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\UnderlyingView\UnderlyingInfoParameterView.xaml.cs">
+      <DependentUpon>UnderlyingInfoParameterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InstrumentBaseView\ParameterView\UnderlyingParameterViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\InstrumentView\UnderlyingView\UnderlyingSelectorView.xaml.cs">
+      <DependentUpon>UnderlyingSelectorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InstrumentBaseView\InstrumentView\UnderlyingView\UnderlyingSelectorViewModel.cs" />
+    <Compile Include="View\CustumView\_4444_MarketDataView\MarketData\FeedManagerView.xaml.cs">
+      <DependentUpon>FeedManagerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CustumView\_4444_MarketDataView\MarketData\MarketDataView.xaml.cs">
+      <DependentUpon>MarketDataView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CustumView\_4444_MarketDataView\MessegeBox\FilterSettingView.xaml.cs">
+      <DependentUpon>FilterSettingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CustumView\_4444_MarketDataView\MessegeBox\MessageBoxView.xaml.cs">
+      <DependentUpon>MessageBoxView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PositionInformationView.xaml.cs">
+      <DependentUpon>PositionInformationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CustumView\_6_UtilView\_6002_BatchControlView\BatchControlView.xaml.cs">
+      <DependentUpon>BatchControlView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CustumView\_6_UtilView\_6002_BatchControlView\BatchControlViewModel.cs" />
+    <Compile Include="View\CustumView\_6_UtilView\_6002_BatchControlView\ConstractViewModel.cs" />
+    <Compile Include="View\CustumView\_6_UtilView\_6002_BatchControlView\ParameterSettingViewModel.cs" />
+    <Compile Include="View\CustumView\_6_UtilView\_6003_OutPutLogView\ErrorOutput.cs" />
+    <Compile Include="View\CustumView\_6_UtilView\_6003_OutPutLogView\IOutput.cs" />
+    <Compile Include="View\CustumView\_6_UtilView\_6003_OutPutLogView\MessageOutput.cs" />
+    <Compile Include="View\CustumView\_6_UtilView\_6003_OutPutLogView\OutputLogView.xaml.cs">
+      <DependentUpon>OutputLogView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CustumView\_6_UtilView\_6003_OutPutLogView\OutputLogViewModel.cs" />
+    <Compile Include="View\CustumView\_6_UtilView\_6003_OutPutLogView\ProcessOutput.cs" />
+    <Compile Include="View\CustumView\_7777_VolatilityView\VolatilityManager\HistVolCalculator.cs" />
+    <Compile Include="Setting\Setting.cs" />
+    <Compile Include="View\CustumView\_7777_VolatilityView\VolatilityManager\UnderlyingListViewModel.cs" />
+    <Compile Include="View\CustumView\_7777_VolatilityView\VolatilityManager\VolCalculationInformationViewModel.cs" />
+    <Compile Include="View\CustumView\_7777_VolatilityView\VolatilityManager\VolCalculationManager.cs" />
+    <Compile Include="View\CustumView\_7777_VolatilityView\VolatilityManager\VolDataViewModel.cs" />
+    <Compile Include="View\Wrapper\NCRWrapperViewModel.cs" />
+    <Page Include="View\InstrumentBaseView\InstPositionView\InstPositionInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ViewCtrl_미사용\HedgePositionGridCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CommonViewCtrl\CalculationAmountView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CustumView\_0_MainView\_0000_PositionMasterView\PositionMasterView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CustumView\_0_MainView\_0001_ResultMasterView\ResultMasterView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CustumView\_0_MainView\_0002_ParameterMasterView\ParameterMasterView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CustumView\_1111_DeltaHedgeMonitorView\DeltaHedgeMonitorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CustumView\_5555_InstrumentSelectorView\InstrumentSelectorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CustumView\_2222_HedgeMonitorView\View\ELSGreekPositionView\ELSGreekPositionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CustumView\_2222_HedgeMonitorView\View\ELSHedgeMonitorView\ELSHedgeMonitorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CustumView\_6_UtilView\_6004_SchedulerView\SchedulerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CustumView\_8001_BatchManagerView\BatchManagerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CustumView\_9999_BookManagerView\BookManagerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Explorer\InstrumentPropertyViewCtrl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Explorer\ExplorerBookInstView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InstrumentBaseView\GroupBaseView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InstrumentBaseView\InstrumentView\IssueInfoView\NoteInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InstrumentBaseView\InstrumentView\IssueInfoView\SecuritiesInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InstrumentBaseView\InstrumentView\IssueInfoView\SwapInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InstrumentBaseView\InstrumentView\StandardInstrument\StandardInstView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InstrumentBaseView\InstrumentBaseView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InstrumentBaseView\InstrumentView\InstrumentComposite\Credit\NthDefaultCDSView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InstrumentBaseView\InstrumentView\InstrumentComposite\Credit\NthDefaultCLNView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InstrumentBaseView\InstrumentView\UnderlyingView\IndexUnderInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InstrumentBaseView\ParameterView\CorrelationInfo_paraView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InstrumentBaseView\ParameterView\Curve\DiscountCurve_paraView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InstrumentBaseView\ParameterView\Curve\YieldTermstructureView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InstrumentBaseView\ParameterView\DicountFactorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InstrumentBaseView\ParameterView\Instrument\standardCredit_para\CdsSpreadTermstructureView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InstrumentBaseView\ParameterView\Instrument\standardCredit_para\NthDefaultTraitView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InstrumentBaseView\ParameterView\Instrument\standardCredit_para\ReferenceEntityInfo_paraView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InstrumentBaseView\ParameterView\Instrument\standardCredit_para\StandardCredit_paraView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InstrumentBaseView\ParameterView\Instrument\stepDownKI_para\StepDownKI_paraView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InstrumentBaseView\ParameterView\Instrument\standard_para\Standard_paraView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\InstrumentBaseView\ParameterView\Method\MonteView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InstrumentBaseView\ParameterView\ParameterSettingView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InstrumentBaseView\ParameterView\Process\GeometricBMView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InstrumentBaseView\ParameterView\Process\HullWhiteView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InstrumentBaseView\ParameterView\UnderlyingInfo_paraView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InstrumentBaseView\ResultView\CommonResultView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InstrumentBaseView\ResultView\GreekView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InstrumentBaseView\ResultView\NullResultView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InstrumentBaseView\ResultView\ResultView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InstrumentBaseView\InstrumentView\UnderlyingView\MatrixView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InstrumentBaseView\InstrumentView\UnderlyingView\UnderlyingInfoParameterView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InstrumentBaseView\InstrumentView\UnderlyingView\UnderlyingSelectorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InstrumentBaseView\InstrumentView\UnderlyingView\UnderlyingInfoView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Setting\EngineSetting.cs" />
+    <Compile Include="Data\Data_Interface\DataLoader.cs" />
+    <Compile Include="Data\Data_Interface\PositionData\MRO\MROPositionDataLoader.cs" />
+    <Compile Include="Data\Data_Interface\PositionData\MRO\Factory\StepDownELSDataConverter.cs" />
+    <Compile Include="_미사용\Instrument.cs" />
+    <Compile Include="View\CustumView\_2222_HedgeMonitorView\View\ELSGreekPositionView\HedgeInformationViewModel.cs" />
+    <Compile Include="View\CustumView\_2222_HedgeMonitorView\View\ELSGreekPositionView\GreekUnderlyingResultWrapperViewModel.cs" />
+    <Compile Include="_미사용\InstrumentDataLoader.cs" />
+    <Compile Include="_미사용\InstrumentHierarchyViewModel.cs" />
+    <Compile Include="View\Explorer\InstrumentViewBuilder.cs" />
+    <Compile Include="View\Explorer\InstrumentViewModel.cs" />
+    <Compile Include="View\InstrumentBaseView\ResultView\ResultView.xaml.cs">
+      <DependentUpon>ResultView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InstrumentBaseView\InstrumentView\UnderlyingView\UnderlyingInfoView.xaml.cs">
+      <DependentUpon>UnderlyingInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="View\CustumView\_4444_MarketDataView\MarketData\FeedManagerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CustumView\_4444_MarketDataView\MarketData\MarketDataView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CustumView\_4444_MarketDataView\MessegeBox\FilterSettingView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CustumView\_4444_MarketDataView\MessegeBox\MessageBoxView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InstrumentBaseView\ResultView\stepdownki\StepDownKIResultView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InstrumentBaseView\ResultView\underlying\GbmGreekInfoResultView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InstrumentBaseView\ResultView\underlying\HullWhiteGreekInfoResultView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InstrumentBaseView\ResultView\underlying\UnderylingInfoResultView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InstrumentBaseView\StandardInstBaseView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PositionInformationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CustumView\_6_UtilView\_6002_BatchControlView\BatchControlView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CustumView\_6_UtilView\_6003_OutPutLogView\OutputLogView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\RiskMonitor.Ctrl.Task.datasource" />
+    <None Include="Properties\DataSources\RiskMonitor.Ctrl.TestControl.datasource" />
+    <None Include="Properties\DataSources\RiskMonitor.CustomProduct.StructuredProduct.datasource" />
+    <None Include="Properties\DataSources\RiskMonitor.HedgeInformation.Model.Data.DataLoaderManager.datasource" />
+    <None Include="Properties\DataSources\RiskMonitor.HedgeInformation.Model.Data.FDMGreekLoader.datasource" />
+    <None Include="Properties\DataSources\RiskMonitor.HedgeInformation.Model.Data.PositionDataLoader.datasource" />
+    <None Include="Properties\DataSources\RiskMonitor.HedgeInformation.Model.Data.ResultDataLoader.datasource" />
+    <None Include="Properties\DataSources\RiskMonitor.HedgeInformation.Model.DataLoader.datasource" />
+    <None Include="Properties\DataSources\RiskMonitor.HedgeInformation.Model.Delta.datasource" />
+    <None Include="Properties\DataSources\RiskMonitor.HedgeInformation.Model.ELS.datasource" />
+    <None Include="Properties\DataSources\RiskMonitor.HedgeInformation.Model.EquiryLinkedSecurity.ELSStepDown.datasource" />
+    <None Include="Properties\DataSources\RiskMonitor.HedgeInformation.Model.Factory.DataConverter.datasource" />
+    <None Include="Properties\DataSources\RiskMonitor.HedgeInformation.Model.Factory.StepDownELSDataConverter.datasource" />
+    <None Include="Properties\DataSources\RiskMonitor.HedgeInformation.Model.Futures.datasource" />
+    <None Include="Properties\DataSources\RiskMonitor.HedgeInformation.Model.Gamma.datasource" />
+    <None Include="Properties\DataSources\RiskMonitor.HedgeInformation.Model.Greek.datasource" />
+    <None Include="Properties\DataSources\RiskMonitor.HedgeInformation.Model.Instrument.datasource" />
+    <None Include="Properties\DataSources\RiskMonitor.HedgeInformation.Model.InstrumentInformation.datasource" />
+    <None Include="Properties\DataSources\RiskMonitor.HedgeInformation.Model.InstrumentPortfolio.datasource" />
+    <None Include="Properties\DataSources\RiskMonitor.HedgeInformation.Model.Option.datasource" />
+    <None Include="Properties\DataSources\RiskMonitor.HedgeInformation.Model.StepDownELSInformation.datasource" />
+    <None Include="Properties\DataSources\RiskMonitor.HedgeInformation.Model.Stock.datasource" />
+    <None Include="Properties\DataSources\RiskMonitor.HedgeInformation.Model.UnderlyingPortfolio.datasource" />
+    <None Include="Properties\DataSources\RiskMonitor.HedgeInformation.Model.Vega.datasource" />
+    <None Include="Properties\DataSources\RiskMonitor.HedgeInformation.View.HedgeInformationView.datasource" />
+    <None Include="Properties\DataSources\RiskMonitor.HedgeInformation.ViewModel.HedgeInformationViewModel.datasource" />
+    <None Include="Properties\DataSources\RiskMonitor.HedgeInformation.ViewModel.InstrumentsLinkedStockViewModel.datasource" />
+    <None Include="Properties\DataSources\RiskMonitor.HedgeInformation.ViewModel.ServerCondition.datasource" />
+    <None Include="Properties\DataSources\RiskMonitor.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\RiskMonitor.Properties.Settings.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ELS701_Data.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ELS701.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="StandardOption.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\Data_Calculation\CorrCalculation\" />
+    <Folder Include="Data\Data_Calculation\IndexCalculation\" />
+    <Folder Include="Data\Data_Calculation\TermStructureCalculation\" />
+    <Folder Include="Data\Data_Interface\MarketData\KAP\" />
+    <Folder Include="Data\Data_Interface\MarketData\KIS\" />
+    <Folder Include="Data\NewFolder1\" />
+    <Folder Include="NowMaking\" />
+    <Folder Include="View\Explorer\Instrument\" />
+    <Folder Include="View\InstrumentBaseView\InstrumentView\InstrumentComposite\Equity\" />
+    <Folder Include="View\InstrumentBaseView\InstrumentView\PayoffView\Composite\" />
+    <Folder Include="View\InstrumentBaseView\InstrumentView\PayoffView\ETC_Backup\" />
+    <Folder Include="View\InstrumentBaseView\InstrumentView\PayoffView\Payoff\AutoCallablePayoff\" />
+    <Folder Include="View\InstrumentBaseView\ParameterView\Swap\SwapStreamPara\" />
+    <Folder Include="XmlFile\result\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ELS823_StabilityNote_Payoff.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XmlFile\ELS840_InstInformation.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="XmlFile\ELS840_Parameter.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XmlFile\CreditFpmlSmaple\cd-ex01-long-asia-corp-fixreg.xml" />
+    <Resource Include="XmlFile\CreditFpmlSmaple\cd-ex02-2003-short-asia-corp-fixreg.xml" />
+    <Resource Include="XmlFile\CreditFpmlSmaple\cd-ex02-short-asia-corp-fixreg.xml" />
+    <Resource Include="XmlFile\CreditFpmlSmaple\cd-ex03-long-aussie-corp-fixreg.xml" />
+    <Resource Include="XmlFile\CreditFpmlSmaple\cd-ex04-short-aussie-corp-fixreg.xml" />
+    <Resource Include="XmlFile\CreditFpmlSmaple\cd-ex05-long-emasia-corp-fixreg.xml" />
+    <Resource Include="XmlFile\CreditFpmlSmaple\cd-ex06-long-emeur-sov-fixreg.xml" />
+    <Resource Include="XmlFile\CreditFpmlSmaple\cd-ex07-2003-long-euro-corp-fixreg.xml" />
+    <Resource Include="XmlFile\CreditFpmlSmaple\cd-ex07-long-euro-corp-fixreg.xml" />
+    <Resource Include="XmlFile\CreditFpmlSmaple\cd-ex08-2003-short-euro-corp-fixreg.xml" />
+    <Resource Include="XmlFile\CreditFpmlSmaple\cd-ex08-short-euro-corp-fixreg.xml" />
+    <Resource Include="XmlFile\CreditFpmlSmaple\cd-ex09-long-euro-sov-fixreg.xml" />
+    <Resource Include="XmlFile\CreditFpmlSmaple\cd-ex10-2003-long-us-corp-fixreg.xml" />
+    <Resource Include="XmlFile\CreditFpmlSmaple\cd-ex10-long-us-corp-fixreg.xml" />
+    <Resource Include="XmlFile\CreditFpmlSmaple\cd-ex11-2003-short-us-corp-fixreg.xml" />
+    <Resource Include="XmlFile\CreditFpmlSmaple\cd-ex11-short-us-corp-fixreg.xml" />
+    <Resource Include="XmlFile\CreditFpmlSmaple\cd-ex12-long-emasia-sov-fixreg.xml" />
+    <Resource Include="XmlFile\CreditFpmlSmaple\cd-ex13-long-asia-sov-fixreg.xml" />
+    <Resource Include="XmlFile\CreditFpmlSmaple\cd-ex14-long-emlatin-corp-fixreg.xml" />
+    <Resource Include="XmlFile\CreditFpmlSmaple\cd-ex15-long-emlatin-sov-fixreg.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="XmlFile\CreditFpmlSmaple\cd-ex16-short-us-corp-fixreg-recovery-factor.xml" />
+    <Resource Include="XmlFile\CreditFpmlSmaple\cd-ex17-short-us-corp-portfolio-compression.xml" />
+    <Resource Include="XmlFile\CreditFpmlSmaple\cd-ex18-standard-north-american-corp.xml" />
+    <Resource Include="XmlFile\CreditFpmlSmaple\cd-indamt-ex01-short-us-corp-fixreg.xml" />
+    <Resource Include="XmlFile\CreditFpmlSmaple\cd-swaption-1.xml" />
+    <Resource Include="XmlFile\CreditFpmlSmaple\cd-swaption-2.xml" />
+    <Resource Include="XmlFile\CreditFpmlSmaple\cdindex-ex01-cdx.xml" />
+    <Resource Include="XmlFile\CreditFpmlSmaple\cdindex-ex02-iTraxx.xml" />
+    <Resource Include="XmlFile\CreditFpmlSmaple\cdindex-ex03-iTraxx-contractual-supplement.xml" />
+    <Resource Include="XmlFile\CreditFpmlSmaple\cds-basket-tranche.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="XmlFile\CreditFpmlSmaple\cds-basket.xml" />
+    <Resource Include="XmlFile\CreditFpmlSmaple\cds-custom-basket.xml" />
+    <Resource Include="XmlFile\CreditFpmlSmaple\cds-ELCDS-ReferenceObligation.xml" />
+    <Resource Include="XmlFile\CreditFpmlSmaple\cds-index-tranche.xml" />
+    <Resource Include="XmlFile\CreditFpmlSmaple\cds-loan-ReferenceObligation.xml" />
+    <Resource Include="XmlFile\CreditFpmlSmaple\cds-loan-SecuredList.xml" />
+    <Resource Include="XmlFile\CreditFpmlSmaple\cds-mortgage-CMBS.xml" />
+    <Resource Include="XmlFile\CreditFpmlSmaple\cds-mortgage-RMBS.xml" />
+    <Resource Include="XmlFile\CreditFpmlSmaple\cdx-index-option.xml" />
+    <Resource Include="XmlFile\CreditFpmlSmaple\itraxx-index-option.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XmlFile\FTD005.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XmlFile\nthDefaultSwapParametor005.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XmlFile\ELS831.xml" />
+    <Resource Include="XmlFile\ELS832.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="XmlFile\ELS833.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="XmlFile\ELS834.xml" />
+    <Resource Include="XmlFile\ELS835.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XmlFile\HazardFromCDS.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XmlFile\book\otcels_book.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="TODOLIST.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XmlFile\interestRate\TestIRProduct.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XmlFile\MultipleBarrier.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="XmlFile\book\mrogen_position\prototype\00000000_50505A3A16S0_compositeOption.xml" />
+    <Resource Include="XmlFile\book\mrogen_position\prototype\00000000_optionType_CompositeOption.xml" />
+    <Resource Include="XmlFile\book\mrogen_position\prototype\4064566A4654_MultiNameCDS.xml" />
+    <Resource Include="XmlFile\book\mrogen_position\prototype\493A003729S1_Group.xml" />
+    <Resource Include="XmlFile\book\mrogen_position\prototype\50301G3801V0_IRS.xml" />
+    <Resource Include="XmlFile\book\mrogen_position\prototype\50505A3A16S0_compositeOption.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="XmlFile\book\mrogen_position\prototype\50507A3626S0_StepDown.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="XmlFile\book\mrogen_position\prototype\51004G3A01D0_StepDownNoKI.xml" />
+    <Resource Include="XmlFile\book\mrogen_position\prototype\optionType_CompositeOption.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Data\Data_Interface\ParameterData\MRO\MROPositionQueryStr.txt" />
+    <Resource Include="Data\Data_Interface\ParameterData\MRO\MROMasterQueryStr.txt" />
+    <Resource Include="Data\Data_Interface\ParameterData\MRO\MROCurveQueryStr.txt" />
+    <Resource Include="Data\Data_Interface\ParameterData\MRO\MROCorrQueryStr.txt" />
+    <Resource Include="Data\Data_Interface\DataUtil\SampleQueryStr.txt" />
+    <Resource Include="Data\Data_Interface\ParameterData\MRO\MROUnderParameterQueryStr.txt" />
+    <Content Include="Data\Data_Interface\MarketDataBase.sdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="XmlFile\book\mrogen_position\prototype\00000000_prototype_stepDownKI.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="XmlFile\XMLFile1.xml" />
+    <Resource Include="XmlFile\book\mrogen_position\prototype\prototype_stepDownKI.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="XmlFile\book\mrogen_position\result\20131026_50507A3517S0_StepDown.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="XmlFile\book\mrogen_position\result\20131026_50507A3605S0_StepDown.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="XmlFile\book\mrogen_position\result\20131026_50507A3607S0_StepDown.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="XmlFile\book\mrogen_position\result\20131026_50507A3610S0_StepDown.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="XmlFile\book\position\result\20131026_4064566A4654_MultiNameCDS.xml" />
+    <Resource Include="XmlFile\book\position\result\20131026_493A003729S1_Group.xml" />
+    <Resource Include="XmlFile\book\position\result\20131026_50301G3801V0_IRS.xml" />
+    <Resource Include="XmlFile\book\position\result\20131026_50505A3A13S0_StopLoss.xml" />
+    <Resource Include="XmlFile\book\position\result\20131026_50505A3A16S0_CompositeOption.xml" />
+    <Resource Include="XmlFile\book\position\result\20131026_50613F3A01D0_DigitalRange.xml" />
+    <Resource Include="XmlFile\book\position\result\20131026_50613F3A01D0_GeneralRangePayoff.xml" />
+    <Resource Include="XmlFile\book\position\result\20131026_51004G3A01D0_StepDownNoKI.xml" />
+    <Resource Include="XmlFile\book\position\result\20131026_KR6008272397_Bond.xml" />
+    <Resource Include="XmlFile\book\position\result\20131026_50507A3626S0_StepDown.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="XmlFile\book\my_portfolio.xml" />
+    <Resource Include="XmlFile\book\stock_fund.xml" />
+    <Resource Include="XmlFile\book\team_position.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="XmlFile\book\otcels2_book.xml" />
+    <Resource Include="XmlFile\MultiNameCDSParameter20131007.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Data\Data_Interface\MarketData\TODO.txt" />
+    <Resource Include="XmlFile\MultiNameCDSParameter20130917.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="XmlFile\MultiNameCDSParameter.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="XmlFile\MultiNameCDS.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="Data\Data_Interface\MarketData\MRO\QueryText\StockHistory.txt" />
+    <Resource Include="XmlFile\IRSParameter.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="XmlFile\IRS.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="XmlFile\CallPut_Parameter.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="XmlFile\SingleNameCDS.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="XmlFile\SingleNameCDSParameter.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="XmlFile\singleDigitalRangeParameter.xml" />
+    <Resource Include="XmlFile\singleDigitalRangeNote.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+    <Resource Include="XmlFile\CallPutOption.xml">
+      <SubType>Designer</SubType>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile%28x86 및 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\qlnet\QLNet\QLNet.csproj">
+      <Project>{F6E762BD-DCDF-4CA0-ABAD-CB21C7D03BEC}</Project>
+      <Name>QLNet</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

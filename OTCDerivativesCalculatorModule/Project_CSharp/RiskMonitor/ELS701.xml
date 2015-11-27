@@ -1,0 +1,714 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<instrument>
+  <issueInformation>
+    <productType>StepDownKIType</productType>
+    <productName>ELS840</productName>
+    <instrumentID>50505A2A14S0</instrumentID>
+    
+    
+    <issueDate id="IssueDate">
+      <dateSingle>2011-08-05</dateSingle>
+    </issueDate>
+    <maturityDate id="MaturityDate">
+      <dateSingle>2013-08-05</dateSingle>
+    </maturityDate>
+
+    <calculationAgent></calculationAgent>
+
+    <notional id="equityNotionalAmount">
+      <notionalAmount>
+        <currency>KRW</currency>
+        <amount>1000000</amount>
+      </notionalAmount>
+    </notional>
+
+    <premium>
+      <payerPartyReference href="party2"/>
+      <receiverPartyReference href="party1"/>
+      <paymentAmount>
+        <currency>EUR</currency>
+        <amount>405000</amount>
+      </paymentAmount>
+      <paymentDate>
+        <unadjustedDate>2002-07-17</unadjustedDate>
+        <dateAdjustments>
+          <businessDayConvention>NONE</businessDayConvention>
+        </dateAdjustments>
+      </paymentDate>
+    </premium>
+
+  </issueInformation>
+
+  <baseInformation>
+
+    <baseIndexes>
+      <underlyingIndex id="Stock1">
+        <stockIndex>
+          <code codeScheme="http://~">gee</code>
+          <name>KOSPI200</name>
+          <businessDayConvention>FOLLOWING</businessDayConvention>
+          <endOfMonth>false</endOfMonth>
+          <dayCounter>Act/360</dayCounter>
+        </stockIndex>
+      </underlyingIndex>
+      <underlyingIndex id="Stock2">
+        <stockIndex>
+          <code codeScheme="http://~">ssww</code>
+          <name>S_P500</name>
+          <businessDayConvention>FOLLOWING</businessDayConvention>
+          <endOfMonth>false</endOfMonth>
+          <dayCounter>Act/360</dayCounter>
+        </stockIndex>
+      </underlyingIndex>
+    </baseIndexes>
+
+    <initialFixedValue>
+      <variable>
+        <symbolName>Initial_Stock1</symbolName>
+        <indexRef>
+          <underlyingIndexRef href="Stock1" />
+          <eventDateRef href="IssueDate" />
+          <fixingDays>
+            <days>-1</days>
+          </fixingDays>
+        </indexRef>
+      </variable>
+
+      <variable>
+        <symbolName>Initial_Stock2</symbolName>
+        <indexRef>
+          <underlyingIndexRef href="Stock2" />
+          <eventDateRef href="IssueDate" />
+          <fixingDays>
+            <days>-1</days>
+          </fixingDays>
+        </indexRef>
+      </variable>
+
+    </initialFixedValue>
+
+    <commonInformation preSet ="custom">
+      <businessDay>bu</businessDay>
+      <businessDayConvenction>kkbu </businessDayConvenction>
+      <daycounter>Act/360</daycounter>
+      <currency>KRW</currency>
+      <imbededOption>NONE</imbededOption>
+      <calendar>KOR</calendar>
+    </commonInformation>
+
+  </baseInformation>
+  
+  <ELSStepDownRedemptions>
+
+    <kiTrigger>
+      <trigger>
+        <code>KOSPI200</code>
+        <value>55</value>
+      </trigger>
+      <trigger>
+        <code>HSCEI</code>
+        <value>55</value>
+      </trigger>
+      <return>slope</return>
+    </kiTrigger>
+    
+    <autoCallTrigger>
+      <date>2013-04-02</date>
+      <condition>
+        <upperTrigger>90</upperTrigger>
+      </condition>
+      <return>1.06</return>
+    </autoCallTrigger>
+
+    <autoCallTrigger>
+      <date>2013-04-02</date>
+      <condition>
+        <upperTrigger>90</upperTrigger>
+      </condition>
+      <return>1.06</return>
+    </autoCallTrigger>
+
+    <autoCallTrigger>
+      <date>2013-04-02</date>
+      <condition>
+        <upperTrigger>90</upperTrigger>
+      </condition>
+      <return>1.06</return>
+    </autoCallTrigger>
+
+    <nonkiTrigger>
+      <return>1.06</return>
+    </nonkiTrigger>
+    
+  </ELSStepDownRedemptions>
+
+  <underlyingCalcType>
+    <type>maximumPerformanceType</type>
+    <maximumPerformanceType>
+      
+      <selectedUnderlying></selectedUnderlying>
+      <selectedUnderlying></selectedUnderlying>
+      <selectedUnderlying></selectedUnderlying>
+    </maximumPerformanceType>
+  </underlyingCalcType>
+  
+</instrument>
+
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<standard_para>
+  <calculationAmount>
+    <amount>210600000</amount>
+    <currency>KRW</currency>
+  </calculationAmount>
+  <underlyingInfo_para>
+    <underlying_para>
+      <type>geometricBM</type>
+      <krCode />
+      <underName />
+      <geometricBM>
+        <currentValue>277000</currentValue>
+        <drift>0.029</drift>
+        <dividend>0.0069</dividend>
+        <volatility>0.2947</volatility>
+      </geometricBM>
+    </underlying_para>
+    <underlying_para>
+      <type>geometricBM</type>
+      <krCode />
+      <underName />
+      <geometricBM>
+        <currentValue>172500</currentValue>
+        <drift>0.029</drift>
+        <dividend>0.0059</dividend>
+        <volatility>0.3345</volatility>
+      </geometricBM>
+    </underlying_para>
+    <dimension>2</dimension>
+    <correlation_para>
+      <first xmlns="KR7012330007">
+        <seconde xmlns="KR7011170008">
+          <value xmlns="0.3328" />
+        </seconde>
+        <discountCurve_para>
+          <yieldTermstructure>
+            <type>ZEROYIELD</type>
+            <interpolation>BACKWARDFLAT</interpolation>
+            <daycounter>Act/365Fix</daycounter>
+            <calendar>NullCalendar</calendar>
+            <businessDayConvention>Following</businessDayConvention>
+            <rateData>
+              <periodMultiplier>1</periodMultiplier>
+              <period>D</period>
+              <data>0.0017965</data>
+            </rateData>
+            <rateData>
+              <periodMultiplier>1</periodMultiplier>
+              <period>M</period>
+              <data>0.0017965</data>
+            </rateData>
+            <rateData>
+              <periodMultiplier>3</periodMultiplier>
+              <period>M</period>
+              <data>0.0024835</data>
+            </rateData>
+            <rateData>
+              <periodMultiplier>6</periodMultiplier>
+              <period>M</period>
+              <data>0.003665</data>
+            </rateData>
+            <rateData>
+              <periodMultiplier>9</periodMultiplier>
+              <period>M</period>
+              <data>0.0049559</data>
+            </rateData>
+            <rateData>
+              <periodMultiplier>12</periodMultiplier>
+              <period>M</period>
+              <data>0.006261</data>
+            </rateData>
+            <rateData>
+              <periodMultiplier>2</periodMultiplier>
+              <period>Y</period>
+              <data>0.00461</data>
+            </rateData>
+            <rateData>
+              <periodMultiplier>3</periodMultiplier>
+              <period>Y</period>
+              <data>0.00764</data>
+            </rateData>
+            <rateData>
+              <periodMultiplier>4</periodMultiplier>
+              <period>Y</period>
+              <data>0.01145</data>
+            </rateData>
+            <rateData>
+              <periodMultiplier>5</periodMultiplier>
+              <period>Y</period>
+              <data>0.01518</data>
+            </rateData>
+            <rateData>
+              <periodMultiplier>6</periodMultiplier>
+              <period>Y</period>
+              <data>0.01858</data>
+            </rateData>
+            <rateData>
+              <periodMultiplier>7</periodMultiplier>
+              <period>Y</period>
+              <data>0.02145</data>
+            </rateData>
+            <rateData>
+              <periodMultiplier>8</periodMultiplier>
+              <period>Y</period>
+              <data>0.02385</data>
+            </rateData>
+            <rateData>
+              <periodMultiplier>9</periodMultiplier>
+              <period>Y</period>
+              <data>0.02583</data>
+            </rateData>
+            <rateData>
+              <periodMultiplier>10</periodMultiplier>
+              <period>Y</period>
+              <data>0.02747</data>
+            </rateData>
+            <rateData>
+              <periodMultiplier>11</periodMultiplier>
+              <period>Y</period>
+              <data>0.02889</data>
+            </rateData>
+          </yieldTermstructure>
+        </discountCurve_para>
+      </first>
+    </correlation_para>
+  </underlyingInfo_para>
+</standard_para>
+
+
+
+
+
+
+
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<pricing>
+  <evaluationTime>00010101</evaluationTime>
+  <itemCode>50507A3517S0</itemCode>
+  <itemType>stepDownKI</itemType>
+  <pricingParameter>
+    <type>standard_para</type>
+    <standard_para>
+      <calculationAmount>
+        <amount>210600000</amount>
+        <currency>KRW</currency>
+      </calculationAmount>
+      <underlyingInfo_para>
+        <underlying_para>
+          <type>geometricBM</type>
+          <krCode />
+          <underName />
+          <geometricBM>
+            <currentValue>277000</currentValue>
+            <drift>0.029</drift>
+            <dividend>0.0069</dividend>
+            <volatility>0.2947</volatility>
+          </geometricBM>
+        </underlying_para>
+        <underlying_para>
+          <type>geometricBM</type>
+          <krCode />
+          <underName />
+          <geometricBM>
+            <currentValue>172500</currentValue>
+            <drift>0.029</drift>
+            <dividend>0.0059</dividend>
+            <volatility>0.3345</volatility>
+          </geometricBM>
+        </underlying_para>
+        <dimension>2</dimension>
+        <correlation_para>
+          <first xmlns="KR7012330007">
+            <seconde xmlns="KR7011170008">
+              <value xmlns="0.3328" />
+            </seconde>
+            <discountCurve_para>
+              <yieldTermstructure>
+                <type>ZEROYIELD</type>
+                <interpolation>BACKWARDFLAT</interpolation>
+                <daycounter>Act/365Fix</daycounter>
+                <calendar>NullCalendar</calendar>
+                <businessDayConvention>Following</businessDayConvention>
+                <rateData>
+                  <periodMultiplier>1</periodMultiplier>
+                  <period>D</period>
+                  <data>0.0017965</data>
+                </rateData>
+                <rateData>
+                  <periodMultiplier>1</periodMultiplier>
+                  <period>M</period>
+                  <data>0.0017965</data>
+                </rateData>
+                <rateData>
+                  <periodMultiplier>3</periodMultiplier>
+                  <period>M</period>
+                  <data>0.0024835</data>
+                </rateData>
+                <rateData>
+                  <periodMultiplier>6</periodMultiplier>
+                  <period>M</period>
+                  <data>0.003665</data>
+                </rateData>
+                <rateData>
+                  <periodMultiplier>9</periodMultiplier>
+                  <period>M</period>
+                  <data>0.0049559</data>
+                </rateData>
+                <rateData>
+                  <periodMultiplier>12</periodMultiplier>
+                  <period>M</period>
+                  <data>0.006261</data>
+                </rateData>
+                <rateData>
+                  <periodMultiplier>2</periodMultiplier>
+                  <period>Y</period>
+                  <data>0.00461</data>
+                </rateData>
+                <rateData>
+                  <periodMultiplier>3</periodMultiplier>
+                  <period>Y</period>
+                  <data>0.00764</data>
+                </rateData>
+                <rateData>
+                  <periodMultiplier>4</periodMultiplier>
+                  <period>Y</period>
+                  <data>0.01145</data>
+                </rateData>
+                <rateData>
+                  <periodMultiplier>5</periodMultiplier>
+                  <period>Y</period>
+                  <data>0.01518</data>
+                </rateData>
+                <rateData>
+                  <periodMultiplier>6</periodMultiplier>
+                  <period>Y</period>
+                  <data>0.01858</data>
+                </rateData>
+                <rateData>
+                  <periodMultiplier>7</periodMultiplier>
+                  <period>Y</period>
+                  <data>0.02145</data>
+                </rateData>
+                <rateData>
+                  <periodMultiplier>8</periodMultiplier>
+                  <period>Y</period>
+                  <data>0.02385</data>
+                </rateData>
+                <rateData>
+                  <periodMultiplier>9</periodMultiplier>
+                  <period>Y</period>
+                  <data>0.02583</data>
+                </rateData>
+                <rateData>
+                  <periodMultiplier>10</periodMultiplier>
+                  <period>Y</period>
+                  <data>0.02747</data>
+                </rateData>
+                <rateData>
+                  <periodMultiplier>11</periodMultiplier>
+                  <period>Y</period>
+                  <data>0.02889</data>
+                </rateData>
+              </yieldTermstructure>
+            </discountCurve_para>
+          </first>
+        </correlation_para>
+      </underlyingInfo_para>
+    </standard_para>
+  </pricingParameter>
+</pricing>
+
+
+
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<pricing>
+  <evaluationTime>00010101</evaluationTime>
+  <itemCode>50507A3517S0</itemCode>
+  <itemType>stepDownKI</itemType>
+  <pricingParameter>
+    <type>standard_para</type>
+    <standard_para>
+      <calculationAmount>
+        <amount>210600000</amount>
+        <currency>KRW</currency>
+      </calculationAmount>
+      <underlyingInfo_para>
+        <underlying_para>
+          <type>geometricBM</type>
+          <krCode />
+          <underName />
+          <geometricBM>
+            <currentValue>277000</currentValue>
+            <drift>0.029</drift>
+            <dividend>0.0069</dividend>
+            <volatility>0.2947</volatility>
+          </geometricBM>
+        </underlying_para>
+        <underlying_para>
+          <type>geometricBM</type>
+          <krCode />
+          <underName />
+          <geometricBM>
+            <currentValue>172500</currentValue>
+            <drift>0.029</drift>
+            <dividend>0.0059</dividend>
+            <volatility>0.3345</volatility>
+          </geometricBM>
+        </underlying_para>
+        <correlationInfo_para>
+          <dimension>2</dimension>
+          <correlation_para>
+            <first xmlns="KR7012330007">
+              <seconde xmlns="KR7011170008">
+                <value xmlns="0.3328" />
+              </seconde>
+            </first>
+            <discountCurve_para>
+              <yieldTermstructure>
+                <type>ZEROYIELD</type>
+                <interpolation>BACKWARDFLAT</interpolation>
+                <daycounter>Act/365Fix</daycounter>
+                <calendar>NullCalendar</calendar>
+                <businessDayConvention>Following</businessDayConvention>
+                <rateData>
+                  <periodMultiplier>1</periodMultiplier>
+                  <period>D</period>
+                  <data>0.0017965</data>
+                </rateData>
+                <rateData>
+                  <periodMultiplier>1</periodMultiplier>
+                  <period>M</period>
+                  <data>0.0017965</data>
+                </rateData>
+                <rateData>
+                  <periodMultiplier>3</periodMultiplier>
+                  <period>M</period>
+                  <data>0.0024835</data>
+                </rateData>
+                <rateData>
+                  <periodMultiplier>6</periodMultiplier>
+                  <period>M</period>
+                  <data>0.003665</data>
+                </rateData>
+                <rateData>
+                  <periodMultiplier>9</periodMultiplier>
+                  <period>M</period>
+                  <data>0.0049559</data>
+                </rateData>
+                <rateData>
+                  <periodMultiplier>12</periodMultiplier>
+                  <period>M</period>
+                  <data>0.006261</data>
+                </rateData>
+                <rateData>
+                  <periodMultiplier>2</periodMultiplier>
+                  <period>Y</period>
+                  <data>0.00461</data>
+                </rateData>
+                <rateData>
+                  <periodMultiplier>3</periodMultiplier>
+                  <period>Y</period>
+                  <data>0.00764</data>
+                </rateData>
+                <rateData>
+                  <periodMultiplier>4</periodMultiplier>
+                  <period>Y</period>
+                  <data>0.01145</data>
+                </rateData>
+                <rateData>
+                  <periodMultiplier>5</periodMultiplier>
+                  <period>Y</period>
+                  <data>0.01518</data>
+                </rateData>
+                <rateData>
+                  <periodMultiplier>6</periodMultiplier>
+                  <period>Y</period>
+                  <data>0.01858</data>
+                </rateData>
+                <rateData>
+                  <periodMultiplier>7</periodMultiplier>
+                  <period>Y</period>
+                  <data>0.02145</data>
+                </rateData>
+                <rateData>
+                  <periodMultiplier>8</periodMultiplier>
+                  <period>Y</period>
+                  <data>0.02385</data>
+                </rateData>
+                <rateData>
+                  <periodMultiplier>9</periodMultiplier>
+                  <period>Y</period>
+                  <data>0.02583</data>
+                </rateData>
+                <rateData>
+                  <periodMultiplier>10</periodMultiplier>
+                  <period>Y</period>
+                  <data>0.02747</data>
+                </rateData>
+                <rateData>
+                  <periodMultiplier>11</periodMultiplier>
+                  <period>Y</period>
+                  <data>0.02889</data>
+                </rateData>
+              </yieldTermstructure>
+            </discountCurve_para>
+          </correlation_para>
+        </correlationInfo_para>
+      </underlyingInfo_para>
+    </standard_para>
+  </pricingParameter>
+</pricing>
+
+<?xml version="1.0" encoding="UTF-8"?>
+<pricing>
+  <evaluationTime>20131026</evaluationTime>
+  <itemCode>50507A3517S0</itemCode>
+  <itemType>stepDownKI</itemType>
+  <pricingParameter>
+    <type>standard_para</type>
+    <standard_para>
+      <calculationAmount>
+        <amount>210600000</amount>
+        <currency>KRW</currency>
+      </calculationAmount>
+      <underlyingInfo_para>
+        <underlying_para>
+          <type>geometricBM</type>
+          <krCode>KR7012330007</krCode>
+          <underName>KR7012330007</underName>
+          <geometricBM>
+            <currentValue>277000</currentValue>
+            <drift>0.029</drift>
+            <dividend>0.0069</dividend>
+            <volatility>0.2947</volatility>
+          </geometricBM>
+        </underlying_para>
+        <underlying_para>
+          <type>geometricBM</type>
+          <krCode>KR7011170008</krCode>
+          <underName>KR7011170008</underName>
+          <geometricBM>
+            <currentValue>172500</currentValue>
+            <drift>0.029</drift>
+            <dividend>0.0059</dividend>
+            <volatility>0.3345</volatility>
+          </geometricBM>
+        </underlying_para>
+        <correlationInfo_para>
+          <dimension>2</dimension>
+          <correlation_para>
+            <first>KR7012330007</first>
+            <seconde>KR7011170008</seconde>
+            <value>0.3328</value>
+          </correlation_para>
+        </correlationInfo_para>
+      </underlyingInfo_para>
+      <discountCurve_para>
+        <yieldTermstructure>
+          <type>ZEROYIELD</type>
+          <interpolation>BACKWARDFLAT</interpolation>
+          <daycounter>Act/365Fix</daycounter>
+          <calendar>NullCalendar</calendar>
+          <businessDayConvention>Following</businessDayConvention>
+          <rateData>
+            <periodMultiplier>1</periodMultiplier>
+            <period>D</period>
+            <data>0.0017965</data>
+          </rateData>
+          <rateData>
+            <periodMultiplier>1</periodMultiplier>
+            <period>M</period>
+            <data>0.0017965</data>
+          </rateData>
+          <rateData>
+            <periodMultiplier>3</periodMultiplier>
+            <period>M</period>
+            <data>0.0024835</data>
+          </rateData>
+          <rateData>
+            <periodMultiplier>6</periodMultiplier>
+            <period>M</period>
+            <data>0.003665</data>
+          </rateData>
+          <rateData>
+            <periodMultiplier>9</periodMultiplier>
+            <period>M</period>
+            <data>0.0049559</data>
+          </rateData>
+          <rateData>
+            <periodMultiplier>12</periodMultiplier>
+            <period>M</period>
+            <data>0.006261</data>
+          </rateData>
+          <rateData>
+            <periodMultiplier>2</periodMultiplier>
+            <period>Y</period>
+            <data>0.00461</data>
+          </rateData>
+          <rateData>
+            <periodMultiplier>3</periodMultiplier>
+            <period>Y</period>
+            <data>0.00764</data>
+          </rateData>
+          <rateData>
+            <periodMultiplier>4</periodMultiplier>
+            <period>Y</period>
+            <data>0.01145</data>
+          </rateData>
+          <rateData>
+            <periodMultiplier>5</periodMultiplier>
+            <period>Y</period>
+            <data>0.01518</data>
+          </rateData>
+          <rateData>
+            <periodMultiplier>6</periodMultiplier>
+            <period>Y</period>
+            <data>0.01858</data>
+          </rateData>
+          <rateData>
+            <periodMultiplier>7</periodMultiplier>
+            <period>Y</period>
+            <data>0.02145</data>
+          </rateData>
+          <rateData>
+            <periodMultiplier>8</periodMultiplier>
+            <period>Y</period>
+            <data>0.02385</data>
+          </rateData>
+          <rateData>
+            <periodMultiplier>9</periodMultiplier>
+            <period>Y</period>
+            <data>0.02583</data>
+          </rateData>
+          <rateData>
+            <periodMultiplier>10</periodMultiplier>
+            <period>Y</period>
+            <data>0.02747</data>
+          </rateData>
+          <rateData>
+            <periodMultiplier>11</periodMultiplier>
+            <period>Y</period>
+            <data>0.02889</data>
+          </rateData>
+        </yieldTermstructure>
+      </discountCurve_para>
+    </standard_para>
+  </pricingParameter>
+</pricing>

@@ -1,0 +1,122 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<instrument Type="compositeOption">
+
+  <header>
+    <productName>BP_807 한화증권 OTC13-005 IndexOption 0424</productName>
+    <productType>CompositeOption</productType>
+    <krCode>50202A3414B0</krCode>
+    <itemCode>50202A3414B0</itemCode>
+    <counterParty>한화투자증권</counterParty>
+  </header>
+
+  <instPositionInfo>
+    <krCode>50202A3414B0</krCode>
+    <instName>BP_807 한화증권 OTC13-005 IndexOption 0424</instName>
+    <instCode>50202A3414B0</instCode>
+    <bookedDate>2013-04-24</bookedDate>
+    <maturityDate>2014-10-23</maturityDate>
+    <instType>compositeOption</instType>
+    <fileName>50202A34_807_compositeOption.xml</fileName>
+    <positionName>OTCDerivatives00</positionName>
+    <counterParty>한화투자증권</counterParty>
+    <notional>2000000000</notional>
+    <currency>KRW</currency>
+    <fundCode>null</fundCode>
+    <fundName>null</fundName>
+  </instPositionInfo>
+  
+  <instrumentInfo>
+    <type>standardInstrument</type>
+    <standardInstrument>
+
+      <issueInformation>
+        <type>noteInfo</type>
+        <noteInfo>
+          <tradeDate>2013-04-24</tradeDate>
+          <effectiveDate>2013-04-24</effectiveDate>
+          <maturityDate>2014-10-23</maturityDate>
+          <notional>2000000000</notional>
+          <premium>0</premium>
+        </noteInfo>
+      </issueInformation>
+
+      <underlyingInformation>
+        <type>index</type>
+        <indexUnderInfo>
+          <index>
+            <type>stock</type>
+            <krCode>KOSPI200</krCode>
+            <name>KOSPI200</name>
+            <basePrice>250.01</basePrice>
+            <stockIndex>
+              
+            </stockIndex>
+          </index>
+        </indexUnderInfo>
+      </underlyingInformation>
+
+      <payoffInfo>
+        <type>compositeSumOptionPayoff</type>
+        <compositeSumOptionPayoff>
+          <excerciseInfo>
+              <type>europeanExercise</type>
+              <europeanExercise>
+                <exerciseDate></exerciseDate>
+                <paymentDays>3D</paymentDays>>
+              </europeanExercise>
+            </excerciseInfo>
+          
+          <fixingDate>2014-10-23</fixingDate>
+          <payoffDate>2014-10-23</payoffDate>
+          
+          <standardOption>
+            <type>barrierWithConstRebateCallOption</type>
+            <unit>1.0</unit>
+            <baseCoupon>0.0</baseCoupon>
+            <barrierWithConstRebateCallOption>
+              
+              <participateRate>0.7</participateRate>
+              <payoffDate>2014-10-23</payoffDate>
+
+              <referenceCalculation>
+                <type>identityReferenceCal</type>
+                <identityReferenceCal>
+                  <fixingDate>2014-10-23</fixingDate>
+                </identityReferenceCal>
+              </referenceCalculation>
+              
+              <barrierInfo>
+                <type>constUpperBarrierInfo</type>
+                <constUpperBarrierInfo>
+                    
+                  <barrierDateInfo>
+                    <dateInformation>
+                      <type>dailyInterval</type>
+                      <dailyInterval>
+                        <observationStartDate>2013-04-25</observationStartDate>
+                        <observationEndDate>2014-10-23</observationEndDate>
+                      </dailyInterval>
+                    </dateInformation>
+                  </barrierDateInfo>
+                    
+                  <trigger>1.2</trigger>
+                  <pastEventOcc>false</pastEventOcc>
+                </constUpperBarrierInfo>
+
+              </barrierInfo>
+
+              <strike>1.0</strike>
+              <lowerBound>0.0</lowerBound>
+              <rebateRate>0.0</rebateRate>
+                
+            </barrierWithConstRebateCallOption>
+              
+          </standardOption>
+          
+        </compositeSumOptionPayoff>
+      </payoffInfo>
+      
+    </standardInstrument>
+  </instrumentInfo>
+
+</instrument>

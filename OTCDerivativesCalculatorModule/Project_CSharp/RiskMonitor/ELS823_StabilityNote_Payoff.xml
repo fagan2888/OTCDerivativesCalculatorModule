@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<instrument>
+  <issueInformation>
+
+    <productType>structuredSwap</productType>
+    <instrumentID>50505A2A14S0</instrumentID>
+
+    <issueDate>2011-08-05</issueDate>
+    <maturityDate>2013-08-05</maturityDate>
+    <notional>1000000</notional>
+    <premium>405000</premium>
+
+    <initialFixedValue>
+      <basePrice>145000</basePrice>
+      <basePrice>28483.333</basePrice>
+    </initialFixedValue>
+
+    <pastKI>false</pastKI>
+
+  </issueInformation>
+
+  <ELSStabilityNote>
+
+    <kiTrigger>
+      <value>55</value>
+      <value>55</value>
+    </kiTrigger>
+
+    <autoCallTrigger>
+      <date>2013-04-02</date>
+      <trigger>90</trigger>
+      <return>1.06</return>
+    </autoCallTrigger>
+
+    <autoCallTrigger>
+      <date>2013-04-02</date>
+      <trigger>90</trigger>
+      <return>1.06</return>
+    </autoCallTrigger>
+
+    <autoCallTrigger>
+      <date>2013-04-02</date>
+      <trigger>90</trigger>
+      <return>1.06</return>
+    </autoCallTrigger>
+
+    <nonkiTrigger>
+      <return>1.06</return>
+    </nonkiTrigger>
+
+  </ELSStabilityNote>
+
+</instrument>

@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{00E2E346-AD03-4596-9BEA-B6208847DFF0}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>FpmlSerialized</RootNamespace>
+    <ProjectName>FpmlSerializedCpp</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;D:\Program Files (x86)\boost\boost_1_47;..\QuantLib;$(IncludePath)</IncludePath>
+    <LibraryPath>$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib;D:\Program Files (x86)\boost\boost_1_47\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;;C:\Program Files\boost\boost_1_47;$(IncludePath)</IncludePath>
+    <LibraryPath>$(VCInstallDir)lib;$(VCInstallDir)atlmfc\lib;$(WindowsSdkDir)lib;$(FrameworkSDKDir)\lib;C:\Program Files\boost\boost_1_47\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Project\2010\Project C++\lib\XmlUtil;.;.\GenClass\;D:\build_ql_1_1_0\QLib\QuantLib;..\FpmlSerialized\GenClass;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996</DisableSpecificWarnings>
+      <AdditionalOptions>/D "ConsolePrint" %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\Project\2010\Project C++\lib\XmlUtil;.;.\GenClass\;D:\build_ql_1_1_0\QLib\QuantLib;..\FpmlSerialized\GenClass;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GenClass\ahn-product-1-0\AverPayoff.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\BaseIndexes.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\BaseInformation.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\BasketAver.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\CommodityIndex.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\CommonInformation.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\ConstPayoff.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\ConventionSet.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\DateInterval.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\DateRef.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\DatesList.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\DownEventCheck.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\EventCheck.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\EventCheckBase.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\EventCheckNormal.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\EventCheckTime.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\EventDate.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\EventDates.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\EventFunctionM.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\EventIndexTransformation.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\EventSchedule.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\ExprPayoff.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\FixingDays.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\Function.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\FunctionEvents.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\Functions.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\FunctionTypeEnum.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\IEventCheck.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\IndexCalculation.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\IndexCalculationTime.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\IndexRef.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\IndexTimeRef.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\InstrumentType.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\InterestrateIndex.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\IssueInformation.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\JointEvent.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\JointFSubEvent.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\JointFunctionEvent.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\JointSubEvent.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\JointTimeEvent.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\JointTimeTypeEnum.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\JointTypeEnum.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\MinimumTran.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\MinimumTranTime.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\NotionalValue.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\NullPayoff.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\ParametorCalculation.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\PayoffBase.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\PreFixPayoff.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\RangeEventCheck.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\ReturnTran.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\ReturnTranTime.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\StockIndex.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\StructuredProduct.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\StructuredProductPayoff.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\StructuredSwap.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\SubEvent.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\SubEvents.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\TriggerAtleast.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\UnderlyingIndex.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\UpDownEventCheck.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\UpEventCheck.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\UpfrontPremium.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\Variable.cpp" />
+    <ClCompile Include="GenClass\ahn-product-1-0\VariableValue.cpp" />
+    <ClCompile Include="GenClass\IDManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GenClass\ahn-product-1-0\all.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\AverPayoff.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\BaseIndexes.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\BaseInformation.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\BasketAver.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\CommodityIndex.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\CommonInformation.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\ConstPayoff.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\ConventionSet.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\DateInterval.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\DateRef.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\DatesList.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\DownEventCheck.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\EventCheck.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\EventCheckBase.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\EventCheckNormal.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\EventCheckTime.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\EventDate.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\EventDates.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\EventFunctionM.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\EventIndexTransformation.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\EventSchedule.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\ExprPayoff.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\FixingDays.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\Function.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\FunctionEvents.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\Functions.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\FunctionTypeEnum.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\IEventCheck.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\IndexCalculation.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\IndexCalculationTime.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\IndexRef.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\IndexTimeRef.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\InstrumentType.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\InterestrateIndex.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\IssueInformation.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\JointEvent.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\JointFSubEvent.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\JointFunctionEvent.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\JointSubEvent.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\JointTimeEvent.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\JointTimeTypeEnum.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\JointTypeEnum.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\MinimumTran.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\MinimumTranTime.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\NotionalValue.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\NullPayoff.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\ParametorCalculation.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\PayoffBase.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\PreFixPayoff.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\RangeEventCheck.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\ReturnTran.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\ReturnTranTime.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\StockIndex.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\StructuredProduct.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\StructuredProductPayoff.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\StructuredSwap.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\SubEvent.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\SubEvents.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\TriggerAtleast.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\UnderlyingIndex.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\UpDownEventCheck.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\UpEventCheck.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\UpfrontPremium.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\Variable.hpp" />
+    <ClInclude Include="GenClass\ahn-product-1-0\VariableValue.hpp" />
+    <ClInclude Include="GenClass\all.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeAnyURI.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeBase64Binary.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeBoolean.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeByte.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeDate.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeDateTime.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeDecimal.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeDouble.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeDuration.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeENTITIES.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeENTITY.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeFloat.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeGDay.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeGMonth.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeGMonthDay.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeGYear.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeGYearMonth.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeHexBinary.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeID.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeIDREF.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeIDREFS.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeInt.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeInteger.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeLanguage.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeLong.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeName.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeNCName.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeNegativeInteger.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeNMTOKEN.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeNMTOKENS.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeNonNegativeInteger.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeNonPositiveInteger.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeNormalizedString.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeNOTATION.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypePositiveInteger.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeQName.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeShort.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeString.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeTime.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeToken.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeUnsignedByte.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeUnsignedInt.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeUnsignedLong.hpp" />
+    <ClInclude Include="GenClass\built_in_type\XsdTypeUnsignedShort.hpp" />
+    <ClInclude Include="GenClass\FileManager.hpp" />
+    <ClInclude Include="GenClass\IDManager.hpp" />
+    <ClInclude Include="GenClass\iserialized.hpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

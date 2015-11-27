@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="Excel_Interface.Excel_vanillaFloatingBondView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Name="directionViewPanel_" Orientation="Horizontal">
+                <StackPanel Orientation="Vertical">
+                    <Label Content="- Issue Information" />
+                    <Grid x:Name="IssueInfoGrid_" />
+                    <Grid x:Name="UnderlyingInfoGrid_" />
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <Button Content="set subType" Width="80" Click="SubTypeSet_Button_Click" />
+                    <Label Content="- Schedule Information" />
+                    <Grid x:Name="couponScheduleGrid_" />
+                </StackPanel>
+            </StackPanel>
+            
+
+        </StackPanel>
+    </Grid>
+</UserControl>

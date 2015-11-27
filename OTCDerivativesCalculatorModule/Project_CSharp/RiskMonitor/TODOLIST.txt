@@ -1,0 +1,7 @@
+﻿file로 로드하는 경우에 과거꺼 소급해서 조회
+issueDate 로 sorting 해서 load?
+
+그냥 resultModel 에다가 option형태로 달아?
+greek option 추가하면 추가대고 머 이런거..
+
+oracle connector dll 이 참조로 필요함

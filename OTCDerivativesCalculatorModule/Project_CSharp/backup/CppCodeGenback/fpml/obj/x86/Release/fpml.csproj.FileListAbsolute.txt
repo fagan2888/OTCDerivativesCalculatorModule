@@ -1,0 +1,5 @@
+D:\Project\2010\Project C#\CppCodeGen\fpml\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Project\2010\Project C#\CppCodeGen\fpml\bin\Release\fpml.dll
+D:\Project\2010\Project C#\CppCodeGen\fpml\bin\Release\fpml.pdb
+D:\Project\2010\Project C#\CppCodeGen\fpml\obj\x86\Release\fpml.dll
+D:\Project\2010\Project C#\CppCodeGen\fpml\obj\x86\Release\fpml.pdb

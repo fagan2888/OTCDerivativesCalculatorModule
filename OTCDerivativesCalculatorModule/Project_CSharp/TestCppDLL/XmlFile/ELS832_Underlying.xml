@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<pricingParametor>
+  <evaluationDate>2013-06-19</evaluationDate>
+  <underlying>
+    <krcode>KR000001</krcode>
+    <underName>SamSung</underName>
+    <currentValue>1369000</currentValue>
+    <drift>0.028</drift>
+    <dividend>0.0052</dividend>
+    <volatility>0.24591</volatility>
+  </underlying>
+  <underlying>
+    <krcode>KR000001</krcode>
+    <underName>LGElec</underName>
+    <currentValue>74400</currentValue>
+    <drift>0.028</drift>
+    <dividend>0.002</dividend>
+    <volatility>0.268165</volatility>
+  </underlying>
+  <method>monte</method>
+  <corr>0.228271</corr>
+  <simulationNum>100000</simulationNum>
+  <dicountFlatTS>0.028</dicountFlatTS>
+</pricingParametor>

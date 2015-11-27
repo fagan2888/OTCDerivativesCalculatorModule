@@ -1,0 +1,389 @@
+   - headerNode , address : 0B6B8B70
+      - productNameNode , address : 0B6B8D70
+         productName : IBK 제840회 사모ELS
+      - productTypeNode , address : 0B6B90A0
+         productType : StepDown
+      - krCodeNode , address : 0B6B9328
+         krCode : 50507A3517S0
+   - instPositionInfoNode , address : 0B6B95B0
+      - krCodeNode , address : 0B6B97E0
+         krCode : 50507A3517S0
+      - instNameNode , address : 0B6B9AB0
+         instName : IBK 제840회 사모ELS
+      - instCodeNode , address : 0B6B9D98
+         instCode : 50507A3517S0
+      - instTypeNode , address : 0B6BA7B8
+         instType : stepDownKI
+      - bookedDateNode , address : 0B6BA020
+         bookedDate : 2013-05-30
+      - unBookedDateNode , address : 0B6BA2A8
+         unBookedDate : 2013-05-21
+      - maturityDateNode , address : 0B6BA530
+         maturityDate : 2016-05-25
+      - fileNameNode , address : 0B6BAA40
+         fileName : prototype_stepDownKI.xml
+      - positionNameNode , address : 0B6BAD28
+         positionName : OTCDerivatives00
+      - counterPartyNode , address : 0B6BB010
+         counterParty : samsung
+      - notionalNode , address : 0B6BB298
+         notional : 2042000000
+      - currencyNode , address : 0B6BB520
+         currency : KRW
+      - fundCodeNode , address : 0B6BB7A8
+         fundCode : null
+      - fundNameNode , address : 0B6BBA30
+         fundName : null
+   - instrumentInfoNode , address : 0B6BBCB8
+      - typeNode , address : 0B6BBE40
+         type : standardInstrument
+      - standardInstrumentNode , address : 0B6BC170
+         - issueInformationNode , address : 0B6BC3E8
+            - typeNode , address : 0B6BC6A8
+               type : noteInfo
+            - swapInfoNode , address : 00000000
+            - noteInfoNode , address : 0B6BC978
+               - notionalNode , address : 0B6BD310
+                  notional : 2042000000
+               - tradeDateNode , address : 0B6BCB30
+                  tradeDate : 2013-05-30
+               - effectiveDateNode , address : 0B6BCE00
+                  effectiveDate : 2013-05-30
+               - maturityDateNode , address : 0B6BD088
+                  maturityDate : 2016-05-25
+               - calculationAmountNode , address : 0B6BD598
+                  - currencyNode , address : 0B6BDAE0
+                     currency : KRW
+                  - amountNode , address : 0B6BD810
+                     amount : 10000
+               - premiumNode , address : 0B6BDD68
+                  premium : 0
+            - securitiesInfoNode , address : 00000000
+         - underlyingInformationNode , address : 0B6BDF60
+            - typeNode , address : 0B6BE0E8
+               type : indexUnderInfo
+            - indexUnderInfoNode , address : 0B6BE3B8
+               - indexNode , address : 0B6BE5D0
+                  - typeNode , address : 0B6BE7D0
+                     type : stockIndex
+                  - interestRateIndexNode , address : 00000000
+                  - stockIndexNode , address : 0B6BEAA0
+                     - krCodeNode , address : 0B6BEC58
+                        krCode : KR7096770003
+                     - nameNode , address : 0B6BEF28
+                        name : KR7096770003
+                     - basePriceNode , address : 0B6BF1B0
+                        basePrice : 145000
+               - indexNode , address : 0B6BF438
+                  - typeNode , address : 0B6BF560
+                     type : stockIndex
+                  - interestRateIndexNode , address : 00000000
+                  - stockIndexNode , address : 0B6BF830
+                     - krCodeNode , address : 0B6BF9E8
+                        krCode : KR7015760002
+                     - nameNode , address : 0B6BFCB8
+                        name : KR7015760002
+                     - basePriceNode , address : 0B810068
+                        basePrice : 28483
+         - payoffInfoNode , address : 0B810260
+            - typeNode , address : 0B810340
+               type : stepDownKI
+            - stepDownKINode , address : 0B810538
+               - redemptionInfoNode , address : 0B811F70
+                  - typeNode , address : 0B812050
+                     type : autoCallRedem
+                  - autoCallRedemNode , address : 0B812320
+                     - eventTriggerNode , address : 0B8124D8
+                        - typeNode , address : 0B8126D8
+                           type : autoCallConstReturnTrigger
+                        - autoCallConstReturnTriggerNode , address : 0B812A08
+                           - dateOrderNode , address : 0B812C80
+                              dateOrder : 0
+                           - dateNode , address : 0B812F50
+                              date : 2013-11-26
+                           - triggerNode , address : 0B8131D8
+                              trigger : 0.95
+                           - returnNode , address : 0B813460
+                              return : 0.035
+                           - averageDaysNode , address : 0B8136E8
+                              averageDays : 1
+                        - couponPaymentNode , address : 00000000
+                     - eventTriggerNode , address : 0B813970
+                        - typeNode , address : 0B813A50
+                           type : autoCallConstReturnTrigger
+                        - autoCallConstReturnTriggerNode , address : 0B813D80
+                           - dateOrderNode , address : 0B813FF8
+                              dateOrder : 1
+                           - dateNode , address : 0B8142C8
+                              date : 2014-05-26
+                           - triggerNode , address : 0B814550
+                              trigger : 0.9
+                           - returnNode , address : 0B8147D8
+                              return : 0.07
+                           - averageDaysNode , address : 0B814A60
+                              averageDays : 1
+                        - couponPaymentNode , address : 00000000
+                     - eventTriggerNode , address : 0B814CE8
+                        - typeNode , address : 0B814DC8
+                           type : autoCallConstReturnTrigger
+                        - autoCallConstReturnTriggerNode , address : 0B8150F8
+                           - dateOrderNode , address : 0B815370
+                              dateOrder : 2
+                           - dateNode , address : 0B815640
+                              date : 2014-11-26
+                           - triggerNode , address : 0B8158C8
+                              trigger : 0.9
+                           - returnNode , address : 0B815B50
+                              return : 0.105
+                           - averageDaysNode , address : 0B815DD8
+                              averageDays : 1
+                        - couponPaymentNode , address : 00000000
+                     - eventTriggerNode , address : 0B816060
+                        - typeNode , address : 0B816140
+                           type : autoCallConstReturnTrigger
+                        - autoCallConstReturnTriggerNode , address : 0B816470
+                           - dateOrderNode , address : 0B8166E8
+                              dateOrder : 3
+                           - dateNode , address : 0B8169B8
+                              date : 2015-05-26
+                           - triggerNode , address : 0B816C40
+                              trigger : 0.85
+                           - returnNode , address : 0B816EC8
+                              return : 0.14
+                           - averageDaysNode , address : 0B817150
+                              averageDays : 1
+                        - couponPaymentNode , address : 00000000
+                     - eventTriggerNode , address : 0B8173D8
+                        - typeNode , address : 0B8174B8
+                           type : autoCallConstReturnTrigger
+                        - autoCallConstReturnTriggerNode , address : 0B8177E8
+                           - dateOrderNode , address : 0B817A60
+                              dateOrder : 4
+                           - dateNode , address : 0B817D30
+                              date : 2015-11-25
+                           - triggerNode , address : 0B817FB8
+                              trigger : 0.85
+                           - returnNode , address : 0B818240
+                              return : 0.175
+                           - averageDaysNode , address : 0B8184C8
+                              averageDays : 1
+                        - couponPaymentNode , address : 00000000
+                     - eventTriggerNode , address : 0B818750
+                        - typeNode , address : 0B818830
+                           type : autoCallConstReturnTrigger
+                        - autoCallConstReturnTriggerNode , address : 0B818B60
+                           - dateOrderNode , address : 0B818DD8
+                              dateOrder : 5
+                           - dateNode , address : 0B8190A8
+                              date : 2016-05-25
+                           - triggerNode , address : 0B819330
+                              trigger : 0.7
+                           - returnNode , address : 0B8195B8
+                              return : 0.21
+                           - averageDaysNode , address : 0B819840
+                              averageDays : 1
+                        - couponPaymentNode , address : 00000000
+                  - monthlyAutoCallRedemNode , address : 00000000
+               - kiEventInfoNode , address : 0B8106F0
+                  - typeNode , address : 0B8108F0
+                     type : constKiTrigger
+                  - constKiTriggerNode , address : 0B810BC0
+                     - pastKINode , address : 0B810DD8
+                        pastKI : false
+                     - valueNode , address : 0B8110A8
+                        value : 0.55
+                     - valueNode , address : 0B811330
+                        value : 0.55
+               - nonKiEventInfoNode , address : 0B8115B8
+                  - typeNode , address : 0B8116F8
+                     type : constNonKiTrigger
+                  - constNonKiTriggerNode , address : 0B811A28
+                     - returnNode , address : 0B811CA0
+                        return : 0.21
+            - interestRateSwapNode , address : 00000000
+            - stopLossNode , address : 00000000
+      - creditInstrumentNode , address : 00000000
+   - calculationAgentNode , address : 00000000
+   - evaluationTimeNode , address : 0B829C70
+      evaluationTime : 2013-10-26
+   - pricingParameterNode , address : 0B82A468
+      - typeNode , address : 0B82A6E0
+         type : standard_para
+      - methodNode , address : 00000000
+      - creditDefaultSwap_paraNode , address : 00000000
+      - stepDownKI_paraNode , address : 00000000
+      - standard_paraNode , address : 0B82A9B0
+         - calculationAmountNode , address : 0B82AB68
+            - currencyNode , address : 0B82B0F8
+               currency : KRW
+            - amountNode , address : 0B82AE28
+               amount : 210600000
+         - underlyingInfo_paraNode , address : 0B82B380
+            - underlying_paraNode , address : 0B82B568
+               - typeNode , address : 0B82B7C8
+                  type : geometricBM
+               - krCodeNode , address : 0B82BA98
+                  krCode : KR7012330007
+               - underNameNode , address : 0B82BD20
+                  underName : KR7012330007
+               - geometricBMNode , address : 0B82BFA8
+                  - currentValueNode , address : 0B82C160
+                     currentValue : 277000
+                  - driftNode , address : 0B82C430
+                     drift : 0.029
+                  - dividendNode , address : 0B82C6B8
+                     dividend : 0.0069
+                  - volatilityNode , address : 0B82C940
+                     volatility : 0.2947
+               - hullWhiteNode , address : 00000000
+            - underlying_paraNode , address : 0B82CBC8
+               - typeNode , address : 0B82CD08
+                  type : geometricBM
+               - krCodeNode , address : 0B82CFD8
+                  krCode : KR7011170008
+               - underNameNode , address : 0B82D260
+                  underName : KR7011170008
+               - geometricBMNode , address : 0B82D4E8
+                  - currentValueNode , address : 0B82D6A0
+                     currentValue : 172500
+                  - driftNode , address : 0B82D970
+                     drift : 0.029
+                  - dividendNode , address : 0B82DBF8
+                     dividend : 0.0059
+                  - volatilityNode , address : 0B82DE80
+                     volatility : 0.3345
+               - hullWhiteNode , address : 00000000
+            - correlationInfo_paraNode , address : 0B82E108
+               - dimensionNode , address : 0B82E290
+                  dimension : 2
+               - correlation_paraNode , address : 0B82E560
+                  - firstNode , address : 0B82E7D8
+                     first : KR7012330007
+                  - secondNode , address : 00000000
+                  - valueNode , address : 0B82ED30
+                     value : 0.3328
+         - discountCurve_paraNode , address : 0B82EFB8
+            - yieldTermstructureNode , address : 0B82F098
+               - typeNode , address : 0B82F310
+                  type : ZEROYIELD
+               - interpolationNode , address : 0B82F5E0
+                  interpolation : BACKWARDFLAT
+               - daycounterNode , address : 0B82F868
+                  daycounter : Act/365Fix
+               - calendarNode , address : 0B82FAF0
+                  calendar : NullCalendar
+               - businessDayConventionNode , address : 0B82FD78
+                  businessDayConvention : Following
+               - rateDataNode , address : 0B8300C0
+                  - periodMultiplierNode , address : 0B830230
+                     periodMultiplier : 1
+                  - periodNode , address : 0B8305C0
+                     period : D
+                  - dataNode , address : 0B830800
+                     data : 0.0017965
+               - rateDataNode , address : 0B830A88
+                  - periodMultiplierNode , address : 0B830BF8
+                     periodMultiplier : 1
+                  - periodNode , address : 0B830F88
+                     period : M
+                  - dataNode , address : 0B8311C8
+                     data : 0.0017965
+               - rateDataNode , address : 0B831450
+                  - periodMultiplierNode , address : 0B8315C0
+                     periodMultiplier : 3
+                  - periodNode , address : 0B831950
+                     period : M
+                  - dataNode , address : 0B831B90
+                     data : 0.0024835
+               - rateDataNode , address : 0B831E18
+                  - periodMultiplierNode , address : 0B831F88
+                     periodMultiplier : 6
+                  - periodNode , address : 0B832318
+                     period : M
+                  - dataNode , address : 0B832558
+                     data : 0.003665
+               - rateDataNode , address : 0B8327E0
+                  - periodMultiplierNode , address : 0B832950
+                     periodMultiplier : 9
+                  - periodNode , address : 0B832CE0
+                     period : M
+                  - dataNode , address : 0B832F20
+                     data : 0.0049559
+               - rateDataNode , address : 0B8331B0
+                  - periodMultiplierNode , address : 0B833320
+                     periodMultiplier : 12
+                  - periodNode , address : 0B8336B0
+                     period : M
+                  - dataNode , address : 0B8338F0
+                     data : 0.006261
+               - rateDataNode , address : 0B833B78
+                  - periodMultiplierNode , address : 0B833CE8
+                     periodMultiplier : 2
+                  - periodNode , address : 0B834078
+                     period : Y
+                  - dataNode , address : 0B8342B8
+                     data : 0.00461
+               - rateDataNode , address : 0B834540
+                  - periodMultiplierNode , address : 0B8346B0
+                     periodMultiplier : 3
+                  - periodNode , address : 0B834A40
+                     period : Y
+                  - dataNode , address : 0B834C80
+                     data : 0.00764
+               - rateDataNode , address : 0B834F08
+                  - periodMultiplierNode , address : 0B835078
+                     periodMultiplier : 4
+                  - periodNode , address : 0B835408
+                     period : Y
+                  - dataNode , address : 0B835648
+                     data : 0.01145
+               - rateDataNode , address : 0B8358D0
+                  - periodMultiplierNode , address : 0B835A40
+                     periodMultiplier : 5
+                  - periodNode , address : 0B835DD0
+                     period : Y
+                  - dataNode , address : 0B836010
+                     data : 0.01518
+               - rateDataNode , address : 0B836298
+                  - periodMultiplierNode , address : 0B836408
+                     periodMultiplier : 6
+                  - periodNode , address : 0B836798
+                     period : Y
+                  - dataNode , address : 0B8369D8
+                     data : 0.01858
+               - rateDataNode , address : 0B836C60
+                  - periodMultiplierNode , address : 0B836DD0
+                     periodMultiplier : 7
+                  - periodNode , address : 0B837160
+                     period : Y
+                  - dataNode , address : 0B8373A0
+                     data : 0.02145
+               - rateDataNode , address : 0B837628
+                  - periodMultiplierNode , address : 0B837798
+                     periodMultiplier : 8
+                  - periodNode , address : 0B837B28
+                     period : Y
+                  - dataNode , address : 0B837D68
+                     data : 0.02385
+               - rateDataNode , address : 0B837FF0
+                  - periodMultiplierNode , address : 0B838160
+                     periodMultiplier : 9
+                  - periodNode , address : 0B8384F0
+                     period : Y
+                  - dataNode , address : 0B838730
+                     data : 0.02583
+               - rateDataNode , address : 0B8389B8
+                  - periodMultiplierNode , address : 0B838B28
+                     periodMultiplier : 10
+                  - periodNode , address : 0B838EB8
+                     period : Y
+                  - dataNode , address : 0B8390F8
+                     data : 0.02747
+               - rateDataNode , address : 0B839380
+                  - periodMultiplierNode , address : 0B8394F0
+                     periodMultiplier : 11
+                  - periodNode , address : 0B839880
+                     period : Y
+                  - dataNode , address : 0B839AC0
+                     data : 0.02889
+   - pricingResultNode , address : 00000000

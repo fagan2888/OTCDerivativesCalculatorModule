@@ -1,0 +1,31 @@
+﻿public void select(DbConnection conn)
+{
+    if (conn.State != ConnectionState.Open)
+        conn.Open();
+
+    DataTable tb = new DataTable();
+
+	this.DAOList_ = new List<@DAOCLASSNAME@>();
+
+    DbCommand dbCommand = conn.CreateCommand();
+
+    string selectQuery = @MANAGERDAOCLASSNAME@.SelectQuery_;
+
+	@FORLOOPKEYCODE@
+
+    //selectQuery = selectQuery.Replace("@KeyColumnValue@", this.KeyColumn_);
+
+    dbCommand.CommandText = selectQuery;
+
+    //DbDataAdapter dataAdapter = new DbDataAdapter(dbCommand, conn);
+	DbDataAdapter dataAdapter = DataBaseConnectManager.CreateDataAdapter(dbCommand, conn);
+
+    dataAdapter.Fill(tb);
+
+    DataRow[] dr = tb.Select();
+    int rowCount = dr.Length;
+
+	@FORLOOPCODE@
+
+            
+}

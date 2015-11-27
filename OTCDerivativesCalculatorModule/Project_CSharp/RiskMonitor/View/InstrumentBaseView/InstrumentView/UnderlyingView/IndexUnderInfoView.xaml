@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="RiskMonitor.IndexUnderInfoView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <DataGrid Name="IndexUnderListDataGrid_" LoadingRow="IndexUnderListDataGrid_LoadingRow"
+                      AutoGenerateColumns="False">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="KRCode" Binding="{Binding Path=KRCode_}"/>
+                    <DataGridTextColumn Header="Name" Binding="{Binding Path=Name_}"/>
+                    <DataGridTextColumn Header="Type" Binding="{Binding Path=Type_}"/>
+                    <DataGridTextColumn Header="BasePrice" Binding="{Binding Path=BasePrice_}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</UserControl>

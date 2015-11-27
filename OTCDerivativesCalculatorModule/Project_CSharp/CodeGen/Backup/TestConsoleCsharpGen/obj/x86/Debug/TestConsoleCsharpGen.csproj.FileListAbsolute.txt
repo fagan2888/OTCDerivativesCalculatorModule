@@ -1,0 +1,7 @@
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\CodeGen\TestConsoleCsharpGen\bin\Debug\TestConsoleCsharpGen.exe
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\CodeGen\TestConsoleCsharpGen\bin\Debug\TestConsoleCsharpGen.pdb
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\CodeGen\TestConsoleCsharpGen\bin\Debug\CSharpCodeGen.dll
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\CodeGen\TestConsoleCsharpGen\bin\Debug\CSharpCodeGen.pdb
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\CodeGen\TestConsoleCsharpGen\obj\x86\Debug\TestConsoleCsharpGen.exe
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\CodeGen\TestConsoleCsharpGen\obj\x86\Debug\TestConsoleCsharpGen.pdb
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\CodeGen\TestConsoleCsharpGen\obj\x86\Debug\TestConsoleCsharpGen.csprojResolveAssemblyReference.cache

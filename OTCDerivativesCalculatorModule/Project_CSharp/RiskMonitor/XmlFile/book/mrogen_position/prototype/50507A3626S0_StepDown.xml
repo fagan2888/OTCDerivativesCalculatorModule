@@ -1,0 +1,141 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<instrument Type="StepDown">
+  
+  <header>
+    <productName>IBK 제873회 사모ELS</productName>
+    <productType>StepDown</productType>
+    <krCode>50507A3626S0</krCode>
+  </header>
+  
+  <instrumentInfo>
+    <type>standardInstrument</type>
+    <standardInstrument>
+      
+      <issueInformation>
+        <type>noteInfo</type>
+        <noteInfo>
+          <tradeDate>2013-06-25</tradeDate>
+          <effectiveDate>2013-06-25</effectiveDate>
+          <maturityDate>2016-06-22</maturityDate>
+          <notional>100000000</notional>
+          <premium>0</premium>
+        </noteInfo>
+      </issueInformation>
+      
+      <underlyingInformation>
+        <type>indexUnderInfo</type>
+        <indexUnderInfo>
+          <index>
+            <type>stockIndex</type>
+            <stockIndex>
+              <krCode>KR7005930003</krCode>
+              <name>KR7005930003</name>
+              <basePrice>1313000</basePrice>
+            </stockIndex>
+          </index>
+          <index>
+            <type>stockIndex</type>
+            <stockIndex>
+              <krCode>KR7005930003</krCode>
+              <name>KR7005930003</name>
+              <basePrice>1313000</basePrice>
+            </stockIndex>
+          </index>
+        </indexUnderInfo>
+      </underlyingInformation>
+
+      <payoffInfo>
+        <type>stepDown</type>
+        <stepDownKI>
+          <kiEventInfo>
+            <type>constKiTrigger</type>
+            <constKiTrigger>
+              <pastKI>false</pastKI>
+              <value>0.6</value>
+              <value>0.6</value>
+            </constKiTrigger>
+          </kiEventInfo>
+          <nonKiEventInfo>
+            <type>constNonKiTrigger</type>
+            <constNonKiTrigger>
+              <return>0.3</return>
+            </constNonKiTrigger>
+          </nonKiEventInfo>
+          <redemptionInfo>
+            <type>autoCallRedem</type>
+            <autoCallRedem>
+              
+              <eventTrigger>
+                <type>autoCallConstReturnTrigger</type>
+                <autoCallConstReturnTrigger>
+                  <dateOrder>0</dateOrder>
+                  <date>2013-12-20</date>
+                  <trigger>0.95</trigger>
+                  <return>0.05</return>
+                  <averageDays>1</averageDays>
+                </autoCallConstReturnTrigger>
+              </eventTrigger>
+              
+              <eventTrigger>
+                <type>autoCallConstReturnTrigger</type>
+                <autoCallConstReturnTrigger>
+                  <dateOrder>1</dateOrder>
+                  <date>2014-06-20</date>
+                  <trigger>0.95</trigger>
+                  <return>0.1</return>
+                  <averageDays>1</averageDays>
+                </autoCallConstReturnTrigger>
+              </eventTrigger>
+              
+              <eventTrigger>
+                <type>autoCallConstReturnTrigger</type>
+                <autoCallConstReturnTrigger>
+                  <dateOrder>2</dateOrder>
+                  <date>2014-12-22</date>
+                  <trigger>0.9</trigger>
+                  <return>0.15</return>
+                  <averageDays>1</averageDays>
+                </autoCallConstReturnTrigger>
+              </eventTrigger>
+              
+              <eventTrigger>
+                <type>autoCallConstReturnTrigger</type>
+                <autoCallConstReturnTrigger>
+                  <dateOrder>3</dateOrder>
+                  <date>2015-06-22</date>
+                  <trigger>0.9</trigger>
+                  <return>0.2</return>
+                  <averageDays>1</averageDays>
+                </autoCallConstReturnTrigger>
+              </eventTrigger>
+
+              <eventTrigger>
+                <type>autoCallConstReturnTrigger</type>
+                <autoCallConstReturnTrigger>
+                  <dateOrder>4</dateOrder>
+                  <date>2015-12-22</date>
+                  <trigger>0.85</trigger>
+                  <return>0.25</return>
+                  <averageDays>1</averageDays>
+                </autoCallConstReturnTrigger>
+              </eventTrigger>
+
+              <eventTrigger>
+                <type>autoCallConstReturnTrigger</type>
+                <autoCallConstReturnTrigger>
+                  <dateOrder>5</dateOrder>
+                  <date>2016-06-22</date>
+                  <trigger>0.85</trigger>
+                  <return>0.3</return>
+                  <averageDays>1</averageDays>
+                </autoCallConstReturnTrigger>
+              </eventTrigger>
+              
+            </autoCallRedem>
+          </redemptionInfo>
+        </stepDownKI>
+      </payoffInfo>
+    </standardInstrument>
+  </instrumentInfo>
+  
+</instrument>

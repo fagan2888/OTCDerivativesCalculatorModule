@@ -1,0 +1,68 @@
+﻿<UserControl x:Class="Excel_Interface.OTCApplicationBatchView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="referenceDate :" />
+                <DatePicker Name="refDatePicker_" SelectedDate="{Binding Path=ReferenceDate_, Mode=TwoWay}" />
+                <Button Name="loadBtn_" Content="load" Click="loadBtn__Click" />
+                <ToolBar>
+                    <Menu>
+                        <MenuItem Header="_Execute">
+                            <MenuItem Header="_parameter Build" Click="parameterBuildButton_Click" />
+                            <MenuItem Header="_calculate" Click="calculateButton_Click" />
+                        </MenuItem>
+
+                    </Menu>
+
+                </ToolBar>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Vertical">
+                    <RadioButton Content="Parameter exist" />
+                    
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                        <Label Content="instrument List" />
+                        <CheckBox VerticalAlignment="Center" IsChecked="{Binding Path=ParallelFlag_}" Content="Parellel excute " />
+                        <Label Content="- core Num :" />
+                        <TextBox Width="30" IsReadOnly="True" Text="{Binding Path=AvailableCore_}" />
+                    </StackPanel>
+                    
+                    
+                    <DataGrid Name="batchItemDataGrid_" LoadingRow="DataGrid_LoadingRow_" 
+                              MaxHeight="500"
+                              AutoGenerateColumns="False"
+                              IsReadOnly="True"
+                              ScrollViewer.CanContentScroll="True" 
+                              ScrollViewer.VerticalScrollBarVisibility="Auto"
+                              ScrollViewer.HorizontalScrollBarVisibility="Auto">
+
+                        <DataGrid.RowStyle>
+                            <Style TargetType="{x:Type DataGridRow}">
+                                <EventSetter Event="MouseDoubleClick" Handler="batchItemDataGrid_MouseDoubleClick"/>
+                            </Style>
+                        </DataGrid.RowStyle>
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Code" Binding="{Binding Path=ItemCode_}"/>
+                            <DataGridTextColumn Header="Name" Binding="{Binding Path=Name_}"/>
+                            <DataGridTextColumn Header="Parameter" Binding="{Binding Path=ParameterStatus_}"/>
+                            <DataGridTextColumn Header="Calculation" Binding="{Binding Path=CalculationStatus_}"/>
+                            <DataGridTextColumn Header="Result" Binding="{Binding Path=ResultPrice_}"/>
+                            
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <Label Content="Log" />
+                <TextBox Name="logTextBox_" />
+            </StackPanel>
+        </StackPanel> 
+    </Grid>
+</UserControl>

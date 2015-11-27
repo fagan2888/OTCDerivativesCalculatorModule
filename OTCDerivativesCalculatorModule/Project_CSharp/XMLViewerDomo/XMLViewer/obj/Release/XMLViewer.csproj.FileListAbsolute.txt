@@ -1,0 +1,10 @@
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\XMLViewerDomo\XMLViewer\bin\Release\XMLViewer.dll
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\XMLViewerDomo\XMLViewer\bin\Release\XMLViewer.pdb
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\XMLViewerDomo\XMLViewer\obj\Release\Viewer.baml
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\XMLViewerDomo\XMLViewer\obj\Release\Viewer.g.cs
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\XMLViewerDomo\XMLViewer\obj\Release\XMLViewer_MarkupCompile.cache
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\XMLViewerDomo\XMLViewer\obj\Release\XMLViewer.g.resources
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\XMLViewerDomo\XMLViewer\obj\Release\XMLViewer.Properties.Resources.resources
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\XMLViewerDomo\XMLViewer\obj\Release\XMLViewer.csproj.GenerateResource.Cache
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\XMLViewerDomo\XMLViewer\obj\Release\XMLViewer.dll
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\XMLViewerDomo\XMLViewer\obj\Release\XMLViewer.pdb

@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="Excel_Interface.Excel_geometricBMView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <Label Content="gbm" />
+            <StackPanel Name="gbmPanel_" Orientation="Horizontal">
+                <Label Content="CurrentValue :" />
+                <TextBox Name="currentValueTB_" Width="80" Text="{Binding Path=CurrentValue_}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Drift :" />
+                <TextBox Name="driftTB_" Width="80" Text="{Binding Path=Drift_}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Dividend :" />
+                <TextBox Width="80" Text="{Binding Path=Dividend_}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Volatility :" />
+                <TextBox Width="80" Text="{Binding Path=Volatility_}"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

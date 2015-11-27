@@ -1,0 +1,31 @@
+﻿select C.std_date,
+	  C.cust_fund_code,
+	  C.first_buy_date as FIRST_BUY_DATE,
+	  C.kr_code as KR_CODE,
+	  C.item_name as ITEM_NAME,
+	  C.CURRENCY_CODE as CURRENCY_CODE,
+	  C.FACE_AMT as FACE_AMT,
+	  D.dirty_price / 10000 * C.FACE_AMT as MRO,
+	  C.market_amt as SIMPONY,
+	  round(abs(D.dirty_price / 10000 * C.FACE_AMT - C.market_amt)/C.FACE_AMT * 10000,2) as DIFF,
+	  C.firm_name as FIRM_NAME,
+	  C.CREDIT_GRADE as CREDIT_GRADE,
+	  C.firm_id as FIRM_ID 
+    from (
+    SELECT std_date,
+      cust_fund_code,
+      first_buy_date,
+      kr_code,
+      item_name,
+      CURRENCY_CODE,
+      FACE_AMT,
+      market_amt,
+      firm_name,
+      CREDIT_GRADE,
+      firm_id
+    FROM td_mrposition A WHERE std_date='@KeyColumn1@' 
+    AND FIRST_BUY_DATE >= '@KeyColumn2@' 
+    AND substr(cust_fund_code, 1, 1) in ('A' ,'F')
+    order by first_buy_date desc) C,
+    ( select * from otc_td_mrcalcprice where std_date='@KeyColumn1@' ) D
+    where C.kr_code = D.kr_code(+);

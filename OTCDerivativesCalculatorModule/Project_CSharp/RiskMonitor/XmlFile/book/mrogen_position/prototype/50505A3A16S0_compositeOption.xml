@@ -1,0 +1,121 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<instrument Type="compositeOption">
+
+  <header>
+    <productName>IBK 제982회 사모ELS</productName>
+    <productType>CompositeOption</productType>
+    <krCode>50505A3B13S0</krCode>
+    <itemCode>50505A3B13S0</itemCode>
+    <counterParty>신탁운용지점</counterParty>
+  </header>
+
+  <instPositionInfo>
+    <krCode>50505A3B13S0</krCode>
+    <instName>IBK 제982회 사모ELS</instName>
+    <instCode>50507A3517S0</instCode>
+    <bookedDate>2013-11-05</bookedDate>
+    <maturityDate>2015-04-30</maturityDate>
+    <instType>compositeOption</instType>
+    <fileName>50505A3A16S0_compositeOption.xml</fileName>
+    <positionName>OTCDerivatives00</positionName>
+    <counterParty>신탁운용지점</counterParty>
+    <notional>38000000</notional>
+    <currency>KRW</currency>
+    <fundCode>null</fundCode>
+    <fundName>null</fundName>
+  </instPositionInfo>
+  
+  <instrumentInfo>
+    <type>standardInstrument</type>
+    <standardInstrument>
+
+      <issueInformation>
+        <type>noteInfo</type>
+        <noteInfo>
+          <tradeDate>2013-11-05</tradeDate>
+          <effectiveDate>2013-11-05</effectiveDate>
+          <maturityDate>2015-04-30</maturityDate>
+          <notional>38000000</notional>
+          <premium>37218743</premium>
+        </noteInfo>
+      </issueInformation>
+
+      <underlyingInformation>
+        <type>index</type>
+        <indexUnderInfo>
+          <index>
+            <type>stock</type>
+            <stockIndex>
+              <krCode>KOSPI200</krCode>
+              <name>KOSPI200</name>
+              <basePrice>266.59</basePrice>
+            </stockIndex>
+          </index>
+        </indexUnderInfo>
+      </underlyingInformation>
+
+      <payoffInfo>
+        <type>compositeSumOptionPayoff</type>
+        <compositeSumOptionPayoff>
+          <excerciseInfo>
+              <type>europeanExercise</type>
+              <europeanExercise>
+                <exerciseDate></exerciseDate>
+                <paymentDays>3D</paymentDays>>
+              </europeanExercise>
+            </excerciseInfo>
+          
+          <fixingDate>2015-04-30</fixingDate>
+          <payoffDate>2015-04-30</payoffDate>
+          
+          <standardOption>
+            <type>barrierWithConstRebateCallOption</type>
+            <unit>1.0</unit>
+            <baseCoupon>0.02</baseCoupon>
+            <barrierWithConstRebateCallOption>
+              
+              <participateRate>0.45</participateRate>
+              <payoffDate>2015-04-28</payoffDate>
+
+              <referenceCalculation>
+                <type>identityReferenceCal</type>
+                <identityReferenceCal>
+                  <fixingDate>2015-04-30</fixingDate>
+                </identityReferenceCal>
+              </referenceCalculation>
+              
+              <barrierInfo>
+                <type>constUpperBarrierInfo</type>
+                <constUpperBarrierInfo>
+                    
+                  <barrierDateInfo>
+                    <dateInformation>
+                      <type>dailyInterval</type>
+                      <dailyInterval>
+                        <observationStartDate>2013-11-05</observationStartDate>
+                        <observationEndDate>2015-04-24</observationEndDate>
+                      </dailyInterval>
+                    </dateInformation>
+                  </barrierDateInfo>
+                    
+                  <trigger>1.3</trigger>
+                  <pastEventOcc>false</pastEventOcc>
+                </constUpperBarrierInfo>
+
+              </barrierInfo>
+
+              <strike>1.0</strike>
+              <lowerBound>0.0</lowerBound>
+              <rebateRate>0.0</rebateRate>
+                
+            </barrierWithConstRebateCallOption>
+              
+          </standardOption>
+          
+        </compositeSumOptionPayoff>
+      </payoffInfo>
+      
+    </standardInstrument>
+  </instrumentInfo>
+
+</instrument>

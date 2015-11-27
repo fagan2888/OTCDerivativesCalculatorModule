@@ -1,0 +1,3823 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+
+  <xsd:complexType name="GridCalculation" id="MessageBody02">
+    <xsd:sequence>
+      <xsd:element name="inst_code" type="xsd:token" />
+      <xsd:element name="inst_name" type="xsd:token" />
+      <xsd:element name="inst_type" type="xsd:token" />
+      <xsd:element name="para_refDate" type="xsd:token" />
+
+      <xsd:element name="productInnerXml" type="ProductInnerXml" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ProductInnerXml">
+    <xsd:sequence>
+      <xsd:element name="instrument" type="Instrument" />
+      <xsd:element name="pricing" type="Pricing" />
+      <xsd:element name="hisoryData" type="HisoryData" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="Root">
+    <xsd:sequence>
+      <xsd:element name="instrument" type="Instrument" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ParaRoot">
+    <xsd:sequence>
+      <xsd:element name="pricing" type="Pricing" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Pricing">
+    <xsd:sequence>
+      <xsd:element name="evaluationTime" type="xsd:date" />
+      <xsd:element name="excel_parameter" type="Excel_parameter" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_result">
+    <xsd:sequence>
+      <xsd:element name="calculationDate" type="xsd:date" />
+      <xsd:element name="excel_valueResult" type="Excel_valueResult" />
+      <xsd:element name="excel_greekResult" type="Excel_greekResult" />
+      <xsd:element name="excel_cashFlowsResult" type="Excel_cashFlowsResult" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_valueResult">
+    <xsd:sequence>
+      <xsd:element name="excel_valueSideResult" type="Excel_valueSideResult" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_valueSideResult">
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+      <xsd:element name="currency" type="xsd:double" />
+      <xsd:element name="dirty" type="xsd:double" />
+      <xsd:element name="clean" type="xsd:double" />
+      <xsd:element name="accrualAmt" type="xsd:double" />
+      <xsd:element name="option" type="xsd:double" />
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_greekResult">
+    <xsd:sequence>
+      <xsd:element name="excel_greekUnderlying" type="Excel_greekUnderlying" maxOccurs="unbounded" />
+      <xsd:element name="theta" type="xsd:token" />
+      <xsd:element name="rho" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_cashFlowsResult">
+    <xsd:sequence>
+      <xsd:element name="excel_cashFlowResult" type="Excel_cashFlowResult" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="Excel_greekUnderlying">
+    <xsd:sequence>
+      <xsd:element name="underlyingName" type="xsd:token" />
+      <xsd:element name="underlyingValue" type="xsd:token" />
+      <xsd:element name="basePrice" type="xsd:token" />
+      <xsd:element name="volatility" type="xsd:token" />
+      <xsd:element name="pertubation_h" type="xsd:token" />
+      <xsd:element name="delta" type="xsd:token" />
+      <xsd:element name="gamma" type="xsd:token" />
+      <xsd:element name="vega" type="xsd:token" />
+      
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_cashFlowResult">
+    <xsd:sequence>
+      <xsd:element name="seq" type="xsd:token" />
+      <xsd:element name="eventDate" type="xsd:token" />
+      <xsd:element name="payoffDate" type="xsd:token" />
+      <xsd:element name="type" type="xsd:token" />
+      <xsd:element name="currency" type="xsd:token" />
+      <xsd:element name="cashFlow" type="xsd:token" />
+      <xsd:element name="yield" type="xsd:token" />
+      <xsd:element name="discount" type="xsd:token" />
+      <xsd:element name="exProb" type="xsd:token" />
+      <xsd:element name="notionalPayment" type="xsd:token" />
+      <xsd:element name="fxRate_forward" type="xsd:token" />
+      <xsd:element name="value" type="xsd:token" />
+      
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="History">
+    <xsd:sequence>
+      <xsd:element name="hisoryData" type="HisoryData" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Instrument">
+    <xsd:sequence>
+      <xsd:element name="code" type="xsd:token" />
+      <xsd:element name="excel_interface" type="Excel_interface" />
+      <xsd:element name="excel_swapInterface" type="Excel_swapInterface" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Message">
+    <xsd:sequence>
+      <xsd:element name="messageHeader" type="MessageHeader" />
+      <xsd:element name="messageBody" type="MessageBody" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="MessageHeader">
+    <xsd:sequence>
+      <xsd:element name="messageId" type="xsd:token" />
+      <xsd:element name="messageType" type="xsd:token" />
+
+      <xsd:element name="sentBy" type="xsd:token" />
+      <xsd:element name="sendTo" type="xsd:token" />
+      <xsd:element name="creationTimestamp" type="xsd:token" />
+      <xsd:element name="isCorrection" type="xsd:token" />
+      <xsd:element name="correlationId" type="xsd:token" />
+      <xsd:element name="sequenceNumber" type="xsd:token" />
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="MessageBody">
+    <xsd:sequence>
+      <xsd:element name="msg_type" type="xsd:token" />
+      <xsd:choice>
+        <!--interApp-->
+        <xsd:element name="maturityNotification" type="MaturityNotification" />
+
+        <!--App_Parellel-->
+        <xsd:element name="gridCalculation" type="GridCalculation" />
+        <xsd:element name="clearQueue" type="ClearQueue" />
+        <xsd:element name="gridCalculationStart" type="GridCalculationStart" />
+        
+        <!--Parellel_calcServer-->
+        <xsd:element name="calculationServerInfo" type="CalculationServerInfo" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="MaturityNotification" id="MessageBody01">
+    <xsd:sequence>
+
+    </xsd:sequence>
+  </xsd:complexType>
+  
+
+
+  <xsd:complexType name="ClearQueue" id="MessageBody03">
+    <xsd:sequence>
+      <xsd:element name="actionType" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="GridCalculationStart" id="MessageBody04">
+    <xsd:sequence>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="CalculationServerInfo" id="MessageBody05">
+    <xsd:sequence>
+      <xsd:element name="server_name" type="xsd:token" />
+      <xsd:element name="server_ip" type="xsd:token" />
+      <xsd:element name="server_port" type="xsd:token" />
+      <xsd:element name="server_status" type="xsd:token" />
+      <xsd:element name="server_coreNum" type="xsd:token" />
+      <xsd:element name="server_use" type="xsd:token" />
+      <xsd:element name="server_aliveTime" type="xsd:token" />
+      <xsd:element name="server_description" type="xsd:token" />
+      
+      
+    </xsd:sequence>
+  </xsd:complexType>
+
+
+
+  <xsd:complexType name="Excel_interface">
+    <xsd:sequence>
+      <xsd:element name="excel_type" type="xsd:token" />
+      <xsd:choice>
+        <xsd:element name="excel_hifive" type="Excel_hifive" /> <!--0-->
+        <xsd:element name="excel_stepDownKICustom" type="Excel_stepDownKICustom" /> <!--1-->
+        <xsd:element name="excel_compositeOption" type="Excel_compositeOption" />
+        <xsd:element name="excel_general" type="Excel_general" />
+        <xsd:element name="excel_fixedBond" type="Excel_fixedBond" />
+        <xsd:element name="excel_vanillaFloatingBond" type="Excel_vanillaFloatingBond" />
+        <xsd:element name="excel_structuredBond" type="Excel_structuredBond" />
+        <xsd:element name="excel_fxForward" type="Excel_fxForward" />
+        <xsd:element name="excel_fxSwap" type="Excel_fxSwap" />
+        <xsd:element name="excel_multiAssetCompositeOption" type="Excel_multiAssetCompositeOption" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_swapInterface">
+    <xsd:sequence>
+      <xsd:element name="excel_type" type="xsd:token" />
+      <xsd:choice>
+        <xsd:element name="excel_irs" type="Excel_irs" />
+        <xsd:element name="excel_crs" type="Excel_crs" />
+        <xsd:element name="excel_cds" type="Excel_cds" />
+        <xsd:element name="excel_structuredSwap" type="Excel_structuredSwap" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  
+  <xsd:complexType name="Excel_parameter">
+    <xsd:sequence>
+      <xsd:element name="excel_type" type="xsd:token" />
+      <xsd:element name="excel_result" type="Excel_result" />
+      <xsd:choice>
+        <xsd:element name="excel_standardPara" type="Excel_standardPara" />
+        <xsd:element name="excel_standardSwapPara" type="Excel_standardSwapPara" />
+        <xsd:element name="excel_standardHifivePara" type="Excel_standardHifivePara" />
+        <xsd:element name="excel_standardCreditPara" type="Excel_standardCreditPara" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_standardPara" id="Excel_parameter00">
+    <xsd:sequence>
+      <xsd:element name="referenceDate" type="xsd:token" />
+      <xsd:element name="simulationNum" type="xsd:token" />
+      <xsd:element name="excel_underlyingCalcInfo_para" type="Excel_underlyingCalcInfo_para" />
+      <xsd:element name="excel_discountCurve_para" type="Excel_discountCurve_para" />
+      
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_standardSwapPara" id="Excel_parameter01">
+    <xsd:sequence>
+      <xsd:element name="referenceDate" type="xsd:token" />
+      <xsd:element name="simulationNum" type="xsd:token" />
+      <xsd:element name="excel_underlyingCalcInfo_para" type="Excel_underlyingCalcInfo_para" />
+      <xsd:element name="excel_discountCurve_para" type="Excel_discountCurve_para" />
+
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="Excel_standardHifivePara" id="Excel_parameter02">
+    <xsd:sequence>
+      <xsd:element name="referenceDate" type="xsd:token" />
+      <xsd:element name="simulationNum" type="xsd:token" />
+      <xsd:element name="excel_underlyingCalcInfo_para" type="Excel_underlyingCalcInfo_para" />
+      <xsd:element name="excel_discountCurve_para" type="Excel_discountCurve_para" />
+      
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_standardCreditPara" id="Excel_parameter03">
+    <xsd:sequence>
+      <xsd:element name="referenceDate" type="xsd:token" />
+      <xsd:element name="simulationNum" type="xsd:token" />
+      <xsd:element name="excel_underlyingCalcInfo_para" type="Excel_underlyingCalcInfo_para" />
+      <xsd:element name="excel_referenceCalcInfo_para" type="Excel_referenceCalcInfo_para" />
+      <xsd:element name="excel_discountCurve_para" type="Excel_discountCurve_para" />
+      <xsd:element name="excel_defaultCurve_para" type="Excel_defaultCurve_para" />
+      
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_defaultCurve_para">
+    <xsd:sequence>
+      <xsd:element name="excel_defaultCurve" type="Excel_defaultCurve" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="Excel_discountCurve_para">
+    <xsd:sequence>
+      <xsd:element name="excel_yieldCurve" type="Excel_yieldCurve" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_yieldCurve" >
+    <xsd:sequence>
+      <xsd:element name="currency" type="xsd:token" />
+      <xsd:element name="code" type="xsd:token" />
+      <xsd:element name="name" type="xsd:token" />
+      <xsd:element name="description" type="xsd:token" />
+      <xsd:element name="excel_interpolation" type="Excel_interpolation" />
+      <xsd:element name="excel_rateData" type="Excel_rateData" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_defaultCurve" >
+    <xsd:sequence>
+      <xsd:element name="code" type="xsd:token" />
+      <xsd:element name="name" type="xsd:token" />
+      <xsd:element name="recovery" type="xsd:token" />
+      <xsd:element name="description" type="xsd:token" />
+      <xsd:element name="excel_interpolation" type="Excel_interpolation" />
+      <xsd:element name="excel_rateData" type="Excel_rateData" maxOccurs="unbounded" />
+      
+    </xsd:sequence>
+  </xsd:complexType>
+  
+
+  <xsd:complexType name="Excel_interpolation" >
+    <xsd:sequence>
+      <xsd:element name="interpolation" type="xsd:token" />
+      <xsd:element name="daycounter" type="xsd:token" />
+      <xsd:element name="calendar" type="xsd:token" />
+      <xsd:element name="businessDayConvention" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_rateData" >
+    <xsd:sequence>
+      <xsd:element name="tenor" type="xsd:token" />
+      <xsd:element name="rateType" type="xsd:token" />
+      <xsd:element name="value" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="Excel_hifive" id="Excel_interface00">
+    <xsd:sequence>
+      <xsd:element name="excel_issueInfo" type="Excel_issueInfo" />
+      <xsd:element name="excel_underlyingCalcInfo" type="Excel_underlyingCalcInfo" />
+      <xsd:element name="excel_hifive_subtype" type="Excel_hifive_subtype" />
+      <xsd:element name="excel_scheduleList" type="Excel_scheduleList" />
+      <xsd:element name="excel_kiEventCalculation" type="Excel_kiEventCalculation" />
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_kiEventCalculation">
+    <xsd:sequence>
+      <xsd:element name="excel_type" type="xsd:token" />
+      <xsd:choice>
+        <xsd:element name="excel_simpleKiEventCalc" type="Excel_simpleKiEventCalc" />
+        <xsd:element name="excel_dualKiEventCalc" type="Excel_dualKiEventCalc" />
+        <xsd:element name="excel_targetKiEventCalc" type="Excel_targetKiEventCalc" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_simpleKiEventCalc" id="Excel_kiEventCalculation00">
+    <xsd:sequence>
+      <xsd:element name="eventDate" type="xsd:token" />
+      <xsd:element name="payoffDate" type="xsd:token" />
+      <xsd:element name="vba_description" type="xsd:token" />
+      
+      <xsd:element name="excel_eventCalcInfo" type="Excel_eventCalcInfo" />
+      <xsd:element name="excel_occReturnCalcInfo" type="Excel_occReturnCalcInfo" />
+      <xsd:element name="excel_noOccReturnCalcInfo" type="Excel_noOccReturnCalcInfo" />
+      
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_occReturnCalcInfo" >
+    <xsd:sequence>
+      <xsd:element name="excel_returnCalcInfo" type="Excel_returnCalcInfo" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_noOccReturnCalcInfo" >
+    <xsd:sequence>
+      <xsd:element name="excel_returnCalcInfo" type="Excel_returnCalcInfo" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="Excel_dualKiEventCalc" id="Excel_kiEventCalculation01">
+    <xsd:sequence>
+      <xsd:element name="vba_description" type="xsd:token" />
+      <xsd:element name="excel_eventCalcInfo" type="Excel_eventCalcInfo" maxOccurs="unbounded" />
+      
+      
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_targetKiEventCalc" id="Excel_kiEventCalculation02">
+    <xsd:sequence>
+      <xsd:element name="eventDate" type="xsd:token" />
+      <xsd:element name="vba_description" type="xsd:token" />
+      <xsd:element name="targetCount" type="xsd:token" />
+      <xsd:element name="excel_eventCalcInfo" type="Excel_eventCalcInfo" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+
+  <xsd:complexType name="Excel_hifive_subtype">
+    <xsd:sequence>
+      <xsd:element name="excel_type" type="xsd:token" />
+      <xsd:choice>
+        <xsd:element name="excel_hifive_stepDown_ki" type="Excel_hifive_stepDown_ki" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_hifive_stepDown_ki" id="Excel_hifive_subtype00">
+    <xsd:sequence>
+      <xsd:element name="underlyingCalcType" type="xsd:token" />
+      <xsd:element name="maturity" type="xsd:token" />
+      <xsd:element name="maturityPeriod" type="xsd:token" />
+      <xsd:element name="couponTenor" type="xsd:token" />
+      <xsd:element name="couponTenorPeriod" type="xsd:token" />
+      <xsd:element name="excel_stepDownKI_subSchedule" type="Excel_stepDownKI_subSchedule" maxOccurs="unbounded"/>
+      <xsd:element name="coupon" type="xsd:token" />
+      <xsd:element name="ki" type="xsd:token" />
+      <xsd:element name="kiObStartDate" type="xsd:token" />
+      <xsd:element name="kiObEndDate" type="xsd:token" />
+      <xsd:element name="settlementDays" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_stepDownKI_subSchedule" >
+    <xsd:sequence>
+      <xsd:element name="excel_type" type="xsd:token" />
+      <xsd:element name="eventDate" type="xsd:token" />
+      <xsd:element name="trigger" type="xsd:token" />
+      <xsd:element name="coupon" type="xsd:token" />
+      <xsd:element name="averageDays" type="xsd:token" />
+      <xsd:element name="underCalcType" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_compositeOption" id="Excel_interface01">
+    <xsd:sequence>
+      <xsd:element name="excel_issueInfo" type="Excel_issueInfo" />
+      <xsd:element name="excel_underlyingCalcInfo" type="Excel_underlyingCalcInfo" />
+      <xsd:element name="exerciseDate" type="xsd:token" />
+      <xsd:element name="payoffDate" type="xsd:token" />
+      <xsd:element name="notionalMaturityPayment" type="xsd:token" />
+      
+      <xsd:element name="excel_compositeOption_subtype" type="Excel_compositeOption_subtype" maxOccurs="unbounded" />
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_stepDownKICustom" id="Excel_interface02">
+    <xsd:sequence>
+      <xsd:element name="excel_issueInfo" type="Excel_issueInfo" />
+      <xsd:element name="excel_underlyingCalcInfo" type="Excel_underlyingCalcInfo" />
+      <xsd:element name="excel_hifive_subtype" type="Excel_hifive_subtype" />
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_general" id="Excel_interface03">
+    <xsd:sequence>
+      <xsd:element name="excel_issueInfo" type="Excel_issueInfo" />
+      <xsd:element name="generalSchedule" type="GeneralSchedule" maxOccurs="unbounded" />
+      <xsd:element name="generalTerminationEvent" type="GeneralTerminationEvent" maxOccurs="unbounded" />
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_multiAssetCompositeOption" id="Excel_interface07">
+    <xsd:sequence>
+      <xsd:element name="excel_issueInfo" type="Excel_issueInfo" />
+      <xsd:element name="excel_underlyingCalcInfo" type="Excel_underlyingCalcInfo" />
+      <xsd:element name="exerciseDate" type="xsd:token" />
+      <xsd:element name="payoffDate" type="xsd:token" />
+      <xsd:element name="notionalMaturityPayment" type="xsd:token" />
+      <xsd:element name="excel_multiAsset_compositeOption_subtype" type="Excel_multiAsset_compositeOption_subtype" maxOccurs="unbounded" />
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_ScheduleGenerator">
+    <xsd:sequence>
+      <xsd:element name="effectiveDate" type="xsd:token" />
+      <xsd:element name="maturityDate" type="xsd:token" />
+      <xsd:element name="tenor" type="xsd:token" />
+      <xsd:element name="paymentDays" type="xsd:token" />
+      <xsd:element name="calendars" type="xsd:token" maxOccurs="unbounded"/>
+      <xsd:element name="businessDayConvention" type="xsd:token" />
+      <xsd:element name="dateGeneration" type="xsd:token" />
+
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="GeneralScheduleInfo" >
+    <xsd:sequence>
+      <xsd:element name="generalSchedule" type="GeneralSchedule" maxOccurs="unbounded" />
+      
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="GeneralSchedule" >
+    <xsd:sequence>
+      <xsd:element name="eventDate" type="xsd:token" />
+      <xsd:element name="detailScheduleType" type="xsd:token" />
+      <xsd:element name="generalScheduleDeatil" type="GeneralScheduleDeatil" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="GeneralScheduleDeatil" >
+    <xsd:sequence>
+      <xsd:element name="eventDate" type="xsd:token" />
+      <xsd:element name="type" type="xsd:token" />
+      <xsd:choice>
+        <xsd:element name="general_scheduleDetail_fixedCoupon" type="General_scheduleDetail_fixedCoupon" />
+        <xsd:element name="general_scheduleDetail_fixedAmount" type="General_scheduleDetail_fixedAmount" />
+
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="General_scheduleDetail_fixedCoupon" id="GeneralScheduleDeatil00" >
+    <xsd:sequence>
+      <xsd:element name="fixedRate" type="xsd:token" />
+      
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="General_scheduleDetail_fixedAmount" id="GeneralScheduleDeatil01">
+    <xsd:sequence>
+      <xsd:element name="fixedAmount" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="GeneralTerminationEvent" >
+    <xsd:sequence>
+      <xsd:element name="detailTerminationType" type="xsd:token" />
+      <xsd:element name="eventDate" type="xsd:token" />
+      <xsd:element name="generalTerminationEventDetail" type="GeneralTerminationEventDetail" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="GeneralTerminationEventDetail" >
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+      <xsd:choice>
+        <xsd:element name="general_TerminationEventDetail_credit" type="General_TerminationEventDetail_credit" />
+        <xsd:element name="general_TerminationEventDetail_target" type="General_TerminationEventDetail_target" />
+
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="General_TerminationEventDetail_credit" id="GeneralTerminationEventDetail00">
+    <xsd:sequence>
+      <xsd:element name="referenceEntity" type="xsd:token" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="General_TerminationEventDetail_target" id="GeneralTerminationEventDetail01" >
+    <xsd:sequence>
+      <xsd:element name="target" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+
+  <xsd:complexType name="Excel_fixedBond" id="Excel_interface40">
+    <xsd:sequence>
+      <xsd:element name="excel_issueInfo" type="Excel_issueInfo" />
+      <xsd:element name="excel_fixedCouponScheduleList" type="Excel_fixedCouponScheduleList" />
+      <xsd:element name="excel_fixedBond_subtype" type="Excel_fixedBond_subtype" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_fixedBond_subtype">
+    <xsd:sequence>
+      <xsd:element name="excel_type" type="xsd:token" />
+      <xsd:choice>
+        <xsd:element name="excel_fixedBond_constantRate" type="Excel_fixedBond_constantRate" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_fixedBond_constantRate" id="Excel_fixedBond_subtype00">
+    <xsd:sequence>
+      <xsd:element name="maturity" type="xsd:token" />
+      <xsd:element name="maturityPeriod" type="xsd:token" />
+      <xsd:element name="couponTenor" type="xsd:token" />
+      <xsd:element name="couponTenorPeriod" type="xsd:token" />
+      <xsd:element name="excel_fixedBond_subSchedule" type="Excel_fixedBond_subSchedule" maxOccurs="unbounded"/>
+      <xsd:element name="fixedRate" type="xsd:token" />
+      <xsd:element name="settlementDays" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_fixedBond_subSchedule" >
+    <xsd:sequence>
+      <xsd:element name="eventDate" type="xsd:token" />
+      <xsd:element name="calculationStartDate" type="xsd:token" />
+      <xsd:element name="calculationEndDate" type="xsd:token" />
+      <xsd:element name="paymentDate" type="xsd:token" />
+      <xsd:element name="fixedRate" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+
+  <xsd:complexType name="Excel_vanillaFloatingBond" id="Excel_interface41">
+    <xsd:sequence>
+      <xsd:element name="excel_issueInfo" type="Excel_issueInfo" />
+      <xsd:element name="excel_underlyingCalcInfo" type="Excel_underlyingCalcInfo" />
+      <xsd:element name="excel_vanillaFloatingCouponScheduleList" type="Excel_vanillaFloatingCouponScheduleList" />
+      <xsd:element name="excel_vanillaFloatingBond_subtype" type="Excel_vanillaFloatingBond_subtype" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_vanillaFloatingBond_subtype">
+    <xsd:sequence>
+      <xsd:element name="excel_type" type="xsd:token" />
+      <xsd:choice>
+        <xsd:element name="excel_vanillaFloatingBond_simple" type="Excel_vanillaFloatingBond_simple" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_vanillaFloatingBond_simple" id="Excel_vanillaFloatingBond_subtype00">
+    <xsd:sequence>
+      <xsd:element name="maturity" type="xsd:token" />
+      <xsd:element name="maturityPeriod" type="xsd:token" />
+      <xsd:element name="couponTenor" type="xsd:token" />
+      <xsd:element name="couponTenorPeriod" type="xsd:token" />
+      <xsd:element name="excel_vanillaFloatingBond_subSchedule" type="Excel_vanillaFloatingBond_subSchedule" maxOccurs="unbounded"/>
+      <xsd:element name="gearing" type="xsd:token" />
+      <xsd:element name="spread" type="xsd:token" />
+      <xsd:element name="settlementDays" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_vanillaFloatingBond_subSchedule" >
+    <xsd:sequence>
+      <xsd:element name="eventDate" type="xsd:token" />
+      <xsd:element name="fixingDate" type="xsd:token" />
+      <xsd:element name="calculationStartDate" type="xsd:token" />
+      <xsd:element name="calculationEndDate" type="xsd:token" />
+      <xsd:element name="paymentDate" type="xsd:token" />
+      <xsd:element name="gearing" type="xsd:token" />
+      <xsd:element name="spread" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="Excel_structuredBond" id="Excel_interface42">
+    <xsd:sequence>
+      <xsd:element name="excel_issueInfo" type="Excel_issueInfo" />
+      <xsd:element name="excel_underlyingCalcInfo" type="Excel_underlyingCalcInfo" />
+      <xsd:element name="excel_couponScheduleList" type="Excel_couponScheduleList" />
+      <xsd:element name="excel_structuredBond_subtype" type="Excel_structuredBond_subtype" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_structuredBond_subtype">
+    <xsd:sequence>
+      <xsd:element name="excel_type" type="xsd:token" />
+      <xsd:choice>
+        <xsd:element name="excel_structuredBond_fixedAccrual" type="Excel_structuredBond_fixedAccrual" />
+        <xsd:element name="excel_structuredBond_floatingAccrual" type="Excel_structuredBond_floatingAccrual" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_structuredBond_fixedAccrual" id="Excel_structuredBond_subtype00">
+    <xsd:sequence>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_structuredBond_floatingAccrual" id="Excel_structuredBond_subtype01">
+    <xsd:sequence>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_additionalOption" >
+    <xsd:sequence>
+      <!--option : changePayoff , callable , putable , -->
+      <xsd:element name="excel_type" type="xsd:token" />
+      <xsd:choice>
+        <xsd:element name="excel_noneOption" type="Excel_noneOption" />
+        <xsd:element name="excel_callableOption" type="Excel_callableOption" />
+        <xsd:element name="excel_puttableOption" type="Excel_puttableOption" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_callableOption" id="Excel_additionalOption00">
+    <xsd:sequence>
+      <xsd:element name="optionType" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_puttableOption" id="Excel_additionalOption01">
+    <xsd:sequence>
+      <xsd:element name="optionType" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_noneOption" id="Excel_additionalOption02">
+    <xsd:sequence>
+      <xsd:element name="optionType" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="Excel_couponScheduleList">
+    <xsd:sequence>
+      <xsd:element name="excel_couponSchedule" type="Excel_couponSchedule" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_couponSchedule">
+    <xsd:sequence>
+      <xsd:element name="excel_type" type="xsd:token" />
+
+      <xsd:element name="excel_additionalOption" type="Excel_additionalOption" />
+      
+      <xsd:choice>
+        <!--이건 전부 즐겨찾기 라고 생각-->
+        <xsd:element name="excel_fixedCouponSchedule" type="Excel_fixedCouponSchedule" />
+        <xsd:element name="excel_vanillaFloatingCouponSchedule" type="Excel_vanillaFloatingCouponSchedule" />
+
+        <xsd:element name="excel_floatingCouponSchedule" type="Excel_floatingCouponSchedule" />
+        <xsd:element name="excel_condi_structuredCouponSchedule" type="Excel_condi_structuredCouponSchedule" />
+        <xsd:element name="excel_condi_structuredAccrualCouponSchedule" type="Excel_condi_structuredAccrualCouponSchedule" />
+        <xsd:element name="excel_multiCondi_structuredCouponSchedule" type="Excel_multiCondi_structuredCouponSchedule" />
+        <xsd:element name="excel_multiCondi_structuredAccrualCouponSchedule" type="Excel_multiCondi_structuredAccrualCouponSchedule" />
+        <xsd:element name="excel_multiCondi_multiRng_structuredAccrualCouponSchedule" type="Excel_multiCondi_multiRng_structuredAccrualCouponSchedule" />
+
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_fixedCouponSchedule" id="Excel_couponSchedule00">
+    <xsd:sequence>
+      <!--<xsd:element name="scheduleInitialDate" type="xsd:token" />-->
+      <!--<xsd:element name="maturityDate" type="xsd:token" />-->
+      <xsd:element name="eventDate" type="xsd:token" />
+      <xsd:element name="payoffDate" type="xsd:token" />
+      <xsd:element name="calculationStartDate" type="xsd:token" />
+      <xsd:element name="calculationEndDate" type="xsd:token" />
+      <xsd:element name="description" type="xsd:token" />
+      <xsd:element name="vba_description" type="xsd:token" />
+      
+      <xsd:element name="fixedRate" type="xsd:token" />
+      <xsd:element name="detailScheduleType" type="xsd:token" />
+      
+      
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="Excel_fixedCouponScheduleList" >
+    <xsd:sequence>
+      <!--<xsd:element name="scheduleInitialDate" type="xsd:token" />-->
+      <xsd:element name="fixedRate" type="xsd:token" />
+      <xsd:element name="dayCounter" type="xsd:token" />
+      <!--<xsd:element name="maturityDate" type="xsd:token" />-->
+      <xsd:element name="excel_couponSchedule" type="Excel_couponSchedule" maxOccurs="unbounded" />
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_vanillaFloatingCouponSchedule" id="Excel_couponSchedule01" >
+    <xsd:sequence>
+      <xsd:element name="eventDate" type="xsd:token" />
+      <xsd:element name="payoffDate" type="xsd:token" />
+      <xsd:element name="calculationStartDate" type="xsd:token" />
+      <xsd:element name="calculationEndDate" type="xsd:token" />
+      <xsd:element name="description" type="xsd:token" />
+      <xsd:element name="vba_description" type="xsd:token" />
+      
+      <xsd:element name="gearing" type="xsd:token" />
+      <xsd:element name="spread" type="xsd:token" />
+      <xsd:element name="outGearing" type="xsd:token" />
+      <xsd:element name="outSpread" type="xsd:token" />
+      <xsd:element name="cap" type="xsd:token" />
+      <xsd:element name="floor" type="xsd:token" />
+      <xsd:element name="excel_underlyingCalcID" type="Excel_underlyingCalcID"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_vanillaFloatingCouponScheduleList" >
+    <xsd:sequence>
+      <!--<xsd:element name="scheduleInitialDate" type="xsd:token" />-->
+      <xsd:element name="fixedRate" type="xsd:token" />
+      <xsd:element name="dayCounter" type="xsd:token" />
+      <!--<xsd:element name="maturityDate" type="xsd:token" />-->
+      <xsd:element name="excel_vanillaFloatingCouponSchedule" type="Excel_vanillaFloatingCouponSchedule" maxOccurs="unbounded" />
+
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="Excel_floatingCouponSchedule" id="Excel_couponSchedule02" >
+    <xsd:sequence>
+      <xsd:element name="eventDate" type="xsd:token" />
+      <xsd:element name="payoffDate" type="xsd:token" />
+      <xsd:element name="calculationStartDate" type="xsd:token" />
+      <xsd:element name="calculationEndDate" type="xsd:token" />
+      <xsd:element name="description" type="xsd:token" />
+      <xsd:element name="vba_description" type="xsd:token" />
+      
+      <xsd:element name="gearing" type="xsd:token" />
+      <xsd:element name="spread" type="xsd:token" />
+      <xsd:element name="excel_returnCalcInfo" type="Excel_returnCalcInfo"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_condi_structuredCouponSchedule" id="Excel_couponSchedule03">
+    <xsd:sequence>
+      <!--<xsd:element name="scheduleInitialDate" type="xsd:token" />-->
+      <!--<xsd:element name="maturityDate" type="xsd:token" />-->
+      
+      <xsd:element name="eventDate" type="xsd:token" />
+      <xsd:element name="payoffDate" type="xsd:token" />
+      <xsd:element name="calculationStartDate" type="xsd:token" />
+      <xsd:element name="calculationEndDate" type="xsd:token" />
+      <xsd:element name="description" type="xsd:token" />
+      <xsd:element name="vba_description" type="xsd:token" />
+      
+      <xsd:element name="excel_eventCalcInfo" type="Excel_eventCalcInfo"/>
+      
+      <xsd:element name="excel_returnCalcInfo" type="Excel_returnCalcInfo"/>
+      
+      <xsd:element name="dayCounter" type="xsd:token" />
+      
+      <xsd:element name="detailScheduleType" type="xsd:token" />
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_condi_structuredAccrualCouponSchedule" id="Excel_couponSchedule04">
+    <xsd:sequence>
+      <!--<xsd:element name="scheduleInitialDate" type="xsd:token" />-->
+      <!--<xsd:element name="maturityDate" type="xsd:token" />-->
+
+      <xsd:element name="eventDate" type="xsd:token" />
+      <xsd:element name="payoffDate" type="xsd:token" />
+      <xsd:element name="calculationStartDate" type="xsd:token" />
+      <xsd:element name="calculationEndDate" type="xsd:token" />
+      <xsd:element name="description" type="xsd:token" />
+      <xsd:element name="vba_description" type="xsd:token" />
+      
+      <xsd:element name="range1D" type="Range1D" />
+      <xsd:element name="excel_returnCalcInfo" type="Excel_returnCalcInfo"/>
+
+      <xsd:element name="dayCounter" type="xsd:token" />
+
+      <xsd:element name="detailScheduleType" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_multiCondi_structuredCouponSchedule" id="Excel_couponSchedule05">
+    <xsd:sequence>
+      <!--<xsd:element name="scheduleInitialDate" type="xsd:token" />-->
+      <!--<xsd:element name="maturityDate" type="xsd:token" />-->
+      <xsd:element name="eventDate" type="xsd:token" />
+      <xsd:element name="payoffDate" type="xsd:token" />
+      <xsd:element name="calculationStartDate" type="xsd:token" />
+      <xsd:element name="calculationEndDate" type="xsd:token" />
+      <xsd:element name="description" type="xsd:token" />
+      <xsd:element name="vba_description" type="xsd:token" />
+      
+      <xsd:element name="excel_eventCalcInfo" type="Excel_eventCalcInfo" maxOccurs="unbounded"/>
+      <xsd:element name="excel_returnCalcInfo" type="Excel_returnCalcInfo" maxOccurs="unbounded"/>
+
+      <xsd:element name="dayCounter" type="xsd:token" />
+
+      <xsd:element name="detailScheduleType" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_multiCondi_structuredAccrualCouponSchedule" id="Excel_couponSchedule06">
+    <xsd:sequence>
+      <!--<xsd:element name="scheduleInitialDate" type="xsd:token" />-->
+      <!--<xsd:element name="maturityDate" type="xsd:token" />-->
+      <xsd:element name="eventDate" type="xsd:token" />
+      <xsd:element name="payoffDate" type="xsd:token" />
+      <xsd:element name="calculationStartDate" type="xsd:token" />
+      <xsd:element name="calculationEndDate" type="xsd:token" />
+      <xsd:element name="description" type="xsd:token" />
+      <xsd:element name="vba_description" type="xsd:token" />
+      
+      <xsd:element name="range1D" type="Range1D" maxOccurs="unbounded" />
+      <xsd:element name="excel_underlyingCalcID" type="Excel_underlyingCalcID" maxOccurs="unbounded" />
+      
+      <xsd:element name="excel_returnCalcInfo" type="Excel_returnCalcInfo" maxOccurs="unbounded"/>
+
+      <xsd:element name="dayCounter" type="xsd:token" />
+
+      <xsd:element name="detailScheduleType" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_multiCondi_multiRng_structuredAccrualCouponSchedule" id="Excel_couponSchedule07">
+    <xsd:sequence>
+      <!--<xsd:element name="scheduleInitialDate" type="xsd:token" />-->
+      <!--<xsd:element name="maturityDate" type="xsd:token" />-->
+      <xsd:element name="eventDate" type="xsd:token" />
+      <xsd:element name="payoffDate" type="xsd:token" />
+      <xsd:element name="calculationStartDate" type="xsd:token" />
+      <xsd:element name="calculationEndDate" type="xsd:token" />
+      <xsd:element name="description" type="xsd:token" />
+      <xsd:element name="vba_description" type="xsd:token" />
+      
+      <xsd:element name="excel_multi_rangeND" type="Excel_multi_rangeND" maxOccurs="unbounded" />
+      <xsd:element name="excel_returnCalcInfo" type="Excel_returnCalcInfo" maxOccurs="unbounded"/>
+
+      <xsd:element name="dayCounter" type="xsd:token" />
+
+      <xsd:element name="detailScheduleType" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_multi_rangeND" >
+    <xsd:sequence>
+      <xsd:element name="joint_type" type="xsd:token" />
+      <xsd:element name="range1D" type="Range1D" maxOccurs="unbounded" />
+      <xsd:element name="excel_underlyingCalcID" type="Excel_underlyingCalcID" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="Excel_compositeOption_subtype">
+    <xsd:sequence>
+      <xsd:element name="excel_type" type="xsd:token" />
+      <xsd:choice>
+        <xsd:element name="excel_vanillaCallPut" type="Excel_vanillaCallPut" />
+        <xsd:element name="excel_upInOutCall" type="Excel_upInOutCall" />
+        <xsd:element name="excel_downInOutPut" type="Excel_downInOutPut" />
+        <xsd:element name="excel_digitalCallPut" type="Excel_digitalCallPut" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_multiAsset_compositeOption_subtype">
+    <xsd:sequence>
+      <xsd:element name="excel_type" type="xsd:token" />
+      <xsd:choice>
+        <xsd:element name="excel_multiAsset_vanillaCallPut" type="Excel_multiAsset_vanillaCallPut" />
+        <xsd:element name="excel_multiAsset_upInOutCall" type="Excel_multiAsset_upInOutCall" />
+        <xsd:element name="excel_multiAsset_downInOutPut" type="Excel_multiAsset_downInOutPut" />
+        <xsd:element name="excel_multiAsset_digitalCallPut" type="Excel_multiAsset_digitalCallPut" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_vanillaCallPut" id="Excel_compositeOption_subtype00">
+    <xsd:sequence>
+      
+      <xsd:element name="payoffDate" type="xsd:token" />
+      <xsd:element name="exerciseDate" type="xsd:token" />
+      <xsd:element name="underlyingCode" type="xsd:token" />
+      <xsd:element name="baseUnderlyingValue" type="xsd:token" />
+      <xsd:element name="callPut" type="xsd:token" />
+      <xsd:element name="baseCoupon" type="xsd:token" />
+      <xsd:element name="strike" type="xsd:token" />
+      <xsd:element name="strikeValue" type="xsd:token" />
+      <xsd:element name="partiRate" type="xsd:token" />
+      
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_upInOutCall" id="Excel_compositeOption_subtype01">
+    <xsd:sequence>
+      <xsd:element name="payoffDate" type="xsd:token" />
+      <xsd:element name="exerciseDate" type="xsd:token" />
+      <xsd:element name="inOut" type="xsd:token" />
+      <xsd:element name="underlyingCode" type="xsd:token" />
+      <xsd:element name="baseUnderlyingValue" type="xsd:token" />
+      <xsd:element name="baseCoupon" type="xsd:token" />
+      <xsd:element name="strike" type="xsd:token" />
+      <xsd:element name="strikeValue" type="xsd:token" />
+      <xsd:element name="partiRate" type="xsd:token" />
+      <xsd:element name="barrier" type="xsd:token" />
+      <xsd:element name="barrierValue" type="xsd:token" />
+      <xsd:element name="rebateCoupon" type="xsd:token" />
+      <xsd:element name="rebateCouponValue" type="xsd:token" />
+      <xsd:element name="observationStartDate" type="xsd:token" />
+      <xsd:element name="observationEndDate" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_downInOutPut" id="Excel_compositeOption_subtype02">
+    <xsd:sequence>
+      <xsd:element name="payoffDate" type="xsd:token" />
+      <xsd:element name="exerciseDate" type="xsd:token" />
+      <xsd:element name="inOut" type="xsd:token" />
+      <xsd:element name="underlyingCode" type="xsd:token" />
+      <xsd:element name="baseUnderlyingValue" type="xsd:token" />
+      <xsd:element name="baseCoupon" type="xsd:token" />
+      <xsd:element name="strike" type="xsd:token" />
+      <xsd:element name="strikeValue" type="xsd:token" />
+      <xsd:element name="partiRate" type="xsd:token" />
+      <xsd:element name="barrier" type="xsd:token" />
+      <xsd:element name="barrierValue" type="xsd:token" />
+      <xsd:element name="rebateCoupon" type="xsd:token" />
+      <xsd:element name="rebateCouponValue" type="xsd:token" />
+      <xsd:element name="observationStartDate" type="xsd:token" />
+      <xsd:element name="observationEndDate" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="Excel_digitalCallPut" id="Excel_compositeOption_subtype03">
+    <xsd:sequence>
+      <xsd:element name="payoffDate" type="xsd:token" />
+      <xsd:element name="exerciseDate" type="xsd:token" />
+      <xsd:element name="callPut" type="xsd:token" />
+      <xsd:element name="underlyingCode" type="xsd:token" />
+      <xsd:element name="baseUnderlyingValue" type="xsd:token" />
+      <xsd:element name="baseCoupon" type="xsd:token" />
+      <xsd:element name="strike" type="xsd:token" />
+      <xsd:element name="strikeValue" type="xsd:token" />
+      <xsd:element name="coupon" type="xsd:token" />
+      <xsd:element name="couponValue" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_multiAsset_vanillaCallPut" id="Excel_multiAsset_compositeOption_subtype00">
+    <xsd:sequence>
+      <xsd:element name="payoffDate" type="xsd:token" />
+      <xsd:element name="exerciseDate" type="xsd:token" />
+      <xsd:element name="baseUnderlyingValue" type="xsd:token" />
+      <xsd:element name="callPut" type="xsd:token" />
+      <xsd:element name="baseCoupon" type="xsd:token" />
+      <xsd:element name="strike" type="xsd:token" />
+      <xsd:element name="strikeValue" type="xsd:token" />
+      <xsd:element name="partiRate" type="xsd:token" />
+      <xsd:element name="excel_underlyingCalcID" type="Excel_underlyingCalcID" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_multiAsset_upInOutCall" id="Excel_multiAsset_compositeOption_subtype01">
+    <xsd:sequence>
+      <xsd:element name="payoffDate" type="xsd:token" />
+      <xsd:element name="exerciseDate" type="xsd:token" />
+      <xsd:element name="inOut" type="xsd:token" />
+      <xsd:element name="baseUnderlyingValue" type="xsd:token" />
+      <xsd:element name="baseCoupon" type="xsd:token" />
+      <xsd:element name="strike" type="xsd:token" />
+      <xsd:element name="strikeValue" type="xsd:token" />
+      <xsd:element name="partiRate" type="xsd:token" />
+      <xsd:element name="barrier" type="xsd:token" />
+      <xsd:element name="barrierValue" type="xsd:token" />
+      <xsd:element name="rebateCoupon" type="xsd:token" />
+      <xsd:element name="rebateCouponValue" type="xsd:token" />
+      <xsd:element name="excel_underlyingCalcID" type="Excel_underlyingCalcID" maxOccurs="unbounded" />
+      <xsd:element name="observationStartDate" type="xsd:token" />
+      <xsd:element name="observationEndDate" type="xsd:token" />
+      
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_multiAsset_downInOutPut" id="Excel_multiAsset_compositeOption_subtype02">
+    <xsd:sequence>
+      <xsd:element name="payoffDate" type="xsd:token" />
+      <xsd:element name="exerciseDate" type="xsd:token" />
+      <xsd:element name="inOut" type="xsd:token" />
+      <xsd:element name="baseUnderlyingValue" type="xsd:token" />
+      <xsd:element name="baseCoupon" type="xsd:token" />
+      <xsd:element name="strike" type="xsd:token" />
+      <xsd:element name="strikeValue" type="xsd:token" />
+      <xsd:element name="partiRate" type="xsd:token" />
+      <xsd:element name="barrier" type="xsd:token" />
+      <xsd:element name="barrierValue" type="xsd:token" />
+      <xsd:element name="rebateCoupon" type="xsd:token" />
+      <xsd:element name="rebateCouponValue" type="xsd:token" />
+      <xsd:element name="excel_underlyingCalcID" type="Excel_underlyingCalcID" maxOccurs="unbounded" />
+      <xsd:element name="observationStartDate" type="xsd:token" />
+      <xsd:element name="observationEndDate" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_multiAsset_digitalCallPut" id="Excel_multiAsset_compositeOption_subtype03">
+    <xsd:sequence>
+      <xsd:element name="payoffDate" type="xsd:token" />
+      <xsd:element name="exerciseDate" type="xsd:token" />
+      <xsd:element name="callPut" type="xsd:token" />
+      <xsd:element name="baseUnderlyingValue" type="xsd:token" />
+      <xsd:element name="baseCoupon" type="xsd:token" />
+      <xsd:element name="strike" type="xsd:token" />
+      <xsd:element name="strikeValue" type="xsd:token" />
+      <xsd:element name="coupon" type="xsd:token" />
+      <xsd:element name="couponValue" type="xsd:token" />
+      <xsd:element name="excel_underlyingCalcID" type="Excel_underlyingCalcID" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+
+  <xsd:complexType name="Excel_fxForward" id="Excel_interface05">
+    <xsd:sequence>
+      <xsd:element name="excel_issueInfo" type="Excel_issueInfo" />
+      <xsd:element name="fx_exchangeLeg" type="Fx_exchangeLeg" />
+      
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_fxSwap" id="Excel_interface06">
+    <xsd:sequence>
+      <xsd:element name="excel_issueInfo" type="Excel_issueInfo" />
+      <xsd:element name="fx_exchangeLeg" type="Fx_exchangeLeg" maxOccurs="unbounded" />
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Fx_exchangeLeg">
+    <xsd:sequence>
+      <xsd:element name="targetNotional" type="xsd:token" />
+      <xsd:element name="targetCurrency" type="xsd:token" />
+      <xsd:element name="baseNotional" type="xsd:token" />
+      <xsd:element name="baseCurrency" type="xsd:token" />
+      <xsd:element name="exchangeType" type="xsd:token" />
+      <xsd:element name="exchangeRate" type="xsd:token" />
+      <xsd:element name="calculationDate" type="xsd:token" />
+      <xsd:element name="paymentDays" type="xsd:token" />
+      <xsd:element name="paymentDate" type="xsd:token" />
+      <xsd:element name="forwardFlag" type="xsd:token" />
+      <xsd:element name="forwardPoint" type="xsd:token" />
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ForwardContractInfo">
+    <xsd:sequence>
+      
+      <xsd:element name="calculationDate" type="xsd:token" />
+      <xsd:element name="settlementDays" type="xsd:token" />
+      <xsd:element name="settlementDate" type="xsd:token" />
+      <xsd:element name="forwardPoint" type="xsd:token" />
+      
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  
+  
+  <xsd:complexType name="Excel_issueInfo">
+    <xsd:sequence>
+      <xsd:element name="excel_type" type="xsd:token" />
+      <xsd:choice>
+        <xsd:element name="excel_noteInfo" type="Excel_noteInfo" />
+        <xsd:element name="excel_swapInfo" type="Excel_swapInfo" />
+        <xsd:element name="excel_swapLegInfo" type="Excel_swapLegInfo" />
+        <xsd:element name="excel_emptyInfo" type="Excel_emptyInfo" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_noteInfo" id="Excel_issueInfo00">
+    <xsd:sequence>
+      <xsd:element name="tradeDate" type="xsd:token" />
+      <xsd:element name="effectiveDate" type="xsd:token" />
+      <xsd:element name="maturityDate" type="xsd:token" />
+      <xsd:element name="notional" type="xsd:token" />
+      <xsd:element name="currency" type="xsd:token" />
+      <xsd:element name="premium" type="xsd:token" />
+      <xsd:element name="includeNotionalPayment" type="xsd:token" />
+      
+      <xsd:element name="vba_description" type="xsd:token" />
+      
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_swapInfo" id="Excel_issueInfo01">
+    <xsd:sequence>
+      <xsd:element name="tradeDate" type="xsd:token" />
+      <xsd:element name="effectiveDate" type="xsd:token" />
+      <xsd:element name="maturityDate" type="xsd:token" />
+      <xsd:element name="notional" type="xsd:token" />
+      <xsd:element name="currency" type="xsd:token" />
+      <xsd:element name="premium" type="xsd:token" />
+      <xsd:element name="vba_description" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_swapLegInfo" id="Excel_issueInfo02">
+    <xsd:sequence>
+      <xsd:element name="notional" type="xsd:token" />
+      <xsd:element name="currency" type="xsd:token" />
+      <xsd:element name="premium" type="xsd:token" />
+      <xsd:element name="vba_description" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_emptyInfo" id="Excel_issueInfo03">
+    <xsd:sequence>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="Excel_underlyingCalcInfo">
+    <xsd:sequence>
+      <xsd:element name="excel_underlyingInfo" type="Excel_underlyingInfo" maxOccurs="unbounded"/>
+      
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_referenceCalcInfo_para">
+    <xsd:sequence>
+      <xsd:element name="excel_referenceInfo_para" type="Excel_referenceInfo_para" maxOccurs="unbounded"/>
+      <xsd:element name="coupula_correlation" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_referenceInfo_para">
+    <xsd:sequence>
+      <xsd:element name="excel_type" type="xsd:token" />
+      <xsd:element name="krCode" type="xsd:token" />
+      <xsd:element name="referenceName" type="xsd:token" />
+      <xsd:element name="model" type="xsd:token" />
+      <!--<xsd:element name="excel_gModel_para" type="Excel_underlyingModel_para" />-->
+      <xsd:element name="excel_defaultCurve" type="Excel_defaultCurve" />
+      <xsd:element name="description" type="xsd:token" />
+
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="Excel_underlyingCalcInfo_para">
+    <xsd:sequence>
+      <xsd:element name="excel_underlyingInfo_para" type="Excel_underlyingInfo_para" maxOccurs="unbounded"/>
+      <xsd:element name="excel_correlationInfo_para" type="Excel_correlationInfo_para" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_correlationInfo_para">
+    <xsd:sequence>
+      <xsd:element name="dimension" type="xsd:integer" />
+      <xsd:element name="excel_correlation_para" type="Excel_correlation_para" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_correlation_para">
+    <xsd:sequence>
+      <xsd:element name="first" type="xsd:token" />
+      <xsd:element name="second" type="xsd:token" />
+      <xsd:element name="value" type="xsd:double" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_underlyingInfo_para">
+    <xsd:sequence>
+      <xsd:element name="excel_type" type="xsd:token" />
+      <xsd:element name="krCode" type="xsd:token" />
+      <xsd:element name="currency" type="xsd:token" />
+      <xsd:element name="underName" type="xsd:token" />
+      <xsd:element name="basePrice" type="xsd:token" />
+      <xsd:element name="sub_type" type="xsd:token" />
+      <xsd:element name="rate_type" type="xsd:token" />
+      <xsd:element name="tenor" type="xsd:token" />
+      <xsd:element name="legTenor" type="xsd:token" />
+      <xsd:element name="linkedCurve" type="xsd:token" />
+      <xsd:element name="excel_underlyingModel_para" type="Excel_underlyingModel_para" />
+      <xsd:element name="value" type="xsd:token" />
+      <xsd:element name="description" type="xsd:token" />
+      
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_underlyingModel_para">
+    <xsd:sequence>
+      <xsd:element name="excel_type" type="xsd:token" />
+
+      <xsd:choice>
+        <xsd:element name="excel_geometricBM" type="Excel_geometricBM" />
+
+        <xsd:element name="excel_hullWhiteOneFactor" type="Excel_hullWhiteOneFactor" />
+        <xsd:element name="excel_hullWhiteTwoFactor" type="Excel_hullWhiteTwoFactor" />
+        <xsd:element name="excel_forwardModel" type="Excel_forwardModel" />
+        <xsd:element name="excel_hestonModel" type="Excel_hestonModel" />
+        <xsd:element name="excel_geometricBM_LocalVol" type="Excel_geometricBM_LocalVol" />
+        
+      </xsd:choice>
+
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="Excel_geometricBM" id="Excel_underlyingModel_para00">
+    <xsd:sequence>
+      <xsd:element name="currentValue" type="xsd:token" />
+      <xsd:element name="drift" type="xsd:token" />
+      <xsd:element name="dividend" type="xsd:token" />
+      <xsd:element name="volatility" type="xsd:token" />
+      <xsd:element name="vba_description" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_geometricBM_LocalVol" id="Excel_underlyingModel_para01">
+    <xsd:sequence>
+      <xsd:element name="currentValue" type="xsd:token" />
+      <xsd:element name="drift" type="xsd:token" />
+      <xsd:element name="dividend" type="xsd:token" />
+      <xsd:element name="linkedSurfaceCode" type="xsd:token" />
+      <xsd:element name="excel_volSurface" type="Excel_volSurface" />
+      <xsd:element name="vba_description" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="Excel_hullWhiteOneFactor" id="Excel_underlyingModel_para02">
+    <xsd:sequence>
+      <xsd:element name="currentValue" type="xsd:token" />
+      <xsd:element name="alpha" type="xsd:token" />
+      <xsd:element name="volatility" type="xsd:token" />
+      <xsd:element name="excel_rateInfo" type="Excel_rateInfo" />
+      <xsd:element name="linkedCurveCode" type="xsd:token" />
+      <xsd:element name="excel_yieldCurve" type="Excel_yieldCurve" />
+      <xsd:element name="vba_description" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_rateInfo" >
+    <xsd:sequence>
+      <xsd:element name="currency" type="xsd:token" />
+      <xsd:element name="indexType" type="xsd:token" />
+      <xsd:element name="tenor" type="xsd:token" />
+      <xsd:element name="legTenor" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="Excel_hullWhiteTwoFactor" id="Excel_underlyingModel_para03">
+    <xsd:sequence>
+      <xsd:element name="currentValue" type="xsd:token" />
+      <xsd:element name="alpha" type="xsd:token" />
+      <xsd:element name="volatility" type="xsd:token" />
+      <xsd:element name="excel_rateInfo" type="Excel_rateInfo" />
+      <xsd:element name="linkedCurveCode" type="xsd:token" />
+      <xsd:element name="excel_yieldCurve" type="Excel_yieldCurve" />
+      <xsd:element name="vba_description" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_forwardModel" id="Excel_underlyingModel_para04">
+    <xsd:sequence>
+      <xsd:element name="currentValue" type="xsd:token" />
+      <xsd:element name="tenor" type="xsd:token" />
+      <xsd:element name="linkedCurveCode" type="xsd:token" />
+      <xsd:element name="excel_yieldCurve" type="Excel_yieldCurve" />
+      <xsd:element name="vba_description" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="Excel_hestonModel" id="Excel_underlyingModel_para05">
+    <xsd:sequence>
+      <xsd:element name="currentValue" type="xsd:token" />
+      <xsd:element name="vba_description" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_volSurface" >
+    <xsd:sequence>
+      <xsd:element name="refDate" type="xsd:token" />
+      <xsd:element name="code" type="xsd:token" />
+      <xsd:element name="name" type="xsd:token" />
+      <xsd:element name="tenor" type="xsd:token" maxOccurs="unbounded" />
+      <xsd:element name="strike" type="xsd:token" maxOccurs="unbounded" />
+      
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_underlyingCalcID">
+    <xsd:sequence>
+      <xsd:element name="excel_type" type="xsd:token" />
+      <xsd:element name="calcID" type="xsd:token" />
+      <xsd:choice>
+        <xsd:element name="excel_choiceUnderlyingCalcID" type="Excel_choiceUnderlyingCalcID" />
+        <xsd:element name="excel_maximumUnderlyingCalcID" type="Excel_maximumUnderlyingCalcID" />
+        <xsd:element name="excel_minimumUnderlyingCalcID" type="Excel_minimumUnderlyingCalcID" />
+        <xsd:element name="excel_averageUnderlyingCalcID" type="Excel_averageUnderlyingCalcID" />
+        <xsd:element name="excel_orderUnderlyingCalcID" type="Excel_orderUnderlyingCalcID" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="Excel_selectedUnderlying" >
+    <xsd:sequence>
+      <xsd:element name="code" type="xsd:token" />
+      <xsd:element name="name" type="xsd:token" />
+      <xsd:element name="checked" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_choiceUnderlyingCalcID" id="Excel_underlyingCalcID00">
+    <xsd:sequence>
+      <xsd:element name="excel_selectedUnderlying" type="Excel_selectedUnderlying" maxOccurs="unbounded"/>
+      <xsd:element name="eventDate" type="xsd:token" />
+      <xsd:element name="averageDays" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="Excel_maximumUnderlyingCalcID" id="Excel_underlyingCalcID01">
+    <xsd:sequence>
+      <xsd:element name="excel_selectedUnderlying" type="Excel_selectedUnderlying" maxOccurs="unbounded"/>
+      <xsd:element name="eventDate" type="xsd:token" />
+      <xsd:element name="averageDays" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_minimumUnderlyingCalcID" id="Excel_underlyingCalcID02">
+    <xsd:sequence>
+      <xsd:element name="excel_selectedUnderlying" type="Excel_selectedUnderlying" maxOccurs="unbounded"/>
+      <xsd:element name="eventDate" type="xsd:token" />
+      <xsd:element name="averageDays" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_averageUnderlyingCalcID" id="Excel_underlyingCalcID03">
+    <xsd:sequence>
+      <xsd:element name="excel_selectedUnderlying" type="Excel_selectedUnderlying" maxOccurs="unbounded"/>
+      <xsd:element name="eventDate" type="xsd:token" />
+      <xsd:element name="weight" type="xsd:token" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_orderUnderlyingCalcID" id="Excel_underlyingCalcID04">
+    <xsd:sequence>
+      <xsd:element name="excel_selectedUnderlying" type="Excel_selectedUnderlying" maxOccurs="unbounded"/>
+      <xsd:element name="eventDate" type="xsd:token" />
+      <xsd:element name="nth" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="Excel_underlyingInfo">
+    <xsd:sequence>
+      <xsd:element name="excel_type" type="xsd:token" />
+      <xsd:choice>
+        <xsd:element name="excel_stockIndex" type="Excel_stockIndex" />
+        <xsd:element name="excel_interestRate" type="Excel_interestRate" />
+        <xsd:element name="excel_indexType" type="Excel_indexType" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_stockIndex" id="Excel_underlyingInfo00">
+    <xsd:sequence>
+      <xsd:element name="krCode" type="xsd:token" />
+      <xsd:element name="name" type="xsd:token" />
+      <xsd:element name="currency" type="xsd:token" />
+      <xsd:element name="basePrice" type="xsd:token" />
+      
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_interestRate" id="Excel_underlyingInfo01">
+    <xsd:sequence>
+      <xsd:element name="krCode" type="xsd:token" />
+      <xsd:element name="name" type="xsd:token" />
+      <xsd:element name="currency" type="xsd:token" />
+      <xsd:element name="rateType" type="xsd:token" />
+      <xsd:element name="tenor" type="xsd:token" />
+      <xsd:element name="legTenor" type="xsd:token" />
+      <xsd:element name="linkedCurve" type="xsd:token" />
+      <xsd:element name="basePrice" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_indexType" id="Excel_underlyingInfo02">
+    <xsd:sequence>
+      <xsd:element name="krCode" type="xsd:token" />
+      <xsd:element name="name" type="xsd:token" />
+      <xsd:element name="currency" type="xsd:token" />
+      <xsd:element name="sub_type" type="xsd:token" />
+      <xsd:element name="rateType" type="xsd:token" />
+      <xsd:element name="tenor" type="xsd:token" />
+      <xsd:element name="legTenor" type="xsd:token" />
+      <xsd:element name="linkedCurve" type="xsd:token" />
+      <xsd:element name="basePrice" type="xsd:token" />
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_referenceSetList">
+    <xsd:sequence>
+      <xsd:element name="excel_referenceSet" type="Excel_referenceSet" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_referenceSet" id="Excel_referenceSetList00">
+    <xsd:sequence>
+        <xsd:element name="krCode" type="xsd:token" />
+        <xsd:element name="usingTF" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_referenceCal_IDList">
+    <xsd:sequence>
+      <xsd:element name="excel_referenceCal_ID" type="Excel_referenceCal_ID" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_referenceCal_ID">
+    <xsd:sequence>
+      <xsd:element name="excel_type" type="xsd:token" />
+      <xsd:choice>
+        <xsd:element name="excel_referSimpleCalculation" type="Excel_referSimpleCalculation" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_referSimpleCalculation" id="Excel_referenceCal_ID00">
+    <xsd:sequence>
+      <xsd:element name="calculationID" type="xsd:token" />
+      <xsd:element name="referenceType" type="xsd:token" />
+      <xsd:element name="referenceSet" type="xsd:token" />
+      <xsd:element name="nth" type="xsd:token" />
+      <xsd:element name="averageDays" type="xsd:token" />
+      
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_scheduleList">
+    <xsd:sequence>
+      <xsd:element name="excel_schedule" type="Excel_schedule" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_schedule">
+    <xsd:sequence>
+      
+      <xsd:element name="excel_type" type="xsd:token" />
+      <xsd:element name="excel_additionalOption" type="Excel_additionalOption" />
+
+      <xsd:choice>
+        <!--이건 전부 즐겨찾기 라고 생각-->
+        <xsd:element name="excel_simpleCalculation" type="Excel_simpleCalculation" />
+        <xsd:element name="excel_choiceReturnCalculation" type="Excel_choiceReturnCalculation" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_simpleCalculation" id="Excel_schedule00">
+    <xsd:sequence>
+      <xsd:element name="eventDate" type="xsd:token" />
+      <xsd:element name="payoffDate" type="xsd:token" />
+      <xsd:element name="description" type="xsd:token" />
+      <xsd:element name="vba_description" type="xsd:token" />
+
+      <xsd:element name="excel_eventCalcInfo" type="Excel_eventCalcInfo"/>
+      <xsd:element name="excel_returnCalcInfo" type="Excel_returnCalcInfo"/>
+      <xsd:element name="excel_complementReturnCalc" type="Excel_complementReturnCalc"/>
+      <xsd:element name="excel_eventCalcInfo_Call" type="Excel_eventCalcInfo_Call"/>
+      <xsd:element name="excel_returnCalcInfo_Call" type="Excel_returnCalcInfo_Call"/>
+      <xsd:element name="excel_complementReturnCalc_Call" type="Excel_complementReturnCalc_Call"/>
+      
+      <xsd:element name="excel_returnCalcInfo_CallableOption" type="Excel_returnCalcInfo_CallableOption"/>
+      
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_complementReturnCalc" >
+    <xsd:sequence>
+      <xsd:element name="excel_returnCalcInfo" type="Excel_returnCalcInfo"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_complementReturnCalc_Call" >
+    <xsd:sequence>
+      <xsd:element name="excel_returnCalcInfo" type="Excel_returnCalcInfo"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_returnCalcInfo_CallableOption" >
+    <xsd:sequence>
+      <xsd:element name="excel_returnCalcInfo" type="Excel_returnCalcInfo"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="Excel_choiceReturnCalculation" id="Excel_schedule01">
+    <xsd:sequence>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_eventCalcInfo">
+    <xsd:sequence>
+      <xsd:element name="excel_type" type="xsd:token" />
+      <xsd:choice>
+        <xsd:element name="excel_singleRangeEventCal" type="Excel_singleRangeEventCal" />
+        <xsd:element name="excel_dualRangeEventCal" type="Excel_dualRangeEventCal" />
+        <xsd:element name="excel_singleBarrierEventCal" type="Excel_singleBarrierEventCal" />
+        <xsd:element name="excel_dualBarrierEventCal" type="Excel_dualBarrierEventCal" />
+        <xsd:element name="excel_identityEventCal" type="Excel_identityEventCal" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="Excel_returnCalcInfo">
+    <xsd:sequence>
+      <xsd:element name="excel_type" type="xsd:token" />
+      <xsd:choice>
+        <xsd:element name="excel_constReturnCal" type="Excel_constReturnCal" />
+        <xsd:element name="excel_vanillaReturnCal" type="Excel_vanillaReturnCal" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_eventCalcInfo_Call">
+    <xsd:sequence>
+        <xsd:element name="excel_eventCalcInfo" type="Excel_eventCalcInfo" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_returnCalcInfo_Call">
+    <xsd:sequence>
+        <xsd:element name="excel_returnCalcInfo" type="Excel_returnCalcInfo" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_singleRangeEventCal" id="Excel_eventCalcInfo00">
+    <xsd:sequence>
+      <xsd:element name="lowerRng" type="xsd:token"/>
+      <xsd:element name="upperRng" type="xsd:token"/>
+      <xsd:element name="excel_underlyingCalcID" type="Excel_underlyingCalcID"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_dualRangeEventCal" id="Excel_eventCalcInfo01">
+    <xsd:sequence>
+      <xsd:element name="lowerRng" type="xsd:token"/>
+      <xsd:element name="upperRng" type="xsd:token"/>
+      <xsd:element name="excel_underlyingCalcID" type="Excel_underlyingCalcID"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_singleBarrierEventCal" id="Excel_eventCalcInfo02">
+    <xsd:sequence>
+      <xsd:element name="lowerTrigger" type="xsd:token"/>
+      <xsd:element name="upperTrigger" type="xsd:token"/>
+      <xsd:element name="excel_underlyingCalcID" type="Excel_underlyingCalcID"/>
+      <xsd:element name="observationStartDate" type="xsd:token"/>
+      <xsd:element name="observationEndDate" type="xsd:token"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_dualBarrierEventCal" id="Excel_eventCalcInfo03">
+    <xsd:sequence>
+      <xsd:element name="lowerRng" type="xsd:token"/>
+      <xsd:element name="upperRng" type="xsd:token"/>
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_identityEventCal" id="Excel_eventCalcInfo04">
+    <xsd:sequence>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_constReturnCal" id="Excel_returnCalcInfo00">
+    <xsd:sequence>
+      <xsd:element name="constReturn" type="xsd:token"/>
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_vanillaReturnCal" id="Excel_returnCalcInfo01">
+    <xsd:sequence>
+      <xsd:element name="gearing" type="xsd:token"/>
+      <xsd:element name="spread" type="xsd:token"/>
+      <xsd:element name="excel_underlyingCalcID" type="Excel_underlyingCalcID"/>
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_kiScheduleList">
+    <xsd:sequence>
+      <xsd:element name="excel_schedule" type="Excel_schedule" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_swapLeg" >
+    <xsd:sequence>
+      <xsd:element name="excel_type" type="xsd:token" />
+      <xsd:choice>
+        <xsd:element name="excel_fixedRateSwapLeg" type="Excel_fixedRateSwapLeg" />
+        <xsd:element name="excel_vanillaFloatingRateSwapLeg" type="Excel_vanillaFloatingRateSwapLeg" />
+        <xsd:element name="excel_structuredSwapLeg" type="Excel_structuredSwapLeg" />
+        <xsd:element name="excel_creditEventSwapLeg" type="Excel_creditEventSwapLeg" />
+        <xsd:element name="excel_hifiveSwapLeg" type="Excel_hifiveSwapLeg" />
+        
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="Excel_fixedRateSwapLeg" id="Excel_swapLeg00">
+    <xsd:sequence>
+      <xsd:element name="excel_swapLegInfo" type="Excel_swapLegInfo" />
+      <xsd:element name="excel_interface" type="Excel_interface" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_vanillaFloatingRateSwapLeg" id="Excel_swapLeg01">
+    <xsd:sequence>
+      <xsd:element name="excel_swapLegInfo" type="Excel_swapLegInfo" />
+      <xsd:element name="excel_interface" type="Excel_interface" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_structuredSwapLeg" id="Excel_swapLeg02">
+    <xsd:sequence>
+      <xsd:element name="excel_swapLegInfo" type="Excel_swapLegInfo" />
+      <xsd:element name="excel_interface" type="Excel_interface" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_creditEventSwapLeg" id="Excel_swapLeg03">
+    <xsd:sequence>
+      <xsd:element name="excel_creditEventInfo" type="Excel_creditEventInfo" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_hifiveSwapLeg" id="Excel_swapLeg04">
+    <xsd:sequence>
+      <xsd:element name="excel_swapLegInfo" type="Excel_swapLegInfo" />
+      <xsd:element name="excel_interface" type="Excel_interface" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="Excel_creditEventInfo" >
+    <xsd:sequence>
+      <xsd:element name="excel_issueInfo" type="Excel_issueInfo" />
+      <xsd:element name="excel_referenceInformationList" type="Excel_referenceInformationList" />
+      <xsd:element name="excel_jointProbabilityTrait" type="Excel_jointProbabilityTrait" />
+      <xsd:element name="excel_protectionTerms" type="Excel_protectionTerms" />
+      
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_jointProbabilityTrait">
+    <xsd:sequence>
+      <xsd:element name="nth" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+
+  <xsd:complexType name="Excel_referenceInformationList">
+    <xsd:sequence>
+      <xsd:element name="excel_referenceInformation" type="Excel_referenceInformation" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_referenceInformation">
+    <xsd:sequence>
+      <!--<xsd:element name="referenceEntity" type="ReferenceEntity" />-->
+      <!--<xsd:element name="referenceObligation" type="ReferenceObligation" />-->
+      <!--<xsd:element name="referencePrice" type="xsd:double" />-->
+      <xsd:element name="entityName" type="xsd:token" />
+      <xsd:element name="entityId" type="xsd:token" />
+      <xsd:element name="excel_referenceObligation" type="Excel_referenceObligation" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_referenceObligation">
+    <xsd:sequence>
+      <xsd:element name="instrumentId" type="xsd:token" />
+      <xsd:element name="couponRate" type="xsd:double" />
+      <xsd:element name="maturity" type="xsd:date" />
+      <xsd:element name="currency" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_protectionTerms">
+    <xsd:sequence>
+      <xsd:element name="excel_creditEvents" type="Excel_creditEvents" />
+      <xsd:element name="excel_obligations" type="Excel_obligations" />
+      <xsd:element name="accrualCoupon" type="xsd:boolean" />
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_creditEvents">
+    <xsd:sequence>
+      <xsd:element name="failureToPay" type="xsd:token" />
+      <xsd:element name="obligationAcceleration" type="xsd:token" />
+      <xsd:element name="repudiationMoratorium" type="xsd:token" />
+      <xsd:element name="restructuring" type="xsd:token" />
+      <xsd:element name="defaultRequirement" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_obligations">
+    <xsd:sequence>
+      <xsd:element name="category" type="xsd:token" />
+      <xsd:element name="notSubordinated" type="xsd:token" />
+      <xsd:element name="notDomesticCurrency" type="xsd:token" />
+      <xsd:element name="notDomesticLaw" type="xsd:token" />
+      <xsd:element name="notDomesticIssuance" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+
+
+  <xsd:complexType name="Excel_structuredSwap" id="Excel_swapInterface70">
+    <xsd:sequence>
+      <!--<xsd:element name="excel_notionalExchange" type="Excel_notionalExchange" />-->
+      <!--<xsd:element name="excel_counterUnderlyingCalcInfo" type="Excel_counterUnderlyingCalcInfo" />-->
+      <xsd:element name="excel_issueInfo" type="Excel_issueInfo" />
+      <xsd:element name="excel_swapLeg" type="Excel_swapLeg" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="Excel_irs" id="Excel_swapInterface60">
+    <xsd:sequence>
+      <!--<xsd:element name="excel_notionalExchange" type="Excel_notionalExchange" />-->
+      <!--<xsd:element name="excel_counterUnderlyingCalcInfo" type="Excel_counterUnderlyingCalcInfo" />-->
+      <xsd:element name="excel_swapLeg" type="Excel_swapLeg" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_counterUnderlyingCalcInfo" >
+    <xsd:sequence>
+      <xsd:element name="excel_underlyingCalcInfo" type="Excel_underlyingCalcInfo" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="Excel_crs" id="Excel_swapInterface61">
+    <xsd:sequence>
+      <!--<xsd:element name="excel_notionalExchange" type="Excel_notionalExchange" />-->
+      <xsd:element name="excel_swapLeg" type="Excel_swapLeg" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Excel_cds" id="Excel_swapInterface62">
+    <xsd:sequence>
+      <xsd:element name="excel_swapLeg" type="Excel_swapLeg" />
+      <xsd:element name="excel_creditEventSwapLeg" type="Excel_creditEventSwapLeg" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+
+  <xsd:complexType name="InstPositionInfo">
+    <xsd:sequence>
+      <xsd:element name="krCode" type="xsd:token" />
+      <xsd:element name="instName" type="xsd:token" />
+      <xsd:element name="instCode" type="xsd:token" />
+      <xsd:element name="instType" type="xsd:token" />
+      <xsd:element name="bookedDate" type="xsd:token" />
+      <xsd:element name="unBookedDate" type="xsd:token" />
+      <xsd:element name="maturityDate" type="xsd:token" />
+      <xsd:element name="fileName" type="xsd:token" />
+      <xsd:element name="positionName" type="xsd:token" />
+      <xsd:element name="counterParty" type="xsd:token" />
+      <xsd:element name="notional" type="xsd:token" />
+      <xsd:element name="currency" type="xsd:token" />
+      <xsd:element name="fundCode" type="xsd:token" />
+      <xsd:element name="fundName" type="xsd:token" />
+      
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="InstrumentInfo">
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+      <xsd:choice>
+        <xsd:element name="standardInstrument" type="StandardInstrument" />
+        <xsd:element name="standardSwapInstrument" type="StandardSwapInstrument" />
+        <xsd:element name="creditInstrument" type="CreditInstrument" />
+        <xsd:element name="fixedBondInstrument" type="FixedBondInstrument" />
+        
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="Group">
+    <xsd:sequence>
+      <xsd:element name="header" type="Header" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="StandardInstrument">
+    <xsd:sequence>
+      <xsd:element name="issueInformation" type="IssueInformation" />
+      <xsd:element name="underlyingInformation" type="UnderlyingInformation" />
+      <xsd:element name="payoffInfo" type="PayoffInfo" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="StandardSwapInstrument">
+    <xsd:sequence>
+      <xsd:element name="issueInformation" type="IssueInformation" />
+      <xsd:element name="underlyingInformation" type="UnderlyingInformation" />
+      <xsd:element name="swapPayoffInfo" type="SwapPayoffInfo" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="CreditInstrument">
+    <xsd:sequence>
+      <xsd:element name="issueInformation" type="IssueInformation" />
+      <xsd:element name="underlyingInformation" type="UnderlyingInformation" />
+      <xsd:element name="creditPayoffInfo" type="CreditPayoffInfo" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="FixedBondInstrument">
+    <xsd:sequence>
+      <xsd:element name="bondInformation" type="BondInformation" />
+      <xsd:element name="bondCouponInfo" type="BondCouponInfo" />
+      <xsd:element name="payoffInfoAnalytic" type="PayoffInfoAnalytic" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="BondInformation">
+    <xsd:sequence>
+      <xsd:element name="irFrequency" type="xsd:token" />
+      <xsd:element name="notional" type="xsd:token" />
+      <xsd:element name="issueDate" type="xsd:token" />
+      <xsd:element name="maturityDate" type="xsd:token" />
+      <xsd:element name="dayCounter" type="xsd:token" />
+      <xsd:element name="businessDayConvention" type="xsd:token" />
+      <xsd:element name="calendar" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="BondCouponInfo">
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+      <xsd:choice id="bondCouponType">
+        <xsd:element name="fixedRateType" type="FixedRateType" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="FixedRateType">
+    <xsd:sequence>
+      <xsd:element name="fixedRate" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="UnderlyingInformation">
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+      <xsd:choice id="underType">
+        <xsd:element name="indexUnderInfo" type="IndexUnderInfo" />
+      
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="IndexUnderInfo">
+    <xsd:sequence>
+      <xsd:element name="index" type="Index" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Index">
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+      <xsd:element name="krCode" type="xsd:token" />
+      <xsd:element name="name" type="xsd:token" />
+      <xsd:element name="basePrice" type="xsd:token" />
+      <xsd:choice id ="indexType">
+        <xsd:element name="interestRateIndex" type="InterestRateIndex" />
+        <xsd:element name="stockIndex" type="StockIndex" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="InterestRateIndex">
+    <xsd:sequence>
+      <xsd:element name="tenor" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="PayoffDateInfo">
+    <xsd:sequence>
+      <xsd:element name="fixingDateInfo" type="FixingDateInfo" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="FixingDateInfo">
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+      
+      <xsd:choice id="fixingDateType">
+        <xsd:element name="fixedFixingDateInfo" type="FixedFixingDateInfo" />
+        <xsd:element name="refVariableFixingDateInfo" type="RefVariableFixingDateInfo" />
+        <xsd:element name="nullFixingDateInfo" type="NullFixingDateInfo" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="RefVariableFixingDateInfo" id="FixingDateInfo00">
+    <xsd:sequence>
+      <xsd:element name="refDateName" type="xsd:token" />
+      <xsd:element name="autoCallFlag" type="xsd:boolean" />
+      <xsd:element name="autoCallFixingDate" type="xsd:date" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="FixedFixingDateInfo" id="FixingDateInfo01">
+    <xsd:sequence>
+      <xsd:element name="date" type="xsd:token" />
+      <xsd:element name="autoCallFlag" type="xsd:boolean" />
+      <xsd:element name="autoCallFixingDate" type="xsd:date" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="NullFixingDateInfo" id="FixingDateInfo02">
+    <xsd:sequence>
+    </xsd:sequence>
+  </xsd:complexType>  
+  
+  <xsd:complexType name="StockIndex">
+    <xsd:sequence>
+    </xsd:sequence>
+
+  </xsd:complexType>
+
+  <xsd:complexType name="SwapPayoffInfo">
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+      <xsd:choice id="swapPayoffType">
+        <xsd:element name="vanillaSwapPayoff" type="VanillaSwapPayoff" />
+        <xsd:element name="autoCallableSwapPayoff" type="AutoCallableSwapPayoff" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="VanillaSwapPayoff" id="SwapPayoffInfo00">
+    <xsd:sequence>
+      <xsd:element name="recieveSwapPart" type="RecieveSwapPart" />
+      <xsd:element name="paySwapPart" type="PaySwapPart" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="AutoCallableSwapPayoff" id="SwapPayoffInfo01">
+    <xsd:sequence>
+      <xsd:element name="recieveSwapPart" type="RecieveSwapPart" />
+      <xsd:element name="paySwapPart" type="PaySwapPart" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="RecieveSwapPart">
+    <xsd:sequence>
+      <xsd:element name="payoffInfo" type="PayoffInfo" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="PaySwapPart">
+    <xsd:sequence>
+      <xsd:element name="payoffInfo" type="PayoffInfo" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <!-- pricer -->
+  <xsd:complexType name="PayoffInfoAnalytic">
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+
+      <xsd:choice id="payoffType_A">
+
+        <xsd:element name="standardPayoff_A" type="StandardPayoff_A" />
+
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="StandardPayoff_A" id="PayoffInfoAnalytic00">
+    <xsd:sequence>
+      <xsd:element name="eventTriggerList_A" type="EventTriggerList_A" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="EventTriggerList_A">
+    <xsd:sequence>
+      <xsd:element name="eventTrigger_A" type="EventTrigger_A" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="EventTrigger_A">
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+
+      <xsd:choice id="eventTriggerType_A">
+        <xsd:element name="fixedRatePayoff_A" type="FixedRatePayoff_A" />
+        <xsd:element name="vanillaFloatingRatePayoff_A" type="VanillaFloatingRatePayoff_A" />
+        
+      </xsd:choice>
+      
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="FixedRatePayoff_A" id="EventTrigger_A00">
+    <xsd:sequence>
+      <xsd:element name="dayCounter" type="xsd:token" />
+      <xsd:element name="calculationStartDate" type="xsd:date" />
+      <xsd:element name="calculationEndDate" type="xsd:date" />
+      <xsd:element name="fixedRate" type="xsd:token" />
+      <xsd:element name="payoffDate" type="xsd:token" />
+
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="VanillaFloatingRatePayoff_A" id="EventTrigger_A01">
+    <xsd:sequence>
+      <xsd:element name="dayCounter" type="xsd:token" />
+      <xsd:element name="calculationStartDate" type="xsd:date" />
+      <xsd:element name="calculationEndDate" type="xsd:date" />
+      <xsd:element name="gearing" type="xsd:double" />
+      <xsd:element name="spread" type="xsd:double" />
+      <xsd:element name="referenceStr" type="xsd:token" />
+      <xsd:element name="payoffDate" type="xsd:token" />
+      <xsd:element name="capFloorOption" type="CapFloorOption" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="CapFloorOption" >
+    <xsd:sequence>
+      <xsd:element name="capOption" type="CapOption" />
+      <xsd:element name="floorOption" type="FloorOption" />
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="CapOption" >
+    <xsd:sequence>
+      <xsd:element name="referenceStr" type="xsd:token" />
+      <xsd:element name="capRate" type="xsd:token" />
+      <xsd:element name="vol" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="FloorOption" >
+    <xsd:sequence>
+      <xsd:element name="referenceStr" type="xsd:token" />
+      <xsd:element name="floorRate" type="xsd:token" />
+      <xsd:element name="vol" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+
+  <xsd:complexType name="SwapPayoffInfoAnalytic">
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+      
+      <xsd:choice id="swapPayoffType_A">
+
+        <xsd:element name="interestRateSwapPayoff_A" type="InterestRateSwapPayoff_A" />
+
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+
+  <xsd:complexType name="InterestRateSwapPayoff_A">
+    <xsd:sequence>
+      <xsd:element name="payoffInfo" type="PayoffInfo" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+
+  <xsd:complexType name="RecieveSwapPart_A">
+    <xsd:sequence>
+      <xsd:element name="payoffInfo" type="PayoffInfo" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="PaySwapPart_A">
+    <xsd:sequence>
+      <xsd:element name="payoffInfo" type="PayoffInfo" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  
+  <xsd:complexType name="PayoffInfo">
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+      <xsd:element name="preDefinedVariableList" type="PreDefinedVariableList" />
+      
+      <xsd:choice id="payoffType">
+        <xsd:element name="stopLossPayoff" type="StopLossPayoff" />
+        <xsd:element name="vanillaPayoff" type="VanillaPayoff" />
+        <xsd:element name="compositeSumOptionPayoff" type="CompositeSumOptionPayoff" />
+        <xsd:element name="autoCallablePayoff" type="AutoCallablePayoff" />
+
+        
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="PreDefinedVariableList" >
+    <xsd:sequence>
+      <xsd:element name="preDefinedVariableInfo" type="PreDefinedVariableInfo"  maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="AutoCallablePayoff" id="PayoffInfo07">
+    <xsd:sequence>
+      <xsd:element name="eventTriggerList" type="EventTriggerList" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="StepDownKIPayoff" id="PayoffInfo00">
+    <xsd:sequence>
+      <xsd:element name="eventTriggerList" type="EventTriggerList" />
+      <xsd:element name="kiEventInfo" type="KiEventInfo" />
+      <xsd:element name="nonKiEventInfo" type="NonKiEventInfo" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="StepDownNoKIPayoff" id="PayoffInfo06">
+    <xsd:sequence>
+      <xsd:element name="eventTriggerList" type="EventTriggerList" />
+      <xsd:element name="noAutoCallReturnTrigger" type="NoAutoCallReturnTrigger" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="StopLossPayoff" id="PayoffInfo03">
+    <xsd:sequence>
+      <xsd:element name="eventTriggerList" type="EventTriggerList" />
+      <xsd:element name="barrierInfo" type="BarrierInfo" />
+      <xsd:element name="returnCalculation" type="ReturnCalculation" />
+      <xsd:element name="payoffDateInfo" type="PayoffDateInfo" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <!--  withNotional - [액면금액 × power × Min(maxLoss, MAX (0, lossTrigger - referenceCal)] -->
+  <!--  액면금액     - [액면금액 × 10    × Min(10%,     MAX (0, 88%         - 일일 수익률 )] -->
+  <xsd:complexType name="StopLossReturnCal" id="ReturnCalculation00" >
+    <xsd:sequence>
+      <xsd:element name="power" type="xsd:token" />
+      <xsd:element name="lossTrigger" type="xsd:token" />
+      <xsd:element name="maximumLoss" type="xsd:token" />
+      <xsd:element name="referenceCalculationInfo" type="ReferenceCalculationInfo" />
+      <xsd:element name="withNotional" type="xsd:boolean" />
+      <xsd:element name="isExpired" type="xsd:boolean" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="VanillaPayoff" id="PayoffInfo04">
+    <xsd:sequence>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="CompositeSumOptionPayoff" id="PayoffInfo05" >
+    <xsd:sequence>
+      <xsd:element name="fixingDateInfo" type="FixingDateInfo" />
+      <xsd:element name="payoffDateInfo" type="PayoffDateInfo" />
+      <xsd:element name="referenceCalculationInfo" type="ReferenceCalculationInfo" />
+      <xsd:element name="standardOption" type="StandardOption" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="OptionPayoffFunction" >
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+      <xsd:choice id="optionPayoffFunctionType">
+        <xsd:element name="vanillaCallFunction" type="VanillaCallFunction" />
+        <xsd:element name="vanillaPutFunction" type="VanillaPutFunction" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="VanillaCallFunction" id="OptionPayoffFunction00" >
+    <xsd:sequence>
+      <xsd:element name="partiRate" type="xsd:double" />
+      <xsd:element name="strike" type="xsd:double" />
+      <xsd:element name="spread" type="xsd:double" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="VanillaPutFunction" id="OptionPayoffFunction01" >
+    <xsd:sequence>
+      <xsd:element name="partiRate" type="xsd:double" />
+      <xsd:element name="strike" type="xsd:double" />
+      <xsd:element name="spread" type="xsd:double" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="StandardOption" >
+    <xsd:sequence>
+      <xsd:element name="unit" type="xsd:double" />
+      <xsd:element name="baseCoupon" type="xsd:double" />
+      <xsd:element name="type" type="xsd:token" />
+      <xsd:choice id="standardOptionType">
+        <xsd:element name="singleBarrier" type="SingleBarrier" />
+        <xsd:element name="vanillaCallOption" type="VanillaCallOption" />
+        <xsd:element name="vanillaPutOption" type="VanillaPutOption" />
+        <xsd:element name="barrierWithConstRebateCallOption" type="BarrierWithConstRebateCallOption" />
+        <xsd:element name="barrierWithConstRebatePutOption" type="BarrierWithConstRebatePutOption" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="SingleBarrier" id="StandardOption00" >
+    <xsd:sequence>
+      <xsd:element name="payoffDateInfo" type="PayoffDateInfo" />
+      <xsd:element name="participateRate" type="xsd:double" />
+      <xsd:element name="barrierInfo" type="BarrierInfo" />
+      <xsd:element name="rebate" type="xsd:double" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="BarrierInfo" >
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+      <xsd:choice id="barrierType">
+        <xsd:element name="constDualBarrierInfo" type="ConstDualBarrierInfo" />
+        <xsd:element name="constLowerBarrierInfo" type="ConstLowerBarrierInfo" />
+        <xsd:element name="constUpperBarrierInfo" type="ConstUpperBarrierInfo" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ConstUpperBarrierInfo" id="BarrierInfo00" >
+    <xsd:sequence>
+      <xsd:element name="referenceCalculationInfo" type="ReferenceCalculationInfo" />
+      <xsd:element name="barrierDateInfo" type="BarrierDateInfo" />
+      <xsd:element name="trigger" type="xsd:double" />
+      <xsd:element name="pastEventOccDate" type="xsd:date" />
+      <xsd:element name="pastEventOccValue" type="xsd:double" />
+      <xsd:element name="refVariableFlag_eventOccDate" type="xsd:token" />
+      <xsd:element name="refVariableFlag_eventOccValue" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ConstLowerBarrierInfo" id="BarrierInfo01" >
+    <xsd:sequence>
+      <xsd:element name="referenceCalculationInfo" type="ReferenceCalculationInfo" />
+      <xsd:element name="barrierDateInfo" type="BarrierDateInfo" />
+      <xsd:element name="trigger" type="xsd:double" />
+      <xsd:element name="pastEventOccDate" type="xsd:date" />
+      <xsd:element name="pastEventOccValue" type="xsd:double" />
+      <xsd:element name="refVariableFlag_eventOccDate" type="xsd:token" />
+      <xsd:element name="refVariableFlag_eventOccValue" type="xsd:token" />
+      
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ConstDualBarrierInfo" id="BarrierInfo02" >
+    <xsd:sequence>
+      <xsd:element name="referenceCalculationInfo" type="ReferenceCalculationInfo" />
+      <xsd:element name="barrierDateInfo" type="BarrierDateInfo" />
+      <xsd:element name="upperTrigger" type="xsd:double" />
+      <xsd:element name="lowerTrigger" type="xsd:double" />
+      <xsd:element name="pastEventOccDate" type="xsd:date" />
+      <xsd:element name="pastEventOccValue" type="xsd:double" />
+      <xsd:element name="refVariableFlag_eventOccDate" type="xsd:token" />
+      <xsd:element name="refVariableFlag_eventOccValue" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="BarrierDateInfo" >
+    <xsd:sequence>
+        <xsd:element name="dateInformation" type="DateInformation" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="DateInformation" >
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+      <xsd:choice id="barrierDateType">
+        <xsd:element name="dailyInterval" type="DailyInterval" />
+        <xsd:element name="dateList" type="DateList" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="DailyInterval" id="DateInformation00" >
+    <xsd:sequence>
+      <xsd:element name="observationStartDate" type="xsd:date" />
+      <xsd:element name="observationEndDate" type="xsd:date" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="DateList" id="DateInformation01" >
+    <xsd:sequence>
+      <xsd:element name="date" type="xsd:date" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="VanillaCallOption" id="StandardOption01" >
+    <xsd:sequence>
+      <xsd:element name="payoffDateInfo" type="PayoffDateInfo" />
+      <xsd:element name="participateRate" type="xsd:double" />
+      <xsd:element name="referenceCalculationInfo" type="ReferenceCalculationInfo" />
+      <xsd:element name="strike" type="xsd:double" />
+      <xsd:element name="lowerBound" type="xsd:double" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="VanillaPutOption" id="StandardOption02" >
+    <xsd:sequence>
+      <xsd:element name="payoffDateInfo" type="PayoffDateInfo" />
+      <xsd:element name="participateRate" type="xsd:double" />
+      <xsd:element name="referenceCalculationInfo" type="ReferenceCalculationInfo" />
+      <xsd:element name="strike" type="xsd:double" />
+      <xsd:element name="lowerBound" type="xsd:double" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="BarrierWithConstRebateCallOption" id="StandardOption03" >
+    <xsd:sequence>
+      <xsd:element name="payoffDateInfo" type="PayoffDateInfo" />
+      <xsd:element name="participateRate" type="xsd:double" />
+      <xsd:element name="referenceCalculationInfo" type="ReferenceCalculationInfo" />
+      <xsd:element name="barrierInfo" type="BarrierInfo" />
+      <xsd:element name="strike" type="xsd:double" />
+      <xsd:element name="lowerBound" type="xsd:double" />
+      <xsd:element name="rebateRate" type="xsd:double" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="BarrierWithConstRebatePutOption" id="StandardOption04" >
+    <xsd:sequence>
+      <xsd:element name="payoffDateInfo" type="PayoffDateInfo" />
+      <xsd:element name="participateRate" type="xsd:double" />
+      <xsd:element name="referenceCalculationInfo" type="ReferenceCalculationInfo" />
+      <xsd:element name="barrierInfo" type="BarrierInfo" />
+      <xsd:element name="strike" type="xsd:double" />
+      <xsd:element name="lowerBound" type="xsd:double" />
+      <xsd:element name="rebateRate" type="xsd:double" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="KiEventInfo" >
+    <xsd:sequence>
+      <xsd:element name="eventTrigger" type="EventTrigger" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="NonKiEventInfo">
+    <xsd:sequence>
+      <xsd:element name="eventTrigger" type="EventTrigger" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="NoAutoCallReturnTrigger" >
+    <xsd:sequence>
+      <xsd:element name="payoffDateInfo" type="PayoffDateInfo" />
+      <xsd:element name="returnCalculation" type="ReturnCalculation" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="RedemptionInfo">
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+      <xsd:choice id="redemptionType">
+        <xsd:element name="autoCallRedem" type="AutoCallRedem" />
+        <xsd:element name="monthlyAutoCallRedem" type="MonthlyAutoCallRedem" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="AutoCallRedem" id="RedemptionInfo00">
+    <xsd:sequence>
+      <xsd:element name="eventTrigger" type="EventTrigger" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="MonthlyAutoCallRedem" id="RedemptionInfo01">
+    <xsd:sequence>
+      <xsd:element name="eventTrigger" type="EventTrigger" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="EventTriggerList" >
+    <xsd:sequence>
+      <xsd:element name="eventTrigger" type="EventTrigger" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  
+  <xsd:complexType name="EventTrigger">
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+      <xsd:element name="eventDate" type="xsd:date" />
+      
+      <xsd:element name="autoTerminationTrigger" type="AutoTerminationTrigger" />
+      <xsd:element name="preEventCalculation" type="PreEventCalculation" />
+      <xsd:element name="preConditionEvent" type="PreConditionEvent" />
+      
+      <xsd:choice id="eventTriggerType">
+        <xsd:element name="autoCallConstReturnTrigger" type="AutoCallConstReturnTrigger" />
+        <xsd:element name="simpleRangeConstReturnTrigger" type="SimpleRangeConstReturnTrigger" />
+        <xsd:element name="simpleRangeRateTrigger" type="SimpleRangeRateTrigger" />
+        <xsd:element name="simpleRangeAccrualRateTrigger" type="SimpleRangeAccrualRateTrigger" />
+        <xsd:element name="fixedRateTrigger" type="FixedRateTrigger" />
+        <xsd:element name="vanillaRateTrigger" type="VanillaRateTrigger" />
+        <xsd:element name="redemptionNotionalTrigger" type="RedemptionNotionalTrigger" />
+        <xsd:element name="autoCallRangeReturnTrigger" type="AutoCallRangeReturnTrigger" />
+        <xsd:element name="vanillaCouponTrigger" type="VanillaCouponTrigger" /> 
+        <xsd:element name="simpleEventCouponTrigger" type="SimpleEventCouponTrigger" />
+        
+      </xsd:choice>
+
+      <xsd:element name="postCalculation" type="PostCalculation" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="PreConditionEvent" >
+    <xsd:sequence>
+      <xsd:element name="refName" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="PreEventCalculation" >
+    <xsd:sequence>
+      <xsd:element name="eventCalculationList" type="EventCalculationList" maxOccurs="unbounded" />
+      <xsd:element name="jointEventCalculation" type="JointEventCalculation" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="JointEventCalculation" >
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+      <xsd:choice id="jointEventType">
+        <xsd:element name="andEventCal" type="AndEventCal" />
+        <xsd:element name="orEventCal" type="OrEventCal" />
+        <xsd:element name="atLeastEventCal" type="AtLeastEventCal" />
+        <xsd:element name="atMostEventCal" type="AtMostEventCal" />
+        <xsd:element name="countEventCal" type="CountEventCal" />
+        
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="EventCalculationInfo" >
+    <xsd:sequence>
+      <xsd:element name="preConditionEvent" type="PreConditionEvent" />
+      
+      <xsd:element name="eventCalculation" type="EventCalculation" maxOccurs="unbounded" />
+      <xsd:element name="jointSimpleCalculation" type="JointSimpleCalculation" />
+      
+      <xsd:element name="pastEventOcc" type="xsd:boolean" />
+      <xsd:element name="refVariable_eventOcc" type="RefVariable_eventOcc" />
+      
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="AndEventCal" id="JointEventCalculation00" >
+    <xsd:sequence>
+      <xsd:element name="eventCalculationList" type="EventCalculationList" />
+      <xsd:element name="complement" type="xsd:boolean" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="OrEventCal" id="JointEventCalculation01" >
+    <xsd:sequence>
+      <xsd:element name="eventCalculationList" type="EventCalculationList" />
+      <xsd:element name="complement" type="xsd:boolean" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="AtLeastEventCal" id="JointEventCalculation02" >
+    <xsd:sequence>
+      <xsd:element name="num" type="xsd:integer" />
+      <xsd:element name="eventCalculationList" type="EventCalculationList" />
+      <xsd:element name="complement" type="xsd:boolean" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="AtMostEventCal" id="JointEventCalculation03" >
+    <xsd:sequence>
+      <xsd:element name="num" type="xsd:integer" />
+      <xsd:element name="eventCalculationList" type="EventCalculationList" />
+      <xsd:element name="complement" type="xsd:boolean" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="CountEventCal" id="JointEventCalculation04" >
+    <xsd:sequence>
+      <xsd:element name="num" type="xsd:integer" />
+      <xsd:element name="eventCalculationList" type="EventCalculationList" />
+      <xsd:element name="complement" type="xsd:boolean" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="EventCalculationList" >
+    <xsd:sequence>
+      <xsd:element name="eventCalculation" type="EventCalculation" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="EventCalculation" >
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:token" />
+      <xsd:element name="type" type="xsd:token" />
+      <xsd:element name="preConditionEvent" type="PreConditionEvent" />
+      
+      <xsd:choice id="eventCalType">
+        <xsd:element name="upperBarrierEventCal" type="UpperBarrierEventCal" />
+        <xsd:element name="lowerBarrierEventCal" type="LowerBarrierEventCal" />
+        <xsd:element name="dualBarrierEventCal" type="DualBarrierEventCal" />
+        <xsd:element name="simpleRangeEventCal" type="SimpleRangeEventCal" />
+        <xsd:element name="referenceEventCal" type="ReferenceEventCal" />
+      </xsd:choice>
+
+      <xsd:element name="pastEventOcc" type="xsd:boolean" />
+      <xsd:element name="refVariable_eventOcc" type="RefVariable_eventOcc" />
+      
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="RefVariable_eventOcc" >
+    <xsd:sequence>
+      <xsd:element name="variableEventInfo" type="VariableEventInfo" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="VariableEventInfo" >
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+      <xsd:choice id="variableEventInfoType">
+        <xsd:element name="nullVariableEventInfo" type="NullVariableEventInfo" />
+        <xsd:element name="overWriteVariableEventInfo" type="OverWriteVariableEventInfo" />
+        
+      </xsd:choice>
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="NullVariableEventInfo" id="VariableEventInfo00">
+    <xsd:sequence>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="OverWriteVariableEventInfo" id="VariableEventInfo01">
+    <xsd:sequence>
+      <xsd:element name="usingRefVarName" type="xsd:token" />
+      <xsd:element name="refInstanceName" type="xsd:token" />
+      <xsd:element name="initialTF" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  
+  <xsd:complexType name="AutoTerminationTrigger" >
+    <xsd:sequence>
+      <xsd:element name="eventCalculationInfo" type="EventCalculationInfo" />
+      <xsd:element name="returnCalculationInfo" type="ReturnCalculationInfo" />
+      <xsd:element name="payoffDateInfo" type="PayoffDateInfo" />
+      
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="SimpleRangeEventCal" id="EventCalculation00">
+    <xsd:sequence>
+      <xsd:element name="range1D" type="Range1D" />
+      <xsd:element name="referenceCalculationInfo" type="ReferenceCalculationInfo" />
+      <xsd:element name="dateInformation" type="DateInformation" />
+      <xsd:element name="jointSimpleCalculation" type="JointSimpleCalculation" />
+      
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="JointSimpleCalculation" >
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+      <xsd:choice id="jointSimpleType">
+        <xsd:element name="andSimpleCal" type="AndSimpleCal" />
+        <xsd:element name="singeSimpleCal" type="SingeSimpleCal" />
+
+      </xsd:choice>
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="AndSimpleCal" id="JointSimpleCalculation00">
+    <xsd:sequence>
+      <xsd:element name="pastOcc" type="xsd:boolean" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="SingeSimpleCal" id="JointSimpleCalculation01">
+    <xsd:sequence>
+      <xsd:element name="pastOcc" type="xsd:boolean" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="UpperBarrierEventCal" id="EventCalculation01">
+    <xsd:sequence>
+      <xsd:element name="dateInformation" type="DateInformation" maxOccurs="unbounded" />
+      <xsd:element name="upperTrigger" type="xsd:double" maxOccurs="unbounded" />
+      <xsd:element name="referenceCalculationInfo" type="ReferenceCalculationInfo" />
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="LowerBarrierEventCal" id="EventCalculation02">
+    <xsd:sequence>
+      <xsd:element name="dateInformation" type="DateInformation" maxOccurs="unbounded" />
+      <xsd:element name="lowerTrigger" type="xsd:double" maxOccurs="unbounded" />
+      <xsd:element name="referenceCalculationInfo" type="ReferenceCalculationInfo" />
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="DualBarrierEventCal" id="EventCalculation03">
+    <xsd:sequence>
+      <xsd:element name="dateInformation" type="DateInformation" maxOccurs="unbounded" />
+      <xsd:element name="upperTrigger" type="xsd:double" maxOccurs="unbounded" />
+      <xsd:element name="lowerTrigger" type="xsd:double" maxOccurs="unbounded" />
+      <xsd:element name="referenceCalculationInfo" type="ReferenceCalculationInfo" maxOccurs="unbounded"/>
+      <xsd:element name="jointSimpleCalculation" type="JointSimpleCalculation" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+
+  <xsd:complexType name="ReferenceEventCal" id="EventCalculation04">
+    <xsd:sequence>
+      <xsd:element name="refName" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="AutoCallConstReturnTrigger" id="EventTrigger01">
+    <xsd:sequence>
+      <xsd:element name="dateOrder" type="xsd:integer" />
+      <xsd:element name="fixingDateInfo" type="FixingDateInfo" />
+      <xsd:element name="payoffDateInfo" type="PayoffDateInfo" />
+      <xsd:element name="trigger" type="xsd:double" />
+      <xsd:element name="return" type="xsd:double" />
+      <xsd:element name="averageDays" type="xsd:integer" />
+      <xsd:element name="isExpired" type="xsd:boolean" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="AutoCallRangeReturnTrigger" id="EventTrigger08">
+    <xsd:sequence>
+      <xsd:element name="simpleRangeEventCal" type="SimpleRangeEventCal" />
+      <xsd:element name="payoffDateInfo" type="PayoffDateInfo" />
+      <xsd:element name="isExpired" type="xsd:boolean" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="SimpleRangeConstReturnTrigger" id="EventTrigger02">
+    <xsd:sequence>
+      <xsd:element name="dateOrder" type="xsd:integer" />
+      <xsd:element name="simpleRangeEventCal" type="SimpleRangeEventCal" />
+      <xsd:element name="payoffDateInfo" type="PayoffDateInfo" />
+      <xsd:element name="constReturn" type="xsd:double" />
+      <xsd:element name="averageDays" type="xsd:integer" />
+      <xsd:element name="isExpired" type="xsd:boolean" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="SimpleRangeReturnTrigger" id="EventTrigger03">
+    <xsd:sequence>
+      <xsd:element name="simpleRangeEventCal" type="SimpleRangeEventCal" />
+      <xsd:element name="autoCallFlag" type="xsd:boolean" />
+      <xsd:element name="expired" type="xsd:boolean" />
+      <xsd:element name="payoffDateInfo" type="PayoffDateInfo" />
+      
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="SimpleRangeReturnList">
+    <xsd:sequence>
+      <xsd:element name="simpleRangeReturn" type="SimpleRangeReturn" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="SimpleRangeReturn">
+    <xsd:sequence>
+      <xsd:element name="simpleRangeEventCal" type="SimpleRangeEventCal" />
+      <xsd:element name="returnCalculation" type="ReturnCalculation" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="SimpleRangeRateTrigger" id="EventTrigger04">
+    <xsd:sequence>
+      <xsd:element name="dayCounter" type="xsd:token" />
+      <xsd:element name="calculationStartDate" type="xsd:date" />
+      <xsd:element name="calculationEndDate" type="xsd:date" />
+      <xsd:element name="referenceCalculationInfo" type="ReferenceCalculationInfo" />
+      <xsd:element name="simpleRangeEventList" type="SimpleRangeEventList" />
+      <xsd:element name="payoffDateInfo" type="PayoffDateInfo" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="SimpleRangeEventList">
+    <xsd:sequence>
+      <xsd:element name="simpleRangeEventCal" type="SimpleRangeEventCal" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="SimpleRangeAccrualRateTrigger" id="EventTrigger05">
+    <xsd:sequence>
+      <xsd:element name="dayCounter" type="xsd:token" />
+      <xsd:element name="calculationStartDate" type="xsd:date" />
+      <xsd:element name="calculationEndDate" type="xsd:date" />
+      <xsd:element name="referenceCalculationInfo" type="ReferenceCalculationInfo" />
+      <xsd:element name="simpleRangeEventList" type="SimpleRangeEventList" />
+      <xsd:element name="payoffDateInfo" type="PayoffDateInfo" />
+      
+      <xsd:element name="denumerDateNum" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="FixedRateTrigger" id="EventTrigger06">
+    <xsd:sequence>
+      <xsd:element name="dayCounter" type="xsd:token" />
+      <xsd:element name="calculationStartDate" type="xsd:date" />
+      <xsd:element name="calculationEndDate" type="xsd:date" />
+      <xsd:element name="fixedRate" type="xsd:double" />
+      <xsd:element name="payoffDateInfo" type="PayoffDateInfo" />
+      <xsd:element name="isExpired" type="xsd:boolean" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="VanillaRateTrigger" id="EventTrigger07">
+    <xsd:sequence>
+      <xsd:element name="dayCounter" type="xsd:token" />
+      <xsd:element name="calculationStartDate" type="xsd:date" />
+      <xsd:element name="calculationEndDate" type="xsd:date" />
+      <xsd:element name="gearing" type="xsd:double" />
+      <xsd:element name="spread" type="xsd:double" />
+      <xsd:element name="referenceCalculationInfo" type="ReferenceCalculationInfo" />
+      <xsd:element name="payoffDateInfo" type="PayoffDateInfo" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="RedemptionNotionalTrigger" id="EventTrigger0">
+    <xsd:sequence>
+      <xsd:element name="payoffDateInfo" type="PayoffDateInfo" />
+      <xsd:element name="redemptionAmount" type="xsd:double" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="VanillaCouponTrigger" id="EventTrigger09">
+    <xsd:sequence>
+      <xsd:element name="gearing" type="xsd:double" />
+      <xsd:element name="spread" type="xsd:double" />
+      <xsd:element name="returnCalculation" type="ReturnCalculation" />
+      <xsd:element name="payoffDateInfo" type="PayoffDateInfo" />
+      <xsd:element name="isExpired" type="xsd:boolean" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="SimpleEventCouponTrigger" id="EventTrigger10">
+    <xsd:sequence>
+      <xsd:element name="eventCalculationInfo" type="EventCalculationInfo" />
+      <xsd:element name="returnCalculationInfo" type="ReturnCalculationInfo" />
+      <xsd:element name="complementReturnCalculation" type="ComplementReturnCalculation" />
+      <xsd:element name="payoffDateInfo" type="PayoffDateInfo" />
+      
+      <xsd:element name="isExpired" type="xsd:boolean" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ComplementReturnCalculation" >
+    <xsd:sequence>
+      <xsd:element name="returnCalculationInfo" type="ReturnCalculationInfo" />
+    </xsd:sequence>
+
+  </xsd:complexType>
+
+  <xsd:complexType name="ReturnCalculationInfo" >
+    <xsd:sequence>
+      <xsd:element name="returnCalculation" type="ReturnCalculation" maxOccurs="unbounded" />
+      <xsd:element name="operatorND" type="OperatorND" />
+    </xsd:sequence>
+
+  </xsd:complexType>
+  
+  
+  <xsd:complexType name="ReturnCalculation">
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+      
+      <xsd:element name="preCalculation" type="PreCalculation" />
+      
+      <xsd:choice id="returnCalType">
+        
+        <xsd:element name="stopLossReturnCal" type="StopLossReturnCal" /> <!--00-->
+        <xsd:element name="constReturnCal" type="ConstReturnCal" /> <!--01-->
+        <xsd:element name="vanillaReturnCal" type="VanillaReturnCal" /> <!--02-->
+        <xsd:element name="complex1DReturnCal" type="Complex1DReturnCal" />
+        <xsd:element name="complexNDReturnCal" type="ComplexNDReturnCal" />
+        <xsd:element name="zeroReturnCal" type="ZeroReturnCal" />
+        <xsd:element name="callPutCompositeReturnCal" type="CallPutCompositeReturnCal" />
+      </xsd:choice>
+
+      <xsd:element name="postCalculation" type="PostCalculation" />
+      <xsd:element name="refVariable_returnValue" type="RefVariable_returnValue" />
+      <xsd:element name="resetVariableInfo" type="ResetVariableInfo" />
+      
+      
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="CallPutCompositeReturnCal" id="ReturnCalculation04" >
+    <xsd:sequence>
+      <xsd:element name="weight" type="xsd:double" maxOccurs="unbounded"/>
+      <xsd:element name="referenceCalculationInfo" type="ReferenceCalculationInfo" />
+      <xsd:element name="optionPayoffFunction" type="OptionPayoffFunction" maxOccurs="unbounded" />
+      
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  
+  <xsd:complexType name="PreCalculation" >
+    <xsd:sequence>
+      <xsd:element name="variableCalList" type="VariableCalList" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="VariableCalculation" >
+    <xsd:sequence>
+      <xsd:element name="referenceCalculationInfo" type="ReferenceCalculationInfo" />
+      <xsd:element name="operator1DList" type="Operator1DList" />
+      <xsd:element name="conditionOperator" type="ConditionOperator" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="VariableCalList" >
+    <xsd:sequence>
+      <xsd:element name="variableCalculation" type="VariableCalculation" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="Operator1DList" >
+    <xsd:sequence>
+      <xsd:element name="operator1D" type="Operator1D" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="Operator1D" >
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+      
+      <xsd:choice id="operator1DType">
+        <xsd:element name="additionOper1D" type="AdditionOper1D" />
+        <xsd:element name="multipleOper1D" type="MultipleOper1D" />
+        <xsd:element name="maximumOper1D" type="MaximumOper1D" />
+        
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="AdditionOper1D" id="Operator1D00" >
+    <xsd:sequence>
+      <xsd:element name="constValue" type="xsd:token" />
+      <xsd:element name="refName" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="MultipleOper1D" id="Operator1D01" >
+    <xsd:sequence>
+      <xsd:element name="constValue" type="xsd:token" />
+      <xsd:element name="refName" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="MaximumOper1D" id="Operator1D02" >
+    <xsd:sequence>
+      <xsd:element name="constValue" type="xsd:token" />
+      <xsd:element name="refName" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ConditionOperator" >
+    <xsd:sequence>
+      <xsd:element name="rangeCondition1D" type="RangeCondition1D" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="RangeCondition1D" >
+    <xsd:sequence>
+      <xsd:element name="range1D" type="Range1D" />
+      <xsd:element name="constValue" type="xsd:token" />
+      <xsd:element name="refName" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="OperatorND" >
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+      
+      <xsd:choice id="operatorNDType">
+        <xsd:element name="additionOperND" type="AdditionOperND" />
+        <xsd:element name="multipleOperND" type="MultipleOperND" />
+        <xsd:element name="divisionOperND" type="DivisionOperND" />
+        <xsd:element name="maximumOperND" type="MaximumOperND" />
+        
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="AdditionOperND" id="OperatorND00" >
+    <xsd:sequence>
+      <xsd:element name="weight" type="xsd:token" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="MultipleOperND" id="OperatorND01" >
+    <xsd:sequence>
+      <xsd:element name="weight" type="xsd:token" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="DivisionOperND" id="OperatorND03" >
+    <xsd:sequence>
+      <xsd:element name="weight" type="xsd:token" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="MaximumOperND" id="OperatorND04" >
+    <xsd:sequence>
+      <xsd:element name="weight" type="xsd:token" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="PostCalculation" >
+    <xsd:sequence>
+      <xsd:element name="operator1DList" type="Operator1DList" />
+      <xsd:element name="conditionOperator" type="ConditionOperator" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  
+  <xsd:complexType name="ConstReturnCal" id="ReturnCalculation01">
+    <xsd:sequence>
+      <xsd:element name="constReturn" type="xsd:double" />
+      
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="RefVariable_returnValue" >
+    <xsd:sequence>
+      <xsd:element name="variableInfo" type="VariableInfo" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="VariableInfo" >
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+      <xsd:choice id="variableInfoType">
+        <xsd:element name="nullVariableInfo" type="NullVariableInfo" />
+        <xsd:element name="overWriteVariableInfo" type="OverWriteVariableInfo" />
+        <xsd:element name="additionVariableInfo" type="AdditionVariableInfo" />
+        <xsd:element name="preDefinedVariableInfo" type="PreDefinedVariableInfo" />
+        <xsd:element name="definedVariableInfo" type="DefinedVariableInfo" />
+        
+      </xsd:choice>
+      
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="NullVariableInfo" id="VariableInfo00">
+    <xsd:sequence>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="ResetVariableInfo" >
+    <xsd:sequence>
+      <xsd:element name="refInstanceName" type="xsd:token" />
+      <xsd:element name="fixingInformation" type="FixingInformation" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="OverWriteVariableInfo" id="VariableInfo01">
+    <xsd:sequence>
+      <xsd:element name="usingRefVarName" type="xsd:token" />
+      <xsd:element name="refInstanceName" type="xsd:token" />
+      <xsd:element name="save" type="xsd:boolean" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="AdditionVariableInfo" id="VariableInfo02">
+    <xsd:sequence>
+      <xsd:element name="usingRefVarName" type="xsd:token" />
+      <xsd:element name="refInstanceName" type="xsd:token" />
+      <xsd:element name="save" type="xsd:boolean" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="PreDefinedVariableInfo" id="VariableInfo03">
+    <xsd:sequence>
+      <xsd:element name="refInstanceName" type="xsd:token" />
+      <xsd:element name="fixingInformation" type="FixingInformation" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="DefinedVariableInfo" id="VariableInfo04">
+    <xsd:sequence>
+      <xsd:element name="refInstanceName" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  
+
+  <xsd:complexType name="VanillaReturnCal" id="ReturnCalculation02">
+    <xsd:sequence>
+      <xsd:element name="gearing" type="xsd:double" />
+      <xsd:element name="spread" type="xsd:double" />
+      <xsd:element name="referenceCalculationInfo" type="ReferenceCalculationInfo" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Complex1DReturnCal" id="ReturnCalculation03">
+    <xsd:sequence>
+      <xsd:element name="variableCalculation" type="VariableCalculation" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ComplexNDReturnCal" id="ReturnCalculation05">
+    <xsd:sequence>
+      <xsd:element name="variableCalList" type="VariableCalList" />
+      <xsd:element name="operatorND" type="OperatorND" />     
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ZeroReturnCal" id="ReturnCalculation06">
+    <xsd:sequence>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="CreditDefaultSwapInstrument">
+    <xsd:complexContent>
+      <xsd:extension base="Instrument">
+        <xsd:sequence>
+          <xsd:element name="creditDefaultSwap" type="CreditDefaultSwap" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+
+  <xsd:complexType name="Header">
+    <xsd:sequence>
+      <xsd:element name="productName" type="xsd:token" />
+      <xsd:element name="productType" type="xsd:token" />
+      <xsd:element name="krCode" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="IssueInformation">
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+      <xsd:choice id="issueType">
+        <xsd:element name="swapInfo" type="SwapInfo" />
+        <xsd:element name="noteInfo" type="NoteInfo" />
+        <xsd:element name="optionInfo" type="OptionInfo" />
+        <xsd:element name="securitiesInfo" type="SecuritiesInfo" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="SwapInfo" id="IssueInformation00">
+    <xsd:sequence>
+      <xsd:element name="notional" type="xsd:date" />
+      <xsd:element name="tradeDate" type="xsd:date" />
+      <xsd:element name="effectiveDate" type="xsd:date" />
+      <xsd:element name="maturityDate" type="xsd:date" />
+      <xsd:element name="calculationAmount" type="CalculationAmount" />
+      <xsd:element name="premium" type="xsd:double" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="NoteInfo" id="IssueInformation01">
+    <xsd:sequence>
+      <xsd:element name="notional" type="xsd:date" />
+      <xsd:element name="tradeDate" type="xsd:date" />
+      <xsd:element name="effectiveDate" type="xsd:date" />
+      <xsd:element name="maturityDate" type="xsd:date" />
+      <xsd:element name="calculationAmount" type="CalculationAmount" />
+      <xsd:element name="premium" type="xsd:double" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="SecuritiesInfo" id="IssueInformation02">
+    <xsd:sequence>
+      <xsd:element name="notional" type="xsd:date" />
+      <xsd:element name="tradeDate" type="xsd:date" />
+      <xsd:element name="effectiveDate" type="xsd:date" />
+      <xsd:element name="maturityDate" type="xsd:date" />
+      <xsd:element name="calculationAmount" type="CalculationAmount" />
+      <xsd:element name="premium" type="xsd:double" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="OptionInfo" id="IssueInformation03">
+    <xsd:sequence>
+      <xsd:element name="notional" type="xsd:date" />
+      <xsd:element name="tradeDate" type="xsd:date" />
+      <xsd:element name="effectiveDate" type="xsd:date" />
+      <xsd:element name="maturityDate" type="xsd:date" />
+      <xsd:element name="calculationAmount" type="CalculationAmount" />
+      <xsd:element name="premium" type="xsd:double" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="CalculationAgent">
+    <xsd:sequence>
+      <xsd:element name="calculationAgentParty" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="InterestRateSwapPayoff" id="PayoffInfo01">
+    <xsd:sequence>
+      <xsd:element name="couponPart" type="CouponPart" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+
+  
+  <xsd:complexType name="RateCalculation">
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+      <xsd:element name="calculationAmount" type="CalculationAmount" />
+      <xsd:element name="calculationStartDate" type="xsd:date" />
+      <xsd:element name="calculationEndDate" type="xsd:date" />
+      <xsd:element name="paymentDate" type="xsd:date" />
+      
+      <xsd:choice id="rateCalType">
+        <xsd:element name="vanillaRateCalculation" type="VanillaRateCalculation" />
+      </xsd:choice>
+      
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="VanillaRateCalculation" id="RateCalculation00">
+    <xsd:sequence>
+      <xsd:element name="rateCouponCalculation" type="RateCouponCalculation" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+
+  <xsd:complexType name="Range1D" >
+    <xsd:sequence>
+      <xsd:element name="lowerBound" type="xsd:double" />
+      <xsd:element name="upperBound" type="xsd:double" />
+      <xsd:element name="lowerBoundEquality" type="xsd:double" />
+      <xsd:element name="upperBoundEquality" type="xsd:double" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ReferenceCalculationInfo" >
+    <xsd:sequence>
+      <xsd:element name="fixingInformation" type="FixingInformation" />
+      
+      <xsd:element name="referenceCalculation" type="ReferenceCalculation" maxOccurs="unbounded" />
+      <xsd:element name="operatorND" type="OperatorND" />
+      
+      <xsd:element name="postCalculation" type="PostCalculation" />
+      <xsd:element name="refVariable_referenceValue" type="RefVariable_referenceValue" />
+      
+    </xsd:sequence>
+
+  </xsd:complexType>
+
+  
+  <xsd:complexType name="ReferenceCalculation">
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+    
+      <xsd:element name="fixingInformation" type="FixingInformation" />
+      
+      <xsd:choice id="referenceCalType">
+        <xsd:element name="choiceReferenceCal" type="ChoiceReferenceCal" />
+        <xsd:element name="identityReferenceCal" type="IdentityReferenceCal" />
+        <xsd:element name="maximumReferenceCal" type="MaximumReferenceCal" />
+        <xsd:element name="minimumReferenceCal" type="MinimumReferenceCal" />
+        <xsd:element name="refVariableReferenceCal" type="RefVariableReferenceCal" />
+        <xsd:element name="dailyReturnReferenceCal" type="DailyReturnReferenceCal" />
+      </xsd:choice>
+
+      <xsd:element name="postCalculation" type="PostCalculation" />
+      <xsd:element name="refVariable_referenceValue" type="RefVariable_referenceValue" />
+      
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="FixingInformation" >
+    <xsd:sequence>
+      <xsd:element name="initialValue" type="xsd:double" />
+      <xsd:element name="fixing" type="Fixing" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Fixing" >
+    <xsd:sequence>
+      <xsd:element name="date" type="xsd:date" />
+      <xsd:element name="value" type="xsd:double" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="RefVariable_referenceValue" >
+    <xsd:sequence>
+      <xsd:element name="variableInfo" type="VariableInfo" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="MaximumReferenceCal" id="ReferenceCalculation00">
+    <xsd:sequence>
+      <xsd:element name="nth" type="xsd:double" />
+      <xsd:element name="selectedUnderName" type="xsd:token" maxOccurs="unbounded" />
+      <xsd:element name="fixingDateInfo" type="FixingDateInfo" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="MinimumReferenceCal" id="ReferenceCalculation03">
+    <xsd:sequence>
+      <xsd:element name="nth" type="xsd:double" />
+      <xsd:element name="selectedUnderName" type="xsd:token" maxOccurs="unbounded" />
+      <xsd:element name="fixingDateInfo" type="FixingDateInfo" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ChoiceReferenceCal" id="ReferenceCalculation01">
+    <xsd:sequence>
+      <xsd:element name="selectedUnderName" type="xsd:token" />
+      <xsd:element name="fixingDateInfo" type="FixingDateInfo" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="IdentityReferenceCal" id="ReferenceCalculation02">
+    <xsd:sequence>
+      <xsd:element name="krCode" type="xsd:token" />
+      <xsd:element name="fixingDateInfo" type="FixingDateInfo" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="RefVariableReferenceCal" id="ReferenceCalculation04">
+    <xsd:sequence>
+      <xsd:element name="refName" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="DailyReturnReferenceCal" id="ReferenceCalculation05">
+    <xsd:sequence>
+      <xsd:element name="krCode" type="xsd:token" />
+      <xsd:element name="fixingDateInfo" type="FixingDateInfo" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="RateCouponCalculation">
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+      <xsd:choice id="rateCouponCalType">
+        <xsd:element name="fixedRateCouponCalculation" type="FixedRateCouponCalculation" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="FixedRateCouponCalculation" id="RateCouponCalculation00">
+    <xsd:sequence>
+      <xsd:element name="rate" type="xsd:double" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="CalculationPeriodFrequency">
+    <xsd:sequence>
+      <xsd:element name="periodMultiplier" type="xsd:integer" />
+      <xsd:element name="period" type="xsd:token" />
+      <xsd:element name="rollConvention" type="xsd:integer" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="SwapStreamPara">
+    <xsd:sequence>
+      <xsd:element name="notional" type="xsd:double" />
+      <xsd:element name="discountCurve_para" type="DiscountCurve_para" />
+    </xsd:sequence>
+    
+  </xsd:complexType>
+
+  <xsd:complexType name="DiscountCurve_para">
+    <xsd:sequence>
+      <xsd:element name="yieldTermstructure" type="YieldTermstructure" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="YieldTermstructure" id="ReferenceCurve00">
+    <xsd:sequence>
+      <xsd:element name="curveType" type="xsd:token" />
+      <xsd:element name="interpolation" type="xsd:token" />
+      <xsd:element name="daycounter" type="xsd:token" />
+      <xsd:element name="calendar" type="xsd:token" />
+      <xsd:element name="businessDayConvention" type="xsd:token" />
+      <xsd:element name="rateData" type="RateData" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Tenor">
+    <xsd:sequence>
+      <xsd:element name="periodMultiplier" type="xsd:integer" maxOccurs="1" />
+      <xsd:element name="period" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="RateData">
+    <xsd:sequence>
+      <xsd:element name="periodMultiplier" type="xsd:integer" maxOccurs="1" />
+      <xsd:element name="period" type="xsd:token" />
+      <xsd:element name="data" type="xsd:double" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  
+
+
+  <xsd:complexType name="PricingParameter">
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+      <xsd:element name="method" type="Method" />
+      
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Method">
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+      <xsd:choice id="methodType">
+        <xsd:element name="monte" type="Monte" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Monte" id="Method00">
+    <xsd:sequence>
+      <xsd:element name="simulationNum" type="xsd:integer" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+
+
+  <xsd:complexType name="StepDownKIResult" id="PricingResult00">
+    <xsd:sequence>
+      <xsd:element name="underylingInfoResult" type="UnderylingInfoResult" />
+      <xsd:element name="cashFlowInfoResult" type="CashFlowInfoResult" />
+      <xsd:element name="theta" type="xsd:double" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="UnderylingInfoResult" >
+    <xsd:sequence>
+      <xsd:element name="underylingResult" type="UnderylingResult" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="NullResult" id="PricingResult01">
+    <xsd:sequence>
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="UnderylingResult" >
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+      <xsd:choice id="underylingGreekType">
+        <xsd:element name="gbmGreekInfoResult" type="GbmGreekInfoResult" />
+        <xsd:element name="hullWhiteGreekInfoResult" type="HullWhiteGreekInfoResult" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="GbmGreekInfoResult" id="UnderylingResult00" >
+    <xsd:sequence>
+      <xsd:element name="gbmGreekResult" type="GbmGreekResult" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="GbmGreekResult" >
+    <xsd:sequence>
+      <xsd:element name="underlyingName" type="xsd:token" />
+      <xsd:element name="delta" type="xsd:double" />
+      <xsd:element name="gamma" type="xsd:token" />
+      <xsd:element name="vega" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="HullWhiteGreekInfoResult" id="UnderylingResult01"  >
+    <xsd:sequence>
+      <xsd:element name="hullWhiteGreekResult" type="HullWhiteGreekResult" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="HullWhiteGreekResult" >
+    <xsd:sequence>
+      <xsd:element name="underlyingName" type="xsd:token" />
+      <xsd:element name="delta" type="xsd:double" />
+      <xsd:element name="gamma" type="xsd:token" />
+      <xsd:element name="vega" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="SimpleCashFlowResult" id="CashFlowInfoResult00" >
+    <xsd:sequence>
+
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="CashFlowInfoResult" >
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+      <xsd:choice id="cashFlowType">
+        <xsd:element name="simpleCashFlowResult" type="SimpleCashFlowResult" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ReferenceEntityInfo_para">
+    <xsd:sequence>
+      <xsd:element name="referenceCurveList" type="ReferenceCurveList" />
+      <xsd:element name="jointProbabilityTrait" type="JointProbabilityTrait" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ReferenceCurveList">
+    <xsd:sequence>
+      <xsd:element name="referenceCurve" type="ReferenceCurve" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="UnderlyingInfo_para">
+    <xsd:sequence>
+      <xsd:element name="underlying_para" type="Underlying_para" maxOccurs="unbounded" />
+      <xsd:element name="correlationInfo_para" type="CorrelationInfo_para" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Underlying_para">
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+      <xsd:element name="krCode" type="xsd:token" />
+      <xsd:element name="underName" type="xsd:token" />
+      <xsd:element name="value" type="xsd:token" />
+      <xsd:choice id="underParaType">
+        <xsd:element name="geometricBM" type="GeometricBM" />
+        <xsd:element name="hullWhiteOneFactor" type="HullWhiteOneFactor" />
+        <xsd:element name="forwardModel" type="ForwardModel" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="GeometricBM" id="Underlying_para00">
+    <xsd:sequence>
+      <xsd:element name="currentValue" type="xsd:double" />
+      <xsd:element name="drift" type="xsd:double" />
+      <xsd:element name="dividend" type="xsd:double" />
+      <xsd:element name="volatility" type="xsd:double" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="HullWhiteOneFactor" id="Underlying_para01">
+    <xsd:sequence>
+      <xsd:element name="currentValue" type="xsd:double" />
+      <xsd:element name="alpha" type="xsd:double" />
+      <xsd:element name="sigma" type="xsd:double" />
+      <xsd:element name="tenor" type="Tenor" />
+      <xsd:element name="fittingYieldCurve" type="FittingYieldCurve" />
+      
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ForwardModel" id="Underlying_para02">
+    <xsd:sequence>
+      <xsd:element name="currentValue" type="xsd:double" />
+      <xsd:element name="tenor" type="Tenor" />
+      <xsd:element name="fittingYieldCurve" type="FittingYieldCurve" />
+
+    </xsd:sequence>
+  </xsd:complexType>
+  
+
+  <xsd:complexType name="CorrelationInfo_para">
+    <xsd:sequence>
+      <xsd:element name="dimension" type="xsd:integer" />
+      <xsd:element name="correlation_para" type="Correlation_para" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Correlation_para">
+    <xsd:sequence>
+      <xsd:element name="first" type="xsd:token" />
+      <xsd:element name="second" type="xsd:token" />
+      <xsd:element name="value" type="xsd:double" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="JointProbabilityTrait">
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+      <xsd:choice id="jointType">
+        <xsd:element name="nthDefaultTrait" type="NthDefaultTrait" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="NthDefaultTrait" id="JointProbabilityTrait00">
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+      <xsd:element name="nth" type="xsd:int" />
+      <xsd:element name="correlation" type="xsd:double" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="FittingYieldCurve">
+    <xsd:sequence>
+      <xsd:element name="yieldTermstructure" type="YieldTermstructure" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="ReferenceCurve">
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+      <xsd:choice id="tsType">
+        <xsd:element name="cdsSpreadTermstructure" type="CdsSpreadTermstructure" />
+        <xsd:element name="yieldTermstructure" type="YieldTermstructure" />
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="EvaluationCurves">
+    <xsd:sequence>
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="CdsSpreadTermstructure" id="ReferenceCurve01">
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+      <xsd:element name="interpolation" type="xsd:token" />
+      <xsd:element name="daycounter" type="xsd:token" />
+      <xsd:element name="calendar" type="xsd:token" />
+      <xsd:element name="businessDayConvention" type="xsd:token" />
+      <xsd:element name="rateData" type="RateData" maxOccurs="unbounded" />
+      <xsd:element name="dateGeneration" type="xsd:token" />
+      <xsd:element name="recoveryRate" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  
+  <xsd:complexType name="StepDownKI_paraSetting">
+    <xsd:sequence>
+      <xsd:element name="geometricBM_paraSetting" type="GeometricBM_paraSetting" />
+      <xsd:element name="hullWhite_paraSetting" type="HullWhite_paraSetting" />
+      <xsd:element name="discountCurve_paraSetting" type="DiscountCurve_paraSetting" />
+      
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="GeometricBM_paraSetting">
+    <xsd:sequence>
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="HullWhite_paraSetting">
+    <xsd:sequence>
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="DiscountCurve_paraSetting">
+    <xsd:sequence>
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+
+  <xsd:complexType name="InstHirachyInfo">
+    <xsd:sequence>
+      <xsd:element name="code" type="xsd:token" />
+      <xsd:element name="type" type="xsd:token" />
+      <xsd:element name="instHirachyInfo" type="InstHirachyInfo" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="BookInformation">
+    <xsd:sequence>
+      <xsd:element name="name" type="xsd:token" />
+      <xsd:element name="pathInfo" type="PathInfo" />
+      <xsd:element name="instrumentList" type="InstrumentList" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="InstrumentList">
+    <xsd:sequence>
+      <xsd:element name="instHirachyInfo" type="InstHirachyInfo" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="PathInfo">
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+      <xsd:element name="url" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  
+  <xsd:complexType name="CreditPayoffInfo">
+    <xsd:sequence>
+      <xsd:element name="type" type="xsd:token" />
+      <xsd:choice id="creditPayoffType">
+        <xsd:element name="creditDefaultSwap" type="CreditDefaultSwap" />
+
+      </xsd:choice>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="CreditDefaultSwap" id="CreditPayoffInfo00">
+    <xsd:sequence>
+      
+      <xsd:element name="protectionPart" type="ProtectionPart" />
+      <xsd:element name="couponPart" type="CouponPart" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ProtectionPart">
+    <xsd:sequence>
+      <xsd:element name="payRecieve" type="xsd:token" />
+      <xsd:element name="referenceInformationList" type="ReferenceInformationList" />
+      <xsd:element name="protectionTerms" type="ProtectionTerms" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="CouponPart">
+    <xsd:sequence>
+      <xsd:element name="payRecieve" type="xsd:token" />
+      
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ReferenceInformationList">
+    <xsd:sequence>
+      <xsd:element name="referenceInformation" type="ReferenceInformation" maxOccurs="unbounded"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ReferenceInformation">
+    <xsd:sequence>
+      <!--<xsd:element name="referenceEntity" type="ReferenceEntity" />-->
+      <!--<xsd:element name="referenceObligation" type="ReferenceObligation" />-->
+      <!--<xsd:element name="referencePrice" type="xsd:double" />-->
+      <xsd:element name="entityName" type="xsd:token" />
+      <xsd:element name="entityId" type="xsd:token" />
+      
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ReferenceEntity">
+    <xsd:sequence>
+      <xsd:element name="entityName" type="xsd:token" />
+      <xsd:element name="entityId" type="xsd:token" />
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ReferenceObligation">
+    <xsd:sequence>
+      <xsd:element name="bond" type="Bond" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Bond">
+    <xsd:sequence>
+      <xsd:element name="instrumentId" type="xsd:token" />
+      <xsd:element name="couponRate" type="xsd:double" />
+      <xsd:element name="maturity" type="xsd:date" />
+      <xsd:element name="currency" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="ProtectionTerms">
+    <xsd:sequence>
+      <xsd:element name="calculationAmount" type="CalculationAmount" />
+      <xsd:element name="creditEvents" type="CreditEvents" />
+      <xsd:element name="obligations" type="Obligations" />
+      <xsd:element name="accrualCoupon" type="xsd:boolean" />
+
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="CalculationAmount">
+    <xsd:sequence>
+      <xsd:element name="currency" type="xsd:token" />
+      <xsd:element name="amount" type="xsd:double" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="CreditEvents">
+    <xsd:sequence>
+      <xsd:element name="failureToPay" type="xsd:token" />
+      <xsd:element name="obligationAcceleration" type="xsd:token" />
+      <xsd:element name="repudiationMoratorium" type="xsd:token" />
+      <xsd:element name="restructuring" type="xsd:token" />
+      <xsd:element name="defaultRequirement" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="Obligations">
+    <xsd:sequence>
+      <xsd:element name="category" type="xsd:token" />
+      <xsd:element name="notSubordinated" type="xsd:token" />
+      <xsd:element name="notDomesticCurrency" type="xsd:token" />
+      <xsd:element name="notDomesticLaw" type="xsd:token" />
+      <xsd:element name="notDomesticIssuance" type="xsd:token" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="HisoryData">
+    <xsd:sequence>
+      <xsd:element name="marketData" type="MarketData" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="MarketData">
+    <xsd:sequence>
+      <xsd:element name="krcode" type="xsd:token" />
+      <xsd:element name="name" type="xsd:token" />
+      <xsd:element name="dataValueInfo" type="DataValueInfo" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+  <xsd:complexType name="DataValueInfo">
+    <xsd:sequence>
+      <xsd:element name="dataValue" type="DataValue" maxOccurs="unbounded" />
+    </xsd:sequence>
+  </xsd:complexType>
+  
+  <xsd:complexType name="DataValue">
+    <xsd:sequence>
+      <xsd:element name="date" type="xsd:date" />
+      <xsd:element name="value" type="xsd:double" />
+    </xsd:sequence>
+  </xsd:complexType>  
+  
+</xsd:schema>

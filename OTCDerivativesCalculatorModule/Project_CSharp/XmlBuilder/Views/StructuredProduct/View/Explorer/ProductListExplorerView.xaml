@@ -1,0 +1,32 @@
+﻿<Window x:Class="XmlBuilder.Views.StructuredProduct.View.Explorer.ProductListExplorerView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ProductListExplorerView" Height="300" Width="300">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <Button Content="Add" />
+                    <Button Content="Remove" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Name : " />
+                    <TextBox Width="100"/>
+                    <Button Content="Find" />
+                </StackPanel>
+            </StackPanel>
+            
+            <Grid x:Name="CustomTreeViewCtrl_Grid_">
+                <ListView x:Name="InstrumentList_ListView_">
+
+                </ListView>
+            </Grid>
+            
+            <Grid x:Name="DetailInformationCtrl_Grid_">
+                
+            </Grid>
+            
+            
+        </StackPanel>
+    </Grid>
+</Window>

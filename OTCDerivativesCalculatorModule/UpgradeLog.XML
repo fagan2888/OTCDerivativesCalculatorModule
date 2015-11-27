@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="OTCDerivativesCalculatorModule">
+</Property><Property Name="솔루션 파일" Value="D:\Project\2010\Project C++\OTCDerivativesCalculatorModule\OTCDerivativesCalculatorModule.sln">
+</Property><Property Name="Date" Value="2013년 2월 28일 목요일">
+</Property><Property Name="Time" Value="오전 9:36:08">
+</Property></Properties><Event ErrorLevel="0" Project="tinyxpath" Source="..\lib\XmlUtil\tinyxpath\tinyxpath.vcproj" Description="Converting project file 'D:\Project\2010\Project C++\lib\XmlUtil\tinyxpath\tinyxpath.vcproj'.">
+</Event><Event ErrorLevel="1" Project="tinyxpath" Source="..\lib\XmlUtil\tinyxpath\tinyxpath.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="1" Project="tinyxpath" Source="..\lib\XmlUtil\tinyxpath\tinyxpath.vcproj" Description="MSB8012: $(TargetPath) ('D:\Project\2010\Project C++\lib\XmlUtil\tinyxpath\.\Debug\tinyxpath.exe') does not match the Linker's OutputFile property value '.\Debug/tinyxpath.exe' ('D:\Project\2010\Project C++\OTCDerivativesCalculatorModule\Debug/tinyxpath.exe') in project configuration 'Debug|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).">
+</Event><Event ErrorLevel="1" Project="tinyxpath" Source="..\lib\XmlUtil\tinyxpath\tinyxpath.vcproj" Description="MSB8012: $(TargetPath) ('D:\Project\2010\Project C++\lib\XmlUtil\tinyxpath\.\Release\tinyxpath.exe') does not match the Linker's OutputFile property value '.\Release/tinyxpath.exe' ('D:\Project\2010\Project C++\OTCDerivativesCalculatorModule\Release/tinyxpath.exe') in project configuration 'Release|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Link.OutputFile).">
+</Event><Event ErrorLevel="0" Project="tinyxpath" Source="..\lib\XmlUtil\tinyxpath\tinyxpath.vcproj" Description="Done converting to new project file 'D:\Project\2010\Project C++\lib\XmlUtil\tinyxpath\tinyxpath.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="tinyxpath" Source="..\lib\XmlUtil\tinyxpath\tinyxpath.vcproj" Description="Converted">
+</Event></UpgradeLog>
