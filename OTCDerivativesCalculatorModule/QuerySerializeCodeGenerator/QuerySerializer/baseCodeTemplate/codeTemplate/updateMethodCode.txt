@@ -1,0 +1,15 @@
+﻿public void update(DbConnection conn)
+{
+    if (conn.State != ConnectionState.Open)
+        conn.Open();
+
+    DbCommand dbCommand = conn.CreateCommand();
+
+    string updateQuery = @DAOCLASSNAME@.UpdateQuery_;
+
+	@UPDATEREPLACECODE@
+
+    dbCommand.CommandText = updateQuery;
+
+    dbCommand.ExecuteNonQuery();
+}

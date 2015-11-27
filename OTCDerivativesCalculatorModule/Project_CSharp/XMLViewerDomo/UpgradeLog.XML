@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="XMLViewerDomo">
+</Property><Property Name="솔루션 파일" Value="D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\XMLViewerDomo\XMLViewerDomo.sln">
+</Property><Property Name="사용자 옵션 파일" Value="D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\XMLViewerDomo\XMLViewerDomo.suo">
+</Property><Property Name="Date" Value="2014년 4월 10일 목요일">
+</Property><Property Name="Time" Value="오후 13:23">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="XMLViewerDomo.sln" Description="파일을 D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\XMLViewerDomo\Backup\XMLViewerDomo.sln(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="" Source="XMLViewerDomo.suo" Description="파일을 D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\XMLViewerDomo\Backup\XMLViewerDomo.suo(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="XMLViewer" Source="XMLViewer\XMLViewer.csproj" Description="프로젝트 파일을 D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\XMLViewerDomo\Backup\XMLViewer\XMLViewer.csproj(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="XMLViewer" Source="XMLViewer\Properties\AssemblyInfo.cs" Description="파일을 D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\XMLViewerDomo\Backup\XMLViewer\Properties\AssemblyInfo.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="XMLViewer" Source="XMLViewer\Properties\Resources.Designer.cs" Description="파일을 D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\XMLViewerDomo\Backup\XMLViewer\Properties\Resources.Designer.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="XMLViewer" Source="XMLViewer\Properties\Settings.Designer.cs" Description="파일을 D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\XMLViewerDomo\Backup\XMLViewer\Properties\Settings.Designer.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="XMLViewer" Source="XMLViewer\Viewer.xaml.cs" Description="파일을 D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\XMLViewerDomo\Backup\XMLViewer\Viewer.xaml.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="XMLViewer" Source="XMLViewer\Properties\Settings.settings" Description="파일을 D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\XMLViewerDomo\Backup\XMLViewer\Properties\Settings.settings(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="XMLViewer" Source="XMLViewer\Properties\Resources.resx" Description="파일을 D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\XMLViewerDomo\Backup\XMLViewer\Properties\Resources.resx(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="XMLViewer" Source="XMLViewer\Viewer.xaml" Description="파일을 D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\XMLViewerDomo\Backup\XMLViewer\Viewer.xaml(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="XMLViewer" Source="XMLViewer\XMLViewer.csproj" Description="변환이 필요 없는 프로젝트 파일입니다.">
+</Event><Event ErrorLevel="3" Project="XMLViewer" Source="XMLViewer\XMLViewer.csproj" Description="변환 필요 없음">
+</Event><Event ErrorLevel="0" Project="DemoApplication" Source="DemoApplication\DemoApplication.csproj" Description="프로젝트 파일을 D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\XMLViewerDomo\Backup\DemoApplication\DemoApplication.csproj(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="DemoApplication" Source="DemoApplication\App.xaml.cs" Description="파일을 D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\XMLViewerDomo\Backup\DemoApplication\App.xaml.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="DemoApplication" Source="DemoApplication\XMLViewerDemoApplication.xaml.cs" Description="파일을 D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\XMLViewerDomo\Backup\DemoApplication\XMLViewerDemoApplication.xaml.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="DemoApplication" Source="DemoApplication\Properties\AssemblyInfo.cs" Description="파일을 D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\XMLViewerDomo\Backup\DemoApplication\Properties\AssemblyInfo.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="DemoApplication" Source="DemoApplication\Properties\Resources.Designer.cs" Description="파일을 D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\XMLViewerDomo\Backup\DemoApplication\Properties\Resources.Designer.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="DemoApplication" Source="DemoApplication\Properties\Settings.Designer.cs" Description="파일을 D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\XMLViewerDomo\Backup\DemoApplication\Properties\Settings.Designer.cs(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="DemoApplication" Source="DemoApplication\Properties\Settings.settings" Description="파일을 D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\XMLViewerDomo\Backup\DemoApplication\Properties\Settings.settings(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="DemoApplication" Source="DemoApplication\Properties\Resources.resx" Description="파일을 D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\XMLViewerDomo\Backup\DemoApplication\Properties\Resources.resx(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="DemoApplication" Source="DemoApplication\App.xaml" Description="파일을 D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\XMLViewerDomo\Backup\DemoApplication\App.xaml(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="DemoApplication" Source="DemoApplication\XMLViewerDemoApplication.xaml" Description="파일을 D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\XMLViewerDomo\Backup\DemoApplication\XMLViewerDemoApplication.xaml(으)로 백업했습니다.">
+</Event><Event ErrorLevel="0" Project="DemoApplication" Source="DemoApplication\DemoApplication.csproj" Description="프로젝트를 변환했습니다.">
+</Event><Event ErrorLevel="3" Project="DemoApplication" Source="DemoApplication\DemoApplication.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="XMLViewerDomo.sln" Description="솔루션을 변환했습니다.">
+</Event><Event ErrorLevel="3" Project="" Source="XMLViewerDomo.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="DemoApplication" Source="DemoApplication\DemoApplication.csproj" Description="검사 완료: 프로젝트 파일을 업그레이드할 필요가 없습니다.">
+</Event></UpgradeLog>

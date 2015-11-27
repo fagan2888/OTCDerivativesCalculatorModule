@@ -1,0 +1,9 @@
+D:\Project File\OTCDerivativesCalculatorModule\SimpleCalculator\obj\x86\Release\SimpleCalculator.csprojResolveAssemblyReference.cache
+D:\Project File\OTCDerivativesCalculatorModule\SimpleCalculator\obj\x86\Release\ExpressionDark.baml
+D:\Project File\OTCDerivativesCalculatorModule\SimpleCalculator\obj\x86\Release\ExpressionLight.baml
+D:\Project File\OTCDerivativesCalculatorModule\SimpleCalculator\obj\x86\Release\PositionView\SimplePositionView.baml
+D:\Project File\OTCDerivativesCalculatorModule\SimpleCalculator\obj\x86\Release\WhistlerBlue.baml
+D:\Project File\OTCDerivativesCalculatorModule\SimpleCalculator\obj\x86\Release\PositionView\SimplePositionView.g.cs
+D:\Project File\OTCDerivativesCalculatorModule\SimpleCalculator\obj\x86\Release\App.g.cs
+D:\Project File\OTCDerivativesCalculatorModule\SimpleCalculator\obj\x86\Release\GeneratedInternalTypeHelper.g.cs
+D:\Project File\OTCDerivativesCalculatorModule\SimpleCalculator\obj\x86\Release\SimpleCalculator_MarkupCompile.cache

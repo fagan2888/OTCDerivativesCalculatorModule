@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<calculationServerInfo>
+  <server_name>Calculation1</server_name>
+  <server_ip>172.17.4.85</server_ip>
+  <server_port>11330</server_port>
+  <server_status>alive</server_status>
+  <server_coreNum>4</server_coreNum>
+  <server_use>use</server_use>
+  <server_aliveTime></server_aliveTime>
+  <server_description></server_description>
+</calculationServerInfo>

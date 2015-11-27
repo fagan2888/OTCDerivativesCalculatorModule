@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="Excel_Interface.Excel_hifiveView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Vertical">
+                    <Label Content="- Issue Information" />
+                    <Grid x:Name="IssueInfoGrid_" />
+
+                    <Grid x:Name="UnderlyingInfoGrid_" />
+
+                    <Label Content="- Underlying Calculation" />
+                    <Grid x:Name="UnderlyingCalcGrid_" />
+                        
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <Button Content="set subType" Click="SubTypeSet_Button_Click" />
+                </StackPanel>
+
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical">
+                <Label Content="- Schedule" />
+                <Grid x:Name="ScheduleGrid_" />
+            </StackPanel>
+            <StackPanel Orientation="Vertical">
+                <Grid x:Name="kiEventCalculationGrid_" />
+            </StackPanel>
+
+        </StackPanel>
+
+
+        
+    </Grid>
+</UserControl>

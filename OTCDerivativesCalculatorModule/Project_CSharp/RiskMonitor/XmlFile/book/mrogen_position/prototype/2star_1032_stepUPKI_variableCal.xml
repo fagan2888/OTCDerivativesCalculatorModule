@@ -1,0 +1,549 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<instrument Type="StepDown">
+  <instPositionInfo>
+    <krCode>50505A3C33S0</krCode>
+    <instName>IBK 제1032회 사모ELS</instName>
+    <instCode>50505A3C33S0</instCode>
+    <instType>stepUp</instType>
+    <notional>976660000</notional>
+  </instPositionInfo>
+  <header>
+    <productName>IBK 제1032회 사모ELS</productName>
+    <krCode>50505A3C33S0</krCode>
+  </header>
+  <instrumentInfo>
+    <type>standardInstrument</type>
+    <standardInstrument>
+      <issueInformation>
+        <type>noteInfo</type>
+        <noteInfo>
+          <tradeDate>2013-12-15</tradeDate>
+          <effectiveDate>2013-12-16</effectiveDate>
+          <maturityDate>2015-06-10</maturityDate>
+          <notional>976660000</notional>
+          <premium>0</premium>
+        </noteInfo>
+      </issueInformation>
+      
+      <underlyingInformation>
+        <type>indexUnderInfo</type>
+        <indexUnderInfo>
+          <index>
+            <type>stockIndex</type>
+            <krCode>KOSPI200</krCode>
+            <name>KOSPI200</name>
+            <basePrice>258.04</basePrice>
+            <stockIndex>
+            </stockIndex>
+          </index>
+          <index>
+            <type>stockIndex</type>
+            <krCode>HSCEI</krCode>
+            <name>HSCEI</name>
+            <basePrice>11025.82</basePrice>
+            <stockIndex>
+            </stockIndex>
+          </index>
+        </indexUnderInfo>
+      </underlyingInformation>
+      
+      <payoffInfo>
+        <type>stepDownKIPayoff</type>
+        <stepDownKIPayoff>
+
+          <kiEventInfo>
+            <eventTrigger>
+              <type>simpleEventCouponTrigger</type>
+              <simpleEventCouponTrigger>
+
+                <eventCalculation>
+                  <type>simpleBarrierEventCal</type>
+                  <simpleBarrierEventCal>
+                    <barrierInfo>
+                      <name>stopLossEvent</name>
+                      <type>constLowerBarrierInfo</type>
+                      <constLowerBarrierInfo>
+
+                        <referenceCalculation>
+                          <type>maximumReferenceCal</type>
+                          <maximumReferenceCal>
+                            <fixingDateInfo>
+                              <type>nullFixingDateInfo</type>
+                              <nullFixingDateInfo></nullFixingDateInfo>
+                            </fixingDateInfo>
+                          </maximumReferenceCal>
+                        </referenceCalculation>
+
+                        <barrierDateInfo>
+                          <dateInformation>
+                            <type>dailyInterval</type>
+                            <dailyInterval>
+                              <observationStartDate>2013-12-16</observationStartDate>
+                              <observationEndDate>2015-06-10</observationEndDate>
+                            </dailyInterval>
+                          </dateInformation>
+                        </barrierDateInfo>
+
+                        <trigger>1.4</trigger>
+
+                        <pastEventOccDate>2013-11-23</pastEventOccDate>
+                        <pastEventOccValue>0.856</pastEventOccValue>
+
+                        <refVariableFlag_eventOccDate>stopLossEvent_eventOccDate</refVariableFlag_eventOccDate>
+                        <refVariableFlag_eventOccValue>stopLossEvent_eventOccValue</refVariableFlag_eventOccValue>
+                        <!-- -->
+
+                      </constLowerBarrierInfo>
+                    </barrierInfo>
+                  </simpleBarrierEventCal>
+
+                </eventCalculation>
+
+                <returnCalculation>
+                  <type>constReturnCal</type>
+                  <constReturnCal>
+                    <constReturn>0.10</constReturn>
+                  </constReturnCal>
+                </returnCalculation>
+
+                <payoffDateInfo>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2015-06-10</date>
+                      <autoCallFlag>false</autoCallFlag>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </payoffDateInfo>
+
+                <isExpired>false</isExpired>
+
+              </simpleEventCouponTrigger>
+            </eventTrigger>
+          </kiEventInfo>
+          
+          <nonKiEventInfo>
+            <eventTrigger>
+              <type>vanillaCouponTrigger</type>
+              <vanillaCouponTrigger>
+                <gearing>1.0</gearing>
+                <spread>0.0</spread>
+                <returnCalculation>
+                  <type>constReturnCal</type>
+                  <constReturnCal>
+                    <constReturn>0.10</constReturn>
+                  </constReturnCal>
+                </returnCalculation>
+                <payoffDateInfo>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2015-06-10</date>
+                      <autoCallFlag>false</autoCallFlag>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </payoffDateInfo>
+                <isExpired>false</isExpired>
+              </vanillaCouponTrigger>
+            </eventTrigger>
+          </nonKiEventInfo>
+
+          <eventTriggerList>
+
+            <eventTrigger>
+              <type>simpleEventCouponTrigger</type>
+              <simpleEventCouponTrigger>
+                
+                <eventCalculation>
+                  <name>e1</name>
+                  <type>simpleRangeEventCal</type>
+                  <simpleRangeEventCal>
+
+                    <range1D>
+                      <lowerBound>0.0</lowerBound>
+                      <lowerBoundEquality>true</lowerBoundEquality>
+                      <upperBound>1.0</upperBound>
+                      <upperBoundEquality>true</upperBoundEquality>
+                    </range1D>
+                    
+                    <referenceCalculation>
+                      <type>minimumReferenceCal</type>
+                      
+                      <minimumReferenceCal>
+                        <fixingDateInfo>
+                          <type>fixedFixingDateInfo</type>
+                          <fixedFixingDateInfo>
+                            <date>2014-03-13</date>
+                          </fixedFixingDateInfo>
+                        </fixingDateInfo>
+                      </minimumReferenceCal>
+                      
+                    </referenceCalculation>
+                    
+                  </simpleRangeEventCal>
+                </eventCalculation>
+
+                <returnCalculation>
+                  <type>complexNDReturnCal</type>
+                  <preCalculation>
+                    <variableCalList>
+                      <variableCal>
+                        <referenceCalculation>
+
+                        </referenceCalculation>
+                        <operation1D>
+                          <additionOper></additionOper>
+                          <maximumOper>0.0</maximumOper>
+                        </operation1D>
+                      </variableCal>
+                      <variableCal>
+
+                      </variableCal>
+                    </variableCalList>
+                  </preCalculation>
+                  
+                  <complexNDReturnCal>
+                    <variableCalList>
+                      <variableCal>
+                        <referenceCalculation>
+                          <type>maximumReferenceCal</type>
+                          <maximumReferenceCal>
+                            <fixingDateInfo>
+                              <type>nullFixingDateInfo</type>
+                              <nullFixingDateInfo></nullFixingDateInfo>
+                            </fixingDateInfo>
+                          </maximumReferenceCal>
+                        </referenceCalculation>
+                        <operator1D>
+                          <additionOper></additionOper>
+                          <maximumOper>0.0</maximumOper>
+                        </operator1D>
+                      </variableCal>                      
+                    </variableCalList>
+                    <operatorND>
+                      
+                    </operatorND>
+                  </complexNDReturnCal>
+
+                  <postCalculation>
+                    <operation1D>
+                      <additionOper></additionOper>
+                      <maximumOper>0.0</maximumOper>
+                      <conditionOperList>
+                        <conditionOper>
+                          <type>simpleConditionOper</type>
+                          <simpleConditionOper>
+                            <range1D></range1D>
+                            <constValue></constValue>
+                          </simpleConditionOper>
+                        </conditionOper>
+                        <conditionOper>
+                          <type>simpleRefConditionOper</type>
+                          <simpleRefConditionOper>
+                            <range1D></range1D>
+                            <constValue></constValue>
+                          </simpleRefConditionOper>
+                        </conditionOper>
+                      </conditionOperList>
+                      <capped></capped>
+                      <min></min>
+                    </operation1D>
+                  </postCalculation>
+
+                </returnCalculation>
+                
+                <payoffDateInfo>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2014-03-13</date>
+                      <autoCallFlag>false</autoCallFlag>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </payoffDateInfo>
+
+                <isExpired>false</isExpired>
+              </simpleEventCouponTrigger>
+
+              <autoTerminationTrigger>
+                <eventCalculation>
+                  <type>referenceEventCal</type>
+                  <referenceEventCal>
+                    <refName>e1</refName>
+                  </referenceEventCal>
+                </eventCalculation>
+                <returnCalculation>
+                  <type>constReturnCal</type>
+                  <constReturnCal>
+                    <constReturn>1.0</constReturn>
+                  </constReturnCal>
+                </returnCalculation>
+
+                <payoffDateInfo>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2014-03-13</date>
+                      <autoCallFlag>false</autoCallFlag>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </payoffDateInfo>
+                
+              </autoTerminationTrigger>
+
+            
+          </eventTrigger>
+            
+            <!--
+            <eventTrigger>
+              <type>simpleRangeReturnTrigger</type>
+              <simpleRangeReturnTrigger>
+                <simpleRangeEvent>
+
+                  <range1D>
+                    <lowerBound>0.0</lowerBound>
+                    <lowerBoundEquality>true</lowerBoundEquality>
+                    <upperBound>1.0</upperBound>
+                    <upperBoundEquality>true</upperBoundEquality>
+                  </range1D>
+
+                  <referenceCalculation>
+                    <type>minimumReferenceCal</type>
+                    <minimumReferenceCal>
+                      <fixingDateInfo>
+                        <type>fixedFixingDateInfo</type>
+                        <fixedFixingDateInfo>
+                          <date>2014-06-10</date>
+                          <autoCallFlag>false</autoCallFlag>
+                        </fixedFixingDateInfo>
+                      </fixingDateInfo>
+                    </minimumReferenceCal>
+                  </referenceCalculation>
+
+                  <returnCalculation>
+                    <type>constReturnCal</type>
+                    <constReturnCal>
+                      <constReturn>0.04</constReturn>
+                    </constReturnCal>
+
+                  </returnCalculation>
+
+                </simpleRangeEvent>
+
+                <payoffDateInfo>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2014-06-10</date>
+                      <autoCallFlag>false</autoCallFlag>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </payoffDateInfo>
+
+              </simpleRangeReturnTrigger>
+
+            </eventTrigger>
+
+            <eventTrigger>
+              <type>simpleRangeReturnTrigger</type>
+              <simpleRangeReturnTrigger>
+                <simpleRangeEvent>
+
+                  <range1D>
+                    <lowerBound>0.0</lowerBound>
+                    <lowerBoundEquality>true</lowerBoundEquality>
+                    <upperBound>1.05</upperBound>
+                    <upperBoundEquality>true</upperBoundEquality>
+                  </range1D>
+
+                  <referenceCalculation>
+                    <type>minimumReferenceCal</type>
+                    <minimumReferenceCal>
+                      <fixingDateInfo>
+                        <type>fixedFixingDateInfo</type>
+                        <fixedFixingDateInfo>
+                          <date>2014-09-05</date>
+                          <autoCallFlag>false</autoCallFlag>
+                        </fixedFixingDateInfo>
+                      </fixingDateInfo>
+                    </minimumReferenceCal>
+                  </referenceCalculation>
+
+                  <returnCalculation>
+                    <type>constReturnCal</type>
+                    <constReturnCal>
+                      <constReturn>0.06</constReturn>
+                    </constReturnCal>
+
+                  </returnCalculation>
+
+                </simpleRangeEvent>
+
+                <payoffDateInfo>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2014-09-05</date>
+                      <autoCallFlag>false</autoCallFlag>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </payoffDateInfo>
+
+              </simpleRangeReturnTrigger>
+
+            </eventTrigger>
+
+            <eventTrigger>
+              <type>simpleRangeReturnTrigger</type>
+              <simpleRangeReturnTrigger>
+                <simpleRangeEvent>
+
+                  <range1D>
+                    <lowerBound>0.0</lowerBound>
+                    <lowerBoundEquality>true</lowerBoundEquality>
+                    <upperBound>1.05</upperBound>
+                    <upperBoundEquality>true</upperBoundEquality>
+                  </range1D>
+
+                  <referenceCalculation>
+                    <type>minimumReferenceCal</type>
+                    <minimumReferenceCal>
+                      <fixingDateInfo>
+                        <type>fixedFixingDateInfo</type>
+                        <fixedFixingDateInfo>
+                          <date>2014-12-10</date>
+                          <autoCallFlag>false</autoCallFlag>
+                        </fixedFixingDateInfo>
+                      </fixingDateInfo>
+                    </minimumReferenceCal>
+                  </referenceCalculation>
+
+                  <returnCalculation>
+                    <type>constReturnCal</type>
+                    <constReturnCal>
+                      <constReturn>0.08</constReturn>
+                    </constReturnCal>
+
+                  </returnCalculation>
+
+                </simpleRangeEvent>
+
+                <payoffDateInfo>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2014-12-10</date>
+                      <autoCallFlag>false</autoCallFlag>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </payoffDateInfo>
+
+              </simpleRangeReturnTrigger>
+
+            </eventTrigger>
+
+            <eventTrigger>
+              <type>simpleRangeReturnTrigger</type>
+              <simpleRangeReturnTrigger>
+                <simpleRangeEvent>
+
+                  <range1D>
+                    <lowerBound>0.0</lowerBound>
+                    <lowerBoundEquality>true</lowerBoundEquality>
+                    <upperBound>1.10</upperBound>
+                    <upperBoundEquality>true</upperBoundEquality>
+                  </range1D>
+
+                  <referenceCalculation>
+                    <type>minimumReferenceCal</type>
+                    <minimumReferenceCal>
+                      <fixingDateInfo>
+                        <type>fixedFixingDateInfo</type>
+                        <fixedFixingDateInfo>
+                          <date>2015-03-10</date>
+                          <autoCallFlag>false</autoCallFlag>
+                        </fixedFixingDateInfo>
+                      </fixingDateInfo>
+                    </minimumReferenceCal>
+                  </referenceCalculation>
+
+                  <returnCalculation>
+                    <type>constReturnCal</type>
+                    <constReturnCal>
+                      <constReturn>0.10</constReturn>
+                    </constReturnCal>
+
+                  </returnCalculation>
+
+                </simpleRangeEvent>
+
+                <payoffDateInfo>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2015-03-10</date>
+                      <autoCallFlag>false</autoCallFlag>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </payoffDateInfo>
+
+              </simpleRangeReturnTrigger>
+
+            </eventTrigger>
+
+            <eventTrigger>
+              <type>simpleRangeReturnTrigger</type>
+              <simpleRangeReturnTrigger>
+                <simpleRangeEvent>
+
+                  <range1D>
+                    <lowerBound>0.0</lowerBound>
+                    <lowerBoundEquality>true</lowerBoundEquality>
+                    <upperBound>1.15</upperBound>
+                    <upperBoundEquality>true</upperBoundEquality>
+                  </range1D>
+
+                  <referenceCalculation>
+                    <type>minimumReferenceCal</type>
+                    <minimumReferenceCal>
+                      <fixingDateInfo>
+                        <type>fixedFixingDateInfo</type>
+                        <fixedFixingDateInfo>
+                          <date>2015-06-10</date>
+                          <autoCallFlag>false</autoCallFlag>
+                        </fixedFixingDateInfo>
+                      </fixingDateInfo>
+                    </minimumReferenceCal>
+                  </referenceCalculation>
+
+                  <returnCalculation>
+                    <type>constReturnCal</type>
+                    <constReturnCal>
+                      <constReturn>0.12</constReturn>
+                    </constReturnCal>
+
+                  </returnCalculation>
+
+                </simpleRangeEvent>
+
+                <payoffDateInfo>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2015-06-10</date>
+                      <autoCallFlag>false</autoCallFlag>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </payoffDateInfo>
+
+              </simpleRangeReturnTrigger>
+
+            </eventTrigger>
+            -->
+          </eventTriggerList>
+          
+        </stepDownKIPayoff>
+      </payoffInfo>
+    </standardInstrument>
+  </instrumentInfo>
+</instrument>

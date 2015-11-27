@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<instrument Type="SingleNameCDS">
+  
+  <header>
+    <productName>F_SingleNameCDS</productName>
+    <productType>SingleNameCDS</productType>
+    <krCode>F000TestProduct</krCode>
+  </header>
+  
+  <instrumentInfo>
+    <type>creditInstrument</type>
+    <creditInstrument>
+    
+      <issueInformation>
+        <type>swapInfo</type>
+        <swapInfo>
+          <tradeDate>2013-08-06</tradeDate>
+          <effectiveDate>2013-08-06</effectiveDate>
+          <maturityDate>2018-08-06</maturityDate>
+          <notional>100000000</notional>
+          <currency>USD</currency>
+          <premium>0</premium>
+        </swapInfo>
+      </issueInformation>
+
+      <underlyingInformation>
+        <type>index</type>
+        <indexUnderInfo>
+          <index>
+            <type>stock</type>
+            <stockIndex>
+              <krCode>KR7005930003</krCode>
+              <name>KR7005930003</name>
+              <basePrice>1313000</basePrice>
+            </stockIndex>
+          </index>
+          <index>
+            <type>stock</type>
+            <stockIndex>
+              <krCode>KR7005930003</krCode>
+              <name>KR7005930003</name>
+              <basePrice>1313000</basePrice>
+            </stockIndex>
+          </index>
+        </indexUnderInfo>
+      </underlyingInformation>
+
+      <creditPayoffInfo>
+        <type>creditDefaultSwap</type>
+        
+        <creditDefaultSwap>
+
+          <protectionPart>
+            <payRecieve>Pay</payRecieve>
+            
+            <referenceInformationList>
+      
+              <referenceInformation>
+                <referenceEntity>
+                  <entityName>Hana Bank</entityName>
+                  <entityId>00286</entityId>
+                </referenceEntity>
+                <referenceObligation>
+                  <bond>
+                    <instrumentId>US40963MAB81</instrumentId>
+                    <couponRate>0.1111</couponRate>
+                    <maturity>2030-03-06</maturity>
+                  </bond>
+                </referenceObligation>
+                <referencePrice>1.0</referencePrice>
+              </referenceInformation>
+      
+              <referenceInformation>
+                <referenceEntity>
+                  <entityName>Hyeondae Auto</entityName>
+                  <entityId>00538</entityId>
+                </referenceEntity>
+                <referenceObligation>
+                  <bond>
+                    <instrumentId>US44890AAA60</instrumentId>
+                    <couponRate>0.1222</couponRate>
+                    <maturity>2030-03-06</maturity>
+                  </bond>
+                </referenceObligation>
+                <referencePrice>1.0</referencePrice>
+              </referenceInformation>
+      
+              <referenceInformation>
+                <referenceEntity>
+                  <entityName>GS Caltecs</entityName>
+                  <entityId>00508</entityId>
+                </referenceEntity>
+                <referenceObligation>
+                  <bond>
+                    <instrumentId>USY5275KAP04</instrumentId>
+                    <couponRate>0.1333</couponRate>
+                    <maturity>2030-03-06</maturity>
+                  </bond>
+                </referenceObligation>
+                <referencePrice>1.0</referencePrice>
+              </referenceInformation>
+      
+            </referenceInformationList>
+    
+            <protectionTerms>
+          
+              <calculationAmount>
+                <currency>USD</currency>
+                <amount>10000000</amount>
+              </calculationAmount>
+      
+              <creditEvents>
+                <failureToPay>true</failureToPay>
+                <obligationAcceleration>true</obligationAcceleration>
+                <repudiationMoratorium>true</repudiationMoratorium>
+                <restructuring>true</restructuring>
+                <defaultRequirement>true</defaultRequirement>
+              </creditEvents>
+      
+              <obligations>
+                <category>Bond</category>
+                <notSubordinated>true</notSubordinated>
+                <notDomesticCurrency>true</notDomesticCurrency>
+                <notDomesticLaw>true</notDomesticLaw>
+                <notDomesticIssuance>true</notDomesticIssuance>
+              </obligations>
+
+              <accrualCoupon>true</accrualCoupon>
+            </protectionTerms>
+          
+          </protectionPart>
+
+          <couponPart>
+            <payRecieve>Recieve</payRecieve>
+            <swapStream>
+              <type>standardStream</type>
+              <standardStream>
+
+                <scheduleInfo>
+                  <effectiveDate>2013-08-06</effectiveDate>
+                  <terminationDate>2018-08-06</terminationDate>
+                  <paymentDays>3</paymentDays>
+                  <calendar>KOR</calendar>
+                  <businessDayConvention>Following</businessDayConvention>
+                  <dateGeneration>Backward</dateGeneration>
+                  <!-- Backward , Forward ,TwentiethIMM , 21 , 17-->
+                  <periodFrequency>3M</periodFrequency>
+                </scheduleInfo>
+                
+                <irCalculation>
+                  <calculationAmount>
+                    <currency>USD</currency>
+                    <amount>10000000</amount>
+                  </calculationAmount>
+                  
+                  <calculationStartDate>2013-08-06</calculationStartDate>
+                  <calculationEndDate>2018-08-06</calculationEndDate>
+                  <paymentDate>2018-08-06</paymentDate>
+
+                  <irCouponCalculation>
+                    <type>fixedRateCalculation</type>
+                    <fixedRateCalculation>
+                      <rate>0.05</rate>
+                    </fixedRateCalculation>
+                  </irCouponCalculation>
+
+                  <inArrear>false</inArrear>
+        
+                </irCalculation>
+                <irCalculation>
+                  <calculationAmount>
+                    <currency>USD</currency>
+                    <amount>10000000</amount>
+                  </calculationAmount>
+
+                  <calculationStartDate>2013-08-06</calculationStartDate>
+                  <calculationEndDate>2018-08-06</calculationEndDate>
+                  <paymentDate>2018-08-06</paymentDate>
+
+                  <irCouponCalculation>
+                    <type>fixedRateCalculation</type>
+                    <fixedRateCalculation>
+                      <rate>0.05</rate>
+                    </fixedRateCalculation>
+                  </irCouponCalculation>
+
+                  <inArrear>false</inArrear>
+
+                </irCalculation>
+                <irCalculation>
+                  <calculationAmount>
+                    <currency>USD</currency>
+                    <amount>10000000</amount>
+                  </calculationAmount>
+
+                  <calculationStartDate>2013-08-06</calculationStartDate>
+                  <calculationEndDate>2018-08-06</calculationEndDate>
+                  <paymentDate>2018-08-06</paymentDate>
+
+                  <irCouponCalculation>
+                    <type>fixedRateCalculation</type>
+                    <fixedRateCalculation>
+                      <rate>0.05</rate>
+                    </fixedRateCalculation>
+                  </irCouponCalculation>
+
+                  <inArrear>false</inArrear>
+
+                </irCalculation>
+                <irCalculation>
+                  <calculationAmount>
+                    <currency>USD</currency>
+                    <amount>10000000</amount>
+                  </calculationAmount>
+
+                  <calculationStartDate>2013-08-06</calculationStartDate>
+                  <calculationEndDate>2018-08-06</calculationEndDate>
+                  <paymentDate>2018-08-06</paymentDate>
+
+                  <irCouponCalculation>
+                    <type>fixedRateCalculation</type>
+                    <fixedRateCalculation>
+                      <rate>0.05</rate>
+                    </fixedRateCalculation>
+                  </irCouponCalculation>
+
+                  <inArrear>false</inArrear>
+
+                </irCalculation>
+                
+              </standardStream>
+              
+            </swapStream>
+          
+          </couponPart>
+        
+        </creditDefaultSwap>
+        
+      </creditPayoffInfo>
+      
+    </creditInstrument>
+  </instrumentInfo>
+  
+  <calculationAgent>
+    <calculationAgentPartyReference href="party1" />
+  </calculationAgent>
+
+</instrument>

@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<pricing>
+  <evaluationTime>2013-08-29</evaluationTime>
+  <itemCode>KR67233183A2</itemCode>
+  <itemType>stepDownKI</itemType>
+
+  <pricingParameter>
+    <type>standard_para</type>
+    
+    <method>
+      <type>monte</type>
+      <monte>
+        <simulationNum>10000</simulationNum>
+      </monte>
+    </method>
+
+    <parameterSetting>
+      <type>generalSetting</type>
+      <generalSetting>
+        <geometricBM_paraSetting>
+          <driftCalculation>
+            <type>constDriftCalculation</type>
+            <constDriftCalculation>
+              <curve_paraSetting>IRSUSD</curve_paraSetting>
+              <driftCalculationMethod>maturitySpot</driftCalculationMethod>
+            </constDriftCalculation>
+          </driftCalculation>
+
+          <volatilityCalculation>
+            <type>constVolCalculation</type>
+            <constVolCalculation>
+              <volatilityCalculationMethod>250history</volatilityCalculationMethod>
+            </constVolCalculation>
+          </volatilityCalculation>
+
+          <correlationCalculation>
+            <type>constCorrelationCalculation</type>
+            <constCorrelationCalculation>
+              <correlationCalculationMethod>250history</correlationCalculationMethod>
+            </constCorrelationCalculation>
+          </correlationCalculation>
+
+        </geometricBM_paraSetting>
+
+        <discountCurve_paraSetting>
+          <curve_paraSetting>IssuerCurve</curve_paraSetting>
+        </discountCurve_paraSetting>
+      </generalSetting>
+    </parameterSetting>
+
+    <standard_para>
+      
+      <notional>100000000</notional>
+
+      <calculationAmount>
+        <currency>KRW</currency>
+        <amount>100000000</amount>
+      </calculationAmount>
+      
+      <underlyingInfo_para>
+        
+        <underlying_para>
+          
+          <type>geometricBM</type>
+          <krCode>KOSPI200</krCode>
+          <underName>KOSPI200</underName>
+          <geometricBM>
+            <currentValue>266.59</currentValue>
+            <drift>0.029</drift>
+            <dividend>0.0069</dividend>
+            <volatility>0.2947</volatility>
+          </geometricBM>
+          
+        </underlying_para>
+        
+        <correlationInfo_para>
+          <dimension>1</dimension>
+          <correlation_para>
+            <first>KOSPI200</first>
+            <second>KOSPI200</second>
+            <value>1</value>
+          </correlation_para>
+        </correlationInfo_para>
+
+
+      </underlyingInfo_para>
+      
+      <discountCurve_para>
+        
+        <yieldTermstructure>
+          <type>ZEROYIELD</type>
+          <interpolation>BACKWARDFLAT</interpolation>
+          <daycounter>ACT365FIX</daycounter>
+          <calendar>NULLCALENDAR</calendar>
+          <!--<frequency>Quarterly</frequency>-->
+          <businessDayConvention>Following</businessDayConvention>
+          <rateData>
+            <periodMultiplier>1</periodMultiplier>
+            <period>D</period>
+            <data>0.0017965</data>
+          </rateData>
+          <rateData>
+            <periodMultiplier>1</periodMultiplier>
+            <period>M</period>
+            <data>0.0017965</data>
+          </rateData>
+          <rateData>
+            <periodMultiplier>3</periodMultiplier>
+            <period>M</period>
+            <data>0.0024835</data>
+          </rateData>
+          <rateData>
+            <periodMultiplier>6</periodMultiplier>
+            <period>M</period>
+            <data>0.003665</data>
+          </rateData>
+          <rateData>
+            <periodMultiplier>9</periodMultiplier>
+            <period>M</period>
+            <data>0.0049559</data>
+          </rateData>
+          <rateData>
+            <periodMultiplier>12</periodMultiplier>
+            <period>M</period>
+            <data>0.006261</data>
+          </rateData>
+          <rateData>
+            <periodMultiplier>2</periodMultiplier>
+            <period>Y</period>
+            <data>0.00461</data>
+          </rateData>
+          <rateData>
+            <periodMultiplier>3</periodMultiplier>
+            <period>Y</period>
+            <data>0.00764</data>
+          </rateData>
+          <rateData>
+            <periodMultiplier>4</periodMultiplier>
+            <period>Y</period>
+            <data>0.01145</data>
+          </rateData>
+          <rateData>
+            <periodMultiplier>5</periodMultiplier>
+            <period>Y</period>
+            <data>0.01518</data>
+          </rateData>
+          <rateData>
+            <periodMultiplier>6</periodMultiplier>
+            <period>Y</period>
+            <data>0.01858</data>
+          </rateData>
+          <rateData>
+            <periodMultiplier>7</periodMultiplier>
+            <period>Y</period>
+            <data>0.02145</data>
+          </rateData>
+          <rateData>
+            <periodMultiplier>8</periodMultiplier>
+            <period>Y</period>
+            <data>0.02385</data>
+          </rateData>
+          <rateData>
+            <periodMultiplier>9</periodMultiplier>
+            <period>Y</period>
+            <data>0.02583</data>
+          </rateData>
+          <rateData>
+            <periodMultiplier>10</periodMultiplier>
+            <period>Y</period>
+            <data>0.02747</data>
+          </rateData>
+          <rateData>
+            <periodMultiplier>11</periodMultiplier>
+            <period>Y</period>
+            <data>0.02889</data>
+          </rateData>
+        </yieldTermstructure>
+        
+      </discountCurve_para>
+      
+    </standard_para>
+    
+  </pricingParameter>
+  
+  <pricingResult>
+    <type>stepDownKIResult</type>
+    <commonResult>
+      <price>206754312</price>
+      <unitPrice unit="10000">9817.39</unitPrice>
+    </commonResult>
+    
+    <stepDownKIResult>
+      
+      <underylingInfoResult>
+        <underylingResult>
+          <type>gbmGreekInfoResult</type>
+          <gbmGreekInfoResult>
+            
+            <gbmGreekResult>
+              <underlyingName></underlyingName>
+              <delta></delta>
+              <gamma></gamma>
+              <vega></vega>
+            </gbmGreekResult>
+
+            <gbmGreekResult>
+              <underlyingName></underlyingName>
+              <delta></delta>
+              <gamma></gamma>
+              <vega></vega>
+            </gbmGreekResult>
+            
+          </gbmGreekInfoResult>
+        </underylingResult>
+
+      </underylingInfoResult>
+      
+      <simpleCashFlow>
+        
+      </simpleCashFlow>
+      
+      <theta>
+        
+      </theta>
+    </stepDownKIResult>
+
+  </pricingResult>
+  
+</pricing>

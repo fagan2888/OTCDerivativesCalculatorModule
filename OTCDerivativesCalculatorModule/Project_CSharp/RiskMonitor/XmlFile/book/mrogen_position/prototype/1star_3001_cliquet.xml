@@ -1,0 +1,1551 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<instrument Type="StepDown">
+  <instPositionInfo>
+    <krCode>50505A3C33S0</krCode>
+    <instName>IBK 제1032회 사모ELS</instName>
+    <instCode>50505A3C33S0</instCode>
+    <instType>stepUp</instType>
+    <notional>976660000</notional>
+  </instPositionInfo>
+  <header>
+    <productName>IBK 제1032회 사모ELS</productName>
+    <krCode>50505A3C33S0</krCode>
+  </header>
+  <instrumentInfo>
+    <type>standardInstrument</type>
+    <standardInstrument>
+      <issueInformation>
+        <type>noteInfo</type>
+        <noteInfo>
+          <tradeDate>2013-02-15</tradeDate>
+          <effectiveDate>2013-02-15</effectiveDate>
+          <maturityDate>2014-02-18</maturityDate>
+          <notional>976660000</notional>
+          <premium>0</premium>
+        </noteInfo>
+      </issueInformation>
+      
+      <underlyingInformation>
+        <type>indexUnderInfo</type>
+        <indexUnderInfo>
+          <index>
+            <type>stockIndex</type>
+            <krCode>KOSPI200</krCode>
+            <name>KOSPI200</name>
+            <basePrice>261.61</basePrice>
+            <stockIndex>
+            </stockIndex>
+          </index>
+        </indexUnderInfo>
+      </underlyingInformation>
+      
+      <payoffInfo>
+        <type>autoCallablePayoff</type>
+        <preDefinedVariableList>
+          <preDefinedVariableInfo>
+            <refInstanceName>CumulCoupon</refInstanceName>
+            <fixingInformation>
+              <initialValue>0.0</initialValue>
+            </fixingInformation>
+            
+            <fixingInformationtest>
+              <initialValue>0.0</initialValue>
+              <fixing>
+                <date>2013-03-15</date>
+                <value>-0.002943312564</value>
+              </fixing>
+              <fixing>
+                <date>2013-04-15</date>
+                <value>-0.036642131764</value>
+              </fixing>
+              <fixing>
+                <date>2013-05-15</date>
+                <value>-0.016404367858</value>
+              </fixing>
+              <fixing>
+                <date>2013-06-14</date>
+                <value>-0.060207953204</value>
+              </fixing>
+              <fixing>
+                <date>2013-07-15</date>
+                <value>-0.068073946032</value>
+              </fixing>
+              <fixing>
+                <date>2013-08-14</date>
+                <value>-0.04182410008</value>
+              </fixing>
+              <fixing>
+                <date>2013-09-13</date>
+                <value>-0.00382410008</value>
+              </fixing>
+              <fixing>
+                <date>2013-10-15</date>
+                <value>0.027575662218</value>
+              </fixing>
+              <fixing>
+                <date>2013-11-15</date>
+                <value>0.009658778714</value>
+              </fixing>
+              <fixing>
+                <date>2013-12-13</date>
+                <value>-0.013656891232</value>
+              </fixing>
+              <fixing>
+                <date>2014-01-15</date>
+                <value>-0.026484359842</value>
+              </fixing>
+            </fixingInformationtest>
+            
+          </preDefinedVariableInfo>
+        </preDefinedVariableList>
+        
+        <autoCallablePayoff>
+
+          <eventTriggerList>
+
+            <eventTrigger>
+              <type>vanillaCouponTrigger</type>
+              <eventDate>2013-03-15</eventDate>
+              <vanillaCouponTrigger>
+
+                <gearing>1.0</gearing>
+                <spread>0.0</spread>
+                
+                <returnCalculation>
+                  <type>callPutCompositeReturnCal</type>
+                  <callPutCompositeReturnCal>
+
+                    <referenceCalculationInfo>
+                      <referenceCalculation>
+                        <type>choiceReferenceCal</type>
+                        <choiceReferenceCal>
+                          <selectedUnderName>KOSPI200</selectedUnderName>
+                          <fixingDateInfo>
+                            <type>fixedFixingDateInfo</type>
+                            <fixedFixingDateInfo>
+                              <date>2013-02-15</date>
+                              <autoCallFlag>false</autoCallFlag>
+                            </fixedFixingDateInfo>
+                          </fixingDateInfo>
+                        </choiceReferenceCal>
+                        <fixingInformation>
+                          <initialValue>1.0</initialValue>
+                          <fixing>
+                            <date>2013-02-15</date>
+                            <value>1.0</value>
+                          </fixing>
+                        </fixingInformation>
+                      </referenceCalculation>
+                      
+                      <referenceCalculation>
+                        <type>choiceReferenceCal</type>
+                        <choiceReferenceCal>
+                          <selectedUnderName>KOSPI200</selectedUnderName>
+                          <fixingDateInfo>
+                            <type>fixedFixingDateInfo</type>
+                            <fixedFixingDateInfo>
+                              <date>2013-03-15</date>
+                              <autoCallFlag>false</autoCallFlag>
+                            </fixedFixingDateInfo>
+                          </fixingDateInfo>
+                          
+                        </choiceReferenceCal>
+                        <fixingInformation>
+                          <initialValue>0.997056687435495</initialValue>
+                          <fixing>
+                            <date>2013-03-15</date>
+                            <value>0.997056687435495</value>
+                          </fixing>
+                        </fixingInformation>
+                      </referenceCalculation>
+                      
+                      <operatorND>
+                        <type>divisionOperND</type>
+                        <divisionOperND>
+                          <weight>1.0</weight>
+                          <weight>1.0</weight>
+                        </divisionOperND>
+                      </operatorND>
+
+                    </referenceCalculationInfo>
+
+                    <weight>1.0</weight>
+                    <weight>-1.0</weight>
+
+                    <optionPayoffFunction>
+                      <type>vanillaCallFunction</type>
+                      <vanillaCallFunction>
+                        <partiRate>1.0</partiRate>
+                        <strike>0.93</strike>
+                        <spread>-0.07</spread>
+                      </vanillaCallFunction>
+                    </optionPayoffFunction>
+
+                    <optionPayoffFunction>
+                      <type>vanillaCallFunction</type>
+                      <vanillaCallFunction>
+                        <partiRate>1.0</partiRate>
+                        <strike>1.038</strike>
+                        <spread>0.0</spread>
+                      </vanillaCallFunction>
+                    </optionPayoffFunction>
+
+                  </callPutCompositeReturnCal>
+                  
+                  <refVariable_returnValue>
+                    <variableInfo>
+                      <type>additionVariableInfo</type>
+                      <additionVariableInfo>
+                        <usingRefVarName></usingRefVarName>
+                        <refInstanceName>CumulCoupon</refInstanceName>
+                        <save>true</save>
+                      </additionVariableInfo>
+                    </variableInfo>
+                  </refVariable_returnValue>
+                </returnCalculation>
+
+                <payoffDateInfo>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2013-03-15</date>
+                      <autoCallFlag>false</autoCallFlag>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </payoffDateInfo>
+
+                <isExpired>false</isExpired>
+              </vanillaCouponTrigger>
+
+            </eventTrigger>
+
+            <eventTrigger>
+              <type>vanillaCouponTrigger</type>
+              <eventDate>2013-04-15</eventDate>
+              <vanillaCouponTrigger>
+
+                <gearing>1.0</gearing>
+                <spread>0.0</spread>
+
+                <returnCalculation>
+                  <type>callPutCompositeReturnCal</type>
+                  <callPutCompositeReturnCal>
+
+                    <referenceCalculationInfo>
+                      <referenceCalculation>
+                        <type>choiceReferenceCal</type>
+                        <choiceReferenceCal>
+                          <selectedUnderName>KOSPI200</selectedUnderName>
+                          <fixingDateInfo>
+                            <type>fixedFixingDateInfo</type>
+                            <fixedFixingDateInfo>
+                              <date>2013-03-15</date>
+                              <autoCallFlag>false</autoCallFlag>
+                            </fixedFixingDateInfo>
+                          </fixingDateInfo>
+
+                        </choiceReferenceCal>
+                        <fixingInformation>
+                          <initialValue>0.997056687435495</initialValue>
+                          <fixing>
+                            <date>2013-03-15</date>
+                            <value>0.997056687435495</value>
+                          </fixing>
+                        </fixingInformation>
+                      </referenceCalculation>
+
+                      <referenceCalculation>
+                        <type>choiceReferenceCal</type>
+                        <choiceReferenceCal>
+                          <selectedUnderName>KOSPI200</selectedUnderName>
+                          <fixingDateInfo>
+                            <type>fixedFixingDateInfo</type>
+                            <fixedFixingDateInfo>
+                              <date>2013-04-15</date>
+                              <autoCallFlag>false</autoCallFlag>
+                            </fixedFixingDateInfo>
+                          </fixingDateInfo>
+                        </choiceReferenceCal>
+                        <fixingInformation>
+                          <initialValue>0.961392913114942</initialValue>
+                          <fixing>
+                            <date>2013-04-15</date>
+                            <value>0.961392913114942</value>
+                          </fixing>
+                        </fixingInformation>
+                      </referenceCalculation>
+
+                      <operatorND>
+                        <type>divisionOperND</type>
+                        <divisionOperND>
+                          <weight>1.0</weight>
+                          <weight>1.0</weight>
+                        </divisionOperND>
+                      </operatorND>
+
+                    </referenceCalculationInfo>
+
+                    <weight>1.0</weight>
+                    <weight>-1.0</weight>
+
+                    <optionPayoffFunction>
+                      <type>vanillaCallFunction</type>
+                      <vanillaCallFunction>
+                        <partiRate>1.0</partiRate>
+                        <strike>0.93</strike>
+                        <spread>-0.07</spread>
+                      </vanillaCallFunction>
+                    </optionPayoffFunction>
+
+                    <optionPayoffFunction>
+                      <type>vanillaCallFunction</type>
+                      <vanillaCallFunction>
+                        <partiRate>1.0</partiRate>
+                        <strike>1.038</strike>
+                        <spread>0.0</spread>
+                      </vanillaCallFunction>
+                    </optionPayoffFunction>
+
+                  </callPutCompositeReturnCal>
+
+                  <refVariable_returnValue>
+                    <variableInfo>
+                      <type>additionVariableInfo</type>
+                      <additionVariableInfo>
+                        <usingRefVarName></usingRefVarName>
+                        <refInstanceName>CumulCoupon</refInstanceName>
+                        <save>true</save>
+                      </additionVariableInfo>
+                    </variableInfo>
+                  </refVariable_returnValue>
+                </returnCalculation>
+
+                <payoffDateInfo>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2013-04-15</date>
+                      <autoCallFlag>false</autoCallFlag>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </payoffDateInfo>
+
+                <isExpired>false</isExpired>
+              </vanillaCouponTrigger>
+
+            </eventTrigger>
+
+            <eventTrigger>
+              <type>vanillaCouponTrigger</type>
+              <eventDate>2013-05-15</eventDate>
+              <vanillaCouponTrigger>
+
+                <gearing>1.0</gearing>
+                <spread>0.0</spread>
+
+                <returnCalculation>
+                  <type>callPutCompositeReturnCal</type>
+                  <callPutCompositeReturnCal>
+
+                    <referenceCalculationInfo>
+                      <referenceCalculation>
+                        <type>choiceReferenceCal</type>
+                        <choiceReferenceCal>
+                          <selectedUnderName>KOSPI200</selectedUnderName>
+                          <fixingDateInfo>
+                            <type>fixedFixingDateInfo</type>
+                            <fixedFixingDateInfo>
+                              <date>2013-04-15</date>
+                              <autoCallFlag>false</autoCallFlag>
+                            </fixedFixingDateInfo>
+                          </fixingDateInfo>
+                        </choiceReferenceCal>
+                        <fixingInformation>
+                          <initialValue>0.961392913114942</initialValue>
+                          <fixing>
+                            <date>2013-04-15</date>
+                            <value>0.961392913114942</value>
+                          </fixing>
+                        </fixingInformation>
+                      </referenceCalculation>
+
+                      <referenceCalculation>
+                        <type>choiceReferenceCal</type>
+                        <choiceReferenceCal>
+                          <selectedUnderName>KOSPI200</selectedUnderName>
+                          <fixingDateInfo>
+                            <type>fixedFixingDateInfo</type>
+                            <fixedFixingDateInfo>
+                              <date>2013-05-15</date>
+                              <autoCallFlag>false</autoCallFlag>
+                            </fixedFixingDateInfo>
+                          </fixingDateInfo>
+                      
+                        </choiceReferenceCal>
+                        <fixingInformation>
+                          <initialValue>0.980849355911471</initialValue>
+                          <fixing>
+                            <date>2013-05-15</date>
+                            <value>0.980849355911471</value>
+                          </fixing>
+                        </fixingInformation>
+                      </referenceCalculation>
+
+                      <operatorND>
+                        <type>divisionOperND</type>
+                        <divisionOperND>
+                          <weight>1.0</weight>
+                          <weight>1.0</weight>
+                        </divisionOperND>
+                      </operatorND>
+
+                    </referenceCalculationInfo>
+
+                    <weight>1.0</weight>
+                    <weight>-1.0</weight>
+
+                    <optionPayoffFunction>
+                      <type>vanillaCallFunction</type>
+                      <vanillaCallFunction>
+                        <partiRate>1.0</partiRate>
+                        <strike>0.93</strike>
+                        <spread>-0.07</spread>
+                      </vanillaCallFunction>
+                    </optionPayoffFunction>
+
+                    <optionPayoffFunction>
+                      <type>vanillaCallFunction</type>
+                      <vanillaCallFunction>
+                        <partiRate>1.0</partiRate>
+                        <strike>1.038</strike>
+                        <spread>0.0</spread>
+                      </vanillaCallFunction>
+                    </optionPayoffFunction>
+
+                  </callPutCompositeReturnCal>
+
+                  <refVariable_returnValue>
+                    <variableInfo>
+                      <type>additionVariableInfo</type>
+                      <additionVariableInfo>
+                        <usingRefVarName></usingRefVarName>
+                        <refInstanceName>CumulCoupon</refInstanceName>
+                        <save>true</save>
+                      </additionVariableInfo>
+                    </variableInfo>
+                  </refVariable_returnValue>
+                </returnCalculation>
+
+                <payoffDateInfo>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2013-05-15</date>
+                      <autoCallFlag>false</autoCallFlag>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </payoffDateInfo>
+
+                <isExpired>false</isExpired>
+              </vanillaCouponTrigger>
+
+            </eventTrigger>
+
+            <eventTrigger>
+              <type>vanillaCouponTrigger</type>
+              <eventDate>2013-06-14</eventDate>
+              <vanillaCouponTrigger>
+
+                <gearing>1.0</gearing>
+                <spread>0.0</spread>
+
+                <returnCalculation>
+                  <type>callPutCompositeReturnCal</type>
+                  <callPutCompositeReturnCal>
+
+                    <referenceCalculationInfo>
+                      <referenceCalculation>
+                        <type>choiceReferenceCal</type>
+                        <choiceReferenceCal>
+                          <selectedUnderName>KOSPI200</selectedUnderName>
+                          <fixingDateInfo>
+                            <type>fixedFixingDateInfo</type>
+                            <fixedFixingDateInfo>
+                              <date>2013-05-15</date>
+                              <autoCallFlag>false</autoCallFlag>
+                            </fixedFixingDateInfo>
+                          </fixingDateInfo>
+                 
+                        </choiceReferenceCal>
+                        <fixingInformation>
+                          <initialValue>0.980849355911471</initialValue>
+                          <fixing>
+                            <date>2013-05-15</date>
+                            <value>0.980849355911471</value>
+                          </fixing>
+                        </fixingInformation>
+                      </referenceCalculation>
+
+                      <referenceCalculation>
+                        <type>choiceReferenceCal</type>
+                        <choiceReferenceCal>
+                          <selectedUnderName>KOSPI200</selectedUnderName>
+                          <fixingDateInfo>
+                            <type>fixedFixingDateInfo</type>
+                            <fixedFixingDateInfo>
+                              <date>2013-06-14</date>
+                              <autoCallFlag>false</autoCallFlag>
+                            </fixedFixingDateInfo>
+                          </fixingDateInfo>
+                    
+                        </choiceReferenceCal>
+                        <fixingInformation>
+                          <initialValue>0.937884637437407</initialValue>
+                          <fixing>
+                            <date>2013-06-14</date>
+                            <value>0.937884637437407</value>
+                          </fixing>
+                        </fixingInformation>
+                      </referenceCalculation>
+
+                      <operatorND>
+                        <type>divisionOperND</type>
+                        <divisionOperND>
+                          <weight>1.0</weight>
+                          <weight>1.0</weight>
+                        </divisionOperND>
+                      </operatorND>
+
+                    </referenceCalculationInfo>
+
+                    <weight>1.0</weight>
+                    <weight>-1.0</weight>
+
+                    <optionPayoffFunction>
+                      <type>vanillaCallFunction</type>
+                      <vanillaCallFunction>
+                        <partiRate>1.0</partiRate>
+                        <strike>0.93</strike>
+                        <spread>-0.07</spread>
+                      </vanillaCallFunction>
+                    </optionPayoffFunction>
+
+                    <optionPayoffFunction>
+                      <type>vanillaCallFunction</type>
+                      <vanillaCallFunction>
+                        <partiRate>1.0</partiRate>
+                        <strike>1.038</strike>
+                        <spread>0.0</spread>
+                      </vanillaCallFunction>
+                    </optionPayoffFunction>
+
+                  </callPutCompositeReturnCal>
+
+                  <refVariable_returnValue>
+                    <variableInfo>
+                      <type>additionVariableInfo</type>
+                      <additionVariableInfo>
+                        <usingRefVarName></usingRefVarName>
+                        <refInstanceName>CumulCoupon</refInstanceName>
+                        <save>true</save>
+                      </additionVariableInfo>
+                    </variableInfo>
+                  </refVariable_returnValue>
+                </returnCalculation>
+
+                <payoffDateInfo>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2013-06-14</date>
+                      <autoCallFlag>false</autoCallFlag>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </payoffDateInfo>
+
+                <isExpired>false</isExpired>
+              </vanillaCouponTrigger>
+
+            </eventTrigger>
+
+            <eventTrigger>
+              <type>vanillaCouponTrigger</type>
+              <eventDate>2013-07-15</eventDate>
+              <vanillaCouponTrigger>
+
+                <gearing>1.0</gearing>
+                <spread>0.0</spread>
+
+                <returnCalculation>
+                  <type>callPutCompositeReturnCal</type>
+                  <callPutCompositeReturnCal>
+
+                    <referenceCalculationInfo>
+                      <referenceCalculation>
+                        <type>choiceReferenceCal</type>
+                        <choiceReferenceCal>
+                          <selectedUnderName>KOSPI200</selectedUnderName>
+                          <fixingDateInfo>
+                            <type>fixedFixingDateInfo</type>
+                            <fixedFixingDateInfo>
+                              <date>2013-06-14</date>
+                              <autoCallFlag>false</autoCallFlag>
+                            </fixedFixingDateInfo>
+                          </fixingDateInfo>
+                        
+                        </choiceReferenceCal>
+                        <fixingInformation>
+                          <initialValue>0.937884637437407</initialValue>
+                          <fixing>
+                            <date>2013-06-14</date>
+                            <value>0.937884637437407</value>
+                          </fixing>
+                        </fixingInformation>
+                      </referenceCalculation>
+
+                      <referenceCalculation>
+                        <type>choiceReferenceCal</type>
+                        <choiceReferenceCal>
+                          <selectedUnderName>KOSPI200</selectedUnderName>
+                          <fixingDateInfo>
+                            <type>fixedFixingDateInfo</type>
+                            <fixedFixingDateInfo>
+                              <date>2013-07-15</date>
+                              <autoCallFlag>false</autoCallFlag>
+                            </fixedFixingDateInfo>
+                          </fixingDateInfo>
+                          
+                        </choiceReferenceCal>
+                        <fixingInformation>
+                          <initialValue>0.930507243606896</initialValue>
+                          <fixing>
+                            <date>2013-07-15</date>
+                            <value>0.930507243606896</value>
+                          </fixing>
+                        </fixingInformation>
+                      </referenceCalculation>
+
+                      <operatorND>
+                        <type>divisionOperND</type>
+                        <divisionOperND>
+                          <weight>1.0</weight>
+                          <weight>1.0</weight>
+                        </divisionOperND>
+                      </operatorND>
+
+                    </referenceCalculationInfo>
+
+                    <weight>1.0</weight>
+                    <weight>-1.0</weight>
+
+                    <optionPayoffFunction>
+                      <type>vanillaCallFunction</type>
+                      <vanillaCallFunction>
+                        <partiRate>1.0</partiRate>
+                        <strike>0.93</strike>
+                        <spread>-0.07</spread>
+                      </vanillaCallFunction>
+                    </optionPayoffFunction>
+
+                    <optionPayoffFunction>
+                      <type>vanillaCallFunction</type>
+                      <vanillaCallFunction>
+                        <partiRate>1.0</partiRate>
+                        <strike>1.038</strike>
+                        <spread>0.0</spread>
+                      </vanillaCallFunction>
+                    </optionPayoffFunction>
+
+                  </callPutCompositeReturnCal>
+
+                  <refVariable_returnValue>
+                    <variableInfo>
+                      <type>additionVariableInfo</type>
+                      <additionVariableInfo>
+                        <usingRefVarName></usingRefVarName>
+                        <refInstanceName>CumulCoupon</refInstanceName>
+                        <save>true</save>
+                      </additionVariableInfo>
+                    </variableInfo>
+                  </refVariable_returnValue>
+                </returnCalculation>
+
+                <payoffDateInfo>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2013-07-15</date>
+                      <autoCallFlag>false</autoCallFlag>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </payoffDateInfo>
+
+                <isExpired>false</isExpired>
+              </vanillaCouponTrigger>
+
+            </eventTrigger>
+
+            <eventTrigger>
+              <type>vanillaCouponTrigger</type>
+              <eventDate>2013-08-14</eventDate>
+              <vanillaCouponTrigger>
+
+                <gearing>1.0</gearing>
+                <spread>0.0</spread>
+
+                <returnCalculation>
+                  <type>callPutCompositeReturnCal</type>
+                  <callPutCompositeReturnCal>
+
+                    <referenceCalculationInfo>
+                      <referenceCalculation>
+                        <type>choiceReferenceCal</type>
+                        <choiceReferenceCal>
+                          <selectedUnderName>KOSPI200</selectedUnderName>
+                          <fixingDateInfo>
+                            <type>fixedFixingDateInfo</type>
+                            <fixedFixingDateInfo>
+                              <date>2013-07-15</date>
+                              <autoCallFlag>false</autoCallFlag>
+                            </fixedFixingDateInfo>
+                          </fixingDateInfo>
+                        
+                        </choiceReferenceCal>
+                        <fixingInformation>
+                          <initialValue>0.930507243606896</initialValue>
+                          <fixing>
+                            <date>2013-07-15</date>
+                            <value>0.930507243606896</value>
+                          </fixing>
+                        </fixingInformation>
+                      </referenceCalculation>
+
+                      <referenceCalculation>
+                        <type>choiceReferenceCal</type>
+                        <choiceReferenceCal>
+                          <selectedUnderName>KOSPI200</selectedUnderName>
+                          <fixingDateInfo>
+                            <type>fixedFixingDateInfo</type>
+                            <fixedFixingDateInfo>
+                              <date>2013-08-14</date>
+                              <autoCallFlag>false</autoCallFlag>
+                            </fixedFixingDateInfo>
+                          </fixingDateInfo>
+                         
+                        </choiceReferenceCal>
+                        <fixingInformation>
+                          <initialValue>0.954932915408432</initialValue>
+                          <fixing>
+                            <date>2013-08-14</date>
+                            <value>0.954932915408432</value>
+                          </fixing>
+                        </fixingInformation>
+                      </referenceCalculation>
+
+                      <operatorND>
+                        <type>divisionOperND</type>
+                        <divisionOperND>
+                          <weight>1.0</weight>
+                          <weight>1.0</weight>
+                        </divisionOperND>
+                      </operatorND>
+
+                    </referenceCalculationInfo>
+
+                    <weight>1.0</weight>
+                    <weight>-1.0</weight>
+
+                    <optionPayoffFunction>
+                      <type>vanillaCallFunction</type>
+                      <vanillaCallFunction>
+                        <partiRate>1.0</partiRate>
+                        <strike>0.93</strike>
+                        <spread>-0.07</spread>
+                      </vanillaCallFunction>
+                    </optionPayoffFunction>
+
+                    <optionPayoffFunction>
+                      <type>vanillaCallFunction</type>
+                      <vanillaCallFunction>
+                        <partiRate>1.0</partiRate>
+                        <strike>1.038</strike>
+                        <spread>0.0</spread>
+                      </vanillaCallFunction>
+                    </optionPayoffFunction>
+
+                  </callPutCompositeReturnCal>
+
+                  <refVariable_returnValue>
+                    <variableInfo>
+                      <type>additionVariableInfo</type>
+                      <additionVariableInfo>
+                        <usingRefVarName></usingRefVarName>
+                        <refInstanceName>CumulCoupon</refInstanceName>
+                        <save>true</save>
+                      </additionVariableInfo>
+                    </variableInfo>
+                  </refVariable_returnValue>
+                </returnCalculation>
+
+                <payoffDateInfo>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2013-08-14</date>
+                      <autoCallFlag>false</autoCallFlag>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </payoffDateInfo>
+
+                <isExpired>false</isExpired>
+              </vanillaCouponTrigger>
+
+            </eventTrigger>
+
+            <eventTrigger>
+              <type>vanillaCouponTrigger</type>
+              <eventDate>2013-09-13</eventDate>
+              <vanillaCouponTrigger>
+
+                <gearing>1.0</gearing>
+                <spread>0.0</spread>
+
+                <returnCalculation>
+                  <type>callPutCompositeReturnCal</type>
+                  <callPutCompositeReturnCal>
+
+                    <referenceCalculationInfo>
+                      <referenceCalculation>
+                        <type>choiceReferenceCal</type>
+                        <choiceReferenceCal>
+                          <selectedUnderName>KOSPI200</selectedUnderName>
+                          <fixingDateInfo>
+                            <type>fixedFixingDateInfo</type>
+                            <fixedFixingDateInfo>
+                              <date>2013-08-14</date>
+                              <autoCallFlag>false</autoCallFlag>
+                            </fixedFixingDateInfo>
+                          </fixingDateInfo>
+                     
+                        </choiceReferenceCal>
+                        <fixingInformation>
+                          <initialValue>0.954932915408432</initialValue>
+                          <fixing>
+                            <date>2013-08-14</date>
+                            <value>0.954932915408432</value>
+                          </fixing>
+                        </fixingInformation>
+                      </referenceCalculation>
+
+                      <referenceCalculation>
+                        <type>choiceReferenceCal</type>
+                        <choiceReferenceCal>
+                          <selectedUnderName>KOSPI200</selectedUnderName>
+                          <fixingDateInfo>
+                            <type>fixedFixingDateInfo</type>
+                            <fixedFixingDateInfo>
+                              <date>2013-09-13</date>
+                              <autoCallFlag>false</autoCallFlag>
+                            </fixedFixingDateInfo>
+                          </fixingDateInfo>
+                        
+                        </choiceReferenceCal>
+                        <fixingInformation>
+                          <initialValue>0.997018462596995</initialValue>
+                          <fixing>
+                            <date>2013-09-13</date>
+                            <value>0.997018462596995</value>
+                          </fixing>
+                        </fixingInformation>
+                      </referenceCalculation>
+
+                      <operatorND>
+                        <type>divisionOperND</type>
+                        <divisionOperND>
+                          <weight>1.0</weight>
+                          <weight>1.0</weight>
+                        </divisionOperND>
+                      </operatorND>
+
+                    </referenceCalculationInfo>
+
+                    <weight>1.0</weight>
+                    <weight>-1.0</weight>
+
+                    <optionPayoffFunction>
+                      <type>vanillaCallFunction</type>
+                      <vanillaCallFunction>
+                        <partiRate>1.0</partiRate>
+                        <strike>0.93</strike>
+                        <spread>-0.07</spread>
+                      </vanillaCallFunction>
+                    </optionPayoffFunction>
+
+                    <optionPayoffFunction>
+                      <type>vanillaCallFunction</type>
+                      <vanillaCallFunction>
+                        <partiRate>1.0</partiRate>
+                        <strike>1.038</strike>
+                        <spread>0.0</spread>
+                      </vanillaCallFunction>
+                    </optionPayoffFunction>
+
+                  </callPutCompositeReturnCal>
+
+                  <refVariable_returnValue>
+                    <variableInfo>
+                      <type>additionVariableInfo</type>
+                      <additionVariableInfo>
+                        <usingRefVarName></usingRefVarName>
+                        <refInstanceName>CumulCoupon</refInstanceName>
+                        <save>true</save>
+                      </additionVariableInfo>
+                    </variableInfo>
+                  </refVariable_returnValue>
+                </returnCalculation>
+
+                <payoffDateInfo>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2013-09-13</date>
+                      <autoCallFlag>false</autoCallFlag>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </payoffDateInfo>
+
+                <isExpired>false</isExpired>
+              </vanillaCouponTrigger>
+
+            </eventTrigger>
+
+            <eventTrigger>
+              <type>vanillaCouponTrigger</type>
+              <eventDate>2013-10-15</eventDate>
+              <vanillaCouponTrigger>
+
+                <gearing>1.0</gearing>
+                <spread>0.0</spread>
+
+                <returnCalculation>
+                  <type>callPutCompositeReturnCal</type>
+                  <callPutCompositeReturnCal>
+
+                    <referenceCalculationInfo>
+                      <referenceCalculation>
+                        <type>choiceReferenceCal</type>
+                        <choiceReferenceCal>
+                          <selectedUnderName>KOSPI200</selectedUnderName>
+                          <fixingDateInfo>
+                            <type>fixedFixingDateInfo</type>
+                            <fixedFixingDateInfo>
+                              <date>2013-09-13</date>
+                              <autoCallFlag>false</autoCallFlag>
+                            </fixedFixingDateInfo>
+                          </fixingDateInfo>
+                      
+                        </choiceReferenceCal>
+                        <fixingInformation>
+                          <initialValue>0.997018462596995</initialValue>
+                          <fixing>
+                            <date>2013-09-13</date>
+                            <value>0.997018462596995</value>
+                          </fixing>
+                        </fixingInformation>
+                      </referenceCalculation>
+
+                      <referenceCalculation>
+                        <type>choiceReferenceCal</type>
+                        <choiceReferenceCal>
+                          <selectedUnderName>KOSPI200</selectedUnderName>
+                          <fixingDateInfo>
+                            <type>fixedFixingDateInfo</type>
+                            <fixedFixingDateInfo>
+                              <date>2013-10-15</date>
+                              <autoCallFlag>false</autoCallFlag>
+                            </fixedFixingDateInfo>
+                          </fixingDateInfo>
+                  
+                        </choiceReferenceCal>
+                        <fixingInformation>
+                          <initialValue>1.02832460532854</initialValue>
+                          <fixing>
+                            <date>2013-10-15</date>
+                            <value>1.02832460532854</value>
+                          </fixing>
+                        </fixingInformation>
+                      </referenceCalculation>
+
+                      <operatorND>
+                        <type>divisionOperND</type>
+                        <divisionOperND>
+                          <weight>1.0</weight>
+                          <weight>1.0</weight>
+                        </divisionOperND>
+                      </operatorND>
+
+                    </referenceCalculationInfo>
+
+                    <weight>1.0</weight>
+                    <weight>-1.0</weight>
+
+                    <optionPayoffFunction>
+                      <type>vanillaCallFunction</type>
+                      <vanillaCallFunction>
+                        <partiRate>1.0</partiRate>
+                        <strike>0.93</strike>
+                        <spread>-0.07</spread>
+                      </vanillaCallFunction>
+                    </optionPayoffFunction>
+
+                    <optionPayoffFunction>
+                      <type>vanillaCallFunction</type>
+                      <vanillaCallFunction>
+                        <partiRate>1.0</partiRate>
+                        <strike>1.038</strike>
+                        <spread>0.0</spread>
+                      </vanillaCallFunction>
+                    </optionPayoffFunction>
+
+                  </callPutCompositeReturnCal>
+
+                  <refVariable_returnValue>
+                    <variableInfo>
+                      <type>additionVariableInfo</type>
+                      <additionVariableInfo>
+                        <usingRefVarName></usingRefVarName>
+                        <refInstanceName>CumulCoupon</refInstanceName>
+                        <save>true</save>
+                      </additionVariableInfo>
+                    </variableInfo>
+                  </refVariable_returnValue>
+                </returnCalculation>
+
+                <payoffDateInfo>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2013-10-15</date>
+                      <autoCallFlag>false</autoCallFlag>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </payoffDateInfo>
+
+                <isExpired>false</isExpired>
+              </vanillaCouponTrigger>
+
+            </eventTrigger>
+
+            <eventTrigger>
+              <type>vanillaCouponTrigger</type>
+              <eventDate>2013-11-15</eventDate>
+              <vanillaCouponTrigger>
+
+                <gearing>1.0</gearing>
+                <spread>0.0</spread>
+
+                <returnCalculation>
+                  <type>callPutCompositeReturnCal</type>
+                  <callPutCompositeReturnCal>
+
+                    <referenceCalculationInfo>
+                      <referenceCalculation>
+                        <type>choiceReferenceCal</type>
+                        <choiceReferenceCal>
+                          <selectedUnderName>KOSPI200</selectedUnderName>
+                          <fixingDateInfo>
+                            <type>fixedFixingDateInfo</type>
+                            <fixedFixingDateInfo>
+                              <date>2013-10-15</date>
+                              <autoCallFlag>false</autoCallFlag>
+                            </fixedFixingDateInfo>
+                          </fixingDateInfo>
+                       
+                        </choiceReferenceCal>
+                        <fixingInformation>
+                          <initialValue>1.02832460532854</initialValue>
+                          <fixing>
+                            <date>2013-10-15</date>
+                            <value>1.02832460532854</value>
+                          </fixing>
+                        </fixingInformation>
+                      </referenceCalculation>
+
+                      <referenceCalculation>
+                        <type>choiceReferenceCal</type>
+                        <choiceReferenceCal>
+                          <selectedUnderName>KOSPI200</selectedUnderName>
+                          <fixingDateInfo>
+                            <type>fixedFixingDateInfo</type>
+                            <fixedFixingDateInfo>
+                              <date>2013-11-15</date>
+                              <autoCallFlag>false</autoCallFlag>
+                            </fixedFixingDateInfo>
+                          </fixingDateInfo>
+                      
+                        </choiceReferenceCal>
+                        <fixingInformation>
+                          <initialValue>1.00990023317151</initialValue>
+                          <fixing>
+                            <date>2013-11-15</date>
+                            <value>1.00990023317151</value>
+                          </fixing>
+                        </fixingInformation>
+                      </referenceCalculation>
+
+                      <operatorND>
+                        <type>divisionOperND</type>
+                        <divisionOperND>
+                          <weight>1.0</weight>
+                          <weight>1.0</weight>
+                        </divisionOperND>
+                      </operatorND>
+
+                    </referenceCalculationInfo>
+
+                    <weight>1.0</weight>
+                    <weight>-1.0</weight>
+
+                    <optionPayoffFunction>
+                      <type>vanillaCallFunction</type>
+                      <vanillaCallFunction>
+                        <partiRate>1.0</partiRate>
+                        <strike>0.93</strike>
+                        <spread>-0.07</spread>
+                      </vanillaCallFunction>
+                    </optionPayoffFunction>
+
+                    <optionPayoffFunction>
+                      <type>vanillaCallFunction</type>
+                      <vanillaCallFunction>
+                        <partiRate>1.0</partiRate>
+                        <strike>1.038</strike>
+                        <spread>0.0</spread>
+                      </vanillaCallFunction>
+                    </optionPayoffFunction>
+
+                  </callPutCompositeReturnCal>
+
+                  <refVariable_returnValue>
+                    <variableInfo>
+                      <type>additionVariableInfo</type>
+                      <additionVariableInfo>
+                        <usingRefVarName></usingRefVarName>
+                        <refInstanceName>CumulCoupon</refInstanceName>
+                        <save>true</save>
+                      </additionVariableInfo>
+                    </variableInfo>
+                  </refVariable_returnValue>
+                </returnCalculation>
+
+                <payoffDateInfo>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2013-11-15</date>
+                      <autoCallFlag>false</autoCallFlag>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </payoffDateInfo>
+
+                <isExpired>false</isExpired>
+              </vanillaCouponTrigger>
+
+            </eventTrigger>
+
+            <eventTrigger>
+              <type>vanillaCouponTrigger</type>
+              <eventDate>2013-12-13</eventDate>
+              <vanillaCouponTrigger>
+
+                <gearing>1.0</gearing>
+                <spread>0.0</spread>
+
+                <returnCalculation>
+                  <type>callPutCompositeReturnCal</type>
+                  <callPutCompositeReturnCal>
+
+                    <referenceCalculationInfo>
+                      <referenceCalculation>
+                        <type>choiceReferenceCal</type>
+                        <choiceReferenceCal>
+                          <selectedUnderName>KOSPI200</selectedUnderName>
+                          <fixingDateInfo>
+                            <type>fixedFixingDateInfo</type>
+                            <fixedFixingDateInfo>
+                              <date>2013-11-15</date>
+                              <autoCallFlag>false</autoCallFlag>
+                            </fixedFixingDateInfo>
+                          </fixingDateInfo>
+                         
+                        </choiceReferenceCal>
+                        <fixingInformation>
+                          <initialValue>1.00990023317151</initialValue>
+                          <fixing>
+                            <date>2013-11-15</date>
+                            <value>1.00990023317151</value>
+                          </fixing>
+                        </fixingInformation>
+                      </referenceCalculation>
+
+                      <referenceCalculation>
+                        <type>choiceReferenceCal</type>
+                        <choiceReferenceCal>
+                          <selectedUnderName>KOSPI200</selectedUnderName>
+                          <fixingDateInfo>
+                            <type>fixedFixingDateInfo</type>
+                            <fixedFixingDateInfo>
+                              <date>2013-12-13</date>
+                              <autoCallFlag>false</autoCallFlag>
+                            </fixedFixingDateInfo>
+                          </fixingDateInfo>
+                   
+                        </choiceReferenceCal>
+                        <fixingInformation>
+                          <initialValue>0.98635373265548</initialValue>
+                          <fixing>
+                            <date>2013-12-13</date>
+                            <value>0.98635373265548</value>
+                          </fixing>
+                        </fixingInformation>
+                      </referenceCalculation>
+
+                      <operatorND>
+                        <type>divisionOperND</type>
+                        <divisionOperND>
+                          <weight>1.0</weight>
+                          <weight>1.0</weight>
+                        </divisionOperND>
+                      </operatorND>
+
+                    </referenceCalculationInfo>
+
+                    <weight>1.0</weight>
+                    <weight>-1.0</weight>
+
+                    <optionPayoffFunction>
+                      <type>vanillaCallFunction</type>
+                      <vanillaCallFunction>
+                        <partiRate>1.0</partiRate>
+                        <strike>0.93</strike>
+                        <spread>-0.07</spread>
+                      </vanillaCallFunction>
+                    </optionPayoffFunction>
+
+                    <optionPayoffFunction>
+                      <type>vanillaCallFunction</type>
+                      <vanillaCallFunction>
+                        <partiRate>1.0</partiRate>
+                        <strike>1.038</strike>
+                        <spread>0.0</spread>
+                      </vanillaCallFunction>
+                    </optionPayoffFunction>
+
+                  </callPutCompositeReturnCal>
+
+                  <refVariable_returnValue>
+                    <variableInfo>
+                      <type>additionVariableInfo</type>
+                      <additionVariableInfo>
+                        <usingRefVarName></usingRefVarName>
+                        <refInstanceName>CumulCoupon</refInstanceName>
+                        <save>true</save>
+                      </additionVariableInfo>
+                    </variableInfo>
+                  </refVariable_returnValue>
+                </returnCalculation>
+
+                <payoffDateInfo>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2013-12-13</date>
+                      <autoCallFlag>false</autoCallFlag>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </payoffDateInfo>
+
+                <isExpired>false</isExpired>
+              </vanillaCouponTrigger>
+
+            </eventTrigger>
+
+            <eventTrigger>
+              <type>vanillaCouponTrigger</type>
+              <eventDate>2014-01-15</eventDate>
+              <vanillaCouponTrigger>
+
+                <gearing>1.0</gearing>
+                <spread>0.0</spread>
+
+                <returnCalculation>
+                  <type>callPutCompositeReturnCal</type>
+                  <callPutCompositeReturnCal>
+
+                    <referenceCalculationInfo>
+                      <referenceCalculation>
+                        <type>choiceReferenceCal</type>
+                        <choiceReferenceCal>
+                          <selectedUnderName>KOSPI200</selectedUnderName>
+                          <fixingDateInfo>
+                            <type>fixedFixingDateInfo</type>
+                            <fixedFixingDateInfo>
+                              <date>2013-12-13</date>
+                              <autoCallFlag>false</autoCallFlag>
+                            </fixedFixingDateInfo>
+                          </fixingDateInfo>
+                       
+                        </choiceReferenceCal>
+                        <fixingInformation>
+                          <initialValue>0.98635373265548</initialValue>
+                          <fixing>
+                            <date>2013-12-13</date>
+                            <value>0.98635373265548</value>
+                          </fixing>
+                        </fixingInformation>
+                      </referenceCalculation>
+
+                      <referenceCalculation>
+                        <type>choiceReferenceCal</type>
+                        <choiceReferenceCal>
+                          <selectedUnderName>KOSPI200</selectedUnderName>
+                          <fixingDateInfo>
+                            <type>fixedFixingDateInfo</type>
+                            <fixedFixingDateInfo>
+                              <date>2014-01-15</date>
+                              <autoCallFlag>false</autoCallFlag>
+                            </fixedFixingDateInfo>
+                          </fixingDateInfo>
+                        </choiceReferenceCal>
+                      </referenceCalculation>
+
+                      <operatorND>
+                        <type>divisionOperND</type>
+                        <divisionOperND>
+                          <weight>1.0</weight>
+                          <weight>1.0</weight>
+                        </divisionOperND>
+                      </operatorND>
+
+                    </referenceCalculationInfo>
+
+                    <weight>1.0</weight>
+                    <weight>-1.0</weight>
+
+                    <optionPayoffFunction>
+                      <type>vanillaCallFunction</type>
+                      <vanillaCallFunction>
+                        <partiRate>1.0</partiRate>
+                        <strike>0.93</strike>
+                        <spread>-0.07</spread>
+                      </vanillaCallFunction>
+                    </optionPayoffFunction>
+
+                    <optionPayoffFunction>
+                      <type>vanillaCallFunction</type>
+                      <vanillaCallFunction>
+                        <partiRate>1.0</partiRate>
+                        <strike>1.038</strike>
+                        <spread>0.0</spread>
+                      </vanillaCallFunction>
+                    </optionPayoffFunction>
+
+                  </callPutCompositeReturnCal>
+
+                  <refVariable_returnValue>
+                    <variableInfo>
+                      <type>additionVariableInfo</type>
+                      <additionVariableInfo>
+                        <usingRefVarName></usingRefVarName>
+                        <refInstanceName>CumulCoupon</refInstanceName>
+                        <save>true</save>
+                      </additionVariableInfo>
+                    </variableInfo>
+                  </refVariable_returnValue>
+                </returnCalculation>
+
+                <payoffDateInfo>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2014-01-15</date>
+                      <autoCallFlag>false</autoCallFlag>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </payoffDateInfo>
+
+                <isExpired>false</isExpired>
+              </vanillaCouponTrigger>
+
+            </eventTrigger>
+
+            <eventTrigger>
+              <type>vanillaCouponTrigger</type>
+              <eventDate>2014-02-14</eventDate>
+              <vanillaCouponTrigger>
+
+                <gearing>1.0</gearing>
+                <spread>0.0</spread>
+
+                <returnCalculation>
+                  <type>callPutCompositeReturnCal</type>
+                  <callPutCompositeReturnCal>
+
+                    <referenceCalculationInfo>
+                      <referenceCalculation>
+                        <type>choiceReferenceCal</type>
+                        <choiceReferenceCal>
+                          <selectedUnderName>KOSPI200</selectedUnderName>
+                          <fixingDateInfo>
+                            <type>fixedFixingDateInfo</type>
+                            <fixedFixingDateInfo>
+                              <date>2014-01-15</date>
+                              <autoCallFlag>false</autoCallFlag>
+                            </fixedFixingDateInfo>
+                          </fixingDateInfo>
+                        </choiceReferenceCal>
+                      </referenceCalculation>
+
+                      <referenceCalculation>
+                        <type>choiceReferenceCal</type>
+                        <choiceReferenceCal>
+                          <selectedUnderName>KOSPI200</selectedUnderName>
+                          <fixingDateInfo>
+                            <type>fixedFixingDateInfo</type>
+                            <fixedFixingDateInfo>
+                              <date>2014-02-14</date>
+                              <autoCallFlag>false</autoCallFlag>
+                            </fixedFixingDateInfo>
+                          </fixingDateInfo>
+                        </choiceReferenceCal>
+                      </referenceCalculation>
+
+                      <operatorND>
+                        <type>divisionOperND</type>
+                        <divisionOperND>
+                          <weight>1.0</weight>
+                          <weight>1.0</weight>
+                        </divisionOperND>
+                      </operatorND>
+
+                    </referenceCalculationInfo>
+
+                    <weight>1.0</weight>
+                    <weight>-1.0</weight>
+
+                    <optionPayoffFunction>
+                      <type>vanillaCallFunction</type>
+                      <vanillaCallFunction>
+                        <partiRate>1.0</partiRate>
+                        <strike>0.93</strike>
+                        <spread>-0.07</spread>
+                      </vanillaCallFunction>
+                    </optionPayoffFunction>
+
+                    <optionPayoffFunction>
+                      <type>vanillaCallFunction</type>
+                      <vanillaCallFunction>
+                        <partiRate>1.0</partiRate>
+                        <strike>1.038</strike>
+                        <spread>0.0</spread>
+                      </vanillaCallFunction>
+                    </optionPayoffFunction>
+
+                  </callPutCompositeReturnCal>
+
+                  <refVariable_returnValue>
+                    <variableInfo>
+                      <type>additionVariableInfo</type>
+                      <additionVariableInfo>
+                        <usingRefVarName></usingRefVarName>
+                        <refInstanceName>CumulCoupon</refInstanceName>
+                        <save>true</save>
+                      </additionVariableInfo>
+                    </variableInfo>
+                  </refVariable_returnValue>
+                </returnCalculation>
+
+                <payoffDateInfo>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2014-02-14</date>
+                      <autoCallFlag>false</autoCallFlag>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </payoffDateInfo>
+
+                <isExpired>false</isExpired>
+              </vanillaCouponTrigger>
+
+            </eventTrigger>
+
+            <eventTrigger>
+              <type>vanillaCouponTrigger</type>
+              <eventDate>2014-02-14</eventDate>
+              <vanillaCouponTrigger>
+
+                <gearing>1.0</gearing>
+                <spread>0.0</spread>
+
+                <returnCalculation>
+                  <type>callPutCompositeReturnCal</type>
+                  <callPutCompositeReturnCal>
+
+                    <referenceCalculationInfo>
+                      <referenceCalculation>
+                        <type>refVariableReferenceCal</type>
+                        <refVariableReferenceCal>
+                          <refName>CumulCoupon</refName>
+                        </refVariableReferenceCal>
+                      </referenceCalculation>
+
+                    </referenceCalculationInfo>
+
+                    <weight>1.0</weight>
+                    <weight>-1.0</weight>
+
+                    <optionPayoffFunction>
+                      <type>vanillaCallFunction</type>
+                      <vanillaCallFunction>
+                        <partiRate>0.5</partiRate>
+                        <strike>0.0</strike>
+                        <spread>0.0</spread>
+                      </vanillaCallFunction>
+                    </optionPayoffFunction>
+
+                    <optionPayoffFunction>
+                      <type>vanillaCallFunction</type>
+                      <vanillaCallFunction>
+                        <partiRate>0.5</partiRate>
+                        <strike>0.228</strike>
+                        <spread>0.0</spread>
+                      </vanillaCallFunction>
+                    </optionPayoffFunction>
+
+                  </callPutCompositeReturnCal>
+
+                </returnCalculation>
+
+                <payoffDateInfo>
+                  <fixingDateInfo>
+                    <type>fixedFixingDateInfo</type>
+                    <fixedFixingDateInfo>
+                      <date>2014-02-14</date>
+                      <autoCallFlag>false</autoCallFlag>
+                    </fixedFixingDateInfo>
+                  </fixingDateInfo>
+                </payoffDateInfo>
+
+                <isExpired>false</isExpired>
+              </vanillaCouponTrigger>
+
+            </eventTrigger>
+            
+          </eventTriggerList>
+          
+        </autoCallablePayoff>
+      </payoffInfo>
+    </standardInstrument>
+  </instrumentInfo>
+</instrument>

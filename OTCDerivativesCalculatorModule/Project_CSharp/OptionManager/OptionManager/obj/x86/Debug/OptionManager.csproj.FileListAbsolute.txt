@@ -1,0 +1,12 @@
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\OptionManager\OptionManager\bin\Debug\OptionManager.exe
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\OptionManager\OptionManager\bin\Debug\OptionManager.pdb
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\OptionManager\OptionManager\bin\Debug\DynamicDataDisplay.dll
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\OptionManager\OptionManager\obj\x86\Debug\MainWindow.baml
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\OptionManager\OptionManager\obj\x86\Debug\MainWindow.g.cs
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\OptionManager\OptionManager\obj\x86\Debug\App.g.cs
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\OptionManager\OptionManager\obj\x86\Debug\OptionManager_MarkupCompile.cache
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\OptionManager\OptionManager\obj\x86\Debug\OptionManager.g.resources
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\OptionManager\OptionManager\obj\x86\Debug\OptionManager.Properties.Resources.resources
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\OptionManager\OptionManager\obj\x86\Debug\OptionManager.csproj.GenerateResource.Cache
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\OptionManager\OptionManager\obj\x86\Debug\OptionManager.exe
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\OptionManager\OptionManager\obj\x86\Debug\OptionManager.pdb

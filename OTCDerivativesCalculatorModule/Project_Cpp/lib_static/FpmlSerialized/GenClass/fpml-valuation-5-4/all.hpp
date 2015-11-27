@@ -1,0 +1,15 @@
+#include <GenClass\fpml-valuation-5-4\AssetValuation.hpp>
+#include <GenClass\fpml-valuation-5-4\DerivedValuationScenario.hpp>
+#include <GenClass\fpml-valuation-5-4\Position.hpp>
+#include <GenClass\fpml-valuation-5-4\PositionConstituent.hpp>
+#include <GenClass\fpml-valuation-5-4\PositionHistory.hpp>
+#include <GenClass\fpml-valuation-5-4\Quotation.hpp>
+#include <GenClass\fpml-valuation-5-4\ReportingRoles.hpp>
+#include <GenClass\fpml-valuation-5-4\ScheduledDate.hpp>
+#include <GenClass\fpml-valuation-5-4\ScheduledDates.hpp>
+#include <GenClass\fpml-valuation-5-4\ScheduledDateType.hpp>
+#include <GenClass\fpml-valuation-5-4\Sensitivity.hpp>
+#include <GenClass\fpml-valuation-5-4\SensitivitySet.hpp>
+#include <GenClass\fpml-valuation-5-4\Valuations.hpp>
+#include <GenClass\fpml-valuation-5-4\ValuationSet.hpp>
+#include <GenClass\fpml-valuation-5-4\ValuationSetDetail.hpp>

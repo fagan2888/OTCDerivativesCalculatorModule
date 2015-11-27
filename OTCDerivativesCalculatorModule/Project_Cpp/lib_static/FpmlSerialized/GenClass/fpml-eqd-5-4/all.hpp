@@ -1,0 +1,14 @@
+#include <GenClass\fpml-eqd-5-4\BrokerEquityOption.hpp>
+#include <GenClass\fpml-eqd-5-4\EquityAmericanExercise.hpp>
+#include <GenClass\fpml-eqd-5-4\EquityBermudaExercise.hpp>
+#include <GenClass\fpml-eqd-5-4\EquityDerivativeBase.hpp>
+#include <GenClass\fpml-eqd-5-4\EquityDerivativeLongFormBase.hpp>
+#include <GenClass\fpml-eqd-5-4\EquityDerivativeShortFormBase.hpp>
+#include <GenClass\fpml-eqd-5-4\EquityEuropeanExercise.hpp>
+#include <GenClass\fpml-eqd-5-4\EquityExerciseValuationSettlement.hpp>
+#include <GenClass\fpml-eqd-5-4\EquityForward.hpp>
+#include <GenClass\fpml-eqd-5-4\EquityMultipleExercise.hpp>
+#include <GenClass\fpml-eqd-5-4\EquityOption.hpp>
+#include <GenClass\fpml-eqd-5-4\EquityOptionTermination.hpp>
+#include <GenClass\fpml-eqd-5-4\EquityOptionTransactionSupplement.hpp>
+#include <GenClass\fpml-eqd-5-4\PrePayment.hpp>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<instrument Type="SingleDigitalRange">
+  <header>
+    <productName>TestDigitalRange001</productName>
+    <productType>SingleDigitalRange</productType>
+    <krCode>TestKR000001</krCode>
+  </header>
+  <issueInformation>
+    <securities>
+      <tradeDate>2013-06-10</tradeDate>
+      <effectiveDate>2013-06-10</effectiveDate>
+      <maturityDate>2016-06-07</maturityDate>
+      <notional>210600000</notional>
+      <premium>0</premium>
+    </securities>
+  </issueInformation>
+  <underlyingInformation>
+    <underlying>
+      <krCode>KR7012330007</krCode>
+      <name>KR7012330007</name>
+      <basePrice>272000</basePrice>
+    </underlying>
+  </underlyingInformation>
+  
+  <singleDigitalRangeSchedule>
+    <singleDigitalRangeCoupon>
+      <order>1</order>
+      <type>singleDigitalRangeCoupon</type>
+      <calculationStartDate>2013-09-03</calculationStartDate>
+      <calculationEndDate>2014-09-04</calculationEndDate>
+      <payoffDate>2014-09-05</payoffDate>
+      <fixed>false</fixed>
+      
+      <rangeList>
+        <singeRange>
+          <order>1</order>
+          <refRate>0.0266</refRate>
+          <couponRate>0.041</couponRate>
+        </singeRange>
+        <singeRange>
+          <order>2</order>
+          <refRate>0.0266</refRate>
+          <couponRate>0.041</couponRate>
+        </singeRange>
+      </rangeList>
+
+
+    </singleDigitalRangeCoupon>
+  </singleDigitalRangeSchedule>
+  
+</instrument>

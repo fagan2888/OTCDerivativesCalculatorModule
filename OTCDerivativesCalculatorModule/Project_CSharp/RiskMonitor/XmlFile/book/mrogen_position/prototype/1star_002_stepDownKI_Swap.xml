@@ -1,0 +1,298 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<instrument Type="StepDown">
+  <instPositionInfo>
+    <krCode>50402G3A01B0</krCode>
+    <instName>F_BP_0002회 신한금융투자 복합 unfundedswap 1024</instName>
+    <instCode>50402G3A01B0</instCode>
+    <instType>SwapStepDownKI</instType>
+    <notional>1045000000</notional>
+  </instPositionInfo>
+  <header>
+    <productName>F_BP_0002회 신한금융투자 복합 unfundedswap 1024</productName>
+    <krCode>50402G3A01B0</krCode>
+  </header>
+  <instrumentInfo>
+    <type>standardSwapInstrument</type>
+    <standardSwapInstrument>
+      <issueInformation>
+        <type>noteInfo</type>
+        <noteInfo>
+          <tradeDate>2013-11-11</tradeDate>
+          <effectiveDate>2013-11-11</effectiveDate>
+          <maturityDate>2016-11-10</maturityDate>
+          <notional>126000000</notional>
+          <premium>0</premium>
+        </noteInfo>
+      </issueInformation>
+      <underlyingInformation>
+        <type>indexUnderInfo</type>
+        <indexUnderInfo>
+          <index>
+            <type>stockIndex</type>
+            <stockIndex>
+              <krCode>TBT</krCode>
+              <name>TBT</name>
+              <basePrice>72.07</basePrice>
+            </stockIndex>
+          </index>
+        </indexUnderInfo>
+      </underlyingInformation>
+      <swapPayoffInfo>
+        <type>autoCallableSwapPayoff</type>
+        <autoCallableSwapPayoff>
+          <recieveSwapPart>
+            <payoffInfo>
+              <type>stepDownNoKIPayoff</type>
+              <stepDownNoKIPayoff>
+                
+                <noAutoCallReturnTrigger>
+                  <type>returnCalculation</type>
+                  <payoffDate>2016-11-10</payoffDate>
+                  <returnCalculation>
+                    <constReturnCal>
+                      <return>0.0</return>
+                    </constReturnCal>
+                  </returnCalculation>
+                </noAutoCallReturnTrigger>
+                
+                <eventTriggerList>
+
+                  <eventTrigger>
+                    <type>simpleRangeReturnTrigger</type>
+                    <simpleRangeReturnTrigger>
+                      <simpleRangeEvent>
+
+                        <range1D>
+                          <lowerBound>1.05</lowerBound>
+                          <lowerBoundEquality>true</lowerBoundEquality>
+                          <upperBound>10.0</upperBound>
+                          <upperBoundEquality>false</upperBoundEquality>
+                        </range1D>
+
+                        <referenceCalculation>
+                          <type>identityReferenceCal</type>
+                          <identityReferenceCal>
+                            <krCode>TBT</krCode>
+                            <fixingDate>2014-04-24</fixingDate>
+                          </identityReferenceCal>
+                        </referenceCalculation>
+
+                        <returnCalculation>
+                          <type>constReturnCal</type>
+                          <constReturnCal>
+                            <constReturn>0.02</constReturn>
+                          </constReturnCal>
+
+                        </returnCalculation>
+
+                      </simpleRangeEvent>
+                        
+                      <autoCallFlag>true</autoCallFlag>
+                      <payoffDate>2014-04-24</payoffDate>
+
+                    </simpleRangeReturnTrigger>
+                    
+                  </eventTrigger>
+                  
+                  <eventTrigger>
+                    <type>simpleRangeReturnTrigger</type>
+                    <simpleRangeReturnTrigger>
+                      <simpleRangeEvent>
+
+                        <range1D>
+                          <lowerBound>1.05</lowerBound>
+                          <lowerBoundEquality>true</lowerBoundEquality>
+                          <upperBound>10.0</upperBound>
+                          <upperBoundEquality>false</upperBoundEquality>
+                        </range1D>
+
+                        <referenceCalculation>
+                          <type>identityReferenceCal</type>
+                          <identityReferenceCal>
+                            <krCode>TBT</krCode>
+                            <fixingDate>2014-10-24</fixingDate>
+                          </identityReferenceCal>
+                        </referenceCalculation>
+
+                        <returnCalculation>
+                          <type>constReturnCal</type>
+                          <constReturnCal>
+                            <constReturn>0.04</constReturn>
+                          </constReturnCal>
+
+                        </returnCalculation>
+
+                      </simpleRangeEvent>
+                        
+                      <autoCallFlag>true</autoCallFlag>
+                      <payoffDate>2014-10-24</payoffDate>
+
+                    </simpleRangeReturnTrigger>
+                    
+                  </eventTrigger>
+                  
+                  <eventTrigger>
+                    <type>simpleRangeReturnTrigger</type>
+                    <simpleRangeReturnTrigger>
+                      <simpleRangeEvent>
+
+                        <range1D>
+                          <lowerBound>1.05</lowerBound>
+                          <lowerBoundEquality>true</lowerBoundEquality>
+                          <upperBound>10.0</upperBound>
+                          <upperBoundEquality>false</upperBoundEquality>
+                        </range1D>
+
+                        <referenceCalculation>
+                          <type>identityReferenceCal</type>
+                          <identityReferenceCal>
+                            <krCode>TBT</krCode>
+                            <fixingDate>2015-04-24</fixingDate>
+                          </identityReferenceCal>
+                        </referenceCalculation>
+
+                        <returnCalculation>
+                          <type>constReturnCal</type>
+
+                          <constReturnCal>
+                            <constReturn>0.06</constReturn>
+                          </constReturnCal>
+
+                        </returnCalculation>
+
+                      </simpleRangeEvent>
+                        
+                      <autoCallFlag>true</autoCallFlag>
+                      <payoffDate>2015-04-24</payoffDate>
+
+                    </simpleRangeReturnTrigger>
+                  </eventTrigger>
+
+                </eventTriggerList>
+                
+              </stepDownNoKIPayoff>
+            </payoffInfo>
+          </recieveSwapPart>
+          <paySwapPart>
+            <type>vanillaStandardStreamPayoff</type>
+            <vanillaStandardStreamPayoff>
+              <eventTriggerList>
+                
+                <eventTrigger>
+                  <type>vanillaRateTrigger</type>
+                  <vanillaRateTrigger>
+                    <calculationStartDate>2014-10-29</calculationStartDate>
+                    <calculationEndDate>2014-01-29</calculationEndDate>
+                    <referenceCalculation>
+                      <type>identityReferenceCal</type>
+                      <identityReferenceCal>
+                        <krCode>KBPCDAAA3M</krCode>
+                        <fixingDate>2014-10-29</fixingDate>
+                      </identityReferenceCal>
+                    </referenceCalculation>
+                    <gearing>1.0</gearing>
+                    <spread>0.0015</spread>
+                    <payoffDate>2014-01-29</payoffDate>
+                  </vanillaRateTrigger>
+                </eventTrigger>
+
+                <eventTrigger>
+                  <type>vanillaRateTrigger</type>
+                  <vanillaRateTrigger>
+                    <calculationStartDate>2014-01-29</calculationStartDate>
+                    <calculationEndDate>2014-04-29</calculationEndDate>
+                    <referenceCalculation>
+                      <type>identityReferenceCal</type>
+                      <identityReferenceCal>
+                        <krCode>KBPCDAAA3M</krCode>
+                        <fixingDate>2014-01-29</fixingDate>
+                      </identityReferenceCal>
+                    </referenceCalculation>
+                    <gearing>1.0</gearing>
+                    <spread>0.0015</spread>
+                    <payoffDate>2014-04-29</payoffDate>
+                  </vanillaRateTrigger>
+                </eventTrigger>
+
+                <eventTrigger>
+                  <type>vanillaRateTrigger</type>
+                  <vanillaRateTrigger>
+                    <calculationStartDate>2014-04-29</calculationStartDate>
+                    <calculationEndDate>2014-07-29</calculationEndDate>
+                    <referenceCalculation>
+                      <type>identityReferenceCal</type>
+                      <identityReferenceCal>
+                        <krCode>KBPCDAAA3M</krCode>
+                        <fixingDate>2014-04-29</fixingDate>
+                      </identityReferenceCal>
+                    </referenceCalculation>
+                    <gearing>1.0</gearing>
+                    <spread>0.0015</spread>
+                    <payoffDate>2014-07-29</payoffDate>
+                  </vanillaRateTrigger>
+                </eventTrigger>
+
+                <eventTrigger>
+                  <type>vanillaRateTrigger</type>
+                  <vanillaRateTrigger>
+                    <calculationStartDate>2014-07-29</calculationStartDate>
+                    <calculationEndDate>2014-10-29</calculationEndDate>
+                    <referenceCalculation>
+                      <type>identityReferenceCal</type>
+                      <identityReferenceCal>
+                        <krCode>KBPCDAAA3M</krCode>
+                        <fixingDate>2014-07-29</fixingDate>
+                      </identityReferenceCal>
+                    </referenceCalculation>
+                    <gearing>1.0</gearing>
+                    <spread>0.0015</spread>
+                    <payoffDate>2014-10-29</payoffDate>
+                  </vanillaRateTrigger>
+                </eventTrigger>
+
+                <eventTrigger>
+                  <type>vanillaRateTrigger</type>
+                  <vanillaRateTrigger>
+                    <calculationStartDate>2014-10-29</calculationStartDate>
+                    <calculationEndDate>2015-01-29</calculationEndDate>
+                    <referenceCalculation>
+                      <type>identityReferenceCal</type>
+                      <identityReferenceCal>
+                        <krCode>KBPCDAAA3M</krCode>
+                        <fixingDate>2014-10-29</fixingDate>
+                      </identityReferenceCal>
+                    </referenceCalculation>
+                    <gearing>1.0</gearing>
+                    <spread>0.0015</spread>
+                    <payoffDate>2015-01-29</payoffDate>
+                  </vanillaRateTrigger>
+                </eventTrigger>
+
+                <eventTrigger>
+                  <type>vanillaRateTrigger</type>
+                  <vanillaRateTrigger>
+                    <calculationStartDate>2015-01-29</calculationStartDate>
+                    <calculationEndDate>2015-04-28</calculationEndDate>
+                    <referenceCalculation>
+                      <type>identityReferenceCal</type>
+                      <identityReferenceCal>
+                        <krCode>KBPCDAAA3M</krCode>
+                        <fixingDate>2015-01-29</fixingDate>
+                      </identityReferenceCal>
+                    </referenceCalculation>
+                    <gearing>1.0</gearing>
+                    <spread>0.0015</spread>
+                    <payoffDate>2015-04-28</payoffDate>
+                  </vanillaRateTrigger>
+                </eventTrigger>
+                
+                
+              </eventTriggerList>
+            </vanillaStandardStreamPayoff>
+          </paySwapPart>
+        </autoCallableSwapPayoff>  
+        
+      </swapPayoffInfo>
+    </standardSwapInstrument>
+  </instrumentInfo>
+</instrument>

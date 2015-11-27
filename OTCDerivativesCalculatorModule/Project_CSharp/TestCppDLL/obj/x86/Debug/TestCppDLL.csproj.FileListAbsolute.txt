@@ -1,0 +1,9 @@
+D:\Project File\OTCDerivativesCalculatorModule\TestCppDLL\bin\Debug\TestCppDLL.exe
+D:\Project File\OTCDerivativesCalculatorModule\TestCppDLL\bin\Debug\TestCppDLL.pdb
+D:\Project File\OTCDerivativesCalculatorModule\TestCppDLL\obj\x86\Debug\TestCppDLL.exe
+D:\Project File\OTCDerivativesCalculatorModule\TestCppDLL\obj\x86\Debug\TestCppDLL.pdb
+D:\Project File\OTCDerivativesCalculatorModule\TestCppDLL\obj\x86\Debug\TestCppDLL.csprojResolveAssemblyReference.cache
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\TestCppDLL\bin\Debug\TestCppDLL.exe
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\TestCppDLL\bin\Debug\TestCppDLL.pdb
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\TestCppDLL\obj\x86\Debug\TestCppDLL.exe
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\TestCppDLL\obj\x86\Debug\TestCppDLL.pdb

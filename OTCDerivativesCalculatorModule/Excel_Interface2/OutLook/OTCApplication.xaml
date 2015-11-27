@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="Excel_Interface.OTCApplication"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <ToolBar>
+                <StackPanel Orientation="Horizontal">
+                    <Menu>
+                        <MenuItem Header="_File" />
+                        <MenuItem Header="_System" />
+                        <MenuItem Header="_Setting" />
+                    </Menu>
+                    <Label Content="Reference Date : " />
+                    <DatePicker HorizontalAlignment="Right"/>
+                </StackPanel>
+
+            </ToolBar>
+
+            <TabControl TabStripPlacement="Bottom">
+                <TabItem Header="_Book">
+                    <Grid Name="BookManagerGrid_" >
+                        
+                    </Grid>
+                </TabItem>
+                <TabItem Header="_Event">
+                    <Grid Name="EventManagerGrid_" >
+                        
+                    </Grid>
+                </TabItem>
+
+                <TabItem Header="_Batch">
+                    <Grid Name="BatchManagerGrid_" >
+
+                    </Grid>
+                </TabItem>
+                
+                <TabItem Header="_ISDA">
+                    <Grid Name="ISDAManagerGrid_" >
+
+                    </Grid>
+                </TabItem>
+            </TabControl>
+            
+        </StackPanel>
+    </Grid>
+</UserControl>

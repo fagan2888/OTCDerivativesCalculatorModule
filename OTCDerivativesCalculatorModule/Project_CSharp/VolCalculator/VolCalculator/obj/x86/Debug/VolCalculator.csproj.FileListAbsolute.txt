@@ -1,0 +1,11 @@
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\VolCalculator\VolCalculator\bin\Debug\VolCalculator.exe
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\VolCalculator\VolCalculator\bin\Debug\VolCalculator.pdb
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\VolCalculator\VolCalculator\obj\x86\Debug\MainWindow.baml
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\VolCalculator\VolCalculator\obj\x86\Debug\MainWindow.g.cs
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\VolCalculator\VolCalculator\obj\x86\Debug\App.g.cs
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\VolCalculator\VolCalculator\obj\x86\Debug\VolCalculator_MarkupCompile.cache
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\VolCalculator\VolCalculator\obj\x86\Debug\VolCalculator.g.resources
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\VolCalculator\VolCalculator\obj\x86\Debug\VolCalculator.Properties.Resources.resources
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\VolCalculator\VolCalculator\obj\x86\Debug\VolCalculator.csproj.GenerateResource.Cache
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\VolCalculator\VolCalculator\obj\x86\Debug\VolCalculator.exe
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\VolCalculator\VolCalculator\obj\x86\Debug\VolCalculator.pdb

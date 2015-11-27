@@ -1,0 +1,66 @@
+﻿<UserControl x:Class="RiskMonitor.InstPositionInfoView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+             
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Name="mainPanel_" Orientation="Horizontal">
+                <Label Content="KRCode :" />
+                <TextBox Width="100" Text="{Binding Path=KRCode_}"/>
+                <Label Content="InstName :" />
+                <TextBox Width="100" Text="{Binding Path=InstName_}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="InstCode :" />
+                <TextBox Width="100" Text="{Binding Path=InstCode_}"/>
+                <Label Content="InstType :" />
+                <TextBox Width="100" Text="{Binding Path=InstType_}"/>
+            </StackPanel>
+            <!--<StackPanel Orientation="Horizontal">
+                <Label Content="BookedDate :" />
+                <TextBox Width="100" Text="{Binding Path=BookedDate_}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="UnBookedDate :" />
+                <TextBox Width="100" Text="{Binding Path=UnBookedDate_}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="MaturityDate :" />
+                <TextBox Width="100" Text="{Binding Path=MaturityDate_}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="FileName :" />
+                <TextBox Width="100" Text="{Binding Path=FileName_}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="PositionName :" />
+                <TextBox Width="100" Text="{Binding Path=PositionName_}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="CounterParty :" />
+                <TextBox Width="100" Text="{Binding Path=CounterParty_}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Notional :" />
+                <TextBox Width="100" Text="{Binding Path=Notional_}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Currency :" />
+                <TextBox Width="100" Text="{Binding Path=Currency_}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="FundCode :" />
+                <TextBox Width="100" Text="{Binding Path=FundCode_}"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="FundName :" />
+                <TextBox Width="100" Text="{Binding Path=FundName_}"/>
+            </StackPanel>-->
+            
+
+        </StackPanel>
+    </Grid>
+</UserControl>

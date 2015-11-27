@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<instrument Type="SingleNameCDS">
+  
+  <header>
+    <productName>IRS_Test</productName>
+    <productType>IRS</productType>
+    <krCode>F0007A3603S0</krCode>
+  </header>
+  
+  <issueInformation>
+    <swap>
+      <tradeDate>2013-06-10</tradeDate>
+      <effectiveDate>2013-06-10</effectiveDate>
+      <maturityDate>2016-06-07</maturityDate>
+      <notional>210600000</notional>
+      <currency>USD</currency>
+      <premium>0</premium>
+    </swap>
+  </issueInformation>
+
+  <underlyingInformation>
+    <underlying>
+      <krCode>CMS10Y</krCode>
+      <type>interestRate</type>
+      <indexTenor>
+        <periodMultiplier>10</periodMultiplier>
+        <period>Y</period>
+      </indexTenor>
+    </underlying>
+    <underlying>
+      <krCode>CMS10Y</krCode>
+      <type>interestRate</type>
+      <indexTenor>
+        <periodMultiplier>10</periodMultiplier>
+        <period>Y</period>
+      </indexTenor>
+    </underlying>
+  </underlyingInformation>
+  
+  <interestRateSwap>
+
+    <swapStream>
+      <payerPartyReference href="party1" />
+      <receiverPartyReference href="party2" />
+      <businessDayConvention>MODFOLLOWING</businessDayConvention>
+      
+      <calculationAmount>
+        <currency>USD</currency>
+        <amount>10000000.0</amount>
+      </calculationAmount>
+      
+      <irCalculation>
+        <paymentDates id="floatingCalcPeriodDates">
+          <effectiveDate>1994-12-14</effectiveDate>
+          <terminationDate>1999-12-14</terminationDate>
+          <calculationPeriodFrequency>
+            <periodMultiplier>6</periodMultiplier>
+            <period>M</period>
+            <rollConvention>14</rollConvention>
+          </calculationPeriodFrequency>
+        </paymentDates>
+        
+        <fixedRate>
+          <rate>0.04</rate>
+        </fixedRate>
+        
+        <dayCountFraction>ACT/360</dayCountFraction>
+        <inArrear>false</inArrear>
+      </irCalculation>
+      
+    </swapStream>
+    
+    <swapStream>
+      <payerPartyReference href="party2" />
+      <receiverPartyReference href="party1" />
+      <feeLeg>
+        <paymentDates id="fixedCalcPeriodDates">
+          <effectiveDate>1994-12-14</effectiveDate>
+          <terminationDate>1999-12-14</terminationDate>
+          <calculationPeriodFrequency>
+            <periodMultiplier>6</periodMultiplier>
+            <period>M</period>
+            <rollConvention>14</rollConvention>
+          </calculationPeriodFrequency>
+        </paymentDates>
+
+        <calculation>
+          <rateCalculation>
+            <calculationType>fixedRate</calculationType>
+            <referenceRate>CMS10Y</referenceRate>
+          </rateCalculation>
+          <dayCountFraction>ACT/360</dayCountFraction>
+          <inArrear>false</inArrear>
+        </calculation>
+      </feeLeg>
+    </swapStream>
+    
+  </interestRateSwap>
+
+  <calculationAgent>
+    <calculationAgentPartyReference href="party1" />
+  </calculationAgent>
+
+</instrument>

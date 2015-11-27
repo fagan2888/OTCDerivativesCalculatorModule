@@ -1,0 +1,110 @@
+﻿<?xml version='1.0' encoding='UTF-8'?>
+<instrument Type="StepDownNoKI">
+
+  <header>
+    <productName>IBK 제0002회 사모DLB</productName>
+    <productType>StepDownNoKI</productType>
+    <krCode>51004G3A01D0</krCode>
+    <itemCode>50505A3A13S0</itemCode>
+    <counterParty>HanaBank</counterParty>
+  </header>
+
+  <instrumentInfo>
+    <type>standardInstrument</type>
+    <standardInstrument>
+
+      <issueInformation>
+        <type>noteInfo</type>
+        <noteInfo>
+          <tradeDate>2013-10-23</tradeDate>
+          <effectiveDate>2013-10-24</effectiveDate>
+          <maturityDate>2015-04-24</maturityDate>
+          <notional>100000000</notional>
+          <premium>0</premium>
+        </noteInfo>
+      </issueInformation>
+
+      <underlyingInformation>
+        <type>index</type>
+        <indexUnderInfo>
+          <index>
+            <type>stock</type>
+            <stockIndex>
+              <krCode>KR7005930003</krCode>
+              <name>TBTUSEQUIT</name>
+              <basePrice>72.07</basePrice>
+            </stockIndex>
+          </index>
+        </indexUnderInfo>
+      </underlyingInformation>
+
+      <payoffInfo>
+        <type>stepDownNoKI</type>
+        <stepDownNoKI>
+          
+          <failToRedemInfo>
+            <type>notionalProtection</type>
+            <couponCalculation>
+              <type>constCouponCalculation</type>
+              <constCouponCalculation>
+                <value>1</value>
+              </constCouponCalculation>
+            </couponCalculation>
+          </failToRedemInfo>
+          
+          <redemptionInfo>
+            <type>autoCallRedem</type>
+            <autoCallRedem>
+
+              <scheduleInfo>
+                <effectiveDate>2013-08-06</effectiveDate>
+                <terminationDate>2018-08-06</terminationDate>
+                <paymentDays>3</paymentDays>
+                <calendar>KOR</calendar>
+                <businessDayConvention>Following</businessDayConvention>
+                <dateGeneration>Backward</dateGeneration>
+                <!-- Backward , Forward ,TwentiethIMM , 21 , 17-->
+                <periodFrequency>3M</periodFrequency>
+              </scheduleInfo>
+              
+              <eventTrigger>
+                <type>autoCallConstReturnTrigger</type>
+                <autoCallConstReturnTrigger>
+                  <dateOrder>0</dateOrder>
+                  <date>2014-04-24</date>
+                  <trigger>1.05</trigger>
+                  <return>0.02</return>
+                  <averageDays>1</averageDays>
+                </autoCallConstReturnTrigger>
+              </eventTrigger>
+              
+              <eventTrigger>
+                <type>autoCallConstReturnTrigger</type>
+                <autoCallConstReturnTrigger>
+                  <dateOrder>0</dateOrder>
+                  <date>2014-10-24</date>
+                  <trigger>1.05</trigger>
+                  <return>0.04</return>
+                  <averageDays>1</averageDays>
+                </autoCallConstReturnTrigger>
+              </eventTrigger>
+              
+              <eventTrigger>
+                <type>autoCallConstReturnTrigger</type>
+                <autoCallConstReturnTrigger>
+                  <dateOrder>0</dateOrder>
+                  <date>2015-04-24</date>
+                  <trigger>1.05</trigger>
+                  <return>0.06</return>
+                  <averageDays>1</averageDays>
+                </autoCallConstReturnTrigger>
+              </eventTrigger>
+              
+            </autoCallRedem>
+          </redemptionInfo>
+        </stepDownNoKI>
+      </payoffInfo>
+    </standardInstrument>
+  </instrumentInfo>
+
+</instrument>

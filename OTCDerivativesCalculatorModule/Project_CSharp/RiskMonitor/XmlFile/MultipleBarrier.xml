@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<instrument Type="MultipleJumpDigitalBarrier">
+  <header>
+    <productName>TestMultipleJump</productName>
+    <productType>MultipleJumpDigitalBarrier</productType>
+    <krCode>50507A3624S0</krCode>
+  </header>
+  
+  <issueInformation>
+    <securities>
+      <tradeDate>2016-06-17</tradeDate>
+      <effectiveDate>2016-06-17</effectiveDate>
+      <maturityDate>2018-06-17</maturityDate>
+      <notional>900000000</notional>
+      <premium>0</premium>
+    </securities>
+  </issueInformation>
+
+  <underlyingInformation>
+    <underlying>
+      <krCode>KR7005940002</krCode>
+      <name>KR7005940002</name>
+      <basePrice>0</basePrice>
+    </underlying>
+  </underlyingInformation>
+
+  <MultipleJumpDigitalBarrier>
+    <barrierInfo>
+      <barrier>
+        <highLevel></highLevel>
+        <returnValue></returnValue>
+        <pastFlag></pastFlag>
+      </barrier>
+      <barrier>
+        <highLevel></highLevel>
+        <returnValue></returnValue>
+        <pastFlag></pastFlag>
+      </barrier>
+      <barrier>
+        <highLevel></highLevel>
+        <returnValue></returnValue>
+        <pastFlag></pastFlag>
+      </barrier>
+      <barrier>
+        <highLevel></highLevel>
+        <returnValue></returnValue>
+        <pastFlag></pastFlag>
+      </barrier>
+      <barrier>
+        <highLevel></highLevel>
+        <returnValue></returnValue>
+        <pastFlag></pastFlag>
+      </barrier>
+      
+    </barrierInfo>
+  </MultipleJumpDigitalBarrier>
+  
+</instrument>

@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="Excel_Interface.MarketDataManagerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <Label Content="IndexDataList" />
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Vertical">
+                    <ListView Name="definedIndexList_" Width="150">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Label Content="{Binding Path=Name_}" MouseDoubleClick="IndexName_MouseDoubleClick"/>
+                            
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    
+                    </ListView>
+                    <StackPanel Orientation="Horizontal">
+                        <Button Content="redownload" Click="redownloadButton_Click" />
+                        <Button Content="load" Click="loadButton_Click" />
+                        <Button Content="delete" Click="deleteButton_Click" />
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Name" />
+                        <TextBox Name="indexSymbolTextBox_" Width="80" />
+                        <Button Content="Edit" Click="editButton_Click" />
+                    </StackPanel>
+                    <Button Content="Add Index" Click="AddIndexButton_Click" />
+                </StackPanel>
+                
+                <StackPanel Orientation="Vertical">
+                    
+                    <DataGrid Name="historyDataGrid_" Height="200" />
+                </StackPanel>
+            </StackPanel>
+            
+            <Button Content="downLoad" Click="downLoadButton_Click" />
+        </StackPanel>
+    </Grid>
+</UserControl>

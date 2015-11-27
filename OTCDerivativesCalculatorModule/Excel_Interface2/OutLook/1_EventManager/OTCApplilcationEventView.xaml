@@ -1,0 +1,131 @@
+﻿<UserControl x:Class="Excel_Interface.OTCApplicationEventView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <Grid>
+        <DockPanel VerticalAlignment="Stretch" LastChildFill="True">
+
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Top">
+                <ToolBar>
+                    <Menu>
+                        <MenuItem Header="Event" />
+                    </Menu>
+                </ToolBar>
+            </StackPanel>
+            <Grid VerticalAlignment="Stretch">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="20*" MinWidth="150"/>
+                    <ColumnDefinition Width="80*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0" Grid.ColumnSpan="1" 
+                      Margin="0" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" Orientation="Vertical">
+                        <Calendar SelectionMode="MultipleRange" SelectedDatesChanged="Calendar_SelectedDatesChanged"/>
+                        <Button Content="All" Width="100" Click="AllButton_Click" />
+                    </StackPanel>
+                    <ListView Name="favoritesListView_" 
+                              Grid.Row="1"
+                              MouseUp="favoritesListView_MouseUp" 
+                              >
+                        <ListView.ItemTemplate >
+                            <DataTemplate >
+                                <TextBlock Text="{Binding FavoriteName_}" 
+                                        AllowDrop="True" >
+                                        
+                                </TextBlock>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    <TreeView Name="bookFolderTreeView_" 
+                              Grid.Row="2"
+                              MouseUp="bookFolderTreeView_MouseUp" >
+                        <TreeView.ItemTemplate >
+
+                            <HierarchicalDataTemplate ItemsSource="{Binding ChildBookList_}">
+                                <TextBlock Text="{Binding BookName_}" AllowDrop="True" >
+                                <TextBlock.ContextMenu>
+                                    <ContextMenu>
+                                        <MenuItem Header="BookProperty" Click="bookProperty_Click" />
+                                        <MenuItem Header="NCRPosition" Click="NCRPosition_Click" />
+                                    </ContextMenu>
+                                </TextBlock.ContextMenu>
+                                </TextBlock>
+                            </HierarchicalDataTemplate>
+                        </TreeView.ItemTemplate>
+                        <TreeView.Resources>
+                            <Style TargetType="TreeViewItem">
+                                <Setter Property="IsExpanded" Value="{Binding IsTreeExpand_, Mode=TwoWay}" />
+                                <Setter Property="FontWeight" Value="{Binding FontWeight_, Mode=TwoWay}" />
+                            </Style>
+                        </TreeView.Resources>
+                    </TreeView>
+                </Grid>
+
+                <GridSplitter ResizeDirection="Columns" Width="5" Height="Auto" VerticalAlignment="Stretch" Margin="0" Name="GridSplitter1" ShowsPreview="True"/>
+
+                <Grid Grid.Column="1" Margin="0" VerticalAlignment="Stretch">
+
+                    <Grid Grid.Column="0" VerticalAlignment="Stretch" >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                            <Label Content="Find :" />
+                            <TextBox HorizontalAlignment="Stretch" Width="100" />
+                            <CheckBox Content="Maturity" VerticalAlignment="Center" />
+
+                        </StackPanel>
+                        <ListView Name="eventListListView_" 
+                                  Height="500"
+                                  Grid.Row="1" VerticalAlignment="Stretch"
+                                  ScrollViewer.VerticalScrollBarVisibility="Visible"
+                                  PreviewMouseLeftButtonDown="eventListListView_PreviewMouseLeftButtonDown"
+                                  PreviewMouseLeftButtonUp="eventListListView_PreviewMouseLeftButtonUp"
+                                  SelectionChanged="eventListListView__SelectionChanged" >
+
+                            <ListView.ItemTemplate >
+                                <DataTemplate >
+                                    <StackPanel Orientation="Vertical">
+                                        <StackPanel Orientation="Horizontal">
+                                            <!--<TextBlock Text="{Binding MasterInformationViewModel_.ItemCode_}" Margin="0,0,10,0" />-->
+                                            <TextBlock Text="{Binding Item_name_}" Margin="0,0,10,0" />
+                                            <TextBlock Text="{Binding Event_name_}" Margin="0,0,10,0" />
+                                            <TextBlock Text="{Binding Event_type_}" Margin="0,0,10,0" />
+                                            <TextBlock Text="{Binding Event_date_,  StringFormat=yyyy-MM-dd}" Margin="0,0,10,0" />
+                                        </StackPanel>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+
+                            <ListView.ContextMenu>
+                                <ContextMenu>
+                                    <MenuItem Header="Event">
+                                        <MenuItem Header="Buy"/>
+                                        <MenuItem Header="Sell"/>
+                                        <MenuItem Header="Position Clear"/>
+                                    </MenuItem>
+                                </ContextMenu>
+                            </ListView.ContextMenu>
+                        </ListView>
+
+                    </Grid>
+
+                </Grid>
+                
+            </Grid>
+            
+            <StackPanel Orientation="Horizontal" DockPanel.Dock="Bottom">
+                <Label Content="Status" />
+            </StackPanel>
+        </DockPanel>
+    </Grid>
+</UserControl>

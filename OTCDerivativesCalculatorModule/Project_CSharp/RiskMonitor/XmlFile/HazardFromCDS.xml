@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<defaultCurveCalculation>
+  <evaluationTime>2013-06-11</evaluationTime>
+  <pricingParameter>
+    
+    <probTraitComposite>
+      <nthDefault>1</nthDefault>  
+    </probTraitComposite>
+    
+    <referenceCurves>
+      
+      <termstructure typ="cdsspread">
+        <curveInfo>
+          
+        </curveInfo>
+        <interpolation>BACKWARDFLAT</interpolation>
+        <daycounter>Act365</daycounter>
+        <calendar></calendar>
+        <frequency>Quarterly</frequency>
+        <DateGeneration>IMM</DateGeneration>
+        <recoveryRate>0.4</recoveryRate>
+        <rateData>
+          <tenor>
+            <periodMultiplier>3</periodMultiplier>
+            <period>M</period>
+          </tenor>
+          <data>0.022</data>
+        </rateData>
+        <rateData>
+          <tenor>6M</tenor>
+          <data>0.022</data>
+        </rateData>
+        <rateData>
+          <tenor>1Y</tenor>
+          <data>0.022</data>
+        </rateData>
+        <rateData>
+          <tenor>2Y</tenor>
+          <data>0.022</data>
+        </rateData>
+      </termstructure>
+
+      <termstructure>
+        <type>cdsspread</type>
+        <interpolation>BACKWARDFLAT</interpolation>
+        <daycounter>Act365</daycounter>
+        <calendar></calendar>
+        <frequency>Quarterly</frequency>
+        <DateGeneration>IMM</DateGeneration>
+        <recoveryRate>0.4</recoveryRate>
+        <rateData>
+          <tenor>
+            <periodMultiplier>3</periodMultiplier>
+            <period>M</period>
+          </tenor>
+          <data>0.022</data>
+        </rateData>
+        <rateData>
+          <tenor>6M</tenor>
+          <data>0.022</data>
+        </rateData>
+        <rateData>
+          <tenor>1Y</tenor>
+          <data>0.022</data>
+        </rateData>
+        <rateData>
+          <tenor>2Y</tenor>
+          <data>0.022</data>
+        </rateData>
+      </termstructure>
+      
+    </referenceCurves>
+
+    <yieldCurve>
+      <termstructure>
+        <type>ZEROYIELD</type>
+        <interpolation>BACKWARDFLAT</interpolation>
+        <rateData>
+          <tenor>3M</tenor>
+          <data>0.022</data>
+        </rateData>
+        <rateData>
+          <tenor>6M</tenor>
+          <data>0.022</data>
+        </rateData>
+        <rateData>
+          <tenor>1Y</tenor>
+          <data>0.022</data>
+        </rateData>
+        <rateData>
+          <tenor>2Y</tenor>
+          <data>0.022</data>
+        </rateData>
+
+      </termstructure>
+    </yieldCurve>
+  
+    <outputCurveTemplate>
+      
+      <!-- single 이면 최초에 무조건 Hazard Curve로 나옴  -->
+      <!-- 최초에 무조건 Hazard Curve로 나옴  -->
+      
+      <tenorList>
+        <tenor>
+          <periodMultiplier>3</periodMultiplier>
+          <period>M</period>
+        </tenor>
+        <tenor>
+          <periodMultiplier>3</periodMultiplier>
+          <period>M</period>
+        </tenor>
+        <tenor>
+          <periodMultiplier>3</periodMultiplier>
+          <period>M</period>
+        </tenor>
+      </tenorList>
+      <calendar></calendar>
+      <daycounter></daycounter>
+      <dateGeneration></dateGeneration>
+      <!--<curveType>hazardRate</curveType> -->
+      
+    </outputCurveTemplate>
+
+    
+    
+  </pricingParameter>
+  
+  <pricingResult>
+    <hazardRateCurve>
+      <termstructure>
+        <rateData>
+          <tenor>
+            <periodMultiplier>3</periodMultiplier>
+            <period>M</period>
+          </tenor>
+          <tenorDate>2015-05-03</tenorDate>
+          <data>0.033</data>
+        </rateData>
+      </termstructure>
+    </hazardRateCurve>
+  </pricingResult>
+  
+</defaultCurveCalculation>

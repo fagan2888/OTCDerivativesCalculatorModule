@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<pricingParametor>
+  <evaluationDate>2013-01-31</evaluationDate>
+  <underlying>
+    <krcode>KR000001</krcode>
+    <underName>SkTelecom</underName>
+    <currentValue>167500</currentValue>
+    <drift>0.0274</drift>
+    <dividend>0.0616</dividend>
+    <volatility>0.21901</volatility>
+  </underlying>
+  <underlying>
+    <krcode>KR000001</krcode>
+    <underName>SamsungSDI</underName>
+    <currentValue>142500</currentValue>
+    <drift>0.0274</drift>
+    <dividend>0.0099</dividend>
+    <volatility>0.19978</volatility>
+  </underlying>
+  <method>monte</method>
+  <corr>0.049211</corr>
+  <simulationNum>100000</simulationNum>
+  <dicountFlatTS>0.0274</dicountFlatTS>
+</pricingParametor>

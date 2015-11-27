@@ -1,0 +1,15 @@
+﻿public void delete(DbConnection conn)
+{
+    if (conn.State != ConnectionState.Open)
+        conn.Open();
+
+    DbCommand dbCommand = conn.CreateCommand();
+
+    string deleteQuery = @DAOCLASSNAME@.DeleteQuery_;
+
+	deleteQuery = deleteQuery.Replace("@KeyColumnValue@", this.KeyColumn_);
+
+    dbCommand.CommandText = deleteQuery;
+
+    dbCommand.ExecuteNonQuery();
+}

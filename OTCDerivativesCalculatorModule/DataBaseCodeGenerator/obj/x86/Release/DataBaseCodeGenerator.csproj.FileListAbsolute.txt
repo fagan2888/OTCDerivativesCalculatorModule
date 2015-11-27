@@ -1,0 +1,4 @@
+D:\Project File\OTCDerivativesCalculatorModule\DataBaseCodeGenerator\bin\Release\DataBaseCodeGenerator.exe
+D:\Project File\OTCDerivativesCalculatorModule\DataBaseCodeGenerator\bin\Release\DataBaseCodeGenerator.pdb
+D:\Project File\OTCDerivativesCalculatorModule\DataBaseCodeGenerator\obj\x86\Release\DataBaseCodeGenerator.exe
+D:\Project File\OTCDerivativesCalculatorModule\DataBaseCodeGenerator\obj\x86\Release\DataBaseCodeGenerator.pdb

@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="RiskMonitor.ResultView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="500">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel x:Name="DetailResult_" Orientation="Vertical">
+                <StackPanel Name="bindingPanel_" Orientation="Horizontal">
+                    <Label Content="UnitValue :" />
+                    <TextBox x:Name="UnitValueTextBox_" Text="{Binding Path=UnitPrice_}"  Width="70" />
+                    <Label Content="Price :" />
+                    <TextBox x:Name="PriceTextBox_" Text="{Binding Path=Price_}" Width="70" />
+                </StackPanel>
+                <Grid x:Name="AdditionalResult_">
+                    
+                </Grid>
+            </StackPanel>
+            <StackPanel x:Name="HistoryResult_" Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="- HisotryResult" />
+                    <Label Content="InitialDate :" />
+                    <DatePicker x:Name="InitialDatePicker_"/>
+                    <Label Content="LastDate :" />
+                    <DatePicker x:Name="LastlDatePicker_"/>
+                    <Button Content="Load" Click="HistoryLoadButton_Click" />
+                </StackPanel>
+                <DataGrid x:Name="HistoryResultDataGrid_">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Date" />
+                        <DataGridTextColumn Header="UnitValue" />
+                        <DataGridTextColumn Header="Price" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

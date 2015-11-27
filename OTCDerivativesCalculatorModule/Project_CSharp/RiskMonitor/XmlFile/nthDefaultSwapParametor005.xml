@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pricing>
+  <evaluationTime>2013-06-11</evaluationTime>
+  
+  <pricingParametor>
+    
+    <notional>10000</notional>
+    <type></type>
+    
+    <referenceEntityCurves>
+      <interpolation>Linear</interpolation>
+      
+      <entity>
+        <num>2</num>
+        <termstructure>
+          <type>yield</type>
+          <rateData>
+            <tenor>3M</tenor>
+            <data>0.03</data>
+          </rateData>
+          <rateData>
+            <tenor>6M</tenor>
+            <data>0.031</data>
+          </rateData>
+          <rateData>
+            <tenor>9M</tenor>
+            <data>0.03</data>
+          </rateData>
+        </termstructure>
+      </entity>
+
+      <entity>
+        <num>2</num>
+        <termstructure>
+          <type>yield</type>
+          <interpolation>linear</interpolation>
+          <rateData>
+            <tenor>3M</tenor>
+            <data>0.03</data>
+          </rateData>
+          <rateData>
+            <tenor>6M</tenor>
+            <data>0.031</data>
+          </rateData>
+          <rateData>
+            <tenor>9M</tenor>
+            <data>0.03</data>
+          </rateData>
+        </termstructure>
+      </entity>
+      
+    </referenceEntityCurves>
+
+    <nthTodefault>1</nthTodefault>
+    <recoveryRate>0.4</recoveryRate>
+
+    <IRRateCalculation>
+      <calculationDate>
+        <date></date>
+        <fixedRate>0.02</fixedRate>
+        <paymentDate>2013-07-01</paymentDate>
+      </calculationDate>
+      <calculationDate>
+        <date></date>
+        <fixedRate>0.02</fixedRate>
+        <paymentDate>2013-07-01</paymentDate>
+      </calculationDate>
+    </IRRateCalculation>
+
+    <discountTS>
+      <type>zero</type>
+      <termstructure>
+        <type>yield</type>
+        <rateData>
+          <tenor>3M</tenor>
+          <data>0.03</data>
+        </rateData>
+        <rateData>
+          <tenor>6M</tenor>
+          <data>0.031</data>
+        </rateData>
+        <rateData>
+          <tenor>9M</tenor>
+          <data>0.03</data>
+        </rateData>
+      </termstructure>
+    </discountTS>
+
+    <riskfreeTS>
+      <type>yield</type>
+      <termstructure>
+        <type>yield</type>
+        <rateData>
+          <tenor>3M</tenor>
+          <data>0.03</data>
+        </rateData>
+        <rateData>
+          <tenor>6M</tenor>
+          <data>0.031</data>
+        </rateData>
+        <rateData>
+          <tenor>9M</tenor>
+          <data>0.03</data>
+        </rateData>
+      </termstructure>
+    </riskfreeTS>
+    
+    
+  </pricingParametor>
+
+  <pricingResult>
+
+    <instValue>10005.5</instValue>
+    
+    <defaultProbabiltity>
+      <termstructure>
+        <type>default</type>
+        <rateData>
+          <tenor>3M</tenor>
+          <data>0.03</data>
+        </rateData>
+        <rateData>
+          <tenor>6M</tenor>
+          <data>0.031</data>
+        </rateData>
+        <rateData>
+          <tenor>9M</tenor>
+          <data>0.03</data>
+        </rateData>
+        
+      </termstructure>
+    </defaultProbabiltity>
+
+    <cashFlowStream>
+      <eventCashFlow>
+        
+        <paymentDate></paymentDate>
+        <couponRate></couponRate>
+        <couponAmount></couponAmount>
+        <discountFactor></discountFactor>
+        <remainNotional></remainNotional>
+        <dayCount></dayCount>
+        <presentValue></presentValue>
+        <defaultProb></defaultProb>
+        <survivalProb></survivalProb>
+        <hazardRate></hazardRate>
+        <fixed></fixed>
+        
+      </eventCashFlow>
+
+      <expectedCashFlow>
+        
+        
+      </expectedCashFlow>
+      
+      
+    </cashFlowStream>
+    
+  </pricingResult>
+  
+</pricing>

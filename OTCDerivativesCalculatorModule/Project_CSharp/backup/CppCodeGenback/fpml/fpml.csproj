@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8F208D9C-DE85-4DA4-B3BF-3320117770EA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>fpml</RootNamespace>
+    <AssemblyName>fpml</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="XSD\example-extension-5-4.xsd" />
+    <None Include="XSD\fpml-asset-5-4.xsd" />
+    <None Include="XSD\fpml-bond-option-5-4.xsd" />
+    <None Include="XSD\fpml-business-events-5-4.xsd" />
+    <None Include="XSD\fpml-cd-5-4.xsd" />
+    <None Include="XSD\fpml-com-5-4.xsd" />
+    <None Include="XSD\fpml-confirmation-processes-5-4.xsd" />
+    <None Include="XSD\fpml-correlation-swaps-5-4.xsd" />
+    <None Include="XSD\fpml-credit-event-notification-5-4.xsd" />
+    <None Include="XSD\fpml-dividend-swaps-5-4.xsd" />
+    <None Include="XSD\fpml-doc-5-4.xsd" />
+    <None Include="XSD\fpml-enum-5-4.xsd" />
+    <None Include="XSD\fpml-eq-shared-5-4.xsd" />
+    <None Include="XSD\fpml-eqd-5-4.xsd" />
+    <None Include="XSD\fpml-fx-5-4.xsd" />
+    <None Include="XSD\fpml-generic-5-4.xsd" />
+    <None Include="XSD\fpml-ird-5-4.xsd" />
+    <None Include="XSD\fpml-main-5-4.xsd" />
+    <None Include="XSD\fpml-mktenv-5-4.xsd" />
+    <None Include="XSD\fpml-msg-5-4.xsd" />
+    <None Include="XSD\fpml-option-shared-5-4.xsd" />
+    <None Include="XSD\fpml-return-swaps-5-4.xsd" />
+    <None Include="XSD\fpml-riskdef-5-4.xsd" />
+    <None Include="XSD\fpml-shared-5-4.xsd" />
+    <None Include="XSD\fpml-standard-5-4.xsd" />
+    <None Include="XSD\fpml-valuation-5-4.xsd" />
+    <None Include="XSD\fpml-variance-swaps-5-4.xsd" />
+    <None Include="XSD\xmldsig-core-schema.xsd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="XSD\genCode.hpp" />
+    <Content Include="XSD\Readme.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="RiskMonitor.BatchControlView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="500">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="- Batch Monitor" />
+                <Label Content="ReferenceDate :" />
+                <DatePicker SelectedDate="{Binding Path=ReferenceDate_}"/>
+                <Button Content="Parameter Load" Click="ParameterLoadBtn_Click" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                
+                <Label Content="Setting ID :" />
+                <TextBlock Width="70" />
+                <Button Content="Parameter Setting" />
+            </StackPanel>
+            <DataGrid Name="InstrumentListDataGrid_" LoadingRow="DataGrid_LoadingRow_" 
+                      AutoGenerateColumns="False"
+                      Height="200"
+                      ScrollViewer.CanContentScroll="True" 
+                      ScrollViewer.VerticalScrollBarVisibility="Auto"
+                      ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                      >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="InstFileName" Binding="{Binding Path=FileName_}"/>
+                    <DataGridTextColumn Header="ItemCode" Binding="{Binding Path=KRCode_}"/>
+                    <DataGridTextColumn Header="Name" Binding="{Binding Path=ProductName_}"/>
+                    <DataGridTextColumn Header="InstType" Binding="{Binding Path=ProductType_}"/>
+                    <DataGridTextColumn Header="Price" Binding="{Binding Path=Price_}"/>
+                    <DataGridTextColumn Header="UnitPrice" Binding="{Binding Path=UnitPrice_}"/>
+                    <DataGridTextColumn Header="Exist" Binding="{Binding Path=IsExistFlag_}" />
+                    <DataGridTextColumn Header="Loaded" Binding="{Binding Path=IsLoadedFlag_}"/>
+                    <DataGridTextColumn Header="Calculated" Binding="{Binding Path=IsCalculateFlag_}" />
+                </DataGrid.Columns>
+            </DataGrid>
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Calculate" Width="70" Click="CalculationBtn_Click" />
+                
+                <Button Content="Parameter Build" Click="ParameterBuildBtn_Click" />
+            </StackPanel>
+        </StackPanel>   
+    </Grid>
+</UserControl>

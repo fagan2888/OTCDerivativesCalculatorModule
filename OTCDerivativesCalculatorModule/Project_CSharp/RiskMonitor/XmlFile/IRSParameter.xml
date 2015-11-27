@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pricing>
+  <evaluationTime>2013-06-11</evaluationTime>
+  
+  <pricingParameter>
+    <!-- floating Rate를 위한것 -->
+    <evaluationCurves>
+      <yieldTermstructure>
+        <type>ZEROYIELD</type>
+        <interpolation>BACKWARDFLAT</interpolation>
+        <rateData>
+          <tenor>3M</tenor>
+          <data>0.022</data>
+        </rateData>
+        <rateData>
+          <tenor>6M</tenor>
+          <data>0.022</data>
+        </rateData>
+        <rateData>
+          <tenor>1Y</tenor>
+          <data>0.022</data>
+        </rateData>
+        <rateData>
+          <tenor>2Y</tenor>
+          <data>0.022</data>
+        </rateData>
+
+      </yieldTermstructure>
+    </evaluationCurves>
+    <method>discountMethod</method>
+    
+    <swapStream>
+      
+      <notionalAmount>
+        <currency>USD</currency>
+        <amount>1000000</amount>
+      </notionalAmount>
+      
+      <discountCurve>
+        <yieldTermstructure>
+          
+          <name>testCurve</name>
+          <currency>USD</currency>
+          <type>ZEROYIELD</type>
+          <interpolation>BACKWARDFLAT</interpolation>
+          
+          <rateData>
+            <periodMultiplier>3</periodMultiplier>
+            <period>M</period>
+            <data>0.22</data>
+          </rateData>
+          
+          <rateData>
+            <periodMultiplier>6</periodMultiplier>
+            <period>M</period>
+            <data>0.22</data>
+          </rateData>
+          
+          <rateData>
+            <periodMultiplier>1</periodMultiplier>
+            <period>Y</period>
+            <data>0.22</data>
+          </rateData>
+
+          <rateData>
+            <periodMultiplier>2</periodMultiplier>
+            <period>Y</period>
+            <data>0.22</data>
+          </rateData>
+
+        </yieldTermstructure>
+      </discountCurve>
+    </swapStream>
+
+  </pricingParameter>
+
+  <pricingResult>
+    <price></price>
+    <unitPrice unit="100">e</unitPrice>
+    
+  </pricingResult>
+
+</pricing>

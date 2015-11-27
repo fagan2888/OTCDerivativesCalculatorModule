@@ -1,0 +1,214 @@
+﻿<Window x:Class="SampleApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:SampleApp"
+        xmlns:ad="clr-namespace:AvalonDock;assembly=AvalonDock"
+        xmlns:ViewModels="clr-namespace:SampleApp.ViewModels;assembly=SampleApp.ViewModels"
+        xmlns:AvalonDockMVVM="clr-namespace:AvalonDockMVVM;assembly=AvalonDockMVVM"
+        x:Name="mainWindow"
+        Title="{Binding Title}" 
+        Closing="Window_Closing"
+        >
+    <Window.Resources>
+
+        <RoutedUICommand x:Key="Commands.NewFile" />
+        <RoutedUICommand x:Key="Commands.OpenFile" />
+        <RoutedUICommand x:Key="Commands.SaveFile" />
+        <RoutedUICommand x:Key="Commands.SaveFileAs" />
+        <RoutedUICommand x:Key="Commands.SaveAllFiles" />
+        <RoutedUICommand x:Key="Commands.CloseFile" />
+        <RoutedUICommand x:Key="Commands.CloseAllFiles" />
+        <RoutedUICommand x:Key="Commands.ShowAllPanes" />
+        <RoutedUICommand x:Key="Commands.HideAllPanes" />
+        <RoutedUICommand x:Key="Commands.Exit" />
+        
+        <!-- 
+        Data template for displaying tabbed documents.
+        This is really simple they are just represented by an AvalonDock
+        DocumentContent that contains a simple WPF TextBox.
+        -->           
+        <DataTemplate
+            DataType="{x:Type ViewModels:TextFileDocumentViewModel}"
+            >
+            <ad:DocumentContent
+                Title="{Binding Title}"      
+                ToolTip="{Binding ToolTip}"
+                >                
+                <TextBox
+                    Text="{Binding Text, UpdateSourceTrigger=PropertyChanged}" VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Auto" TextWrapping="Wrap" />
+            </ad:DocumentContent>
+        </DataTemplate>
+
+        <!--
+        The DataTemplate for the 'Open Documents' pane.
+        This uses an AvalonDock DockableContent that contains an instance of the
+        OpenDocumentPaneView user control.
+        -->
+        <DataTemplate
+            DataType="{x:Type ViewModels:OpenDocumentsPaneViewModel}"
+            >
+            <ad:DockableContent
+                x:Name="openDocumentsPane"
+                Title="Open Documents"
+                AvalonDockMVVM:AvalonDockHost.IsPaneVisible="{Binding IsVisible}"
+                >
+                <local:OpenDocumentsPaneView />
+            </ad:DockableContent>
+        </DataTemplate>
+
+        <!-- 
+        The DataTemplate for the 'Document Overview' pane.
+        This uses an AvalonDock DockableContent that contains an instance of the 
+        DocumentOverviewView user control.
+        -->
+        <DataTemplate
+            DataType="{x:Type ViewModels:DocumentOverviewPaneViewModel}"
+            >
+            <ad:DockableContent
+                x:Name="documentOverviewPane"
+                Title="Document Overview"
+                AvalonDockMVVM:AvalonDockHost.IsPaneVisible="{Binding IsVisible}"
+                >
+                <local:DocumentOverviewPaneView />
+            </ad:DockableContent>
+        </DataTemplate>
+
+    </Window.Resources>
+    <Window.CommandBindings>
+        <CommandBinding 
+            Command="{StaticResource Commands.NewFile}"
+            Executed="NewFile_Executed"
+            />
+        <CommandBinding 
+            Command="{StaticResource Commands.OpenFile}"
+            Executed="OpenFile_Executed"
+            />
+        <CommandBinding 
+            Command="{StaticResource Commands.SaveFile}"
+            Executed="SaveFile_Executed"
+            />
+        <CommandBinding 
+            Command="{StaticResource Commands.SaveFileAs}"
+            Executed="SaveFileAs_Executed"
+            />
+        <CommandBinding 
+            Command="{StaticResource Commands.SaveAllFiles}"
+            Executed="SaveAllFiles_Executed"
+            />
+        <CommandBinding 
+            Command="{StaticResource Commands.CloseFile}"
+            Executed="CloseFile_Executed"
+            />
+        <CommandBinding 
+            Command="{StaticResource Commands.CloseAllFiles}"
+            Executed="CloseAllFiles_Executed"
+            />
+        <CommandBinding 
+            Command="{StaticResource Commands.ShowAllPanes}"
+            Executed="ShowAllPanes_Executed"
+            />
+        <CommandBinding 
+            Command="{StaticResource Commands.HideAllPanes}"
+            Executed="HideAllPanes_Executed"
+            />
+        <CommandBinding 
+            Command="{StaticResource Commands.Exit}"
+            Executed="Exit_Executed"
+            />
+    </Window.CommandBindings>
+    <Window.InputBindings>
+        <KeyBinding
+			Key="N"
+            Modifiers="Control"
+			Command="{StaticResource Commands.NewFile}"
+			/>
+        <KeyBinding
+			Key="O"
+            Modifiers="Control"
+			Command="{StaticResource Commands.OpenFile}"
+			/>
+        <KeyBinding
+			Key="S"
+            Modifiers="Control"
+			Command="{StaticResource Commands.SaveFile}"
+			/>
+    </Window.InputBindings>
+    <DockPanel>
+        <Menu
+            DockPanel.Dock="Top"
+            >
+            <MenuItem
+                Header="_File"
+                >
+                <MenuItem
+                    Header="_New File"
+                    Command="{StaticResource Commands.NewFile}"
+                    />
+                <MenuItem
+                    Header="_Open File"
+                    Command="{StaticResource Commands.OpenFile}"
+                    />
+                <Separator />
+                <MenuItem
+                    Header="_Close File"
+                    Command="{StaticResource Commands.CloseFile}"
+                    />
+                <MenuItem
+                    Header="C_lose All Files"
+                    Command="{StaticResource Commands.CloseAllFiles}"
+                    />
+                <Separator />
+                <MenuItem
+                    Header="_Save File"
+                    Command="{StaticResource Commands.SaveFile}"
+                    />
+                <MenuItem
+                    Header="Save File _As"
+                    Command="{StaticResource Commands.SaveFileAs}"
+                    />
+                <MenuItem
+                    Header="Save All F_iles"
+                    Command="{StaticResource Commands.SaveAllFiles}"
+                    />
+                <Separator />
+                <MenuItem
+                    Header="E_xit"
+                    Command="{StaticResource Commands.Exit}"
+                    />
+            </MenuItem>
+            <MenuItem
+                Header="_View"
+                >
+                <MenuItem
+                    Header="_Document Overview"
+                    IsChecked="{Binding DocumentOverviewPaneViewModel.IsVisible}"
+                    IsCheckable="True"
+                    />
+                <MenuItem
+                    Header="_Open Documents"
+                    IsChecked="{Binding OpenDocumentsPaneViewModel.IsVisible}"
+                    IsCheckable="True"
+                    />
+                <Separator />
+                <MenuItem
+                    Header="_Show All"
+                    Command="{StaticResource Commands.ShowAllPanes}"
+                    />
+                <MenuItem
+                    Header="_Hide All"
+                    Command="{StaticResource Commands.HideAllPanes}"
+                    />
+            </MenuItem>
+        </Menu>
+
+        <AvalonDockMVVM:AvalonDockHost
+            x:Name="avalonDockHost"
+            Panes="{Binding Panes}"
+            Documents="{Binding Documents}"
+            ActiveDocument="{Binding ActiveDocument}"
+            ActivePane="{Binding ActivePane}"
+            AvalonDockLoaded="avalonDockHost_AvalonDockLoaded"
+            DocumentClosing="avalonDockHost_DocumentClosing"
+            />
+    </DockPanel>
+</Window>

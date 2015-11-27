@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<bookInformation>
+  <name></name>
+  <pathInfo>
+    <type>local</type>
+    <url>D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\RiskMonitor\XmlFile\book\position\</url>
+  </pathInfo>
+  <instrumentList>
+    
+    <instHirachyInfo>
+      <code>50507A3623S0</code>
+      <type>StepDown</type>
+    </instHirachyInfo>
+
+    <instHirachyInfo>
+      <code>50507A3624S0</code>
+      <type>StepDown</type>
+    </instHirachyInfo>
+
+    <instHirachyInfo>
+      <code>50507A3625S0</code>
+      <type>StepDown</type>
+    </instHirachyInfo>
+
+    <instHirachyInfo>
+      <code>50507A3626S0</code>
+      <type>StepDown</type>
+    </instHirachyInfo>
+
+    <instHirachyInfo>
+      <code>50507A3627S0</code>
+      <type>StepDown</type>
+    </instHirachyInfo>
+    
+    <instHirachyInfo>
+      <code>TestGroup</code>
+      <type>Group</type>
+      
+      <instHirachyInfo>
+        <code>50507A3628S0</code>
+        <type>StepDown</type>
+      </instHirachyInfo>
+
+      <instHirachyInfo>
+        <code>50507A3629S0</code>
+        <type>StepDown</type>
+      </instHirachyInfo>
+      
+    </instHirachyInfo>
+
+  </instrumentList>
+</bookInformation>

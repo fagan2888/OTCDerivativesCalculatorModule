@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="RiskMonitor.BatchManagerView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="- Batch Monitor" />
+                <Label Content="ReferenceDate :" />
+                <DatePicker SelectedDate="{Binding Path=ReferenceDate_}"/>
+                <Button Content="Calculate" Width="70" />
+            </StackPanel>
+            <DataGrid Name="batchInstListDataGrid_" 
+                      AutoGenerateColumns="False"
+                      ScrollViewer.CanContentScroll="True" 
+                      ScrollViewer.VerticalScrollBarVisibility="Auto"
+                      ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                      >
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ItemCode" Binding="{Binding Path=InstResultMasterWrapperVM_.KRCode_}"/>
+                    <DataGridTextColumn Header="InstName" Binding="{Binding Path=InstResultMasterWrapperVM_.InstName_}"/>
+                    <DataGridTextColumn Header="InstType" Binding="{Binding Path=InstResultMasterWrapperVM_.InstType_}"/>
+                    <DataGridTextColumn Header="UnitPrice" Binding="{Binding Path=InstResultMasterWrapperVM_.CalUnitValue_}"/>
+                    <DataGridTextColumn Header="ParaExist" Binding="{Binding Path=ParaExistFlag_}" />
+                    <DataGridTextColumn Header="IsCalculated" Binding="{Binding Path=IsCalculateFlag_}" />
+                    <DataGridTextColumn Header="FileName" Binding="{Binding Path=InstResultMasterWrapperVM_.FileName_}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</UserControl>

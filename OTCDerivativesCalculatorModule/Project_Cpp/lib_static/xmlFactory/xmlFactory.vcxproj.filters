@@ -1,0 +1,2937 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Factory">
+      <UniqueIdentifier>{a7c9e755-3042-4c3b-8af7-68d5b416b340}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="util">
+      <UniqueIdentifier>{b3b44a85-c272-432c-b370-575051843e1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factory\ELS">
+      <UniqueIdentifier>{3a61133f-ea14-4f73-9f09-184f5695fd16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factory\Etc">
+      <UniqueIdentifier>{e81a7fad-14b0-4ad5-8cc6-b1c82ff2c9bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factory\ELS\StepDown">
+      <UniqueIdentifier>{6f4a0e61-50e1-44a2-9471-c5f4f695cc8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tinyXml">
+      <UniqueIdentifier>{a187ec94-6281-49e9-bdd3-b430bf68dfa8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GenClass">
+      <UniqueIdentifier>{22cc7e4c-d474-4df9-8202-f96af013aa30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GenClass\built_in_type">
+      <UniqueIdentifier>{be8a8b9e-431d-4f38-9eb4-b46c5c508bd8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GenClass\RiskMonitor-0-1">
+      <UniqueIdentifier>{c6c18d9e-6e45-48d5-89ae-777c023909e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factory\ELS\vanillaPayoff">
+      <UniqueIdentifier>{bcd12232-1e09-4afc-9d8a-f9d0f4e8e19d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factory\ELS\vanillaStandardStream">
+      <UniqueIdentifier>{d40e4fa4-ada9-4233-ab65-74b014482639}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factory\ELS\Credit">
+      <UniqueIdentifier>{081e64bd-bbeb-461a-a7de-c01cf23b05cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factory\ELS\Curve">
+      <UniqueIdentifier>{a2162964-e98d-4829-bf97-e46b9fc8594d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factory\excel">
+      <UniqueIdentifier>{85687e18-ef6d-4729-8cf8-14c685d2b29b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factory\ELS\Hifive">
+      <UniqueIdentifier>{1c278739-f1a4-431c-aaa6-69165042b8dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factory\ELS\CompositeOption">
+      <UniqueIdentifier>{0a9af4bb-f5d3-4050-bfab-34ba2b594c7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factory\structuredBond">
+      <UniqueIdentifier>{792b47c1-313c-488f-8120-69efd758d26c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Factory\structuredSwap">
+      <UniqueIdentifier>{30cc405e-2b09-4586-bb8e-fe065cca365c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="util\xmlUtilHeader.hpp">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="util\convertFunction.hpp">
+      <Filter>util</Filter>
+    </ClInclude>
+    <ClInclude Include="tinyXml\tinyxml.h">
+      <Filter>tinyXml</Filter>
+    </ClInclude>
+    <ClInclude Include="tinyXml\tinystr.h">
+      <Filter>tinyXml</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Credit\qlCreditDefaultProductFactory.hpp">
+      <Filter>Factory\ELS\Credit</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\FileManager.hpp">
+      <Filter>GenClass</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\IDManager.hpp">
+      <Filter>GenClass</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\iserialized.hpp">
+      <Filter>GenClass</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeByte.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeDate.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeDateTime.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeDecimal.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeDouble.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeDuration.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeENTITIES.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeENTITY.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeFloat.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeGDay.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeGMonth.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeGMonthDay.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeGYear.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeGYearMonth.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeHexBinary.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeID.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeIDREF.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeIDREFS.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeInt.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeInteger.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeLanguage.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeLong.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeName.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeNCName.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeNegativeInteger.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeNMTOKEN.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeNMTOKENS.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeNonNegativeInteger.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeNonPositiveInteger.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeNormalizedString.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeNOTATION.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypePositiveInteger.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeQName.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeShort.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeString.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeTime.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeToken.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeUnsignedByte.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeUnsignedInt.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeUnsignedLong.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeUnsignedShort.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeAnyURI.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeBase64Binary.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeBoolean.hpp">
+      <Filter>GenClass\built_in_type</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\qlTypeFactory.hpp">
+      <Filter>Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\instrumentFactory.hpp">
+      <Filter>Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\nullFactory.hpp">
+      <Filter>Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\ELS\StepDown\qlStepDownKIGeneralFactory.hpp">
+      <Filter>Factory\ELS\StepDown</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\ELS\vanillaPayoff\qlVanillaPayoffFactory.hpp">
+      <Filter>Factory\ELS\vanillaPayoff</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlEventTriggerInfoFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlFixingDateFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlInstrumentFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlInterestRateIndexFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlPricerFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlPricingEngineFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlProcessFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlReturnCalculationFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlTermstructureFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlTimeUnitFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlYieldTermStructureFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\all.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlBusinessDayConvention.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlCalendarFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlCashFlowFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlCurrencyFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlDateGenerationFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlDateInformationFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlDayCounterFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlSwapPricerFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlFixingDateInfoFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlEventCalculationFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlRangeEventFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlReferenceCalculationFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlVariableCalculationFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlOperatorFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlJointEventCalculationFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlVariableInfoFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlVariableEventInfoFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlPreEventCalculationFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlPreConditionEventFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlPostCalculationFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlJointSimpleCalculationFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlOptionPayoffFunctionFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlFixingInformationFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlInstrumentInfoFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\excel\qlexcel_fixedCouponScheduleListFactory.hpp">
+      <Filter>Factory\excel</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\ELS\Hifive\qlHifiveFactory.hpp">
+      <Filter>Factory\ELS\Hifive</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\ELS\StepDown\qlStepDownELSFactory.hpp">
+      <Filter>Factory\ELS\StepDown</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\ELS\CompositeOption\qlCompositeOptionFactory.hpp">
+      <Filter>Factory\ELS\CompositeOption</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\ELS\CompositeOption\qlMultiAssetCompositeOptionFactory.hpp">
+      <Filter>Factory\ELS\CompositeOption</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\structuredBond\qlStructuredBondFactory.hpp">
+      <Filter>Factory\structuredBond</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\structuredSwap\qlStructuredSwapFactory.hpp">
+      <Filter>Factory\structuredSwap</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\AdditionVariableInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\all.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\AndEventCal.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\AndSimpleCal.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\AtLeastEventCal.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\AtMostEventCal.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\AutoCallablePayoff.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\AutoCallableSwapPayoff.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\AutoCallConstReturnTrigger.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\AutoCallRangeReturnTrigger.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\AutoCallRedem.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\AutoTerminationTrigger.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\BarrierDateInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\BarrierInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\BarrierWithConstRebateCallOption.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\BarrierWithConstRebatePutOption.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Bond.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\BondCouponInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\BondInformation.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\BookInformation.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\CalculationAgent.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\CalculationAmount.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\CalculationPeriodFrequency.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\CalculationServerInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\CallPutCompositeReturnCal.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\CapFloorOption.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\CapOption.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\CashFlowInfoResult.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\CdsSpreadTermstructure.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\ChoiceReferenceCal.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\ClearQueue.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\ComplementReturnCalculation.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Complex1DReturnCal.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\ComplexNDReturnCal.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\CompositeSumOptionPayoff.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\ConditionOperator.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\ConstDualBarrierInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\ConstLowerBarrierInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\ConstReturnCal.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\ConstUpperBarrierInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Correlation_para.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\CorrelationInfo_para.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\CountEventCal.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\CouponPart.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\CreditDefaultSwap.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\CreditDefaultSwapInstrument.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\CreditEvents.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\CreditInstrument.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\CreditPayoffInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\DailyInterval.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\DailyReturnReferenceCal.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\DataValue.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\DataValueInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\DateInformation.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\DateList.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\DefinedVariableInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\DiscountCurve_para.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\DiscountCurve_paraSetting.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\DivisionOperND.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\DualBarrierEventCal.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\EvaluationCurves.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\EventCalculation.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\EventCalculationInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\EventCalculationList.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\EventTrigger.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\EventTrigger_A.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\EventTriggerList.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\EventTriggerList_A.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_averageUnderlyingCalcID.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_cds.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_choiceReturnCalculation.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_choiceUnderlyingCalcID.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_complementReturnCalc.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_complementReturnCalc_Call.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_compositeOption.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_compositeOption_subtype.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_condi_structuredAccrualCouponSchedule.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_condi_structuredCouponSchedule.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_constReturnCal.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_correlation_para.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_correlationInfo_para.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_counterUnderlyingCalcInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_couponSchedule.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_couponScheduleList.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_creditEventInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_creditEvents.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_creditEventSwapLeg.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_crs.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_defaultCurve.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_defaultCurve_para.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_digitalCallPut.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_discountCurve_para.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_downInOutPut.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_dualBarrierEventCal.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_dualKiEventCalc.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_dualRangeEventCal.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_emptyInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_eventCalcInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_eventCalcInfo_Call.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_fixedBond.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_fixedBond_constantRate.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_fixedBond_subSchedule.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_fixedBond_subtype.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_fixedCouponSchedule.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_fixedCouponScheduleList.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_fixedRateSwapLeg.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_floatingCouponSchedule.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_forwardModel.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_fxForward.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_fxSwap.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_general.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_geometricBM.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_geometricBM_LocalVol.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_hestonModel.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_hifive.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_hifive_stepDown_ki.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_hifive_subtype.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_hifiveSwapLeg.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_hullWhiteOneFactor.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_hullWhiteTwoFactor.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_identityEventCal.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_indexType.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_interestRate.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_interface.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_interpolation.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_irs.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_issueInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_jointProbabilityTrait.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_kiEventCalculation.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_kiScheduleList.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_maximumUnderlyingCalcID.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_minimumUnderlyingCalcID.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_multi_rangeND.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_multiAsset_compositeOption_subtype.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_multiAsset_digitalCallPut.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_multiAsset_downInOutPut.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_multiAsset_upInOutCall.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_multiAsset_vanillaCallPut.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_multiAssetCompositeOption.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_multiCondi_multiRng_structuredAccrualCouponSchedule.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_multiCondi_structuredAccrualCouponSchedule.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_multiCondi_structuredCouponSchedule.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_noOccReturnCalcInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_noteInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_obligations.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_occReturnCalcInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_orderUnderlyingCalcID.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_parameter.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_protectionTerms.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_rateData.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_referenceCal_ID.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_referenceCal_IDList.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_referenceCalcInfo_para.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_referenceInfo_para.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_referenceInformation.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_referenceInformationList.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_referenceObligation.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_referenceSet.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_referenceSetList.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_referSimpleCalculation.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_result.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_returnCalcInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_returnCalcInfo_Call.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_schedule.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_ScheduleGenerator.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_scheduleList.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_selectedUnderlying.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_simpleCalculation.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_simpleKiEventCalc.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_singleBarrierEventCal.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_singleRangeEventCal.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_standardCreditPara.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_standardHifivePara.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_standardPara.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_standardSwapPara.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_stepDownKI_subSchedule.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_stepDownKICustom.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_stockIndex.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_structuredBond.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_structuredBond_fixedAccrual.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_structuredBond_floatingAccrual.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_structuredBond_subtype.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_structuredSwap.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_structuredSwapLeg.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_swapInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_swapInterface.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_swapLeg.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_swapLegInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_targetKiEventCalc.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_underlyingCalcID.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_underlyingCalcInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_underlyingCalcInfo_para.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_underlyingInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_underlyingInfo_para.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_underlyingModel_para.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_upInOutCall.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_vanillaCallPut.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_vanillaFloatingBond.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_vanillaFloatingBond_simple.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_vanillaFloatingBond_subSchedule.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_vanillaFloatingBond_subtype.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_vanillaFloatingCouponSchedule.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_vanillaFloatingCouponScheduleList.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_vanillaFloatingRateSwapLeg.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_vanillaReturnCal.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_volSurface.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_yieldCurve.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\FittingYieldCurve.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\FixedBondInstrument.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\FixedFixingDateInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\FixedRateCouponCalculation.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\FixedRatePayoff_A.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\FixedRateTrigger.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\FixedRateType.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Fixing.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\FixingDateInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\FixingInformation.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\FloorOption.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\ForwardContractInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\ForwardModel.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Fx_exchangeLeg.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\GbmGreekInfoResult.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\GbmGreekResult.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\General_scheduleDetail_fixedAmount.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\General_scheduleDetail_fixedCoupon.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\General_TerminationEventDetail_credit.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\General_TerminationEventDetail_target.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\GeneralSchedule.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\GeneralScheduleDeatil.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\GeneralScheduleInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\GeneralTerminationEvent.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\GeneralTerminationEventDetail.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\GeometricBM.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\GeometricBM_paraSetting.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\GridCalculation.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\GridCalculationStart.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Group.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Header.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\HisoryData.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\History.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\HullWhite_paraSetting.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\HullWhiteGreekInfoResult.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\HullWhiteGreekResult.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\HullWhiteOneFactor.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\IdentityReferenceCal.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Index.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\IndexUnderInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\InstHirachyInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\InstPositionInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Instrument.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\InstrumentInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\InstrumentList.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\InterestRateIndex.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\InterestRateSwapPayoff.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\InterestRateSwapPayoff_A.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\IssueInformation.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\JointEventCalculation.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\JointProbabilityTrait.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\JointSimpleCalculation.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\KiEventInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\LogPrint.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\LowerBarrierEventCal.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\MarketData.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\MaturityNotification.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\MaximumOper1D.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\MaximumOperND.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\MaximumReferenceCal.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Message.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\MessageBody.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\MessageHeader.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Method.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\MinimumReferenceCal.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Monte.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\MonthlyAutoCallRedem.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Multi_rangeND.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\MultipleOper1D.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\MultipleOperND.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\NoAutoCallReturnTrigger.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\NonKiEventInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\NoteInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\NthDefaultTrait.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\NullFixingDateInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\NullResult.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\NullVariableEventInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\NullVariableInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Obligations.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Operator1D.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Operator1DList.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\OperatorND.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\OptionInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\OptionPayoffFunction.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\OrEventCal.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\OverWriteVariableEventInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\OverWriteVariableInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\ParaRoot.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\PathInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\PayoffCalcLog.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\PayoffDateInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\PayoffInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\PayoffInfoAnalytic.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\PaySwapPart.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\PaySwapPart_A.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\PostCalculation.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\PreCalculation.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\PreConditionEvent.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\PreDefinedVariableInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\PreDefinedVariableList.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\PreEventCalculation.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Pricing.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\PricingParameter.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\ProtectionPart.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\ProtectionTerms.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Range1D.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\RangeCondition1D.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\RateCalculation.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\RateCouponCalculation.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\RateData.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\RecieveSwapPart.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\RecieveSwapPart_A.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\RedemptionInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\RedemptionNotionalTrigger.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\ReferenceCalculation.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\ReferenceCalculationInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\ReferenceCurve.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\ReferenceCurveList.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\ReferenceEntity.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\ReferenceEntityInfo_para.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\ReferenceEventCal.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\ReferenceInformation.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\ReferenceInformationList.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\ReferenceObligation.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\RefVariable_eventOcc.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\RefVariable_referenceValue.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\RefVariable_returnValue.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\RefVariableFixingDateInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\RefVariableReferenceCal.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\ResetVariableInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\ReturnCalculation.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\ReturnCalculationInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Root.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\SecuritiesInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\SimpleCashFlowResult.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\SimpleEventCouponTrigger.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\SimpleRangeAccrualRateTrigger.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\SimpleRangeConstReturnTrigger.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\SimpleRangeEventCal.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\SimpleRangeEventList.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\SimpleRangeRateTrigger.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\SimpleRangeReturn.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\SimpleRangeReturnList.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\SimpleRangeReturnTrigger.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\SingeSimpleCal.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\SingleBarrier.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\StandardInstrument.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\StandardOption.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\StandardPayoff_A.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\StandardSwapInstrument.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\StepDownKI_paraSetting.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\StepDownKIPayoff.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\StepDownKIResult.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\StepDownNoKIPayoff.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\StockIndex.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\StopLossPayoff.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\StopLossReturnCal.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\SwapInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\SwapPayoffInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\SwapPayoffInfoAnalytic.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\SwapStreamPara.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Tenor.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Underlying_para.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\UnderlyingInfo_para.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\UnderlyingInformation.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\UnderylingInfoResult.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\UnderylingResult.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\UpperBarrierEventCal.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\VanillaCallFunction.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\VanillaCallOption.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\VanillaCouponTrigger.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\VanillaFloatingRatePayoff_A.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\VanillaPayoff.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\VanillaPutFunction.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\VanillaPutOption.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\VanillaRateCalculation.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\VanillaRateTrigger.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\VanillaReturnCal.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\VanillaSwapPayoff.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\VariableCalculation.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\VariableCalList.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\VariableEventInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\VariableInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\YieldTermstructure.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\ZeroReturnCal.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\AdditionOper1D.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\AdditionOperND.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_greekResult.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_greekUnderlying.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_cashFlowResult.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_cashFlowsResult.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\ProductInnerXml.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_valueSideResult.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_valueResult.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_rateInfo.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_returnCalcInfo_CallableOption.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_additionalOption.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_callableOption.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_puttableOption.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\RiskMonitor-0-1\Excel_noneOption.hpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClInclude>
+    <ClInclude Include="Factory\Etc\qlAdditionalOptionFactory.hpp">
+      <Filter>Factory\Etc</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="util\convertFunction.cpp">
+      <Filter>util</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyXml\tinyxml.cpp">
+      <Filter>tinyXml</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyXml\tinyxmlerror.cpp">
+      <Filter>tinyXml</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyXml\tinyxmlparser.cpp">
+      <Filter>tinyXml</Filter>
+    </ClCompile>
+    <ClCompile Include="tinyXml\tinystr.cpp">
+      <Filter>tinyXml</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Credit\qlCreditDefaultProductFactory.cpp">
+      <Filter>Factory\ELS\Credit</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\IDManager.cpp">
+      <Filter>GenClass</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\qlTypeFactory.cpp">
+      <Filter>Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\ELS\StepDown\qlStepDownKIGeneralFactory.cpp">
+      <Filter>Factory\ELS\StepDown</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\ELS\vanillaPayoff\qlVanillaPayoffFactory.cpp">
+      <Filter>Factory\ELS\vanillaPayoff</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\instrumentFactory.cpp">
+      <Filter>Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Etc\qlEventTriggerInfoFactory.cpp">
+      <Filter>Factory\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Etc\qlInstrumentFactory.cpp">
+      <Filter>Factory\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Etc\qlPricerFactory.cpp">
+      <Filter>Factory\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Etc\qlPricingEngineFactory.cpp">
+      <Filter>Factory\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Etc\qlProcessFactory.cpp">
+      <Filter>Factory\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Etc\qlReturnCalculationFactory.cpp">
+      <Filter>Factory\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Etc\qlYieldTermStructureFactory.cpp">
+      <Filter>Factory\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Etc\qlCashFlowFactory.cpp">
+      <Filter>Factory\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Etc\qlDateInformationFactory.cpp">
+      <Filter>Factory\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Etc\qlSwapPricerFactory.cpp">
+      <Filter>Factory\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Etc\qlFixingDateInfoFactory.cpp">
+      <Filter>Factory\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Etc\qlEventCalculationFactory.cpp">
+      <Filter>Factory\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Etc\qlReferenceCalculationFactory.cpp">
+      <Filter>Factory\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Etc\qlVariableCalculationFactory.cpp">
+      <Filter>Factory\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Etc\qlOperatorFactory.cpp">
+      <Filter>Factory\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Etc\qlJointEventCalculationFactory.cpp">
+      <Filter>Factory\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Etc\qlVariableInfoFactory.cpp">
+      <Filter>Factory\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Etc\qlVariableEventInfoFactory.cpp">
+      <Filter>Factory\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Etc\qlPreEventCalculationFactory.cpp">
+      <Filter>Factory\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Etc\qlPreConditionEventFactory.cpp">
+      <Filter>Factory\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Etc\qlPostCalculationFactory.cpp">
+      <Filter>Factory\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Etc\qlJointSimpleCalculationFactory.cpp">
+      <Filter>Factory\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Etc\qlOptionPayoffFunctionFactory.cpp">
+      <Filter>Factory\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Etc\qlFixingInformationFactory.cpp">
+      <Filter>Factory\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Etc\qlInstrumentInfoFactory.cpp">
+      <Filter>Factory\Etc</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\excel\qlexcel_fixedCouponScheduleListFactory.cpp">
+      <Filter>Factory\excel</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\ELS\Hifive\qlHifiveFactory.cpp">
+      <Filter>Factory\ELS\Hifive</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\ELS\StepDown\qlStepDownELSFactory.cpp">
+      <Filter>Factory\ELS\StepDown</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\ELS\CompositeOption\qlCompositeOptionFactory.cpp">
+      <Filter>Factory\ELS\CompositeOption</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\ELS\CompositeOption\qlMultiAssetCompositeOptionFactory.cpp">
+      <Filter>Factory\ELS\CompositeOption</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\structuredBond\qlStructuredBondFactory.cpp">
+      <Filter>Factory\structuredBond</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\structuredSwap\qlStructuredSwapFactory.cpp">
+      <Filter>Factory\structuredSwap</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\AndEventCal.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\AndSimpleCal.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\AtLeastEventCal.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\AtMostEventCal.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\AutoCallablePayoff.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\AutoCallableSwapPayoff.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\AutoCallConstReturnTrigger.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\AutoCallRangeReturnTrigger.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\AutoCallRedem.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\AutoTerminationTrigger.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\BarrierDateInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\BarrierInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\BarrierWithConstRebateCallOption.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\BarrierWithConstRebatePutOption.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Bond.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\BondCouponInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\BondInformation.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\BookInformation.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\CalculationAgent.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\CalculationAmount.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\CalculationPeriodFrequency.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\CalculationServerInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\CallPutCompositeReturnCal.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\CapFloorOption.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\CapOption.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\CashFlowInfoResult.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\CdsSpreadTermstructure.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\ChoiceReferenceCal.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\ClearQueue.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\ComplementReturnCalculation.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Complex1DReturnCal.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\ComplexNDReturnCal.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\CompositeSumOptionPayoff.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\ConditionOperator.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\ConstDualBarrierInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\ConstLowerBarrierInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\ConstReturnCal.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\ConstUpperBarrierInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Correlation_para.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\CorrelationInfo_para.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\CountEventCal.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\CouponPart.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\CreditDefaultSwap.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\CreditDefaultSwapInstrument.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\CreditEvents.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\CreditInstrument.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\CreditPayoffInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\DailyInterval.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\DailyReturnReferenceCal.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\DataValue.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\DataValueInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\DateInformation.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\DateList.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\DefinedVariableInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\DiscountCurve_para.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\DiscountCurve_paraSetting.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\DivisionOperND.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\DualBarrierEventCal.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\EvaluationCurves.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\EventCalculation.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\EventCalculationInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\EventCalculationList.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\EventTrigger.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\EventTrigger_A.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\EventTriggerList.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\EventTriggerList_A.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_averageUnderlyingCalcID.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_cds.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_choiceReturnCalculation.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_choiceUnderlyingCalcID.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_complementReturnCalc.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_complementReturnCalc_Call.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_compositeOption.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_compositeOption_subtype.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_condi_structuredAccrualCouponSchedule.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_condi_structuredCouponSchedule.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_constReturnCal.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_correlation_para.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_correlationInfo_para.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_counterUnderlyingCalcInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_couponSchedule.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_couponScheduleList.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_creditEventInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_creditEvents.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_creditEventSwapLeg.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_crs.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_defaultCurve.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_defaultCurve_para.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_digitalCallPut.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_discountCurve_para.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_downInOutPut.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_dualBarrierEventCal.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_dualKiEventCalc.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_dualRangeEventCal.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_emptyInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_eventCalcInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_eventCalcInfo_Call.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_fixedBond.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_fixedBond_constantRate.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_fixedBond_subSchedule.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_fixedBond_subtype.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_fixedCouponSchedule.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_fixedCouponScheduleList.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_fixedRateSwapLeg.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_floatingCouponSchedule.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_forwardModel.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_fxForward.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_fxSwap.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_general.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_geometricBM.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_geometricBM_LocalVol.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_hestonModel.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_hifive.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_hifive_stepDown_ki.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_hifive_subtype.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_hifiveSwapLeg.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_hullWhiteOneFactor.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_hullWhiteTwoFactor.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_identityEventCal.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_indexType.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_interestRate.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_interface.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_interpolation.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_irs.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_issueInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_jointProbabilityTrait.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_kiEventCalculation.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_kiScheduleList.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_maximumUnderlyingCalcID.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_minimumUnderlyingCalcID.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_multi_rangeND.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_multiAsset_compositeOption_subtype.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_multiAsset_digitalCallPut.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_multiAsset_downInOutPut.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_multiAsset_upInOutCall.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_multiAsset_vanillaCallPut.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_multiAssetCompositeOption.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_multiCondi_multiRng_structuredAccrualCouponSchedule.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_multiCondi_structuredAccrualCouponSchedule.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_multiCondi_structuredCouponSchedule.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_noOccReturnCalcInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_noteInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_obligations.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_occReturnCalcInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_orderUnderlyingCalcID.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_parameter.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_protectionTerms.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_rateData.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_referenceCal_ID.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_referenceCal_IDList.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_referenceCalcInfo_para.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_referenceInfo_para.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_referenceInformation.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_referenceInformationList.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_referenceObligation.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_referenceSet.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_referenceSetList.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_referSimpleCalculation.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_result.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_returnCalcInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_returnCalcInfo_Call.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_schedule.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_ScheduleGenerator.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_scheduleList.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_selectedUnderlying.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_simpleCalculation.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_simpleKiEventCalc.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_singleBarrierEventCal.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_singleRangeEventCal.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_standardCreditPara.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_standardHifivePara.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_standardPara.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_standardSwapPara.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_stepDownKI_subSchedule.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_stepDownKICustom.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_stockIndex.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_structuredBond.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_structuredBond_fixedAccrual.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_structuredBond_floatingAccrual.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_structuredBond_subtype.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_structuredSwap.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_structuredSwapLeg.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_swapInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_swapInterface.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_swapLeg.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_swapLegInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_targetKiEventCalc.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_underlyingCalcID.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_underlyingCalcInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_underlyingCalcInfo_para.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_underlyingInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_underlyingInfo_para.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_underlyingModel_para.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_upInOutCall.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_vanillaCallPut.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_vanillaFloatingBond.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_vanillaFloatingBond_simple.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_vanillaFloatingBond_subSchedule.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_vanillaFloatingBond_subtype.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_vanillaFloatingCouponSchedule.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_vanillaFloatingCouponScheduleList.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_vanillaFloatingRateSwapLeg.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_vanillaReturnCal.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_volSurface.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_yieldCurve.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\FittingYieldCurve.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\FixedBondInstrument.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\FixedFixingDateInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\FixedRateCouponCalculation.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\FixedRatePayoff_A.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\FixedRateTrigger.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\FixedRateType.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Fixing.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\FixingDateInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\FixingInformation.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\FloorOption.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\ForwardContractInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\ForwardModel.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Fx_exchangeLeg.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\GbmGreekInfoResult.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\GbmGreekResult.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\General_scheduleDetail_fixedAmount.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\General_scheduleDetail_fixedCoupon.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\General_TerminationEventDetail_credit.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\General_TerminationEventDetail_target.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\GeneralSchedule.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\GeneralScheduleDeatil.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\GeneralScheduleInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\GeneralTerminationEvent.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\GeneralTerminationEventDetail.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\GeometricBM.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\GeometricBM_paraSetting.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\GridCalculation.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\GridCalculationStart.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Group.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Header.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\HisoryData.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\History.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\HullWhite_paraSetting.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\HullWhiteGreekInfoResult.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\HullWhiteGreekResult.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\HullWhiteOneFactor.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\IdentityReferenceCal.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Index.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\IndexUnderInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\InstHirachyInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\InstPositionInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Instrument.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\InstrumentInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\InstrumentList.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\InterestRateIndex.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\InterestRateSwapPayoff.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\InterestRateSwapPayoff_A.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\IssueInformation.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\JointEventCalculation.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\JointProbabilityTrait.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\JointSimpleCalculation.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\KiEventInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\LogPrint.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\LowerBarrierEventCal.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\MarketData.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\MaturityNotification.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\MaximumOper1D.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\MaximumOperND.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\MaximumReferenceCal.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Message.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\MessageBody.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\MessageHeader.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Method.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\MinimumReferenceCal.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Monte.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\MonthlyAutoCallRedem.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Multi_rangeND.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\MultipleOper1D.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\MultipleOperND.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\NoAutoCallReturnTrigger.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\NonKiEventInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\NoteInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\NthDefaultTrait.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\NullFixingDateInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\NullResult.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\NullVariableEventInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\NullVariableInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Obligations.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Operator1D.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Operator1DList.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\OperatorND.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\OptionInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\OptionPayoffFunction.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\OrEventCal.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\OverWriteVariableEventInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\OverWriteVariableInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\ParaRoot.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\PathInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\PayoffCalcLog.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\PayoffDateInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\PayoffInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\PayoffInfoAnalytic.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\PaySwapPart.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\PaySwapPart_A.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\PostCalculation.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\PreCalculation.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\PreConditionEvent.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\PreDefinedVariableInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\PreDefinedVariableList.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\PreEventCalculation.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Pricing.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\PricingParameter.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\ProtectionPart.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\ProtectionTerms.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Range1D.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\RangeCondition1D.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\RateCalculation.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\RateCouponCalculation.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\RateData.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\RecieveSwapPart.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\RecieveSwapPart_A.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\RedemptionInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\RedemptionNotionalTrigger.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\ReferenceCalculation.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\ReferenceCalculationInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\ReferenceCurve.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\ReferenceCurveList.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\ReferenceEntity.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\ReferenceEntityInfo_para.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\ReferenceEventCal.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\ReferenceInformation.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\ReferenceInformationList.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\ReferenceObligation.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\RefVariable_eventOcc.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\RefVariable_referenceValue.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\RefVariable_returnValue.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\RefVariableFixingDateInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\RefVariableReferenceCal.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\ResetVariableInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\ReturnCalculation.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\ReturnCalculationInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Root.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\SecuritiesInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\SimpleCashFlowResult.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\SimpleEventCouponTrigger.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\SimpleRangeAccrualRateTrigger.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\SimpleRangeConstReturnTrigger.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\SimpleRangeEventCal.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\SimpleRangeEventList.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\SimpleRangeRateTrigger.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\SimpleRangeReturn.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\SimpleRangeReturnList.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\SimpleRangeReturnTrigger.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\SingeSimpleCal.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\SingleBarrier.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\StandardInstrument.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\StandardOption.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\StandardPayoff_A.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\StandardSwapInstrument.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\StepDownKI_paraSetting.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\StepDownKIPayoff.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\StepDownKIResult.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\StepDownNoKIPayoff.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\StockIndex.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\StopLossPayoff.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\StopLossReturnCal.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\SwapInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\SwapPayoffInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\SwapPayoffInfoAnalytic.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\SwapStreamPara.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Tenor.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Underlying_para.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\UnderlyingInfo_para.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\UnderlyingInformation.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\UnderylingInfoResult.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\UnderylingResult.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\UpperBarrierEventCal.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\VanillaCallFunction.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\VanillaCallOption.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\VanillaCouponTrigger.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\VanillaFloatingRatePayoff_A.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\VanillaPayoff.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\VanillaPutFunction.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\VanillaPutOption.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\VanillaRateCalculation.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\VanillaRateTrigger.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\VanillaReturnCal.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\VanillaSwapPayoff.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\VariableCalculation.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\VariableCalList.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\VariableEventInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\VariableInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\YieldTermstructure.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\ZeroReturnCal.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\AdditionOper1D.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\AdditionOperND.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\AdditionVariableInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_greekResult.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_greekUnderlying.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_cashFlowResult.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_cashFlowsResult.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\ProductInnerXml.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_valueResult.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_valueSideResult.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_rateInfo.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_returnCalcInfo_CallableOption.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_additionalOption.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_callableOption.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_puttableOption.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\RiskMonitor-0-1\Excel_noneOption.cpp">
+      <Filter>GenClass\RiskMonitor-0-1</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory\Etc\qlAdditionalOptionFactory.cpp">
+      <Filter>Factory\Etc</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<instrument Type="IRS">
+  
+  <header>
+    <productName>F_대우증권 IRS 20130821</productName>
+    <productType>IRS</productType>
+    <krCode>50301G3801V0</krCode>
+  </header>
+
+  <header2>
+    <messageId messageIdScheme="http://abc.com/message-id">123</messageId>
+    <sentBy>abc</sentBy>
+    <sendTo>sdr</sendTo>
+    <creationTimestamp>1994-12-12T09:12:47Z</creationTimestamp>
+  </header2>
+  
+  <isCorrection>false</isCorrection>
+  <correlationId correlationIdScheme="http://abc.com/correlation-id">456</correlationId>
+  <sequenceNumber>1</sequenceNumber>
+  <originatingEvent>Trade</originatingEvent>
+  
+  <tradeHeader>
+    <partyTradeIdentifier>
+      <issuer issuerIdScheme="http://www.fpml.org/coding-scheme/external/cftc/issuer-identifier">1021111111</issuer>
+      <tradeId tradeIdScheme="http://www.fpml.org/coding-scheme/external/unique-transaction-identifier">12345678901234567890123456789012</tradeId>
+    </partyTradeIdentifier>
+    <tradeInformation>
+      <executionDateTime>1994-12-12T09:12:34Z</executionDateTime>
+      <intentToClear>false</intentToClear>
+      <nonStandardTerms>true</nonStandardTerms>
+      <offMarketPrice>true</offMarketPrice>
+      <largeSizeTrade>false</largeSizeTrade>
+      <executionType>Electronic</executionType>
+      <executionVenueType>SEF</executionVenueType>
+    </tradeInformation>
+    <tradeDate>1994-12-12</tradeDate>
+  </tradeHeader>
+  
+  <instrumentInfo>
+    <type>standardInstrument</type>
+    <standardInstrument>
+    
+      <issueInformation>
+        <type>swapInfo</type>
+        <swapInfo>
+          <tradeDate>2013-08-06</tradeDate>
+          <effectiveDate>2013-08-06</effectiveDate>
+          <maturityDate>2018-08-06</maturityDate>
+          <notional>100000000</notional>
+          <currency>USD</currency>
+          <premium>0</premium>
+        </swapInfo>
+      </issueInformation>
+
+      <underlyingInformation>
+        <type>index</type>
+        <indexUnderInfo>
+          <index>
+            <type>stock</type>
+            <stockIndex>
+              <krCode>KR7005930003</krCode>
+              <name>KR7005930003</name>
+              <basePrice>1313000</basePrice>
+            </stockIndex>
+          </index>
+        </indexUnderInfo>
+      </underlyingInformation>
+
+      <payoffInfo>
+        <type>interestRateSwapPayoff</type>
+
+        <interestRateSwap>
+          <irsPayPart>
+            <irsEventTriggerList>
+              <irsEventTrigger>
+                <type>irsFixedRateTrigger</type>
+                <eventDate></eventDate>
+                <irsFixedRateTrigger>
+                  <calculationStartDate></calculationStartDate>
+                  <calculationEndDate></calculationEndDate>
+                  <fixedRate></fixedRate>
+                  <dayCounter></dayCounter>
+                  <payoffDate></payoffDate>
+                </irsFixedRateTrigger>
+              </irsEventTrigger>
+
+              <irsEventTrigger>
+                <type>irsVanillaFloatingRateTrigger</type>
+                <eventDate></eventDate>
+                <irsVanillaFloatingRateTrigger>
+                  <calculationStartDate></calculationStartDate>
+                  <calculationEndDate></calculationEndDate>
+                  <gearing></gearing>
+                  <spread></spread>
+                  <referenceRate></referenceRate>
+                  <dayCounter></dayCounter>
+                  <payoffDate></payoffDate>
+
+                  <capFloor>
+                    <cap>
+                      <capRate></capRate>
+                      <vol></vol>
+                    </cap>
+                  </capFloor>
+                  
+                </irsVanillaFloatingRateTrigger>
+              </irsEventTrigger>
+              
+              
+            </irsEventTriggerList>
+            
+          </irsPayPart>
+          
+        
+        </interestRateSwap>
+        
+      </payoffInfo>
+      
+    </standardInstrument>
+  </instrumentInfo>
+  
+  <calculationAgent>
+    <calculationAgentPartyReference href="party1" />
+  </calculationAgent>
+
+</instrument>

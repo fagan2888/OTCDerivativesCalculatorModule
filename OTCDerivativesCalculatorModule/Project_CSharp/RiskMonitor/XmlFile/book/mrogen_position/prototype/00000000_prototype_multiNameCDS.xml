@@ -1,0 +1,481 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pricing>
+  <pricingType>creditdefaultswap</pricingType>
+  <evaluationTime>2013-10-07</evaluationTime>
+  
+  <pricingParameter>
+    <type>standardCredit_para</type>
+
+    <standardCredit_para>
+      <calculationAmount>
+        <currency>USD</currency>
+        <amount>10000000</amount>
+      </calculationAmount>
+
+      <referenceEntityInfo_para>
+        <referenceCurveList>
+          <referenceCurve>
+            <type>cdsSpreadTermstructure</type>
+            <cdsSpreadTermstructure>
+              <type>cdsspread</type>
+              <interpolation>BACKWARDFLAT</interpolation>
+              <daycounter>Act/365Fix</daycounter>
+              <calendar>KOR</calendar>
+              <!--<frequency>Quarterly</frequency>-->
+              <businessDayConvention>Following</businessDayConvention>
+              <dateGeneration>TwentiethIMM</dateGeneration>
+              <recoveryRate>0.4</recoveryRate>
+
+              <rateData>
+                <periodMultiplier>6</periodMultiplier>
+                <period>M</period>
+                <data>0.00147</data>
+              </rateData>
+
+              <rateData>
+                <periodMultiplier>1</periodMultiplier>
+                <period>Y</period>
+                <data>0.00228</data>
+              </rateData>
+
+              <rateData>
+                <periodMultiplier>2</periodMultiplier>
+                <period>Y</period>
+                <data>0.00347</data>
+              </rateData>
+
+              <rateData>
+                <periodMultiplier>3</periodMultiplier>
+                <period>Y</period>
+                <data>0.00475</data>
+              </rateData>
+
+              <rateData>
+                <periodMultiplier>4</periodMultiplier>
+                <period>Y</period>
+                <data>0.00716</data>
+              </rateData>
+
+              <rateData>
+                <periodMultiplier>5</periodMultiplier>
+                <period>Y</period>
+                <data>0.00873</data>
+              </rateData>
+
+              <rateData>
+                <periodMultiplier>7</periodMultiplier>
+                <period>Y</period>
+                <data>0.01063</data>
+              </rateData>
+
+              <rateData>
+                <periodMultiplier>10</periodMultiplier>
+                <period>Y</period>
+                <data>0.01219</data>
+              </rateData>
+
+            </cdsSpreadTermstructure>
+          </referenceCurve>
+
+          <referenceCurve>
+            <type>cdsSpreadTermstructure</type>
+            <cdsSpreadTermstructure>
+              <type>cdsspread</type>
+              <interpolation>BACKWARDFLAT</interpolation>
+              <daycounter>Act/365Fix</daycounter>
+              <calendar>KOR</calendar>
+              <!--<frequency>Quarterly</frequency>-->
+              <businessDayConvention>Following</businessDayConvention>
+              <dateGeneration>TwentiethIMM</dateGeneration>
+              <recoveryRate>0.4</recoveryRate>
+
+              <rateData>
+                <periodMultiplier>6</periodMultiplier>
+                <period>M</period>
+                <data>0.0021</data>
+              </rateData>
+
+              <rateData>
+                <periodMultiplier>1</periodMultiplier>
+                <period>Y</period>
+                <data>0.00259</data>
+              </rateData>
+
+              <rateData>
+                <periodMultiplier>2</periodMultiplier>
+                <period>Y</period>
+                <data>0.00379</data>
+              </rateData>
+
+              <rateData>
+                <periodMultiplier>3</periodMultiplier>
+                <period>Y</period>
+                <data>0.00493</data>
+              </rateData>
+
+              <rateData>
+                <periodMultiplier>4</periodMultiplier>
+                <period>Y</period>
+                <data>0.00689</data>
+              </rateData>
+
+              <rateData>
+                <periodMultiplier>5</periodMultiplier>
+                <period>Y</period>
+                <data>0.00877</data>
+              </rateData>
+
+              <rateData>
+                <periodMultiplier>7</periodMultiplier>
+                <period>Y</period>
+                <data>0.01106</data>
+              </rateData>
+
+              <rateData>
+                <periodMultiplier>10</periodMultiplier>
+                <period>Y</period>
+                <data>0.01267</data>
+              </rateData>
+
+            </cdsSpreadTermstructure>
+          </referenceCurve>
+
+          <referenceCurve>
+            <type>cdsSpreadTermstructure</type>
+            <cdsSpreadTermstructure>
+              <type>cdsspread</type>
+              <interpolation>BACKWARDFLAT</interpolation>
+              <daycounter>Act/365Fix</daycounter>
+              <calendar>KOR</calendar>
+              <!--<frequency>Quarterly</frequency>-->
+              <businessDayConvention>Following</businessDayConvention>
+              <dateGeneration>TwentiethIMM</dateGeneration>
+              <recoveryRate>0.4</recoveryRate>
+
+              <rateData>
+                <periodMultiplier>6</periodMultiplier>
+                <period>M</period>
+                <data>0.00199</data>
+              </rateData>
+
+              <rateData>
+                <periodMultiplier>1</periodMultiplier>
+                <period>Y</period>
+                <data>0.0024</data>
+              </rateData>
+
+              <rateData>
+                <periodMultiplier>2</periodMultiplier>
+                <period>Y</period>
+                <data>0.00341</data>
+              </rateData>
+
+              <rateData>
+                <periodMultiplier>3</periodMultiplier>
+                <period>Y</period>
+                <data>0.00479</data>
+              </rateData>
+
+              <rateData>
+                <periodMultiplier>4</periodMultiplier>
+                <period>Y</period>
+                <data>0.00718</data>
+              </rateData>
+
+              <rateData>
+                <periodMultiplier>5</periodMultiplier>
+                <period>Y</period>
+                <data>0.00859</data>
+              </rateData>
+
+              <rateData>
+                <periodMultiplier>7</periodMultiplier>
+                <period>Y</period>
+                <data>0.01057</data>
+              </rateData>
+
+              <rateData>
+                <periodMultiplier>10</periodMultiplier>
+                <period>Y</period>
+                <data>0.0122</data>
+              </rateData>
+
+            </cdsSpreadTermstructure>
+          </referenceCurve>
+        </referenceCurveList>
+        <jointProbabilityTrait>
+          <type>nthDefaultTrait</type>
+          <nthDefaultTrait>
+            <type>onefactor</type>
+            <nth>1</nth>
+            <correlation>0.9999</correlation>
+          </nthDefaultTrait>
+        </jointProbabilityTrait>
+
+      </referenceEntityInfo_para>
+    
+    <!-- floating Rate를 위한것 -->
+      <evaluationCurves>
+        <curves>
+          <yieldTermstructure>
+            <type>ZEROYIELD</type>
+            <interpolation>BACKWARDFLAT</interpolation>
+            
+            <rateData>
+              <periodMultiplier>1</periodMultiplier>
+              <period>D</period>
+              <data>0.0017965</data>
+            </rateData>
+
+            <rateData>
+              <periodMultiplier>1</periodMultiplier>
+              <period>M</period>
+              <data>0.0017965</data>
+            </rateData>
+
+            <rateData>
+              <periodMultiplier>3</periodMultiplier>
+              <period>M</period>
+              <data>0.0024835</data>
+            </rateData>
+
+            <rateData>
+              <periodMultiplier>6</periodMultiplier>
+              <period>M</period>
+              <data>0.003665</data>
+            </rateData>
+
+            <rateData>
+              <periodMultiplier>9</periodMultiplier>
+              <period>M</period>
+              <data>0.0049559</data>
+            </rateData>
+
+            <rateData>
+              <periodMultiplier>12</periodMultiplier>
+              <period>M</period>
+              <data>0.006261</data>
+            </rateData>
+
+            <rateData>
+              <periodMultiplier>2</periodMultiplier>
+              <period>Y</period>
+              <data>0.00461</data>
+            </rateData>
+
+            <rateData>
+              <periodMultiplier>3</periodMultiplier>
+              <period>Y</period>
+              <data>0.00764</data>
+            </rateData>
+
+            <rateData>
+              <periodMultiplier>4</periodMultiplier>
+              <period>Y</period>
+              <data>0.01145</data>
+            </rateData>
+
+            <rateData>
+              <periodMultiplier>5</periodMultiplier>
+              <period>Y</period>
+              <data>0.01518</data>
+            </rateData>
+
+            <rateData>
+              <periodMultiplier>6</periodMultiplier>
+              <period>Y</period>
+              <data>0.01858</data>
+            </rateData>
+
+            <rateData>
+              <periodMultiplier>7</periodMultiplier>
+              <period>Y</period>
+              <data>0.02145</data>
+            </rateData>
+
+            <rateData>
+              <periodMultiplier>8</periodMultiplier>
+              <period>Y</period>
+              <data>0.02385</data>
+            </rateData>
+
+            <rateData>
+              <periodMultiplier>9</periodMultiplier>
+              <period>Y</period>
+              <data>0.02583</data>
+            </rateData>
+
+            <rateData>
+              <periodMultiplier>10</periodMultiplier>
+              <period>Y</period>
+              <data>0.02747</data>
+            </rateData>
+
+            <rateData>
+              <periodMultiplier>11</periodMultiplier>
+              <period>Y</period>
+              <data>0.02889</data>
+            </rateData>
+            
+          </yieldTermstructure>
+        </curves>
+      </evaluationCurves>
+
+      <discountCurve_para>
+        <type>yieldTermstructure</type>
+        <yieldTermstructure>
+          <type>ZEROYIELD</type>
+          <interpolation>BACKWARDFLAT</interpolation>
+          <daycounter>Act/365Fix</daycounter>
+          <calendar>NullCalendar</calendar>
+          <!--<frequency>Quarterly</frequency>-->
+          <businessDayConvention>Following</businessDayConvention>
+          
+          <rateData>
+            <periodMultiplier>1</periodMultiplier>
+            <period>D</period>
+            <data>0.0017965</data>
+          </rateData>
+
+          <rateData>
+            <periodMultiplier>1</periodMultiplier>
+            <period>M</period>
+            <data>0.0017965</data>
+          </rateData>
+
+          <rateData>
+            <periodMultiplier>3</periodMultiplier>
+            <period>M</period>
+            <data>0.0024835</data>
+          </rateData>
+
+          <rateData>
+            <periodMultiplier>6</periodMultiplier>
+            <period>M</period>
+            <data>0.003665</data>
+          </rateData>
+
+          <rateData>
+            <periodMultiplier>9</periodMultiplier>
+            <period>M</period>
+            <data>0.0049559</data>
+          </rateData>
+
+          <rateData>
+            <periodMultiplier>12</periodMultiplier>
+            <period>M</period>
+            <data>0.006261</data>
+          </rateData>
+
+          <rateData>
+            <periodMultiplier>2</periodMultiplier>
+            <period>Y</period>
+            <data>0.00461</data>
+          </rateData>
+
+          <rateData>
+            <periodMultiplier>3</periodMultiplier>
+            <period>Y</period>
+            <data>0.00764</data>
+          </rateData>
+
+          <rateData>
+            <periodMultiplier>4</periodMultiplier>
+            <period>Y</period>
+            <data>0.01145</data>
+          </rateData>
+
+          <rateData>
+            <periodMultiplier>5</periodMultiplier>
+            <period>Y</period>
+            <data>0.01518</data>
+          </rateData>
+
+          <rateData>
+            <periodMultiplier>6</periodMultiplier>
+            <period>Y</period>
+            <data>0.01858</data>
+          </rateData>
+
+          <rateData>
+            <periodMultiplier>7</periodMultiplier>
+            <period>Y</period>
+            <data>0.02145</data>
+          </rateData>
+
+          <rateData>
+            <periodMultiplier>8</periodMultiplier>
+            <period>Y</period>
+            <data>0.02385</data>
+          </rateData>
+
+          <rateData>
+            <periodMultiplier>9</periodMultiplier>
+            <period>Y</period>
+            <data>0.02583</data>
+          </rateData>
+
+          <rateData>
+            <periodMultiplier>10</periodMultiplier>
+            <period>Y</period>
+            <data>0.02747</data>
+          </rateData>
+
+          <rateData>
+            <periodMultiplier>11</periodMultiplier>
+            <period>Y</period>
+            <data>0.02889</data>
+          </rateData>
+
+        </yieldTermstructure>
+      </discountCurve_para>
+
+      <recoveryRate>0.4</recoveryRate>
+      
+    </standardCredit_para>
+
+  </pricingParameter>
+
+  <pricingResult>
+    <type>standardCreditResult</type>
+    <commonResult>
+      <price>206754312</price>
+      <unitPrice unit="10000">9817.39</unitPrice>
+    </commonResult>
+    <standardCreditResult>
+      <underylingInfoResult>
+        <underylingResult>
+          <type>gbmGreekInfoResult</type>
+          <gbmGreekInfoResult>
+
+            <gbmGreekResult>
+              <underlyingName></underlyingName>
+              <delta></delta>
+              <gamma></gamma>
+              <vega></vega>
+            </gbmGreekResult>
+
+            <gbmGreekResult>
+              <underlyingName></underlyingName>
+              <delta></delta>
+              <gamma></gamma>
+              <vega></vega>
+            </gbmGreekResult>
+
+          </gbmGreekInfoResult>
+        </underylingResult>
+
+      </underylingInfoResult>
+
+      <simpleCashFlow>
+
+      </simpleCashFlow>
+
+      <theta>
+
+      </theta>
+    </standardCreditResult>
+    
+  </pricingResult>
+
+</pricing>

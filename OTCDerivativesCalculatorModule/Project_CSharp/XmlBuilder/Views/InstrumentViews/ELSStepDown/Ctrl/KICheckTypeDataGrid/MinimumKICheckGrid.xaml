@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="XmlBuilder.Views.InstrumentViews.ELSStepDown.Ctrl.KICheckTypeDataGrid.MinimumKICheckGrid"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d">
+    <Grid>
+        <DataGrid>
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=Num_}" Header="No" />
+                <DataGridTextColumn Binding="{Binding Path=Type_}" Header="Type" />
+                <DataGridTextColumn Binding="{Binding Path=Num_}" Header="KI Type" />
+                <DataGridTextColumn Binding="{Binding Path=Name_}" Header="CheckTime" />
+                <DataGridTextColumn Binding="{Binding Path=Expired_}" Header="IsOccured" />
+                <DataGridTextColumn Binding="{Binding Path=Expired_}" Header="Description" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

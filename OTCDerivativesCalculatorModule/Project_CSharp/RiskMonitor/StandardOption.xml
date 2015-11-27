@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<instrument>
+  <instrumentInfo>
+    <productType Name="structuredSwap"/>
+    <instrumentID>50505A2A14S0</instrumentID>
+    <issueDate id="issueDate">
+      <unadjustedDate>2002-07-17</unadjustedDate>
+      <dateAdjustments>
+        <businessDayConvention>NONE</businessDayConvention>
+      </dateAdjustments>
+    </issueDate>
+    <maturityDate id="maturityDate">
+      <unadjustedDate>2002-07-17</unadjustedDate>
+      <dateAdjustments>
+        <businessDayConvention>NONE</businessDayConvention>
+      </dateAdjustments>
+    </maturityDate>
+
+    <calculationAgent></calculationAgent>
+
+    <notional id="equityNotionalAmount">
+      <notionalAmount>
+        <currency>KRW</currency>
+        <amount>1000000</amount>
+      </notionalAmount>
+    </notional>
+
+    <premium>
+      <payerPartyReference href="party2"/>
+      <receiverPartyReference href="party1"/>
+      <paymentAmount>
+        <currency>EUR</currency>
+        <amount>405000</amount>
+      </paymentAmount>
+      <paymentDate>
+        <unadjustedDate>2002-07-17</unadjustedDate>
+        <dateAdjustments>
+          <businessDayConvention>NONE</businessDayConvention>
+        </dateAdjustments>
+      </paymentDate>
+    </premium>
+  </instrumentInfo>
+  <underlyingInfo>
+    
+  </underlyingInfo>
+  <payoffInfo>
+    <standardOption>
+      <payoffCalculationLists>
+        <payoffCalculation>
+          <date>
+            
+          </date>
+          <event>
+            <underlying>
+              <lower></lower>
+              <upper></upper>
+            </underlying>
+            <underlying>
+              <lower></lower>
+              <upper></upper>
+            </underlying>
+          </event>
+          <returnValue>
+            <constReturn>
+              
+            </constReturn>
+          </returnValue>
+          <returnFixing>
+            
+          </returnFixing>
+        </payoffCalculation>
+        
+        <payoffCalculation>
+          <date>
+
+          </date>
+          <event>
+            <underlying>
+              <lower></lower>
+              <upper></upper>
+            </underlying>
+            <underlying>
+              <lower></lower>
+              <upper></upper>
+            </underlying>
+          </event>
+          <returnValue>
+            <constReturn>
+
+            </constReturn>
+          </returnValue>
+          <returnFixing>
+
+          </returnFixing>
+        </payoffCalculation>
+
+        <payoffCalculation>
+          <date>
+
+          </date>
+          <event>
+            <underlying>
+              <lower></lower>
+              <upper></upper>
+            </underlying>
+            <underlying>
+              <lower></lower>
+              <upper></upper>
+            </underlying>
+          </event>
+          <returnValue>
+            <constReturn>
+
+            </constReturn>
+          </returnValue>
+          <returnFixing>
+
+          </returnFixing>
+        </payoffCalculation>
+      </payoffCalculationLists>
+    </standardOption>  
+  </payoffInfo>
+</instrument>

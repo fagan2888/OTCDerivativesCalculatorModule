@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="Excel_Interface.Excel_fixedBond_subtypeLoaderView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="fixed Type :" />
+                <ComboBox Width="60" Name="fixedBond_subtypeCombBox_"  >
+                </ComboBox>
+            </StackPanel>
+            <Grid Name="selectedSubtypeGrid_" />
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Surmit" Click="SurmitButton_Click" />
+                <Button Content="Cancel" Click="CancelButton_Click" />
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

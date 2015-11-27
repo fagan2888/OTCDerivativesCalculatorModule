@@ -1,0 +1,9 @@
+﻿<Window x:Class="XmlBuilder.Views.InstrumentViews.ELSStepDown.Ctrl.KIPayoffEditView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:payoff="clr-namespace:XmlBuilder.Views.InstrumentViews.ELSStepDown.Ctrl.PayoffCalculation"
+        Title="KIPayoffEditView" Height="300" Width="300">
+    <Grid>
+        <payoff:PayoffEditCtrl />
+    </Grid>
+</Window>

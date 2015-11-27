@@ -1,0 +1,15 @@
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\VolatiltityManager\bin\Debug\VolDataBase.sdf
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\VolatiltityManager\bin\Debug\VolatiltityManager.exe.config
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\VolatiltityManager\bin\Debug\VolatiltityManager.exe
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\VolatiltityManager\bin\Debug\VolatiltityManager.pdb
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\VolatiltityManager\obj\x86\Debug\VolatiltityManager.csprojResolveAssemblyReference.cache
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\VolatiltityManager\obj\x86\Debug\MainWindow.baml
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\VolatiltityManager\obj\x86\Debug\MainWindow.g.cs
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\VolatiltityManager\obj\x86\Debug\App.g.cs
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\VolatiltityManager\obj\x86\Debug\VolatiltityManager_Content.g.cs
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\VolatiltityManager\obj\x86\Debug\VolatiltityManager_MarkupCompile.cache
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\VolatiltityManager\obj\x86\Debug\VolatiltityManager.g.resources
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\VolatiltityManager\obj\x86\Debug\VolatiltityManager.Properties.Resources.resources
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\VolatiltityManager\obj\x86\Debug\VolatiltityManager.csproj.GenerateResource.Cache
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\VolatiltityManager\obj\x86\Debug\VolatiltityManager.exe
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\VolatiltityManager\obj\x86\Debug\VolatiltityManager.pdb

@@ -1,0 +1,13 @@
+﻿<Window x:Class="XmlBuilder.Views.InstrumentViews.ELSStepDown.Ctrl.RedemInfo.RedemEditView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:payoff="clr-namespace:XmlBuilder.Views.InstrumentViews.ELSStepDown.Ctrl.PayoffCalculation"
+        xmlns:event="clr-namespace:XmlBuilder.Views.InstrumentViews.ELSStepDown.Ctrl.EventCalculation"
+        Title="RedemEditView" Height="300" Width="300">
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <event:EventEditCtrl />
+            <payoff:PayoffEditCtrl />
+        </StackPanel>
+    </Grid>
+</Window>

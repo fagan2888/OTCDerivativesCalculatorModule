@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="Excel_Interface.Excel_underlyingModelEditorView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <Label Content="model editor" />
+
+            <ComboBox Name="modelCombo_" 
+                              SelectedIndex="{Binding Path=SelectedIndex_}"
+                              DisplayMemberPath="UnderlyingModelComboString_"  
+                              SelectionChanged="modelCombo__SelectionChanged"
+                              Width="60"  />
+            
+            <Grid Name="SelectedModelGrid_" />
+            <StackPanel Orientation="Horizontal">
+                <Button Content="Surmit" Click="SurmitButton_Click" />
+                <Button Content="Cancel" Click="CancelButton_Click" />
+            </StackPanel>
+            
+        </StackPanel>
+    </Grid>
+</UserControl>

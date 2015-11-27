@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="Excel_Interface.GeneralTerminationEventInfoView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="- Termination Information" />
+                <Button Content="Add" />
+            </StackPanel>
+            <DataGrid Name="terminationDataGrid_"
+                      AutoGenerateColumns="False"
+                    ScrollViewer.CanContentScroll="True" 
+                    IsReadOnly="True"
+                    ScrollViewer.VerticalScrollBarVisibility="Auto"
+                    ScrollViewer.HorizontalScrollBarVisibility="Auto" 
+                    SelectionChanged="terminationDataGrid__SelectionChanged">
+                
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Date" Binding="{Binding Path=EventDate_}"/>
+                    <DataGridTextColumn Header="Type" Binding="{Binding Path=Type_}"/>
+                    <DataGridTemplateColumn Header="Model">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="{Binding Path=Model_}" Click="modelEditBtn_Click"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                        <DataGridTemplateColumn.CellEditingTemplate>
+                            <DataTemplate>
+                                <Button Content="Edit" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellEditingTemplate>
+                    </DataGridTemplateColumn>
+
+                </DataGrid.Columns>
+                <DataGrid.ContextMenu>
+                    <ContextMenu>
+                        <MenuItem Header="Add" Click="addTerminationEvent_Click"/>
+                        <MenuItem Header="Delete" Click="deleteTerminationEvent_Click"/>
+                    </ContextMenu>
+                </DataGrid.ContextMenu>
+            </DataGrid>
+        </StackPanel>
+    </Grid>
+</UserControl>

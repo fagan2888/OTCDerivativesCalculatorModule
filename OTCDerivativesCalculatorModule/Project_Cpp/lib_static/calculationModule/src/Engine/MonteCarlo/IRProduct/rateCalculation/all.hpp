@@ -1,0 +1,15 @@
+#include <src/Engine/MonteCarlo/IRProduct/rateCalculation/fixedRateETI.hpp>
+#include <src/Engine/MonteCarlo/IRProduct/rateCalculation/range1D.hpp>
+#include <src/Engine/MonteCarlo/IRProduct/rateCalculation/rangeEventInfo.hpp>
+#include <src/Engine/MonteCarlo/IRProduct/rateCalculation/rangeRateCalculation.hpp>
+#include <src/Engine/MonteCarlo/IRProduct/rateCalculation/redemptionNotionalETI.hpp>
+#include <src/Engine/MonteCarlo/IRProduct/rateCalculation/simpleRangeAccrualRateETI.hpp>
+#include <src/Engine/MonteCarlo/IRProduct/rateCalculation/simpleRangeEvent.hpp>
+#include <src/Engine/MonteCarlo/IRProduct/rateCalculation/simpleRangeRateETI.hpp>
+#include <src/Engine/MonteCarlo/IRProduct/rateCalculation/vanillaFloatingRateETI.hpp>
+#include <src/Engine/MonteCarlo/IRProduct/rateCalculation/vanillaRateETI.hpp>
+#include <src/Engine/MonteCarlo/IRProduct/rateCalculation/rangeFixedAccrualRateETI.hpp>
+#include <src/Engine/MonteCarlo/IRProduct/rateCalculation/rangeFloatingAccrualRateETI.hpp>
+#include <src/Engine/MonteCarlo/IRProduct/rateCalculation/multiConditionCouponRateETI.hpp>
+#include <src/Engine/MonteCarlo/IRProduct/rateCalculation/multiConditionAccrualCouponRateETI.hpp>
+#include <src/Engine/MonteCarlo/IRProduct/rateCalculation/multiConditionMultiRngAccrualCouponRateETI.hpp>

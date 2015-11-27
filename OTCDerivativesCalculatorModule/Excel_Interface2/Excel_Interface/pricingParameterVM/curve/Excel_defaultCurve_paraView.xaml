@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="Excel_Interface.Excel_defaultCurve_paraView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Label Content="-default Info" />
+            </StackPanel>
+
+            <StackPanel Orientation="Vertical">
+                <DataGrid Name="DiscountCurveDataGrid_">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Code" Binding="{Binding Path=Code_}"/>
+                        <DataGridTextColumn Header="Name" Binding="{Binding Path=Name_}"/>
+                        <DataGridTextColumn Header="Description" Binding="{Binding Path=Description_}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <!--<DataGrid Name="RateDataGrid_" LoadingRow="DataGrid_LoadingRow_" 
+                              AutoGenerateColumns="False"
+                              ScrollViewer.CanContentScroll="True" 
+                              ScrollViewer.VerticalScrollBarVisibility="Auto"
+                              ScrollViewer.HorizontalScrollBarVisibility="Auto">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Type" Binding="{Binding Path=RateType_}"/>
+                        <DataGridTextColumn Header="Tenor" Binding="{Binding Path=Tenor_}"/>
+                        <DataGridTextColumn Header="Value" Binding="{Binding Path=Value_}"/>
+                    </DataGrid.Columns>
+                </DataGrid>-->
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

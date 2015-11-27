@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<instrument>
+
+  <issueInformation>
+    <issueType>Note</issueType>
+  </issueInformation>
+
+  <underlyingInformation>
+    <underlying>
+      <krCode>CMS10Y</krCode>
+      <type>interestRate</type>
+    </underlying>
+    <underlying>
+      <krCode>CMS10Y</krCode>
+      <type>interestRate</type>
+    </underlying>
+  </underlyingInformation>
+  
+  <structuredNote>
+
+    <irCalculationInfo>
+      <daycounter></daycounter>
+      <calendar></calendar>
+      <paymentDays></paymentDays>
+      
+      
+
+    </irCalculationInfo>
+    
+    <irCalculation>
+      <fixingDate></fixingDate>
+      <paymentDate></paymentDate>
+      <rateCalculation>
+        <calculationType>PowerSpread</calculationType>
+        <calculation>
+          <referenceRate>CMS10Y</referenceRate>
+        </calculation>
+
+      </rateCalculation>
+      
+      
+    </irCalculation>
+
+  </structuredNote>
+  
+  
+</instrument>

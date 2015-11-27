@@ -1,0 +1,5 @@
+﻿PYTHON 코드로 가야할듯 이건
+MARKET DATA 를 DB에 박아 넣는 작업임
+
+우선은 LOCAL에서 작업할거니까 이걸로 그냥 하고
+PYTHON 빨리 배워서 바꾸자 ㄱㄱ

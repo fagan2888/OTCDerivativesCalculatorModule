@@ -1,0 +1,7 @@
+D:\Project\2010\Project C#\CppCodeGen\TestConsoleCsharpGen\obj\x86\Release\ResolveAssemblyReference.cache
+D:\Project\2010\Project C#\CppCodeGen\TestConsoleCsharpGen\bin\Release\TestConsoleCsharpGen.exe
+D:\Project\2010\Project C#\CppCodeGen\TestConsoleCsharpGen\bin\Release\TestConsoleCsharpGen.pdb
+D:\Project\2010\Project C#\CppCodeGen\TestConsoleCsharpGen\bin\Release\CSharpCodeGen.dll
+D:\Project\2010\Project C#\CppCodeGen\TestConsoleCsharpGen\bin\Release\CSharpCodeGen.pdb
+D:\Project\2010\Project C#\CppCodeGen\TestConsoleCsharpGen\obj\x86\Release\TestConsoleCsharpGen.exe
+D:\Project\2010\Project C#\CppCodeGen\TestConsoleCsharpGen\obj\x86\Release\TestConsoleCsharpGen.pdb

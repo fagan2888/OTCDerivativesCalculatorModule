@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<instrument Type="DigitalRange">
+
+  <header>
+    <productName>IBK 제2013-006회 OTC</productName>
+    <productType>HybridDigitalRangeRate</productType>
+    <krCode>50202A3C16O0</krCode>
+  </header>
+
+  <instrumentInfo>
+    <type>standardInstrument</type>
+    <standardInstrument>
+
+      <issueInformation>
+        <type>noteInfo</type>
+        <noteInfo>
+          <tradeDate>2013-10-06</tradeDate>
+          <effectiveDate>2013-10-07</effectiveDate>
+          <maturityDate>2014-04-04</maturityDate>
+          <notional>1000000</notional>
+          <currency>KRW</currency>
+          <premium>0</premium>
+        </noteInfo>
+      </issueInformation>
+
+      <underlyingInformation>
+        <type>index</type>
+        <indexUnderInfo>
+          <index>
+            <type>interestRateIndex</type>
+            <krCode>KBPCDAAA</krCode>
+            <name>CDAAA3M</name>
+            <basePrice>0.029</basePrice>
+            
+            <interestRateIndex>
+              <tenor>
+                <periodMultiplier>3</periodMultiplier>
+                <period>M</period>
+              </tenor>
+            </interestRateIndex>
+            
+          </index>
+          <index>
+            <type>stockIndex</type>
+            <krCode>KOSPI200</krCode>
+            <name>KOSPI200</name>
+            <basePrice>265.1</basePrice>
+
+            <stockIndex>
+            </stockIndex>
+
+          </index>
+          
+        </indexUnderInfo>
+      </underlyingInformation>
+
+      <payoffInfo>
+        <type>vanillaStandardStreamPayoff</type>
+        <vanillaStandardStreamPayoff>
+          <eventTriggerList>
+            
+            <eventTrigger>
+              <type>simpleRangeRateTrigger</type>
+              <simpleRangeRateTrigger>
+
+                <calculationStartDate>2013-12-05</calculationStartDate>
+                <calculationEndDate>2014-03-05</calculationEndDate>
+              
+                <simpleRangeEventList>
+                  <simpleRangeEvent>
+
+                    <range1D>
+                      <lowerBound>1.0</lowerBound>
+                      <lowerBoundEquality>true</lowerBoundEquality>
+                      <upperBound>10.0</upperBound>
+                      <upperBoundEquality>false</upperBoundEquality>
+                    </range1D>
+
+                    <referenceCalculation>
+                      <type>identityReferenceCal</type>
+                      <identityReferenceCal>
+                        <krCode>KOSPI200</krCode>
+                        <fixingDate>2014-03-05</fixingDate>
+                      </identityReferenceCal>
+                    </referenceCalculation>
+
+                    <returnCalculation>
+                      <type>vanillaReturnCal</type>
+
+                      <vanillaReturnCal>
+                        <referenceCalculation>
+                          <type>identityReferenceCal</type>
+                          <identityReferenceCal>
+                            <krCode>KBPCDAAA</krCode>
+                            <fixingDate>2013-12-05</fixingDate>
+                          </identityReferenceCal>
+                        </referenceCalculation>
+                        <gearing>1.0</gearing>
+                        <spread>0.0025</spread>
+                      </vanillaReturnCal>
+
+                    </returnCalculation>
+
+                  </simpleRangeEvent>
+                  
+                  <simpleRangeEvent>
+
+                    <range1D>
+                      <lowerBound>0.0</lowerBound>
+                      <lowerBoundEquality>true</lowerBoundEquality>
+                      <upperBound>1.0</upperBound>
+                      <upperBoundEquality>false</upperBoundEquality>
+                    </range1D>
+
+                    <referenceCalculation>
+                      <type>identityReferenceCal</type>
+                      <identityReferenceCal>
+                        <krCode>KOSPI200</krCode>
+                        <fixingDate>2014-03-05</fixingDate>
+                      </identityReferenceCal>
+                    </referenceCalculation>
+
+                    <returnCalculation>
+                      <type>vanillaReturnCal</type>
+
+                      <vanillaReturnCal>
+                        <referenceCalculation>
+                          <type>identityReferenceCal</type>
+                          <identityReferenceCal>
+                            <krCode>KBPCDAAA</krCode>
+                            <fixingDate>2013-12-05</fixingDate>
+                          </identityReferenceCal>
+                        </referenceCalculation>
+                        <gearing>1.0</gearing>
+                        <spread>0.0024</spread>
+                      </vanillaReturnCal>
+
+                    </returnCalculation>
+
+                  </simpleRangeEvent>
+                  
+                </simpleRangeEventList>
+
+                <payoffDate>2014-03-07</payoffDate>
+              
+              </simpleRangeRateTrigger>
+            </eventTrigger>
+
+            <eventTrigger>
+              <type>simpleRangeRateTrigger</type>
+              <simpleRangeRateTrigger>
+
+                <calculationStartDate>2014-03-06</calculationStartDate>
+                <calculationEndDate>2014-06-05</calculationEndDate>
+
+                <simpleRangeEventList>
+                  <simpleRangeEvent>
+
+                    <range1D>
+                      <lowerBound>1.0</lowerBound>
+                      <lowerBoundEquality>true</lowerBoundEquality>
+                      <upperBound>10.0</upperBound>
+                      <upperBoundEquality>false</upperBoundEquality>
+                    </range1D>
+
+                    <referenceCalculation>
+                      <type>identityReferenceCal</type>
+                      <identityReferenceCal>
+                        <krCode>KOSPI200</krCode>
+                        <fixingDate>2014-06-05</fixingDate>
+                      </identityReferenceCal>
+                    </referenceCalculation>
+
+                    <returnCalculation>
+                      <type>vanillaReturnCal</type>
+
+                      <vanillaReturnCal>
+                        <referenceCalculation>
+                          <type>identityReferenceCal</type>
+                          <identityReferenceCal>
+                            <krCode>KBPCDAAA</krCode>
+                            <fixingDate>2014-03-05</fixingDate>
+                          </identityReferenceCal>
+                        </referenceCalculation>
+                        <gearing>1.0</gearing>
+                        <spread>0.0025</spread>
+                      </vanillaReturnCal>
+
+                    </returnCalculation>
+
+                  </simpleRangeEvent>
+
+                  <simpleRangeEvent>
+
+                    <range1D>
+                      <lowerBound>0.0</lowerBound>
+                      <lowerBoundEquality>true</lowerBoundEquality>
+                      <upperBound>1.0</upperBound>
+                      <upperBoundEquality>false</upperBoundEquality>
+                    </range1D>
+
+                    <referenceCalculation>
+                      <type>identityReferenceCal</type>
+                      <identityReferenceCal>
+                        <krCode>KOSPI200</krCode>
+                        <fixingDate>2014-06-05</fixingDate>
+                      </identityReferenceCal>
+                    </referenceCalculation>
+
+                    <returnCalculation>
+                      <type>vanillaReturnCal</type>
+
+                      <vanillaReturnCal>
+                        <referenceCalculation>
+                          <type>identityReferenceCal</type>
+                          <identityReferenceCal>
+                            <krCode>KBPCDAAA</krCode>
+                            <fixingDate>2014-03-05</fixingDate>
+                          </identityReferenceCal>
+                        </referenceCalculation>
+                        <gearing>1.0</gearing>
+                        <spread>0.0024</spread>
+                      </vanillaReturnCal>
+
+                    </returnCalculation>
+
+                  </simpleRangeEvent>
+
+                </simpleRangeEventList>
+
+                <payoffDate>2014-06-10</payoffDate>
+
+              </simpleRangeRateTrigger>
+            </eventTrigger>
+
+            <eventTrigger>
+              <type>redemptionNotionalTrigger</type>
+              <redemptionNotionalTrigger>
+                <payoffDate>2014-06-10</payoffDate>
+                <redemptionAmount>1.0</redemptionAmount>
+              </redemptionNotionalTrigger>
+            </eventTrigger>
+            
+          </eventTriggerList>
+        </vanillaStandardStreamPayoff>
+      
+      </payoffInfo>
+      
+    </standardInstrument>
+  </instrumentInfo>
+
+</instrument>

@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="Excel_Interface.Excel_profitLossView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <!--<StackPanel Name="bindingPanel_" Orientation="Horizontal">
+                <Label Content="ReferenceDate :" />
+                <DatePicker Width="100" SelectedDate="{Binding Path=ReferenceDate_, Mode=TwoWay}"
+                                    DisplayDate="{Binding Path=ReferenceDate_, Mode=TwoWay}"/>
+                <Button Content="Load" Click="LoadButton_Click" />
+            </StackPanel>-->
+            <StackPanel Name="bindingPanel_" Orientation="Horizontal">
+                <Label Content="Book Value :" />
+                <TextBox Width="200" Name="bookValueTextBox_" Text="{Binding Path=BookValue_}" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="EvalAmount :" />
+                <TextBox Width="200" Name="evalAmountTextBox_" Text="{Binding Path=EvalAmount_}" IsReadOnly="True" Foreground="Gray"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Total P/L(Cal) :" />
+                <TextBox Width="200" Name="TotalPLTextBox_" Text="{Binding Path=TotalProfitLoss_}" IsReadOnly="True" Foreground="Gray"/>
+            </StackPanel>
+            <!--
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Daily P/L:" />
+                <TextBox Width="200" Name="DailyPLTextBox_" Text="{Binding Path=DailyProfitLoss_}" IsReadOnly="True" Foreground="Gray"/>
+            </StackPanel>
+            
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="History P/L" />
+                    <Button Content="load" Click="PLHistoryLoadButton_Click" />
+                </StackPanel>
+                <DataGrid Name="historyPL_DataGrid_"/>
+            </StackPanel>
+            -->
+            <StackPanel Orientation="Vertical">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Trade Event History" />
+                </StackPanel>
+                <DataGrid Name="TradeEventHistory_DataGrid"/>
+            </StackPanel>
+            
+        </StackPanel>
+    </Grid>
+</UserControl>

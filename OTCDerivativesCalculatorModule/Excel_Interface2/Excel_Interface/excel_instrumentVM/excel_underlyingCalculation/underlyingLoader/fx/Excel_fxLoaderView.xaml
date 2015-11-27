@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="Excel_Interface.Excel_fxLoaderView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <Grid>
+        <DataGrid Name="symbolDataGrid_" LoadingRow="DataGrid_LoadingRow_" 
+          AutoGenerateColumns="False"
+          IsReadOnly="True"
+          ScrollViewer.CanContentScroll="True" 
+          ScrollViewer.VerticalScrollBarVisibility="Auto"
+          ScrollViewer.HorizontalScrollBarVisibility="Auto">
+
+            <DataGrid.RowStyle>
+                <Style TargetType="{x:Type DataGridRow}">
+                    <EventSetter Event="MouseDoubleClick" Handler="resultDataGrid_MouseDoubleClick2"/>
+                </Style>
+            </DataGrid.RowStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Symbol" Binding="{Binding Path=Symbol_}"/>
+                <DataGridTextColumn Header="Name_eng" Binding="{Binding Path=Name_eng_}"/>
+                <DataGridTextColumn Header="Name_kor" Binding="{Binding Path=Name_kor_}"/>
+                <DataGridTextColumn Header="Symbol_type" Binding="{Binding Path=Symbol_type_}"/>
+                <DataGridTextColumn Header="Provider" Binding="{Binding Path=Provider_}"/>
+                <DataGridTextColumn Header="Description" Binding="{Binding Path=Description_}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>

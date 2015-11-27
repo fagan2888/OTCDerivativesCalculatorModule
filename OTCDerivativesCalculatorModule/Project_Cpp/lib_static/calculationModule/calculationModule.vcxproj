@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{470C3A4E-E667-4F8A-B89C-907F2C14B713}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>calculationModule</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LibraryPath>D:\Program Files (x86)\boost\boost_1_47\lib;.\Project_Cpp\lib_static\QuantLib\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\QuantLib;D:\Program Files (x86)\boost\boost_1_47;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>D:\Program Files (x86)\boost\boost_1_47;$(VCInstallDir)include;$(VCInstallDir)atlmfc\include;$(WindowsSdkDir)include;$(FrameworkSDKDir)\include;</IncludePath>
+    <LibraryPath>D:\Program Files (x86)\boost\boost_1_47\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(SolutionDir)Project_Cpp\lib_static\QuantLib</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996;4819;</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>QuantLib-vc100-mt-gd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)Project_Cpp\lib_static\QuantLib\bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\;$(SolutionDir)Project_Cpp\lib_static\QuantLib;$(ProjectDir)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996;4819</DisableSpecificWarnings>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>QuantLib-vc100-mt-s.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>D:\Project File\OTCDerivativesCalculatorModule\Project_Cpp\lib_static\QuantLib\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="..\..\..\..\..\build_ql_1_1_0\Fpml\confirmation-5-2_xml\confirmation\products\interest-rate-derivatives\ird-ex06-xccy-swap.xml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="..\xmlFactory\xml\testfpmlProduct.xml" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Engine\MonteCarlo\autoTerminationETI.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\Common\Interface\all.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\Common\Interface\IReturnCalculation.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\Common\Interface\IEventInfo.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\Common\Interface\ISwapStream.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\Common\standardSwapStream.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\eventCalculation\all.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\eventCalculation\dateInformation\all.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\eventCalculation\dateInformation\dailyInterval.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\eventCalculation\dateInformation\dateInformation.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\eventCalculation\dateInformation\dateList.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\eventCalculation\eventCalculation.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\eventCalculation\eventCalculationInfo.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\eventCalculation\jointEventCalculation\all.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\eventCalculation\jointEventCalculation\andEventCal.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\eventCalculation\jointEventCalculation\atLeastEventCal.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\eventCalculation\jointEventCalculation\atMostEventCal.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\eventCalculation\jointEventCalculation\countEventCal.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\eventCalculation\jointEventCalculation\jointEventCalculation.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\eventCalculation\jointEventCalculation\orEventCal.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\eventCalculation\jointEventCalculation\rangeJointCal\range1DJointAndCalculation.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\eventCalculation\jointEventCalculation\rangeJointCal\range1DJointCalculation.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\eventCalculation\jointEventCalculation\rangeJointCal\range1DJointORCalculation.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\eventCalculation\jointEventCalculation\simpleJointCal\all.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\eventCalculation\jointEventCalculation\simpleJointCal\andSimpleCal.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\eventCalculation\jointEventCalculation\simpleJointCal\identitySimpleCal.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\eventCalculation\jointEventCalculation\simpleJointCal\jointSimpleCalculation.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\eventCalculation\lowerBarrierEventCal.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\eventCalculation\multiRangeEventCal.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\eventCalculation\referenceEventCal.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\eventCalculation\simpleBarrierEventCal.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\eventCalculation\simpleRangeEventCal.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\eventCalculation\simpleRangeEventTimeCal.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\eventCalculation\upperBarrierEventCal.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\fixedFixingDateInfo.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\fixingDateInfo.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\fixingInformation.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\instrument\all.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\instrument\noteInst.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\instrument\swapInst.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\IRefVariable.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\IRProduct\couponCalculation.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\IRProduct\couponCalculation\all.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\IRProduct\couponCalculation\multiEventCouponETI.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\IRProduct\couponCalculation\simpleEventCouponETI.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\IRProduct\couponCalculation\vanillaCallPutCouponETI.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\IRProduct\couponCalculation\vanillaCouponETI.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\IRProduct\RateCalculation.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\IRProduct\rateCalculation\all.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\IRProduct\rateCalculation\fixedRateETI.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\IRProduct\rateCalculation\multiConditionAccrualCouponRateETI.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\IRProduct\rateCalculation\multiConditionCouponRateETI.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\IRProduct\rateCalculation\multiConditionMultiRngAccrualCouponRateETI.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\IRProduct\rateCalculation\range1D.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\IRProduct\rateCalculation\rangeEventInfo.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\IRProduct\rateCalculation\rangeFixedAccrualRateETI.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\IRProduct\rateCalculation\rangeFloatingAccrualRateETI.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\IRProduct\rateCalculation\rangeND.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\IRProduct\rateCalculation\rangeRateCalculation.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\IRProduct\rateCalculation\redemptionNotionalETI.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\IRProduct\rateCalculation\simpleRangeAccrualRateETI.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\IRProduct\rateCalculation\simpleRangeEvent.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\IRProduct\rateCalculation\simpleRangeRateETI.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\IRProduct\rateCalculation\vanillaRateETI.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\ITimeCalculation.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\MCPricer.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\MonteEngine.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\nullFixingDateInfo.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\operator\additionOperator1D.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\operator\additionOperatorND.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\operator\all.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\operator\condition\conditionOperator.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\operator\condition\rangeConditionOperator1D.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\operator\divisionOperatorND.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\operator\identityOperatorND.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\operator\maximumOperator1D.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\operator\maximumOperatorND.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\operator\multipleOperator1D.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\operator\multipleOperatorND.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\operator\operator1D.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\operator\operatorND.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\PathGeneratorFactory.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\postCalculation\postCalculation.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\preCalculation\preCalculation.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\preEventCalculation\preConditionEvent.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\preEventCalculation\preEventCalculation.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\pricer\additionalOption\additionalOption.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\pricer\additionalOption\all.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\pricer\additionalOption\callableOption.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\pricer\additionalOption\noneOption.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\pricer\all.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\pricer\autoCallablePricer.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\pricer\autoCallableSwapPricer.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\pricer\barrierEventPricer.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\pricer\compositeSumOptionPricer.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\pricer\event\all.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\pricer\event\compositeSumOptionETI.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\pricer\event\constKiMinLossPayoffTriggerETI.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\pricer\event\constPayoffEventTriggerInfo.hpp" />
+    <ClInclude Include="src\engine\montecarlo\pricer\event\eventTriggerInfo.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\pricer\event\noAutoCallReturnETI.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\pricer\event\simpleOption\all.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\pricer\event\simpleOption\constantPayoffETI.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\pricer\event\simpleOption\barrierWithConstRebatePutOptionETI.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\pricer\event\simpleOption\singleBarrierOptionETI.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\pricer\event\simpleOption\barrierWithConstRebateCallOptionETI.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\pricer\event\simpleOption\vanillaCallETI.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\pricer\event\simpleOption\vanillaPutETI.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\pricer\event\simpleRangeConstReturnETI.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\pricer\event\simpleRangeReturnETI.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\pricer\hifivePricer.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\pricer\stepDownNoKIEventPricer.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\pricer\stoplossEventPricer.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\pricer\vanillaCreditEventPricer.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\pricer\vanillaPricer.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\pricer\vanillaSwapPricer.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\referenceCalculation\choiceReferenceCal.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\referenceCalculation\dailyReturnReferenceCal.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\referenceCalculation\identityReferenceCal.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\referenceCalculation\maximumReferenceCal.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\referenceCalculation\minimumReferenceCal.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\referenceCalculation\referenceCalculation.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\referenceCalculation\referenceCalculationInfo.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\referenceCalculation\referenceTimeCalculation.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\referenceCalculation\refVariableReferenceCal.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\refVariableFixingDateInfo.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\result\CalculationLogCommulator.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\result\resultCommulator.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\returnCalculation\all.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\returnCalculation\CallPutCompositeReturnCal.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\returnCalculation\callPutReturnCal.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\returnCalculation\CallPut\all.hpp" />
+    <ClInclude Include="src\engine\montecarlo\returncalculation\callput\OptionPayoffFunction.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\returnCalculation\CallPut\VanillaCall.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\returnCalculation\CallPut\VanillaPut.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\returnCalculation\complex1DReturnCal.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\returnCalculation\complexNDReturnCal.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\returnCalculation\constReturnCal.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\returnCalculation\returnCalculation.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\returnCalculation\returnCalculationInfo.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\returnCalculation\stopLossReturnCal.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\returnCalculation\vanillaReturnCal.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\returnCalculation\zeroReturnCal.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\stochasticProcess\all.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\stochasticProcess\ForwardRateModelWrapper.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\stochasticProcess\gbmProcess1DWrapper.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\stochasticProcess\hullWhite2FactorProcess1DWrapper.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\stochasticProcess\hullWhiteProcess1DWrapper.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\stochasticProcess\IProcessWrapper.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\stochasticProcess\nullProcessModelWrapper.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\stochasticProcess\processArrayWrapper.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\stochasticProcess\SabrProcess1DWrapper.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\StopLoss\stoplossCalculation.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\StopLoss\stoplossEventInfo.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\StopLoss\stoplossPricer.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\variableCalculation.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\variableInfo\additionVariableInfo.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\variableInfo\all.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\variableInfo\definedVariableInfo.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\variableInfo\nullVariableEventInfo.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\variableInfo\nullVariableInfo.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\variableInfo\overWriteVariableEventInfo.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\variableInfo\overWriteVariableInfo.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\variableInfo\predefinedVariableInfo.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\variableInfo\resetVariableInfo.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\variableInfo\variableEventInfo.hpp" />
+    <ClInclude Include="src\Engine\MonteCarlo\variableInfo\variableInfo.hpp" />
+    <ClInclude Include="src\Index\UnderlyingIndex.hpp" />
+    <ClInclude Include="src\Instrument\instrumentWithEngine.hpp" />
+    <ClInclude Include="src\util\CalcValueResult.hpp" />
+    <ClInclude Include="src\util\CashFlowResult.hpp" />
+    <ClInclude Include="src\util\comparision.hpp" />
+    <ClInclude Include="src\util\ConvertFunction.hpp" />
+    <ClInclude Include="src\util\DateHelper.hpp" />
+    <ClInclude Include="src\util\MyResultCalculator.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Engine\MonteCarlo\autoTerminationETI.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\Common\standardSwapStream.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\eventCalculation\dateInformation\dailyInterval.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\eventCalculation\dateInformation\dateList.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\eventCalculation\eventCalculation.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\eventCalculation\eventCalculationInfo.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\eventCalculation\jointEventCalculation\andEventCal.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\eventCalculation\jointEventCalculation\atLeastEventCal.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\eventCalculation\jointEventCalculation\atMostEventCal.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\eventCalculation\jointEventCalculation\countEventCal.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\eventCalculation\jointEventCalculation\jointEventCalculation.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\eventCalculation\jointEventCalculation\orEventCal.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\eventCalculation\jointEventCalculation\rangeJointCal\range1DJointAndCalculation.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\eventCalculation\jointEventCalculation\rangeJointCal\range1DJointCalculation.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\eventCalculation\jointEventCalculation\rangeJointCal\range1DJointORCalculation.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\eventCalculation\jointEventCalculation\simpleJointCal\andSimpleCal.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\eventCalculation\jointEventCalculation\simpleJointCal\identitySimpleCal.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\eventCalculation\lowerBarrierEventCal.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\eventCalculation\multiRangeEventCal.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\eventCalculation\referenceEventCal.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\eventCalculation\simpleBarrierEventCal.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\eventCalculation\simpleRangeEventCal.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\eventCalculation\simpleRangeEventTimeCal.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\eventCalculation\upperBarrierEventCal.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\fixedFixingDateInfo.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\fixingDateInfo.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\fixingInformation.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\instrument\noteInst.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\instrument\swapInst.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\IRefVariable.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\IRProduct\couponCalculation.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\IRProduct\couponCalculation\multiEventCouponETI.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\IRProduct\couponCalculation\simpleEventCouponETI.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\IRProduct\couponCalculation\vanillaCallPutCouponETI.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\IRProduct\couponCalculation\vanillaCouponETI.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\IRProduct\RateCalculation.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\IRProduct\rateCalculation\fixedRateETI.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\IRProduct\rateCalculation\multiConditionAccrualCouponRateETI.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\IRProduct\rateCalculation\multiConditionCouponRateETI.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\IRProduct\rateCalculation\multiConditionMultiRngAccrualCouponRateETI.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\IRProduct\rateCalculation\range1D.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\IRProduct\rateCalculation\rangeEventInfo.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\IRProduct\rateCalculation\rangeFixedAccrualRateETI.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\IRProduct\rateCalculation\rangeFloatingAccrualRateETI.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\IRProduct\rateCalculation\rangeND.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\IRProduct\rateCalculation\rangeRateCalculation.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\IRProduct\rateCalculation\redemptionNotionalETI.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\IRProduct\rateCalculation\simpleRangeAccrualRateETI.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\IRProduct\rateCalculation\simpleRangeEvent.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\IRProduct\rateCalculation\simpleRangeRateETI.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\IRProduct\rateCalculation\vanillaRateETI.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\ITimeCalculation.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\MCPricer.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\MonteEngine.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\nullFixingDateInfo.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\operator\additionOperator1D.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\operator\additionOperatorND.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\operator\condition\conditionOperator.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\operator\condition\rangeConditionOperator1D.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\operator\divisionOperatorND.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\operator\identityOperatorND.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\operator\maximumOperator1D.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\operator\maximumOperatorND.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\operator\multipleOperator1D.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\operator\multipleOperatorND.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\operator\operator1D.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\operator\operatorND.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\PathGeneratorFactory.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\postCalculation\postCalculation.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\preCalculation\preCalculation.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\preEventCalculation\preConditionEvent.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\preEventCalculation\preEventCalculation.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\pricer\additionalOption\additionalOption.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\pricer\additionalOption\callableOption.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\pricer\additionalOption\noneOption.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\pricer\autoCallablePricer.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\pricer\autoCallableSwapPricer.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\pricer\compositeSumOptionPricer.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\pricer\event\compositeSumOptionETI.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\pricer\event\constKiMinLossPayoffTriggerETI.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\pricer\event\constPayoffEventTriggerInfo.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\pricer\event\eventTriggerInfo.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\pricer\event\noAutoCallReturnETI.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\pricer\event\simpleOption\constantPayoffETI.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\pricer\event\simpleOption\barrierWithConstRebatePutOptionETI.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\pricer\event\simpleOption\singleBarrierOptionETI.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\pricer\event\simpleOption\barrierWithConstRebateCallOptionETI.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\pricer\event\simpleOption\vanillaCallETI.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\pricer\event\simpleOption\vanillaPutETI.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\pricer\event\simpleRangeConstReturnETI.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\pricer\event\simpleRangeReturnETI.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\pricer\hifivePricer.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\pricer\stepDownNoKIEventPricer.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\pricer\stoplossEventPricer.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\pricer\vanillaCreditEventPricer.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\pricer\vanillaPricer.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\pricer\vanillaSwapPricer.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\referenceCalculation\choiceReferenceCal.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\referenceCalculation\dailyReturnReferenceCal.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\referenceCalculation\identityReferenceCal.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\referenceCalculation\maximumReferenceCal.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\referenceCalculation\minimumReferenceCal.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\referenceCalculation\referenceCalculation.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\referenceCalculation\referenceCalculationInfo.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\referenceCalculation\referenceTimeCalculation.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\referenceCalculation\refVariableReferenceCal.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\refVariableFixingDateInfo.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\result\CalculationLogCommulator.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\result\resultCommulator.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\returnCalculation\CallPutCompositeReturnCal.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\returnCalculation\callPutReturnCal.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\returnCalculation\CallPut\OptionPayoffFunction.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\returnCalculation\CallPut\VanillaCall.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\returnCalculation\CallPut\VanillaPut.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\returnCalculation\complex1DReturnCal.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\returnCalculation\complexNDReturnCal.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\returnCalculation\constReturnCal.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\returnCalculation\returnCalculation.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\returnCalculation\returnCalculationInfo.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\returnCalculation\stopLossReturnCal.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\returnCalculation\vanillaReturnCal.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\returnCalculation\zeroReturnCal.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\stochasticProcess\ForwardRateModelWrapper.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\stochasticProcess\gbmProcess1DWrapper.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\stochasticProcess\hullWhite2FactorProcess1DWrapper.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\stochasticProcess\hullWhiteProcess1DWrapper.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\stochasticProcess\nullProcessModelWrapper.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\stochasticProcess\processArrayWrapper.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\stochasticProcess\SabrProcess1DWrapper.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\StopLoss\stoplossCalculation.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\StopLoss\stoplossEventInfo.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\StopLoss\stoplossPricer.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\variableCalculation.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\variableInfo\additionVariableInfo.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\variableInfo\definedVariableInfo.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\variableInfo\nullVariableEventInfo.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\variableInfo\nullVariableInfo.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\variableInfo\overWriteVariableEventInfo.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\variableInfo\overWriteVariableInfo.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\variableInfo\predefinedVariableInfo.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\variableInfo\resetVariableInfo.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\variableInfo\variableEventInfo.cpp" />
+    <ClCompile Include="src\Engine\MonteCarlo\variableInfo\variableInfo.cpp" />
+    <ClCompile Include="src\Index\UnderlyingIndex.cpp" />
+    <ClCompile Include="src\Instrument\instrumentWithEngine.cpp" />
+    <ClCompile Include="src\util\CalcValueResult.cpp" />
+    <ClCompile Include="src\util\CashFlowResult.cpp" />
+    <ClCompile Include="src\util\comparision.cpp" />
+    <ClCompile Include="src\util\ConvertFunction.cpp" />
+    <ClCompile Include="src\util\DateHelper.cpp" />
+    <ClCompile Include="src\util\MyResultCalculator.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

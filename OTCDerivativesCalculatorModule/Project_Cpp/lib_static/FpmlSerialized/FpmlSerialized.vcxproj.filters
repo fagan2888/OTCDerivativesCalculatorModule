@@ -1,0 +1,642 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="GenClass">
+      <UniqueIdentifier>{4af11b6e-c990-4fc9-ab4e-52011e1d967e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GenClass\fpml-bond-option-5-4">
+      <UniqueIdentifier>{d50ffe9e-48a1-4f53-98b1-fc6bae27e77f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GenClass\fpml-variance-swaps-5-4">
+      <UniqueIdentifier>{3b07d51d-5934-4683-abac-be5ea7a03381}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GenClass\fpml-asset-5-4">
+      <UniqueIdentifier>{f2269bee-8ef3-464f-922d-ce5898a53cea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GenClass\fpml-business-events-5-4">
+      <UniqueIdentifier>{11a7b2ca-dbdb-4199-b710-eb4d2174c3ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GenClass\fpml-cd-5-4">
+      <UniqueIdentifier>{c215c9eb-92db-4fa5-a455-47d5f0a83432}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GenClass\fpml-com-5-4">
+      <UniqueIdentifier>{a0c2235c-dfa0-44f1-826b-4bfd225adb7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GenClass\fpml-confirmation-processes-5-4">
+      <UniqueIdentifier>{ca01f205-222b-4d2a-9aad-2917731f4b59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GenClass\fpml-correlation-swaps-5-4">
+      <UniqueIdentifier>{de85df1f-aa0d-4234-86a4-05af33839cd8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GenClass\fpml-credit-event-notification-5-4">
+      <UniqueIdentifier>{63af00fb-bb18-4916-ab0c-d11a6f8f841d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GenClass\fpml-dividend-swaps-5-4">
+      <UniqueIdentifier>{d772ed38-5a7b-4535-866c-5658338d3b39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GenClass\fpml-doc-5-4">
+      <UniqueIdentifier>{8faa5627-229d-441f-985d-c5f2378f31ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GenClass\fpml-enum-5-4">
+      <UniqueIdentifier>{c3d08ebc-3d13-45d0-9aef-4d476863d3e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GenClass\fpml-eqd-5-4">
+      <UniqueIdentifier>{53ffc7f0-ad00-4c9c-9733-22fe7c469701}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GenClass\fpml-eq-shared-5-4">
+      <UniqueIdentifier>{615a6e1e-3fa1-425a-845a-763d60439e17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GenClass\fpml-fx-5-4">
+      <UniqueIdentifier>{bbf1ef74-609c-4195-85fc-0c90b60dd38f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GenClass\fpml-generic-5-4">
+      <UniqueIdentifier>{68d60977-6e93-4823-829c-8154a8ebae56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GenClass\fpml-ird-5-4">
+      <UniqueIdentifier>{180eabf0-89b3-4c7c-82d9-eb442debe803}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GenClass\fpml-main-5-4">
+      <UniqueIdentifier>{34b342ba-fbcc-49b7-8b8a-9f782b19dc97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GenClass\fpml-mktenv-5-4">
+      <UniqueIdentifier>{319471ee-51bb-40e5-aed8-53d3568f25ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GenClass\fpml-msg-5-4">
+      <UniqueIdentifier>{fafb6e6f-bf3e-40c4-ac98-a5763194fc94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GenClass\fpml-option-shared-5-4">
+      <UniqueIdentifier>{3485e1bb-758e-4b14-ae00-3913451dbd09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GenClass\fpml-return-swaps-5-4">
+      <UniqueIdentifier>{e7af9939-cd40-4940-bee5-3a49729e23c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GenClass\fpml-riskdef-5-4">
+      <UniqueIdentifier>{3df9007a-9b13-412c-8ac7-182a1eaee6d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GenClass\fpml-shared-5-4">
+      <UniqueIdentifier>{eb9f6ef5-19b6-42bf-b06f-420d75a55b9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GenClass\fpml-standard-5-4">
+      <UniqueIdentifier>{dbca7328-7732-466b-9c34-658d4c9fa413}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GenClass\fpml-valuation-5-4">
+      <UniqueIdentifier>{476d7504-ee05-4b9c-8a47-654cfa9f5be2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GenClass\xmldsig-core-schema">
+      <UniqueIdentifier>{188d4ccb-25c0-4d08-80b5-c459ae2eada6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GenClass\bulit-in-type">
+      <UniqueIdentifier>{c06d96fc-4a6e-4fbf-a648-28bc68952938}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GenClass\ahn-product-1-0">
+      <UniqueIdentifier>{f1c3698b-ac72-4aa1-a08e-ae7cb49c3e71}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GenClass\IDManager.cpp">
+      <Filter>GenClass</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\JointEvent.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\SubEvents.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\DateRef.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\ParametorCalculation.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\AverPayoff.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\BaseIndexes.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\BaseInformation.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\BasketAver.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\CommodityIndex.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\CommonInformation.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\ConstPayoff.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\ConventionSet.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\DateInterval.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\DatesList.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\DownEventCheck.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\EventCheck.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\EventCheckBase.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\EventCheckNormal.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\EventCheckTime.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\EventDate.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\EventDates.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\EventFunctionM.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\EventIndexTransformation.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\EventSchedule.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\ExprPayoff.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\FixingDays.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\Function.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\FunctionEvents.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\Functions.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\FunctionTypeEnum.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\IEventCheck.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\IndexCalculation.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\IndexRef.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\InstrumentType.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\InterestrateIndex.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\IssueInformation.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\JointFSubEvent.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\JointFunctionEvent.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\JointSubEvent.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\JointTimeEvent.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\JointTimeTypeEnum.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\JointTypeEnum.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\MinimumTran.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\MinimumTranTime.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\NotionalValue.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\NullPayoff.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\PayoffBase.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\PreFixPayoff.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\RangeEventCheck.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\ReturnTran.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\ReturnTranTime.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\StockIndex.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\StructuredProduct.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\StructuredProductPayoff.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\StructuredSwap.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\SubEvent.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\TriggerAtleast.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\UnderlyingIndex.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\UpDownEventCheck.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\UpEventCheck.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\UpfrontPremium.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\Variable.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\VariableValue.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\IndexCalculationTime.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+    <ClCompile Include="GenClass\ahn-product-1-0\IndexTimeRef.cpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GenClass\all.hpp">
+      <Filter>GenClass</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\iserialized.hpp">
+      <Filter>GenClass</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeAnyURI.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeBase64Binary.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeBoolean.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeByte.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeDate.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeDateTime.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeDecimal.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeDouble.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeDuration.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeENTITIES.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeENTITY.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeFloat.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeGDay.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeGMonth.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeGMonthDay.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeGYear.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeGYearMonth.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeHexBinary.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeID.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeIDREF.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeIDREFS.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeInt.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeInteger.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeLanguage.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeLong.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeName.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeNCName.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeNegativeInteger.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeNMTOKEN.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeNMTOKENS.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeNonNegativeInteger.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeNonPositiveInteger.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeNormalizedString.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeNOTATION.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypePositiveInteger.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeQName.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeShort.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeString.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeTime.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeToken.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeUnsignedByte.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeUnsignedInt.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeUnsignedLong.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\built_in_type\XsdTypeUnsignedShort.hpp">
+      <Filter>GenClass\bulit-in-type</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\IDManager.hpp">
+      <Filter>GenClass</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\FileManager.hpp">
+      <Filter>GenClass</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\IndexCalculationTime.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\JointEvent.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\SubEvents.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\DateRef.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\ParametorCalculation.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\all.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\AverPayoff.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\BaseIndexes.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\BaseInformation.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\BasketAver.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\CommodityIndex.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\CommonInformation.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\ConstPayoff.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\ConventionSet.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\DateInterval.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\DatesList.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\DownEventCheck.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\EventCheck.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\EventCheckBase.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\EventCheckNormal.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\EventCheckTime.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\EventDate.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\EventDates.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\EventFunctionM.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\EventIndexTransformation.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\EventSchedule.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\ExprPayoff.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\FixingDays.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\Function.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\FunctionEvents.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\Functions.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\FunctionTypeEnum.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\IEventCheck.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\IndexCalculation.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\IndexRef.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\InstrumentType.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\InterestrateIndex.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\IssueInformation.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\JointFSubEvent.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\JointFunctionEvent.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\JointSubEvent.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\JointTimeEvent.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\JointTimeTypeEnum.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\JointTypeEnum.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\MinimumTran.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\MinimumTranTime.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\NotionalValue.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\NullPayoff.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\PayoffBase.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\PreFixPayoff.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\RangeEventCheck.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\ReturnTran.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\ReturnTranTime.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\StockIndex.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\StructuredProduct.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\StructuredProductPayoff.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\StructuredSwap.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\SubEvent.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\TriggerAtleast.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\UnderlyingIndex.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\UpDownEventCheck.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\UpEventCheck.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\UpfrontPremium.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\Variable.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\VariableValue.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+    <ClInclude Include="GenClass\ahn-product-1-0\IndexTimeRef.hpp">
+      <Filter>GenClass\ahn-product-1-0</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

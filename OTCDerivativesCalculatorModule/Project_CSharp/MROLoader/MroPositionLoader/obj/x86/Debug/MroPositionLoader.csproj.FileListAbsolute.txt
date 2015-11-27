@@ -1,0 +1,11 @@
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\MROLoader\MroPositionLoader\bin\Debug\Data\Data_Interface\MarketDataBase.sdf
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\MROLoader\MroPositionLoader\bin\Debug\MroPositionLoader.exe
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\MROLoader\MroPositionLoader\bin\Debug\MroPositionLoader.pdb
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\MROLoader\MroPositionLoader\bin\Debug\RiskMonitor.exe
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\MROLoader\MroPositionLoader\bin\Debug\Fluent.dll
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\MROLoader\MroPositionLoader\bin\Debug\QLNet.dll
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\MROLoader\MroPositionLoader\bin\Debug\AvalonDock.dll
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\MROLoader\MroPositionLoader\bin\Debug\RiskMonitor.pdb
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\MROLoader\MroPositionLoader\obj\x86\Debug\MroPositionLoader.exe
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\MROLoader\MroPositionLoader\obj\x86\Debug\MroPositionLoader.pdb
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\MROLoader\MroPositionLoader\obj\x86\Debug\MroPositionLoader.csprojResolveAssemblyReference.cache

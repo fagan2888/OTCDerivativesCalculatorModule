@@ -1,0 +1,15 @@
+﻿public void insert(DbConnection conn)
+{
+    if (conn.State != ConnectionState.Open)
+        conn.Open();
+
+    DbCommand dbCommand = conn.CreateCommand();
+
+    string insertQuery = @DAOCLASSNAME@.InsertQuery_;
+
+	@INSERTREPLACECODE@
+
+    dbCommand.CommandText = insertQuery;
+
+    dbCommand.ExecuteNonQuery();
+}

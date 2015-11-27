@@ -1,0 +1,56 @@
+﻿<Window x:Class="QuerySerializeCodeGenerator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="400" Width="770">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Horizontal">
+                <Button Content="build" Click="Button_Click" />
+                <RadioButton Content="table" Name="tableRB_" IsChecked="True" VerticalContentAlignment="Center" />
+                <RadioButton Content="view" Name="viewRB_" VerticalContentAlignment="Center" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <Label Content="Name : " />
+                        <TextBox Name="nameTB_" Width="80" />
+                    </StackPanel>
+                    <Label Content=" -ColumnList" />
+                    <DataGrid Width="160" Name="columnListGrid_" AutoGenerateColumns="False" >
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding }" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </StackPanel>
+                <StackPanel Orientation="Vertical">
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel Orientation="Vertical">
+                            <Label Content="- Query" />
+                            <TextBox  AcceptsReturn="True" Width="250" Height="300" Name="queryTb_" />
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical">
+                            <Label Content="- Manager" />
+                            <TextBox  Width="250" Height="300" Name="managerResultTb_" />
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical">
+                            <Label Content="- DAO" />
+                            <TextBox Width="250" Height="300" Name="daoTb_" />
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel Orientation="Vertical">
+                            <Label Content="- VM Property" />
+                            <TextBox  AcceptsReturn="True" Width="250" Height="300" Name="ViewModelTb_" />
+                        </StackPanel>
+                        <StackPanel Orientation="Vertical">
+                            <Label Content="- View Xaml" />
+                            <TextBox  AcceptsReturn="True" Width="250" Height="300" Name="ViewTb_" />
+                        </StackPanel>
+                    </StackPanel>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+
+    </Grid>
+</Window>

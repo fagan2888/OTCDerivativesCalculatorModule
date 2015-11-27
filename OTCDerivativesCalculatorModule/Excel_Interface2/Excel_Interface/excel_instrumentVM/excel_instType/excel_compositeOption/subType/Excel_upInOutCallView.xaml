@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="Excel_Interface.Excel_upInOutCallView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" >
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Name="bindPanel_" Orientation="Horizontal">
+                <Label Content="Up And ( In/Out ) Call Option" />
+                <ComboBox  Name="inOutComboBox_" SelectedItem="{Binding Path=CallPut_}" Width="80" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="PartiRate : " />
+                <TextBox Width="80" Text="{Binding Path=PartiRate_}" />
+                <Label Content="%" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Strike : " />
+                <TextBox Name="strikeTxtBox_" Width="80" Text="{Binding Path=Strike_}" />
+                <Label Content="%" />
+                <Label Content="Atm " />
+                <CheckBox Name="atmCheckBox_" VerticalAlignment="Center" Checked="AtmCheckBox_Checked" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="기준가 : " />
+                <TextBox Name="baseUnderlyingValueTxtBox_" Width="80" Text="{Binding Path=BaseUnderlyingValue_}" />
+                <Label Content="StrikeValue : " />
+                <TextBox Name="strikeValueTxtBox_" Width="80" Text="{Binding Path=StrikeValue_}" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="BaseCoupon : " />
+                <TextBox Width="80" Text="{Binding Path=BaseCoupon_}" />
+                <Label Content="%" />
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Barrier : " />
+                <TextBox Name="barrierTxtBox_" Width="60" Text="{Binding Path=Barrier_}" TextChanged="barrierTxtBox__TextChanged" />
+                <Label Content="%" />
+                <Label Content="Barrier Value : " />
+                <TextBox Name="barrierValueTxtBox_" Width="60" Text="{Binding Path=BarrierValue_}" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Rebate : " />
+                <TextBox Name="rebateCouponTxtBox_" Width="60" Text="{Binding Path=RebateCoupon_}" />
+                <Label Content="%" />
+                <Label Content="Rebate Value : " />
+                <TextBox Name="rebateCouponValueTxtBox_" Width="60" Text="{Binding Path=RebateCouponValue_}" />
+            </StackPanel>
+            
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Observe :" />
+                <DatePicker Name="barrierObStartDatePicker_" Width="100" SelectedDate="{Binding Path=ObservationStartDate_, Mode=TwoWay}"
+                                                DisplayDate="{Binding Path=ObservationStartDate_, Mode=TwoWay}"/>
+                <Label Content="~" />
+                <DatePicker Name="barrierObEndDatePicker_" Width="100" SelectedDate="{Binding Path=ObservationEndDate_, Mode=TwoWay}"
+                                                DisplayDate="{Binding Path=ObservationEndDate_, Mode=TwoWay}"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

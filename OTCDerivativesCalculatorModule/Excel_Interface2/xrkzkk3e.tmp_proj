@@ -1,0 +1,801 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{67E26D74-90D1-4531-9B2D-91D19468B7A7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Excel_Interface2</RootNamespace>
+    <AssemblyName>Excel_Interface2</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Chart\GraphView.xaml.cs">
+      <DependentUpon>GraphView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Chart\GraphViewModel.cs" />
+    <Compile Include="Data\CurveDataLoader.cs" />
+    <Compile Include="Data\MarketDataLoader\INDEX_DATA_Table_DAO.cs" />
+    <Compile Include="Data\MarketDataLoader\INDEX_DATA_Table_DAOManager.cs" />
+    <Compile Include="Data\MarketDataLoader\MarketDataLoader.cs" />
+    <Compile Include="Data\ModelParameterDataLoader.cs" />
+    <Compile Include="ETL_DataMapping\KOM_PSIT_INF_Table_DAO.cs" />
+    <Compile Include="ETL_DataMapping\KOM_PSIT_INF_Table_DAOManager.cs" />
+    <Compile Include="EventHandler\Excel_EventHandler.cs" />
+    <Compile Include="Excel_Interface\excel_event\DAO\EVENT_INFO_Table_DAO.cs" />
+    <Compile Include="Excel_Interface\excel_event\EventManagerView.xaml.cs">
+      <DependentUpon>EventManagerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_event\EventManagerViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_event\EventView.xaml.cs">
+      <DependentUpon>EventView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_event\EventViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_calculation\rateCoupon\Excel_couponScheduleListView.xaml.cs">
+      <DependentUpon>Excel_couponScheduleListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_calculation\rateCoupon\Excel_couponScheduleListViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_calculation\rateCoupon\Excel_couponScheduleLoaderView.xaml.cs">
+      <DependentUpon>Excel_couponScheduleLoaderView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_calculation\rateCoupon\Excel_couponScheduleViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_calculation\rateCoupon\Excel_fixedCouponScheduleView.xaml.cs">
+      <DependentUpon>Excel_fixedCouponScheduleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_calculation\rateCoupon\Excel_fixedCouponScheduleViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_calculation\rateCoupon\Excel_floatingCouponScheduleView.xaml.cs">
+      <DependentUpon>Excel_floatingCouponScheduleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_calculation\rateCoupon\Excel_floatingCouponScheduleViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_calculation\Excel_scheduleLoaderView.xaml.cs">
+      <DependentUpon>Excel_scheduleLoaderView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_calculation\excel_simpleCalculation\eventCalc\Excel_eventCalcInfoLoaderView.xaml.cs">
+      <DependentUpon>Excel_eventCalcInfoLoaderView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_calculation\excel_simpleCalculation\eventCalc\Excel_identityEventCalView.xaml.cs">
+      <DependentUpon>Excel_identityEventCalView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_calculation\excel_simpleCalculation\eventCalc\Excel_identityEventCalViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_calculation\excel_simpleCalculation\eventCalc\Excel_singleBarrierEventCalView.xaml.cs">
+      <DependentUpon>Excel_singleBarrierEventCalView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_calculation\excel_simpleCalculation\eventCalc\Excel_singleRangeEventCalView.xaml.cs">
+      <DependentUpon>Excel_singleRangeEventCalView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_calculation\excel_simpleCalculation\Excel_simpleCalculationView.xaml.cs">
+      <DependentUpon>Excel_simpleCalculationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_calculation\excel_simpleCalculation\returnCalc\Excel_constReturnCalView.xaml.cs">
+      <DependentUpon>Excel_constReturnCalView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_calculation\excel_simpleCalculation\returnCalc\Excel_returnCalcInfoLoaderView.xaml.cs">
+      <DependentUpon>Excel_returnCalcInfoLoaderView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_calculation\excel_simpleCalculation\returnCalc\Excel_vanillaReturnCalView.xaml.cs">
+      <DependentUpon>Excel_vanillaReturnCalView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_calculation\rateCoupon\Excel_vanillaFloatingCouponScheduleView.xaml.cs">
+      <DependentUpon>Excel_vanillaFloatingCouponScheduleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_calculation\rateCoupon\Excel_vanillaFloatingCouponScheduleViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_bond\excel_fixedBond\Excel_fixedCouponScheduleListView.xaml.cs">
+      <DependentUpon>Excel_fixedCouponScheduleListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_bond\excel_fixedBond\Excel_fixedCouponScheduleListViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_bond\excel_fixedBond\subtype\Excel_fixedBond_constantRateView.xaml.cs">
+      <DependentUpon>Excel_fixedBond_constantRateView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_bond\excel_fixedBond\subtype\Excel_fixedBond_constantRateViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_bond\excel_fixedBond\subtype\Excel_fixedBond_subScheduleViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_bond\excel_fixedBond\subtype\Excel_fixedBond_subtypeLoaderView.xaml.cs">
+      <DependentUpon>Excel_fixedBond_subtypeLoaderView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_bond\excel_fixedBond\subtype\Excel_fixedBond_subTypeViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_bond\excel_floatingBond\excel_structuredBond\Excel_instrument_structuredBondViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_bond\excel_floatingBond\excel_structuredBond\Excel_structuredBondView.xaml.cs">
+      <DependentUpon>Excel_structuredBondView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_bond\excel_floatingBond\excel_structuredBond\Excel_structuredBondViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_bond\excel_floatingBond\excel_vanillaFloatingBond\Excel_instrument_vanillaFloatingBondViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_bond\excel_floatingBond\excel_vanillaFloatingBond\Excel_vanillaFloatingBondViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_bond\excel_floatingBond\excel_vanillaFloatingBond\Excel_vanillaFloatingBondView.xaml.cs">
+      <DependentUpon>Excel_vanillaFloatingBondView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_bond\excel_floatingBond\excel_vanillaFloatingBond\Excel_vanillaFloatingCouponScheduleListView.xaml.cs">
+      <DependentUpon>Excel_vanillaFloatingCouponScheduleListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_bond\excel_floatingBond\excel_vanillaFloatingBond\Excel_vanillaFloatingCouponScheduleListViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_bond\excel_floatingBond\excel_vanillaFloatingBond\subtype\Excel_vanillaFloatingBond_simpleView.xaml.cs">
+      <DependentUpon>Excel_vanillaFloatingBond_simpleView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_bond\excel_floatingBond\excel_vanillaFloatingBond\subtype\Excel_vanillaFloatingBond_simpleViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_bond\excel_floatingBond\excel_vanillaFloatingBond\subtype\Excel_vanillaFloatingBond_subScheduleViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_bond\excel_floatingBond\excel_vanillaFloatingBond\subtype\Excel_vanillaFloatingBond_subtypeLoaderView.xaml.cs">
+      <DependentUpon>Excel_vanillaFloatingBond_subtypeLoaderView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_bond\excel_floatingBond\excel_vanillaFloatingBond\subtype\Excel_vanillaFloatingBond_subtypeViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_compositeOption\subType\Excel_upInOutCallView.xaml.cs">
+      <DependentUpon>Excel_upInOutCallView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_cds\Excel_cdsView.xaml.cs">
+      <DependentUpon>Excel_cdsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_cds\Excel_cdsViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_cds\Excel_instrument_cdsViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_cds\protectionTerm\Excel_creditEventInfoView.xaml.cs">
+      <DependentUpon>Excel_creditEventInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_cds\protectionTerm\Excel_creditEventInfoViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_cds\protectionTerm\excel_protection\Excel_creditEventsView.xaml.cs">
+      <DependentUpon>Excel_creditEventsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_cds\protectionTerm\excel_protection\Excel_creditEventsViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_cds\Excel_creditEventSwapLegViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_cds\protectionTerm\excel_jointProb\Excel_jointProbabilityTraitView.xaml.cs">
+      <DependentUpon>Excel_jointProbabilityTraitView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_cds\protectionTerm\excel_jointProb\Excel_jointProbabilityTraitViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_cds\protectionTerm\excel_protection\Excel_obligationsView.xaml.cs">
+      <DependentUpon>Excel_obligationsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_cds\protectionTerm\excel_protection\Excel_obligationsViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_cds\protectionTerm\excel_protection\Excel_protectionTermsView.xaml.cs">
+      <DependentUpon>Excel_protectionTermsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_cds\protectionTerm\excel_protection\Excel_protectionTermsViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_cds\protectionTerm\excel_referenceInformation\Excel_referenceInformationListView.xaml.cs">
+      <DependentUpon>Excel_referenceInformationListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_cds\protectionTerm\excel_referenceInformation\Excel_referenceInformationListViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_cds\protectionTerm\excel_referenceInformation\Excel_referenceInformationView.xaml.cs">
+      <DependentUpon>Excel_referenceInformationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_cds\protectionTerm\excel_referenceInformation\Excel_referenceInformationViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_cds\protectionTerm\excel_referenceInformation\Excel_referenceObligationView.xaml.cs">
+      <DependentUpon>Excel_referenceObligationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_cds\protectionTerm\excel_referenceInformation\Excel_referenceObligationViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_cds\protectionTerm\excel_referenceInformation\Loader\Excel_referenceLoaderView.xaml.cs">
+      <DependentUpon>Excel_referenceLoaderView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_crs\Excel_crsView.xaml.cs">
+      <DependentUpon>Excel_crsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_crs\Excel_crsViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_fxDerivatives\forward\Excel_fxForwardView.xaml.cs">
+      <DependentUpon>Excel_fxForwardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_fxDerivatives\forward\Excel_fxForwardViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_fxDerivatives\forward\Excel_instrument_fxForwardViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_fxDerivatives\Fx_exchangeLegView.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_fxDerivatives\Fx_exchangeLegView.xaml.cs">
+      <DependentUpon>Fx_exchangeLegView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_fxDerivatives\swap\Excel_fxSwapView.xaml.cs">
+      <DependentUpon>Excel_fxSwapView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_fxDerivatives\swap\Excel_fxSwapViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_fxDerivatives\Fx_exchangeLegViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_fxDerivatives\swap\Excel_instrument_fxSwapViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_hifive\Excel_kiEventCalculationViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_hifive\kiEventCalculation\Excel_dualKiEventCalcView.xaml.cs">
+      <DependentUpon>Excel_dualKiEventCalcView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_hifive\kiEventCalculation\Excel_dualKiEventCalcViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_hifive\kiEventCalculation\Excel_noOccReturnCalcInfoViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_hifive\kiEventCalculation\Excel_occReturnCalcInfoViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_hifive\kiEventCalculation\Excel_simpleKiEventCalcView.xaml.cs">
+      <DependentUpon>Excel_simpleKiEventCalcView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_hifive\kiEventCalculation\Excel_simpleKiEventCalcViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_hifive\kiEventCalculation\Excel_targetKiEventCalcView.xaml.cs">
+      <DependentUpon>Excel_targetKiEventCalcView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_hifive\kiEventCalculation\Excel_targetKiEventCalcViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_hifive\kiEventCalculation\loader\Excel_kiEventCalculationLoaderView.xaml.cs">
+      <DependentUpon>Excel_kiEventCalculationLoaderView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_hifive\subType\Excel_hifive_stepDown_nokiViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_hifive\subType\Excel_hifive_stepUp_kiViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_hifive\subType\Excel_hifive_stepUp_nokiViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_hifive\subType\Excel_hifive_subtypeLoaderView.xaml.cs">
+      <DependentUpon>Excel_hifive_subtypeLoaderView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_multiAssetCompositeOption\Excel_instrument_multiAssetCompositeOptionViewModel.cs.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_multiAssetCompositeOption\Excel_multiAssetCompositeOptionView.xaml.cs">
+      <DependentUpon>Excel_multiAssetCompositeOptionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_multiAssetCompositeOption\Excel_multiAssetCompositeOptionViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_multiAssetCompositeOption\Excel_multiAsset_compositeOption_subtypeViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_multiAssetCompositeOption\subType\Excel_multiAsset_upInOutCallView.xaml.cs">
+      <DependentUpon>Excel_multiAsset_upInOutCallView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_multiAssetCompositeOption\subType\Excel_multiAsset_upInOutCallViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_multiAssetCompositeOption\subType\Excel_multiAsset_vanillaCallPutView.xaml.cs">
+      <DependentUpon>Excel_multiAsset_vanillaCallPutView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_multiAssetCompositeOption\subType\Excel_multiAsset_vanillaCallPutViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_multiAssetCompositeOption\subType\loader\Excel_multiAssetCompositeOptionLoaderView.xaml.cs">
+      <DependentUpon>Excel_multiAssetCompositeOptionLoaderView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_spotTrade\Excel_fxSpotViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_spotTrade\Excel_instrument_fxSpotViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\general\excel_generalSwap\Excel_generalSwapParaView.xaml.cs">
+      <DependentUpon>Excel_generalSwapParaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\general\excel_generalSwap\Excel_generalSwapParaViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\general\excel_generalSwap\Excel_generalSwapView.xaml.cs">
+      <DependentUpon>Excel_generalSwapView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\general\excel_generalSwap\Excel_generalSwapViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\general\excel_generalSwap\Excel_instrument_generalSwapViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\general\general_schedule\GeneralScheduleDeatilViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\general\general_schedule\GeneralScheduleEditorView.xaml.cs">
+      <DependentUpon>GeneralScheduleEditorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\general\general_schedule\GeneralScheduleInfoView.xaml.cs">
+      <DependentUpon>GeneralScheduleInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\general\general_schedule\GeneralScheduleInfoViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\general\general_schedule\GeneralScheduleViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\general\general_schedule\detail\General_scheduleDetail_fixedAmountViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\general\general_schedule\detail\General_scheduleDetail_fixedCouponViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\general\general_terminationEvent\detail\General_TerminationEventDetail_creditViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\general\general_terminationEvent\detail\General_TerminationEventDetail_targetViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\general\general_terminationEvent\GeneralTerminationEventDetailViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\general\general_terminationEvent\GeneralTerminationEventEditorView.xaml.cs">
+      <DependentUpon>GeneralTerminationEventEditorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\general\general_terminationEvent\GeneralTerminationEventInfoViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\general\general_terminationEvent\GeneralTerminationEventInfoView.xaml.cs">
+      <DependentUpon>GeneralTerminationEventInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\general\general_terminationEvent\GeneralTerminationEventViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_irs\Excel_counterUnderlyingCalcInfoViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_irs\Excel_instrument_irsViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_irs\Excel_irsView.xaml.cs">
+      <DependentUpon>Excel_irsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_irs\Excel_irsViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\Excel_swapLegViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\leg\Excel_creditEventSwapLegViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\leg\Excel_fixedRateSwapLegViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\leg\Excel_hifiveSwapLegViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\leg\Excel_structuredRateSwapLegViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\leg\Excel_vanillaFloatingRateSwapLegViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_issueInfo\Excel_emptyInfoView.xaml.cs">
+      <DependentUpon>Excel_emptyInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_issueInfo\Excel_emptyInfoViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_issueInfo\Excel_swapInfoView.xaml.cs">
+      <DependentUpon>Excel_swapInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_issueInfo\Excel_swapInfoViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_issueInfo\Excel_swapLegInfoView.xaml.cs">
+      <DependentUpon>Excel_swapLegInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_issueInfo\Excel_swapLegInfoViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_underlyingCalculation\Excel_selectedUnderlyingViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_underlyingCalculation\underlyingCalcIDType\Excel_averageUnderlyingCalcIDView.xaml.cs">
+      <DependentUpon>Excel_averageUnderlyingCalcIDView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_underlyingCalculation\underlyingCalcIDType\Excel_averageUnderlyingCalcIDViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_underlyingCalculation\underlyingCalcIDType\Excel_choiceUnderlyingCalcIDView.xaml.cs">
+      <DependentUpon>Excel_choiceUnderlyingCalcIDView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_underlyingCalculation\underlyingCalcIDType\Excel_choiceUnderlyingCalcIDViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_underlyingCalculation\underlyingCalcIDType\Excel_maximumUnderlyingCalcIDView.xaml.cs">
+      <DependentUpon>Excel_maximumUnderlyingCalcIDView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_underlyingCalculation\underlyingCalcIDType\Excel_maximumUnderlyingCalcIDViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_underlyingCalculation\underlyingCalcIDType\Excel_minimumUnderlyingCalcIDView.xaml.cs">
+      <DependentUpon>Excel_minimumUnderlyingCalcIDView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_underlyingCalculation\underlyingCalcIDType\Excel_minimumUnderlyingCalcIDViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_underlyingCalculation\underlyingCalcIDType\loader\Excel_underlyingCalcIDLoaderView.xaml.cs">
+      <DependentUpon>Excel_underlyingCalcIDLoaderView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_result\Excel_greekResultView.xaml.cs">
+      <DependentUpon>Excel_greekResultView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_result\Excel_greekResultViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_result\Excel_resultView.xaml.cs">
+      <DependentUpon>Excel_resultView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\marketData\Curve\CurveManager.cs" />
+    <Compile Include="Excel_Interface\marketData\Curve\CURVETENOR_INFO_Table_DAO.cs" />
+    <Compile Include="Excel_Interface\marketData\Curve\CURVETENOR_INFO_Table_DAOManager.cs" />
+    <Compile Include="Excel_Interface\marketData\Curve\CURVE_DATA_Table_DAO.cs" />
+    <Compile Include="Excel_Interface\marketData\Curve\CURVE_DATA_Table_DAOManager.cs" />
+    <Compile Include="Excel_Interface\pricingParameterVM\curve\CurveHeaderInfo_Table_DAO.cs" />
+    <Compile Include="Excel_Interface\pricingParameterVM\curve\CurveHeaderInfo_Table_DAOManager.cs" />
+    <Compile Include="Excel_Interface\pricingParameterVM\curve\Excel_defaultCurveViewModel.cs" />
+    <Compile Include="Excel_Interface\pricingParameterVM\curve\Excel_defaultCurve_paraView.xaml.cs">
+      <DependentUpon>Excel_defaultCurve_paraView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\pricingParameterVM\curve\Excel_defaultCurve_paraViewModel.cs" />
+    <Compile Include="Excel_Interface\pricingParameterVM\curve\yield\Excel_yieldCurveViewModel.cs" />
+    <Compile Include="Excel_Interface\pricingParameterVM\Excel_standardCreditParaView.xaml.cs">
+      <DependentUpon>Excel_standardCreditParaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\pricingParameterVM\Excel_standardCreditParaViewModel.cs" />
+    <Compile Include="Excel_Interface\pricingParameterVM\IEngine.cs" />
+    <Compile Include="Excel_Interface\pricingParameterVM\parameterSetting\CurveInterpolationSetting.cs" />
+    <Compile Include="Excel_Interface\pricingParameterVM\parameterSetting\GBMSetting.cs" />
+    <Compile Include="Excel_Interface\pricingParameterVM\parameterSetting\HullWhiteSetting.cs" />
+    <Compile Include="Excel_Interface\pricingParameterVM\parameterSetting\ParameterSettingManager.cs" />
+    <Compile Include="Excel_Interface\pricingParameterVM\parameterSetting\ParameterSettingManagerBuilder.cs" />
+    <Compile Include="Excel_Interface\pricingParameterVM\paraVMwithEngine\Excel_singleAssetCompositeOptionStandParaWithEngineViewModel.cs" />
+    <Compile Include="Excel_Interface\pricingParameterVM\referenceEntity\Excel_referenceCalcInfo_paraView.xaml.cs">
+      <DependentUpon>Excel_referenceCalcInfo_paraView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\pricingParameterVM\referenceEntity\Excel_referenceCalcInfo_paraViewModel.cs" />
+    <Compile Include="Excel_Interface\pricingParameterVM\referenceEntity\Excel_referenceInfo_paraViewModel.cs" />
+    <Compile Include="MasterInformation\DAO\MASTER_INFO_Table_DAO.cs" />
+    <Compile Include="MasterInformation\DAO\MASTER_INFO_Table_DAOManager.cs" />
+    <Compile Include="MasterInformation\MasterInfo_TableManagerView.xaml.cs">
+      <DependentUpon>MasterInfo_TableManagerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MasterInformation\MasterInfo_TableManagerViewModel.cs" />
+    <Compile Include="OutLook\BookManager\OTCApplcationBookView.xaml.cs">
+      <DependentUpon>OTCApplcationBookView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OutLook\EventManager\OTCApplilcationEventView.xaml.cs">
+      <DependentUpon>OTCApplilcationEventView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OutLook\OTCApplication.xaml.cs">
+      <DependentUpon>OTCApplication.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OutLook\BookManager\OTCApplicationBookViewModel_.cs" />
+    <Compile Include="OutLook\EventManager\OTCApplicationEventViewModel.cs" />
+    <Compile Include="PL_Calculator\POSITION_PL_TableDAOManager.cs" />
+    <Compile Include="PL_Calculator\POSITION_PL_Table_DAO.cs" />
+    <Compile Include="Excel_Interface\excel_event\EVENT_INFO_Table_DAOManager.cs" />
+    <Compile Include="Excel_Interface\excel_event\SettlementEventViewModel.cs" />
+    <Compile Include="Util&amp;Factory\CustomControl\Currency_Combo\CurrencyManagerView.xaml.cs">
+      <DependentUpon>CurrencyManagerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Util&amp;Factory\CustomControl\Currency_Combo\CurrencyManagerViewModel.cs" />
+    <Compile Include="Util&amp;Factory\DataErrorCheck.cs" />
+    <Compile Include="Util&amp;Factory\DataInterfaceManager.cs" />
+    <Compile Include="Util&amp;Factory\Environment\CurrencyViewModel.cs" />
+    <Compile Include="Util&amp;Factory\CustomControl\Frequency_Combo\Annual_ComboBoxItem.cs" />
+    <Compile Include="Util&amp;Factory\CustomControl\Frequency_Combo\FrequencyCombo.xaml.cs">
+      <DependentUpon>FrequencyCombo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Util&amp;Factory\CustomControl\Frequency_Combo\I_FrequencyComboBoxItem.cs" />
+    <Compile Include="Util&amp;Factory\CustomControl\Frequency_Combo\Monthly_ComboBoxItem.cs" />
+    <Compile Include="Util&amp;Factory\CustomControl\Frequency_Combo\Once_ComboBoxItem.cs" />
+    <Compile Include="Util&amp;Factory\CustomControl\Frequency_Combo\SemiAnnual_ComboBoxItem.cs" />
+    <Compile Include="Util&amp;Factory\DataConnector\DataBaseConnectManager.cs" />
+    <Compile Include="Util&amp;Factory\DataConnector\DataBaseStringFormat.cs" />
+    <Compile Include="Util&amp;Factory\Environment\ContractComboViewModel.cs" />
+    <Compile Include="Util&amp;Factory\Environment\ContractSubComboViewModel.cs" />
+    <Compile Include="Util&amp;Factory\Environment\DAO\TYPE_VARIABLE_Table_DAO.cs" />
+    <Compile Include="Util&amp;Factory\Environment\DAO\TYPE_VARIABLE_Table_DAOManager.cs" />
+    <Compile Include="Util&amp;Factory\Environment\EnvironmentVariable.cs" />
+    <Compile Include="Excel_Interface\calculationDllModule\CalculationModuleDLL.cs" />
+    <Compile Include="Excel_Interface\excel_profitLoss\tradeEvent\Buy_TradeEventViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_bond\excel_fixedBond\Excel_fixedBondView.xaml.cs">
+      <DependentUpon>Excel_fixedBondView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_bond\excel_fixedBond\Excel_fixedBondViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_bond\excel_fixedBond\Excel_instrument_fixedBondViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_calculation\Excel_scheduleListView.xaml.cs">
+      <DependentUpon>Excel_scheduleListView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_calculation\excel_simpleCalculation\eventCalc\Excel_eventCalcInfoViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_calculation\excel_simpleCalculation\eventCalc\Excel_singleBarrierEventCalViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_calculation\excel_simpleCalculation\eventCalc\Excel_singleRangeEventCalViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_calculation\excel_simpleCalculation\eventCalc_Call\Excel_eventCalcInfo_CallViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_calculation\excel_simpleCalculation\Excel_simpleCalculationViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_calculation\excel_simpleCalculation\returnCalc\Excel_complementReturnCalcViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_calculation\excel_simpleCalculation\returnCalc\Excel_constReturnCalViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_calculation\excel_simpleCalculation\returnCalc\Excel_returnCalcInfoViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_calculation\excel_simpleCalculation\returnCalc\Excel_vanillaReturnCalViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_calculation\excel_simpleCalculation\returnCalc_Call\Excel_returnCalcInfo_CallViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\Excel_InstrumentBookingView.xaml.cs">
+      <DependentUpon>Excel_InstrumentBookingView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\Excel_InstrumentView.xaml.cs">
+      <DependentUpon>Excel_InstrumentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\Excel_instrumentViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_compositeOption\Excel_compositeOptionView.xaml.cs">
+      <DependentUpon>Excel_compositeOptionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_compositeOption\Excel_compositeOptionViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_compositeOption\Excel_compositeOption_subtypeViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_compositeOption\Excel_instrument_compositeOptionViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_compositeOption\subType\Excel_digitalCallPutView.xaml.cs">
+      <DependentUpon>Excel_digitalCallPutView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_compositeOption\subType\Excel_digitalCallPutViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_compositeOption\subType\Excel_upInOutCallViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_compositeOption\subType\Excel_vanillaCallPutView.xaml.cs">
+      <DependentUpon>Excel_vanillaCallPutView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_compositeOption\subType\Excel_vanillaCallPutViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_compositeOption\subType\loader\Excel_compositeOptionLoaderView.xaml.cs">
+      <DependentUpon>Excel_compositeOptionLoaderView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_crs\Excel_instrument_crsViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\general\excel_general\Excel_generalParaView.xaml.cs">
+      <DependentUpon>Excel_generalParaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\general\excel_general\Excel_generalParaViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\general\excel_general\Excel_generalView.xaml.cs">
+      <DependentUpon>Excel_generalView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\general\excel_general\Excel_generalViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\general\excel_general\Excel_instrument_generalViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_hifive\Excel_hifiveView.xaml.cs">
+      <DependentUpon>Excel_hifiveView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_hifive\Excel_instrument_hifiveViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_hifive\subType\stepDownKI\Excel_hifive_StepDownKI_View.xaml.cs">
+      <DependentUpon>Excel_hifive_StepDownKI_View.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_hifive\subType\stepDownKI\Excel_stepDownKI_subScheduleViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_profitLoss\tradeEvent\TradeEventViewModel.cs" />
+    <Compile Include="PL_Calculator\PL_Calculator.cs" />
+    <Compile Include="PL_Calculator\PL_Data.cs" />
+    <Compile Include="PL_Calculator\Price_Data.cs" />
+    <Compile Include="PL_Calculator\TradePLEvent.cs" />
+    <Compile Include="Util&amp;Factory\Environment\PricingSetting\DiscountCurveSetting.cs" />
+    <Compile Include="Util&amp;Factory\Environment\PricingSetting\PricingMethodSettingManager.cs" />
+    <Compile Include="Util&amp;Factory\Environment\PricingSetting\PricingParameterSetting.cs" />
+    <Compile Include="Util&amp;Factory\Environment\ProgramVariable.cs" />
+    <Compile Include="Util&amp;Factory\Environment\PublicEnumVariable.cs" />
+    <Compile Include="Util&amp;Factory\Environment\UnderlyingComboViewModel.cs" />
+    <Compile Include="Util&amp;Factory\Environment\UnderlyingDetailComboViewModel.cs" />
+    <Compile Include="Util&amp;Factory\Environment\UnderlyingModelSettingManager.cs" />
+    <Compile Include="Util&amp;Factory\Excel_InterfaceLoader.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_issueInfo\Excel_issueInfoViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_issueInfo\Excel_noteInfoView.xaml.cs">
+      <DependentUpon>Excel_noteInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_issueInfo\Excel_noteInfoViewModel.cs" />
+    <Compile Include="Util&amp;Factory\Excel_parameterLoader.cs" />
+    <Compile Include="Excel_Interface\excel_profitLoss\Excel_profitLossView.xaml.cs">
+      <DependentUpon>Excel_profitLossView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_profitLoss\Excel_profitLossViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_underlyingCalculation\Excel_underlyingCalcIDViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_underlyingCalculation\Excel_underlyingCalcInfoView.xaml.cs">
+      <DependentUpon>Excel_underlyingCalcInfoView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_underlyingCalculation\Excel_underlyingCalcInfoViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_underlyingCalculation\Excel_underlyingLoaderView.xaml.cs">
+      <DependentUpon>Excel_underlyingLoaderView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_underlyingInfo\Excel_underlyingBasePriceEditorView.xaml.cs">
+      <DependentUpon>Excel_underlyingBasePriceEditorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_underlyingInfo\Excel_underlyingInfoViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_hifive\Excel_hifiveViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_hifive\subType\stepDownKI\Excel_hifive_stepDown_kiViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_hifive\subType\Excel_hifive_subtypeViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\Excel_interfaceViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_hifive\Excel_kiScheduleListViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_calculation\Excel_scheduleListViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_calculation\Excel_scheduleViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_underlyingInfo\Excel_interestRateViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\excel_underlyingInfo\Excel_stockIndexViewModel.cs" />
+    <Compile Include="MasterInformation\MasterInformationView.xaml.cs">
+      <DependentUpon>MasterInformationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MasterInformation\MasterInformationViewModel.cs" />
+    <Compile Include="Excel_Interface\excel_instrumentVM\TradePositionInfoViewModel.cs" />
+    <Compile Include="Excel_Interface\marketData\Index\IndexHistoryMarketData.cs" />
+    <Compile Include="Excel_Interface\marketData\Index\IndexMarketData.cs" />
+    <Compile Include="Excel_Interface\marketData\Index\IndexTickerInfo.cs" />
+    <Compile Include="Excel_Interface\marketData\IndexTickerInfoEditorView.xaml.cs">
+      <DependentUpon>IndexTickerInfoEditorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\marketData\MarketDataManagerView.xaml.cs">
+      <DependentUpon>MarketDataManagerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\marketData\MarketDataManagerViewModel.cs" />
+    <Compile Include="Excel_Interface\marketData\YahooMarketData\YahooMarketDataLoader.cs" />
+    <Compile Include="Excel_Interface\pricingParameterVM\curve\Excel_discountCurve_paraView.xaml.cs">
+      <DependentUpon>Excel_discountCurve_paraView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\pricingParameterVM\curve\Excel_discountCurve_paraViewModel.cs" />
+    <Compile Include="Excel_Interface\pricingParameterVM\curve\Excel_interestRateCurveLoaderView.xaml.cs">
+      <DependentUpon>Excel_interestRateCurveLoaderView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\pricingParameterVM\curve\Excel_interestRateCurveLoaderViewModel.cs" />
+    <Compile Include="Excel_Interface\pricingParameterVM\curve\interpolation\Excel_interpolationView.xaml.cs">
+      <DependentUpon>Excel_interpolationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\pricingParameterVM\curve\interpolation\Excel_interpolationViewModel.cs" />
+    <Compile Include="Excel_Interface\pricingParameterVM\Excel_standardParaView.xaml.cs">
+      <DependentUpon>Excel_standardParaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\pricingParameterVM\result\Excel_resultViewModel.cs" />
+    <Compile Include="Excel_Interface\pricingParameterVM\result\InstUnderlyingStockGreekPositionViewModel.cs" />
+    <Compile Include="Excel_Interface\pricingParameterVM\underlying\Excel_underlyingCalcInfo_paraView.xaml.cs">
+      <DependentUpon>Excel_underlyingCalcInfo_paraView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\pricingParameterVM\underlying\Excel_underlyingInfo_paraViewModel.cs" />
+    <Compile Include="Excel_Interface\pricingParameterVM\underlying\Excel_underlyingModel_paraViewModel.cs" />
+    <Compile Include="Excel_Interface\pricingParameterVM\underlying\model\Excel_forwardModelViewModel.cs" />
+    <Compile Include="Excel_Interface\pricingParameterVM\underlying\model\Excel_geometricBMView.xaml.cs">
+      <DependentUpon>Excel_geometricBMView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\pricingParameterVM\underlying\model\Excel_geometricBMViewModel.cs" />
+    <Compile Include="Excel_Interface\pricingParameterVM\underlying\model\Excel_hullWhiteOneFactorView.xaml.cs">
+      <DependentUpon>Excel_hullWhiteOneFactorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\pricingParameterVM\underlying\model\Excel_hullWhiteOneFactorViewModel.cs" />
+    <Compile Include="Excel_Interface\pricingParameterVM\Excel_parameterViewModel.cs" />
+    <Compile Include="Excel_Interface\pricingParameterVM\curve\Excel_rateDataViewModel.cs" />
+    <Compile Include="Excel_Interface\pricingParameterVM\Excel_standardParaViewModel.cs" />
+    <Compile Include="Excel_Interface\pricingParameterVM\underlying\Excel_underlyingCalcInfo_paraViewModel.cs" />
+    <Compile Include="Excel_Interface\pricingParameterVM\underlying\model\Excel_underlyingModelEditorView.xaml.cs">
+      <DependentUpon>Excel_underlyingModelEditorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\pricingParameterVM\underlying\model\Excel_underlyingModelEditorViewModel.cs" />
+    <Compile Include="OutLook\HedgeMonitor\DeltaHedgeMonitorView.xaml.cs">
+      <DependentUpon>DeltaHedgeMonitorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OutLook\HedgeMonitor\DeltaHedgeMonitorViewModel.cs" />
+    <Compile Include="OutLook\HedgeMonitor\HedgeUnderlyingGreekPositionViewModel.cs" />
+    <Compile Include="OutLook\HedgeMonitor\GreekPositionViewModel.cs" />
+    <Compile Include="OutLook\HedgeMonitor\StockGreekPositionViewModel.cs" />
+    <Compile Include="OutLook\BookManager\BookProperty\BookPropertyView.xaml.cs">
+      <DependentUpon>BookPropertyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OutLook\BookManager\BookProperty\BookPropertyViewModel.cs" />
+    <Compile Include="OutLook\BookManager\BookProperty\BookViewModel.cs" />
+    <Compile Include="OutLook\OTCApplicationViewModel.cs" />
+    <Compile Include="OutLook\BookManager\BookFolderView.xaml.cs">
+      <DependentUpon>BookFolderView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OutLook\BookManager\Excel_instrument_stepDownKICustomViewModel.cs" />
+    <Compile Include="OutLook\BookManager\Excel_stepDownKICustomParaView.xaml.cs">
+      <DependentUpon>Excel_stepDownKICustomParaView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OutLook\BookManager\Excel_stepDownKICustomParaViewModel.cs" />
+    <Compile Include="OutLook\BookManager\Excel_stepDownKICustomView.xaml.cs">
+      <DependentUpon>Excel_stepDownKICustomView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OutLook\BookManager\Excel_stepDownKICustomViewModel.cs" />
+    <Compile Include="OutLook\BookManager\FavoriteViewModel.cs" />
+    <Compile Include="OutLook\BookManager\FolderViewModel.cs" />
+    <Compile Include="OutLook\BookManager\IFileAction.cs" />
+    <Compile Include="OutLook\BookManager\IRemoveInstrument.cs" />
+    <Compile Include="OutLook\BookManager\MasterFavoriteViewModel.cs" />
+    <Compile Include="OutLook\BookManager\PositionMasterToolBarViewModel.cs" />
+    <Compile Include="OutLook\BookManager\PositionMasterViewModel.cs" />
+    <Compile Include="OutLook\BookManager\RootBookViewModel.cs" />
+    <Compile Include="OutLook\BookManager\RootFavoriteViewModel.cs" />
+    <Compile Include="OutLook\BookManager\SubViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Excel_Interface\scheduleGen\ScheduleGeneratorView.xaml.cs">
+      <DependentUpon>ScheduleGeneratorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Excel_Interface\scheduleGen\ScheduleGeneratorViewModel.cs" />
+    <Compile Include="Excel_Interface\scheduleGen\setting\UnderlyingModelSetting.cs" />
+    <Compile Include="Util&amp;Factory\CodeClassificationGenerator.cs" />
+    <Compile Include="Util&amp;Factory\CounterPartyLoaderView.xaml.cs">
+      <DependentUpon>CounterPartyLoaderView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Util&amp;Factory\resource\IndexConverter.cs" />
+    <Compile Include="Util&amp;Factory\StringFormat.cs" />
+    <Compile Include="Util&amp;Factory\SystemVariableManager.cs" />
+    <Compile Include="Util&amp;Factory\TradeString\FixedBond_TradeString.cs" />
+    <Compile Include="Util&amp;Factory\TradeString\StepDownKI_TradeString.cs" />
+    <Compile Include="Util&amp;Factory\TradeString\TradeStringManager.cs" />
+    <Compile Include="Util&amp;Factory\TradeString\VanillaFloatingBond_TradeString.cs" />
+    <Compile Include="Util&amp;Factory\XMLFileLoader.cs" />
+    <Compile Include="Util&amp;Factory\StringConverter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\codeProject_lib\DynamicDataDisplay v0.3\src\DynamicDataDisplay\DynamicDataDisplay.csproj">
+      <Project>{ECD37682-DF7E-409F-912D-0965634556B5}</Project>
+      <Name>DynamicDataDisplay</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Project_CSharp\qlnet\QLNet\QLNet.csproj">
+      <Project>{F6E762BD-DCDF-4CA0-ABAD-CB21C7D03BEC}</Project>
+      <Name>QLNet</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Project_CSharp\RiskMonitor\RiskMonitor.csproj">
+      <Project>{EB3AB6F7-7658-470C-BDD3-BFE52398787A}</Project>
+      <Name>RiskMonitor</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Excel_Interface\marketData\MarketDataDB.sdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="OutLook\favorite.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="OutLook\menuConfig.xml" />
+    <Content Include="OutLook\XMLFile1.xml">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_creditDerivatives\" />
+    <Folder Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_futures\" />
+    <Folder Include="Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_cds\couponTerm\" />
+    <Folder Include="Excel_Interface\pricingParameterVM\curve\default\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <ReferencePath Include="D:\Project File\OTCDerivativesCalculatorModule\Release\bin\DynamicDataDisplay.dll" />
+    <ReferencePath Include="D:\Project File\OTCDerivativesCalculatorModule\packages\MahApps.Metro.0.13.1.0\lib\net40\MahApps.Metro.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\Microsoft.CSharp.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\mscorlib.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\PresentationCore.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\PresentationFramework.dll" />
+    <ReferencePath Include="D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\qlnet\QLNet\bin\Debug\QLNet.dll" />
+    <ReferencePath Include="D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\RiskMonitor\bin\Debug\RiskMonitor.exe" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Core.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.DataSetExtensions.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Data.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Microsoft SQL Server Compact Edition\v3.5\Desktop\System.Data.SqlServerCe.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.dll" />
+    <ReferencePath Include="D:\Project File\OTCDerivativesCalculatorModule\packages\MahApps.Metro.0.13.1.0\lib\net40\System.Windows.Interactivity.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xaml.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\System.Xml.Linq.dll" />
+    <ReferencePath Include="C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0\WindowsBase.dll" />
+    <ReferencePath Include="D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\XMLViewerDomo\XMLViewer\bin\Release\XMLViewer.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Chart\GraphView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_calculation\Excel_scheduleLoaderView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_calculation\excel_simpleCalculation\eventCalc\Excel_eventCalcInfoLoaderView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_calculation\excel_simpleCalculation\eventCalc\Excel_identityEventCalView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_calculation\excel_simpleCalculation\eventCalc\Excel_singleBarrierEventCalView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_calculation\excel_simpleCalculation\eventCalc\Excel_singleRangeEventCalView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_calculation\excel_simpleCalculation\Excel_simpleCalculationView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_calculation\excel_simpleCalculation\returnCalc\Excel_constReturnCalView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_calculation\excel_simpleCalculation\returnCalc\Excel_returnCalcInfoLoaderView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_calculation\excel_simpleCalculation\returnCalc\Excel_vanillaReturnCalView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_calculation\rateCoupon\Excel_couponScheduleListView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_calculation\rateCoupon\Excel_couponScheduleLoaderView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_calculation\rateCoupon\Excel_fixedCouponScheduleView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_calculation\rateCoupon\Excel_floatingCouponScheduleView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_calculation\rateCoupon\Excel_vanillaFloatingCouponScheduleView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_bond\excel_fixedBond\Excel_fixedBondView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_calculation\Excel_scheduleListView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\Excel_InstrumentBookingView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\Excel_InstrumentView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_bond\excel_fixedBond\Excel_fixedCouponScheduleListView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_bond\excel_fixedBond\subtype\Excel_fixedBond_constantRateView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_bond\excel_fixedBond\subtype\Excel_fixedBond_subtypeLoaderView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_bond\excel_floatingBond\excel_structuredBond\Excel_structuredBondView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_bond\excel_floatingBond\excel_vanillaFloatingBond\Excel_vanillaFloatingBondView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_bond\excel_floatingBond\excel_vanillaFloatingBond\Excel_vanillaFloatingCouponScheduleListView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_bond\excel_floatingBond\excel_vanillaFloatingBond\subtype\Excel_vanillaFloatingBond_simpleView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_bond\excel_floatingBond\excel_vanillaFloatingBond\subtype\Excel_vanillaFloatingBond_subtypeLoaderView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_compositeOption\Excel_compositeOptionView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_compositeOption\subType\Excel_digitalCallPutView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_compositeOption\subType\Excel_upInOutCallView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_compositeOption\subType\Excel_vanillaCallPutView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_compositeOption\subType\loader\Excel_compositeOptionLoaderView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_cds\Excel_cdsView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_cds\protectionTerm\Excel_creditEventInfoView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_cds\protectionTerm\excel_protection\Excel_creditEventsView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_cds\protectionTerm\excel_jointProb\Excel_jointProbabilityTraitView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_cds\protectionTerm\excel_protection\Excel_obligationsView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_cds\protectionTerm\excel_protection\Excel_protectionTermsView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_cds\protectionTerm\excel_referenceInformation\Excel_referenceInformationListView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_cds\protectionTerm\excel_referenceInformation\Excel_referenceInformationView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_cds\protectionTerm\excel_referenceInformation\Excel_referenceObligationView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_cds\protectionTerm\excel_referenceInformation\Loader\Excel_referenceLoaderView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_crs\Excel_crsView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_fxDerivatives\forward\Excel_fxForwardView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_fxDerivatives\Fx_exchangeLegView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_fxDerivatives\swap\Excel_fxSwapView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_hifive\kiEventCalculation\Excel_dualKiEventCalcView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_hifive\kiEventCalculation\Excel_simpleKiEventCalcView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_hifive\kiEventCalculation\Excel_targetKiEventCalcView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_hifive\kiEventCalculation\loader\Excel_kiEventCalculationLoaderView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_hifive\subType\Excel_hifive_subtypeLoaderView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_multiAssetCompositeOption\Excel_multiAssetCompositeOptionView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_multiAssetCompositeOption\subType\Excel_multiAsset_upInOutCallView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_multiAssetCompositeOption\subType\Excel_multiAsset_vanillaCallPutView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_multiAssetCompositeOption\subType\loader\Excel_multiAssetCompositeOptionLoaderView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\general\excel_generalSwap\Excel_generalSwapParaView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\general\excel_generalSwap\Excel_generalSwapView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\general\excel_general\Excel_generalParaView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\general\excel_general\Excel_generalView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_hifive\Excel_hifiveView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_hifive\subType\stepDownKI\Excel_hifive_StepDownKI_View.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\general\general_schedule\GeneralScheduleEditorView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\general\general_schedule\GeneralScheduleInfoView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\general\general_terminationEvent\GeneralTerminationEventEditorView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\general\general_terminationEvent\GeneralTerminationEventInfoView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_instType\excel_swap\excel_irs\Excel_irsView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_issueInfo\Excel_emptyInfoView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_issueInfo\Excel_noteInfoView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_issueInfo\Excel_swapInfoView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_issueInfo\Excel_swapLegInfoView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_underlyingCalculation\underlyingCalcIDType\Excel_averageUnderlyingCalcIDView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_underlyingCalculation\underlyingCalcIDType\Excel_choiceUnderlyingCalcIDView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_underlyingCalculation\underlyingCalcIDType\Excel_maximumUnderlyingCalcIDView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_underlyingCalculation\underlyingCalcIDType\Excel_minimumUnderlyingCalcIDView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_underlyingCalculation\underlyingCalcIDType\loader\Excel_underlyingCalcIDLoaderView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_profitLoss\Excel_profitLossView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_underlyingCalculation\Excel_underlyingCalcInfoView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_underlyingCalculation\Excel_underlyingLoaderView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_instrumentVM\excel_underlyingInfo\Excel_underlyingBasePriceEditorView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_result\Excel_greekResultView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_result\Excel_resultView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\pricingParameterVM\curve\Excel_defaultCurve_paraView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\pricingParameterVM\Excel_standardCreditParaView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\pricingParameterVM\referenceEntity\Excel_referenceCalcInfo_paraView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\MasterInformation\MasterInformationView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\marketData\IndexTickerInfoEditorView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\marketData\MarketDataManagerView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\pricingParameterVM\curve\Excel_discountCurve_paraView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\pricingParameterVM\curve\Excel_interestRateCurveLoaderView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\pricingParameterVM\curve\interpolation\Excel_interpolationView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\pricingParameterVM\Excel_standardParaView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\pricingParameterVM\underlying\Excel_underlyingCalcInfo_paraView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\pricingParameterVM\underlying\model\Excel_geometricBMView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\pricingParameterVM\underlying\model\Excel_hullWhiteOneFactorView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\pricingParameterVM\underlying\model\Excel_underlyingModelEditorView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\scheduleGen\ScheduleGeneratorView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\MasterInformation\MasterInfo_TableManagerView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\OutLook\BookManager\OTCApplcationBookView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\OutLook\EventManager\OTCApplilcationEventView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\OutLook\HedgeMonitor\DeltaHedgeMonitorView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\OutLook\BookManager\BookFolderView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\OutLook\BookManager\BookProperty\BookPropertyView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\OutLook\BookManager\Excel_stepDownKICustomParaView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\OutLook\BookManager\Excel_stepDownKICustomView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_event\EventManagerView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Excel_Interface\excel_event\EventView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\OutLook\OTCApplication.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Util&amp;Factory\CounterPartyLoaderView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Util&amp;Factory\CustomControl\Currency_Combo\CurrencyManagerView.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\Util&amp;Factory\CustomControl\Frequency_Combo\FrequencyCombo.g.cs" />
+    <Compile Include="D:\Project File\OTCDerivativesCalculatorModule\Excel_Interface2\obj\Debug\GeneratedInternalTypeHelper.g.cs" />
+  </ItemGroup>
+</Project>

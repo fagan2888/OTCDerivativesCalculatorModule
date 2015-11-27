@@ -1,0 +1,5 @@
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\FpmlSerializedCSharp\bin\Release\FpmlSerializedCSharp.dll
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\FpmlSerializedCSharp\bin\Release\FpmlSerializedCSharp.pdb
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\FpmlSerializedCSharp\obj\Release\FpmlSerializedCSharp.csprojResolveAssemblyReference.cache
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\FpmlSerializedCSharp\obj\Release\FpmlSerializedCSharp.dll
+D:\Project File\OTCDerivativesCalculatorModule\Project_CSharp\FpmlSerializedCSharp\obj\Release\FpmlSerializedCSharp.pdb
